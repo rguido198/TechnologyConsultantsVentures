@@ -141,6 +141,7 @@
 
     var width = 0,
       height = 0,
+      activeHeight = 0,
       dpr = Math.min(window.devicePixelRatio || 1, 2);
     var particles = [];
     var textBoxes = [];
@@ -192,11 +193,23 @@
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+      // The hero can be much taller than its visible "open" area once a
+      // full-width screenshot sits below the copy — spreading a fixed
+      // particle budget across the whole height would waste most of them
+      // behind that opaque image. Confine spawning/movement to the region
+      // above it, where the constellation is actually seen.
+      var visual = hero.querySelector(".hero-visual");
+      activeHeight = height;
+      if (visual) {
+        var visualTop = visual.getBoundingClientRect().top - box.top;
+        if (visualTop > 120) activeHeight = visualTop;
+      }
+
       var count = Math.round(
-        Math.max(PARTICLE_MIN, Math.min(PARTICLE_MAX, (width * height) / PARTICLE_AREA))
+        Math.max(PARTICLE_MIN, Math.min(PARTICLE_MAX, (width * activeHeight) / PARTICLE_AREA))
       );
-      particles = makeParticles(width, height, count);
-      linkDist = Math.max(LINK_DIST_MIN, Math.min(LINK_DIST_MAX, Math.min(width, height) * LINK_DIST_RATIO));
+      particles = makeParticles(width, activeHeight, count);
+      linkDist = Math.max(LINK_DIST_MIN, Math.min(LINK_DIST_MAX, Math.min(width, activeHeight) * LINK_DIST_RATIO));
       textBoxes = computeTextBoxes(hero);
     }
 
@@ -215,8 +228,8 @@
             p.y += p.vy;
             if (p.x < -20) p.x = width + 20;
             if (p.x > width + 20) p.x = -20;
-            if (p.y < -20) p.y = height + 20;
-            if (p.y > height + 20) p.y = -20;
+            if (p.y < -20) p.y = activeHeight + 20;
+            if (p.y > activeHeight + 20) p.y = -20;
           });
           maybeStartPulse(now);
         }
