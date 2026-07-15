@@ -1,207 +1,572 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technology Consultants Ventures</title>
-  <!-- San Francisco is system default on Apple, fallback to Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Technology Consultants — We earn our advice by shipping</title>
+<meta name="description" content="A consulting practice run by builders. We design, build, and operate React web apps and AI agents for startups, SMBs, and mid-market teams." />
+
+<!-- Typography: Editorial pairing (Fraunces + Inter Tight) + JetBrains Mono for accents -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="components.css" />
+
+<!-- Placeholder styling for case-study image slots until real screenshots are added -->
+<style>
+  .case-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    font: 500 13px/1.4 var(--font-sans);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+  }
+  .case-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    border: 1px dashed var(--line);
+    border-radius: var(--r-md);
+    pointer-events: none;
+  }
+  .case-placeholder span { position: relative; }
+</style>
 </head>
-
 <body>
-  <!-- Global Navigation (Apple Style) -->
-  <nav class="global-nav">
-    <div class="nav-content">
-      <a href="#" class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path
-            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-          </path>
-          <polyline points="3.29 7 12 12 20.71 7"></polyline>
-          <line x1="12" y1="22" x2="12" y2="12"></line>
-        </svg>
+
+<!-- ─────────────────── Nav ─────────────────── -->
+<header class="nav">
+  <div class="wrap-wide nav-inner">
+    <a class="nav-brand" href="#top" aria-label="Technology Consultants home">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span>Technology Consultants</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-li"><a href="#services">Services</a></li>
+        <li class="nav-li"><a href="#work">Work</a></li>
+        <li class="nav-li"><a href="#how">How we work</a></li>
+        <li class="nav-li"><a href="#about">About</a></li>
+        <li><a class="nav-cta" href="#contact">Book a call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ─────────────────── Hero ─────────────────── -->
+<section class="hero">
+  <div class="hero-shapes" data-hero-shapes aria-hidden="true"></div>
+  <div class="wrap-wide hero-inner">
+    <div class="hero-meta-row">
+      <p class="eyebrow">Technology Consultants</p>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="meta">Web Applications &amp; AI Agents</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="meta"><span class="dot" aria-hidden="true"></span>Booking projects · Q3 2026</span>
+    </div>
+
+    <h1 class="display h1">
+      We build web applications. The ones worth building right now have <em>AI agents</em> in them.
+    </h1>
+
+    <p class="lede">
+      A consulting practice run by builders who ship their own products. We design, build, and operate
+      the web applications your business runs on &mdash; using the same stack that powers
+      Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care.
+    </p>
+
+    <div class="hero-cta-row">
+      <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+        Book a 30-min strategy call
+        <span class="arr" aria-hidden="true">→</span>
       </a>
-      <div class="nav-links">
-        <a href="#about">Philosophy</a>
-        <a href="#portfolio">Subsidiaries</a>
-        <a href="#contact">Contact</a>
+      <a class="btn btn-ghost" href="#work">See what we&rsquo;ve built</a>
+    </div>
+
+    <div class="hero-stats" aria-label="How we work">
+      <div class="hero-stat">
+        <div class="n">In production.</div>
+        <div class="l">Real users today on Appt Helper, Open Cita, Border Bills.</div>
       </div>
-      <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            style="display: none;">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
+      <div class="hero-stat">
+        <div class="n">Senior team.</div>
+        <div class="l">The people who pitch your project ship&nbsp;it.</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n">Code first.</div>
+        <div class="l">No decks before working software.</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n">One team.</div>
+        <div class="l">Web apps and AI agents &mdash; same engineers, same stack.</div>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Hero Section: Holding Company Profile -->
-  <section class="module-hero theme-dark">
-    <div class="hero-glow"></div>
-    <div class="module-content">
-      <h4 class="trust-label hero-animate"
-        style="color: var(--color-blue); margin-bottom: 24px; font-size: 20px; font-weight: 700;">
-        TECHNOLOGY CONSULTANTS</h4>
-      <h2 class="headline hero-animate delay-1">The infrastructure behind modern solutions.</h2>
-      <p class="intro-text hero-animate delay-2" style="margin-top: 16px;">We manage and operate a portfolio of
-        category-defining digital
-        products, providing the
-        architectural blueprints and operational expertise they need to scale.</p>
-      <div class="cta-links hero-animate delay-3">
-        <a href="#portfolio" class="cta-primary">Explore our subsidiaries <span class="chevron">&gt;</span></a>
+<!-- ─────────────────── Trust strip ─────────────────── -->
+<section class="trust">
+  <div class="wrap-wide">
+    <div class="trust-head">
+      <p class="eyebrow ink">Built by us — in production today</p>
+      <p class="small">Products we&rsquo;ve developed &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care. The same team builds for our clients.</p>
+    </div>
+    <div class="trust-grid">
+      <a class="trust-cell" href="https://appthelper.com" target="_blank" rel="noreferrer">
+        <div class="name">Appt Helper</div>
+        <div class="tag">Appointment infrastructure for schedule-driven businesses</div>
+        <div class="status">Live · appthelper.com</div>
+      </a>
+      <a class="trust-cell" href="https://opencita.com" target="_blank" rel="noreferrer">
+        <div class="name">Open Cita</div>
+        <div class="tag">Booking, simplified. Spanish-first markets.</div>
+        <div class="status">Live · opencita.com</div>
+      </a>
+      <a class="trust-cell" href="#work">
+        <div class="name">Border Bills</div>
+        <div class="tag">Pay Mexican utility bills from the US — in seconds.</div>
+        <div class="status">Live</div>
+      </a>
+      <a class="trust-cell" data-status="dev" href="#work">
+        <div class="name">Baja Care</div>
+        <div class="tag">Medical tourism, made navigable.</div>
+        <div class="status">In development</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Services ─────────────────── -->
+<section id="services" class="section services-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">What we do</p>
+        <h2 class="display h2">One team.<br />One <em>stack</em>.</h2>
+      </div>
+      <p class="lede">Web development and AI agents are the same discipline now. We run both with the same senior engineers who ship our own products &mdash; not advisors with a slide deck.</p>
+    </header>
+
+    <div class="services-grid">
+
+      <article class="service">
+        <div class="service-icon-row">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7l9-4 9 4-9 4-9-4z"/>
+              <path d="M3 12l9 4 9-4"/>
+              <path d="M3 17l9 4 9-4"/>
+            </svg>
+          </div>
+          <span class="service-tag">01 · Web</span>
+        </div>
+        <header>
+          <h3 class="display h3">React &amp; Full-Stack Web Development</h3>
+          <p class="sub">From MVP to scale.</p>
+        </header>
+        <p class="body">
+          We build modern web products end-to-end &mdash; React on the front end, TypeScript and Node on the back end, Postgres, and the infrastructure to run them. You get senior engineers who&rsquo;ve shipped to real users, not a junior team learning on your dime.
+        </p>
+        <ul class="service-list">
+          <li>Product architecture &amp; technical strategy</li>
+          <li>Full-stack design and build</li>
+          <li>API design, integrations, data modeling</li>
+          <li>Performance, security, observability</li>
+          <li>Mobile-responsive on every breakpoint</li>
+          <li>Handoff with docs &mdash; or we operate it</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service-icon-row">
+          <div class="service-icon alt" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="6" width="16" height="12" rx="3"/>
+              <path d="M9 12h.01M15 12h.01"/>
+              <path d="M12 2v4M5 10H3M21 10h-2M5 14H3M21 14h-2"/>
+            </svg>
+          </div>
+          <span class="service-tag">02 · AI</span>
+        </div>
+        <header>
+          <h3 class="display h3">AI Agent Consulting</h3>
+          <p class="sub">Strategy, build, and adoption &mdash; without the hype.</p>
+        </header>
+        <p class="body">
+          Most &ldquo;AI strategies&rdquo; stall because nobody on the team has shipped an agent. We assess where AI actually moves the needle, design and build the agents that do the work, and roll them out so your team uses them on Monday morning.
+        </p>
+        <ul class="service-list">
+          <li>AI readiness audits &amp; roadmaps</li>
+          <li>Custom agent design &amp; implementation</li>
+          <li>Claude, OpenAI, open-source models</li>
+          <li>Skills, plugins, MCP servers</li>
+          <li>Team enablement &amp; training</li>
+          <li>Ongoing operations and tuning</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Selected work ─────────────────── -->
+<section id="work" class="section work-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2 class="display h2">Products we&rsquo;ve built.<br />Lessons we bring to <em>yours</em>.</h2>
+      </div>
+      <p class="lede">Each one is live, with the same team you&rsquo;ll work with. Click through and find a real working product on the other side.</p>
+    </header>
+
+    <div class="work-grid">
+
+      <article class="case">
+        <div class="case-media">
+          <div class="case-placeholder"><span>Drop Appt Helper screenshot</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Appt Helper</span>
+            <span class="case-status">Live · appthelper.com</span>
+          </div>
+          <h3 class="case-title">Appointment infrastructure for businesses that live and die by their schedule.</h3>
+          <p class="case-desc">A scheduling platform for service businesses where every missed appointment is real money lost. Multi-tenant, SMS &amp; email reminders, calendar sync, embeddable booking widget.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio</span>
+            <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">Visit <span class="arr">↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-media">
+          <div class="case-placeholder"><span>Drop Open Cita screenshot</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Open Cita</span>
+            <span class="case-status">Live · opencita.com</span>
+          </div>
+          <h3 class="case-title">Booking, simplified. For Spanish-first service businesses.</h3>
+          <p class="case-desc">An online appointment platform designed for Spanish-speaking service businesses underserved by US-built scheduling tools &mdash; built on the same engine as Appt Helper.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">TypeScript · Next.js · next-intl · Postgres</span>
+            <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">Visit <span class="arr">↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-media">
+          <div class="case-placeholder"><span>Drop Border Bills screenshot</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Border Bills</span>
+            <span class="case-status">Live</span>
+          </div>
+          <h3 class="case-title">Pay Mexican utility bills from the US &mdash; without the drive.</h3>
+          <p class="case-desc">A consumer payment app for US-based families paying CFE (electricity), Telmex / Izzi (internet), water, and predial &mdash; in seconds, instead of driving across the border or wiring cash.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">Next.js 16 · React 19 · Stripe · Reloadly</span>
+            <a class="btn-link" href="#work">Case study <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" data-status="dev">
+        <div class="case-media">
+          <div class="case-placeholder"><span>Drop Baja Care mockup</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Baja Care</span>
+            <span class="case-status">In development</span>
+          </div>
+          <h3 class="case-title">Medical tourism, made navigable.</h3>
+          <p class="case-desc">A patient-side discovery and intake platform connecting US patients with vetted Baja California providers &mdash; turning Facebook groups and word-of-mouth into a guided, transparent experience.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">Next.js · React · TypeScript</span>
+            <a class="btn-link" href="#work">Watch this space <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── How we work ─────────────────── -->
+<section id="how" class="section how-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">How we work</p>
+        <h2 class="display h2">We meet you <em>where</em> you are.</h2>
+      </div>
+      <p class="lede">Every engagement is structured around your reality &mdash; not a template. Pick what fits, or we&rsquo;ll help you choose.</p>
+    </header>
+
+    <div class="how-grid">
+
+      <article class="how-cell">
+        <div class="how-num">01</div>
+        <h4 class="display h4">Fixed-scope project</h4>
+        <p class="body">For a defined deliverable with a clear edge &mdash; an MVP, a redesign, an AI integration. We scope tightly, ship on a date, and hand off cleanly.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Best for</dt><dd>validated ideas · planned launches</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Typical length</dt><dd>4 – 16 weeks</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="how-cell">
+        <div class="how-num">02</div>
+        <h4 class="display h4">Monthly retainer</h4>
+        <p class="body">For teams that need senior engineering or AI ops capacity on an ongoing basis. Predictable cost, flexible scope, no hiring overhead.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Best for</dt><dd>scaling startups · fractional CTO</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Typical length</dt><dd>3+ months, month-to-month</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="how-cell">
+        <div class="how-num">03</div>
+        <h4 class="display h4">Strategy sprint</h4>
+        <p class="body">A one- to two-week deep dive: AI readiness audit, architecture review, or agent design sprint. You leave with a roadmap your team can execute &mdash; with or without us.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Best for</dt><dd>&ldquo;we know we need this&hellip;&rdquo;</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Typical length</dt><dd>1 – 2 weeks, fixed price</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="how-cell">
+        <div class="how-num">04</div>
+        <h4 class="display h4">Partnership / equity</h4>
+        <p class="body">For founders who want a long-term technical partner. We invest engineering time in exchange for equity or revenue share, with structure that protects both sides.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Best for</dt><dd>early-stage with a credible market</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Typical length</dt><dd>12+ months</dd>
+          </div>
+        </dl>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Why us ─────────────────── -->
+<section class="section why-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Why teams pick us</p>
+        <h2 class="display h2">The differences <em>that</em> matter.</h2>
+      </div>
+      <p class="lede">Four small things that compound across an engagement. They&rsquo;re what we&rsquo;d look for if we were buying the service instead of selling it.</p>
+    </header>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="n">01 &mdash; Operators, not just advisors</span>
+        <h3 class="display h3">Products in production. Real users, real revenue.</h3>
+        <p class="body">Our recommendations come from the trenches &mdash; cancellations at 2&nbsp;AM, payment edge cases, real customer support tickets &mdash; not from a slide deck.</p>
+      </div>
+      <div class="why-item">
+        <span class="n">02 — Senior team, no bait-and-switch</span>
+        <h3 class="display h3">The people who pitch your project are the people who ship it.</h3>
+        <p class="body">No offshore handoff, no junior team you didn&rsquo;t sign up for. The first call is with the people writing the code.</p>
+      </div>
+      <div class="why-item">
+        <span class="n">03 — Stack we know cold</span>
+        <h3 class="display h3">React, TypeScript, Node, Python, Postgres, and modern AI tooling.</h3>
+        <p class="body">We don&rsquo;t pick stacks we can&rsquo;t operate at 2 AM. Claude, OpenAI, MCP, and agent frameworks are everyday tools here, not a learning curve we&rsquo;re billing you for.</p>
+      </div>
+      <div class="why-item">
+        <span class="n">04 — Reliability from day one</span>
+        <h3 class="display h3">Auth, data protection, observability, and a deployment story we can defend.</h3>
+        <p class="body">Not bolted on later. Every product we ship has the boring fundamentals in place before the marketing site goes live.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Trust & Social Proof: Portfolio Showcase -->
-  <section id="portfolio" class="trust-section theme-light">
-    <div class="trust-container">
-      <h4 class="trust-label fade-item">OUR FLAGSHIP SUBSIDIARIES</h4>
-      <div class="logo-strip">
-        <!-- Appt Helper Logo -->
-        <a href="https://appthelper.com" target="_blank" rel="noopener noreferrer" class="trust-logo fade-item delay-1"
-          style="text-decoration: none; color: inherit;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 100 100" fill="none"
-            class="product-icon-small scroll-arrow" style="transform-origin: center;">
-            <path d="M70,50 L30,20 L30,80 Z" stroke="#375586" stroke-width="8" stroke-linejoin="round" fill="none" />
-            <path d="M45,50 L15,25 L15,75 Z" stroke="#375586" stroke-width="8" stroke-linejoin="round" fill="none" />
-            <path d="M50,50 L35,40 L35,60 Z" fill="#4BECD7" />
-          </svg>
-          <span>Appt Helper</span>
+<!-- ─────────────────── AI capabilities ─────────────────── -->
+<section class="section ai-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">AI agents — in practice</p>
+        <h2 class="display h2">What we <em>actually</em> build.</h2>
+      </div>
+      <p class="lede">Three patterns we&rsquo;ve shipped &mdash; or are shipping right now. Adapt them to your data, tools, and guardrails.</p>
+    </header>
+
+    <div class="ai-grid">
+      <article class="ai-card">
+        <div class="n">A · Customer-facing</div>
+        <h4 class="display h4">Agents that talk to your users.</h4>
+        <p class="body">Support, sales-qualification, and intake agents that operate inside your existing tools &mdash; chat, email, your app &mdash; with handoff to humans when it matters.</p>
+        <ul>
+          <li>Intake &amp; triage</li>
+          <li>Knowledge-base search</li>
+          <li>Lead qualification</li>
+        </ul>
+      </article>
+
+      <article class="ai-card">
+        <div class="n">B · Internal workflow</div>
+        <h4 class="display h4">Agents that compress hours into minutes.</h4>
+        <p class="body">Research, triage, document generation, data reconciliation. Built on Claude Code, Cowork, or whichever runtime fits your team&rsquo;s reality.</p>
+        <ul>
+          <li>Document generation</li>
+          <li>Data reconciliation</li>
+          <li>Inbound ops triage</li>
+        </ul>
+      </article>
+
+      <article class="ai-card">
+        <div class="n">C · Custom skills &amp; MCP</div>
+        <h4 class="display h4">Specialist agents for your business.</h4>
+        <p class="body">The skills and connectors that turn a generic LLM into a specialist for your business: your data, your tools, your guardrails, your tone.</p>
+        <ul>
+          <li>MCP servers</li>
+          <li>Tool &amp; API connectors</li>
+          <li>Skill bundles &amp; prompts</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── About ─────────────────── -->
+<section id="about" class="section about-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 class="display h2">A small team of builders, led by an engineer who&rsquo;s been on <em>both</em> sides of the table.</h2>
+      </div>
+      <p class="lede">We started by shipping our own products so we&rsquo;d know what we were talking about when we started shipping yours.</p>
+    </header>
+
+    <div class="about-grid">
+      <div class="about-body">
+        <p>Technology Consultants was founded by <strong>Roberto Guido</strong> &mdash; an engineer with an MBA who&rsquo;s spent his career bridging the gap between what&rsquo;s technically possible and what actually moves a business. He leads a focused team of senior engineers and designers who&rsquo;ve shipped products together for years.</p>
+        <p>We started by building our own products &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care &mdash; because we wanted to prove the architecture, the team, and the operating model worked before selling any of it to clients.</p>
+        <p>That portfolio is now the foundation of our consulting practice. Every recommendation we make has been tested against real users and real edge cases &mdash; not just slide decks.</p>
+      </div>
+      <aside class="about-card">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div class="pfp" aria-hidden="true">RG</div>
+          <div>
+            <div class="name">Roberto Guido</div>
+            <div class="role">Founder · Engineer + MBA</div>
+          </div>
+        </div>
+        <dl>
+          <div class="row"><dt>Practice</dt><dd>Web &amp; AI agents</dd></div>
+          <div class="row"><dt>Based</dt><dd>San Diego · Tijuana</dd></div>
+          <div class="row"><dt>Languages</dt><dd>English · Spanish</dd></div>
+          <div class="row"><dt>Open to</dt><dd>SMB · startup · mid-market</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Final CTA ─────────────────── -->
+<section id="contact" class="section cta-bg">
+  <div class="wrap-wide">
+    <div class="cta-card">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2 class="display h2">Tell us what you&rsquo;re trying to build.</h2>
+        <p class="lede">A 30-minute call costs nothing and usually leaves you with at least one concrete idea &mdash; whether or not we end up working together.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+          Email us to book a call
+          <span class="arr" aria-hidden="true">→</span>
         </a>
-        <!-- Open Cita Logo -->
-        <a href="https://opencita.com" target="_blank" rel="noopener noreferrer" class="trust-logo fade-item delay-2"
-          style="text-decoration: none; color: inherit;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 100 100" fill="none"
-            class="product-icon-small scroll-arrow" style="transform-origin: center;">
-            <path d="M70,50 L30,20 L30,80 Z" stroke="#375586" stroke-width="8" stroke-linejoin="round" fill="none" />
-            <path d="M45,50 L15,25 L15,75 Z" stroke="#375586" stroke-width="8" stroke-linejoin="round" fill="none" />
-            <path d="M50,50 L35,40 L35,60 Z" fill="#4BECD7" />
-          </svg>
-          <span>Open Cita</span>
+        <p class="cta-meta">contact@technologyconsultants.ventures · Typical reply within 24 hrs · M – F</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ─────────────────── Footer ─────────────────── -->
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-brand" href="#top">
+          <span class="nav-mark" aria-hidden="true"></span>
+          <span style="color:#fff;">Technology Consultants</span>
         </a>
+        <p>A consulting practice run by builders. We design, build, and operate React web apps and AI agents.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Web development</a></li>
+          <li><a href="#services">AI agent consulting</a></li>
+          <li><a href="#how">Engagement models</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Our work</h5>
+        <ul>
+          <li><a href="https://appthelper.com" target="_blank" rel="noreferrer">Appt Helper</a></li>
+          <li><a href="https://opencita.com" target="_blank" rel="noreferrer">Open Cita</a></li>
+          <li><a href="#work">Border Bills</a></li>
+          <li><a href="#work">Baja Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="mailto:contact@technologyconsultants.ventures">Email us</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-
-
-  <!-- Core Philosophy & Contact (Softer, User-Friendly Layout) -->
-  <section id="about" class="philosophy-section theme-light">
-    <div class="philosophy-container">
-      <h2 class="section-title text-center fade-item">Core Principles.</h2>
-
-      <div class="friendly-list">
-        <div class="friendly-item fade-item delay-1">
-          <div class="friendly-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-          </div>
-          <div class="friendly-content">
-            <h4>Full-Stack Mastery</h4>
-            <p>From complex backend architectures to fluid user interfaces, we handle the entire engineering lifecycle.
-            </p>
-          </div>
-        </div>
-
-        <div class="friendly-item fade-item delay-2">
-          <div class="friendly-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-          </div>
-          <div class="friendly-content">
-            <h4>Enterprise Security</h4>
-            <p>Robust data protection and compliance woven into the fabric of every application we build.</p>
-          </div>
-        </div>
-
-        <div class="friendly-item fade-item delay-3">
-          <div class="friendly-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-              </path>
-            </svg>
-          </div>
-          <div class="friendly-content">
-            <h4>Rapid Open Delivery</h4>
-            <p>We deploy modern frameworks and accessible APIs to get your product to market faster without sacrificing
-              quality.</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="contact" class="friendly-contact fade-item delay-2">
-        <div class="friendly-content text-center">
-          <h4>Get in Touch</h4>
-          <p>For press, support, or general inquiries regarding our portfolio.</p>
-          <div class="cta-links" style="margin-bottom:0; justify-content:center;">
-            <a href="mailto:support@technologyconsultants.ventures" class="cta-primary cta-btn"
-              style="color:#fff; text-decoration:none;">Contact Support</a>
-          </div>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      <span class="small">&copy; 2026 Technology Consultants. All rights reserved.</span>
+      <span class="mono">v2026.05 · made by builders</span>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Global Footer -->
-  <footer class="global-footer">
-    <div class="footer-content">
-      <div class="footer-directory">
-        <div class="footer-column">
-          <h3>Parent Company</h3>
-          <ul>
-            <li><a href="#">About TC</a></li>
-            <li><a href="#">Philosophy</a></li>
-            <li><a href="#">Contact Support</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Subsidiaries</h3>
-          <ul>
-            <li><a href="#">Appt Helper</a></li>
-            <li><a href="#">Open Cita</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-legal">
-        <p>Copyright © <span id="year"></span> Technology Consultants. All rights reserved.</p>
-        <div class="legal-links">
-          <a href="#">Privacy Policy</a>
-          <span class="pipe">|</span>
-          <a href="#">Terms of Use</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script type="module" src="/src/main.ts"></script>
+<script defer src="hero-shapes.js"></script>
 </body>
-
 </html>

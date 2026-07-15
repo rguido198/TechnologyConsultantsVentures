@@ -1,0 +1,147 @@
+/* ──────────────────────────────────────────────────────────────────────
+   Technology Consultants Ventures — design tokens & base
+   Apple-inspired, warm, editorial.
+   ────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand palette (from existing TCV site) */
+  --blue:        #06c;
+  --blue-hover:  #0050a0;
+  --teal:        #4BECD7;
+  --teal-soft:   #b8f7ed;
+  --navy:        #375586;
+  --ink:         #1d1d1f;
+  --ink-soft:    #424246;
+  --ink-quiet:   #6e6e73;
+  --line:        #d2d2d7;
+  --line-soft:   #e8e8ed;
+  --bg:          #ffffff;
+  --bg-warm:     #faf7f0;
+  --bg-warm-2:   #f4efe5;
+  --bg-soft:     #f5f5f7;
+
+  /* Type (default — Editorial: Fraunces + Inter Tight) */
+  --font-display: "Fraunces", "Times New Roman", Georgia, serif;
+  --font-sans:    "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+  --display-weight: 460;
+  --display-tracking: -0.035em;
+
+  /* Radii */
+  --r-sm:  6px;
+  --r-md:  12px;
+  --r-lg:  20px;
+  --r-xl:  28px;
+
+  /* Rhythm */
+  --section-y: clamp(96px, 9vw, 144px);
+  --gutter-x:  clamp(20px, 4vw, 56px);
+  --max:       1200px;
+  --max-wide:  1320px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(20,22,30,.04);
+  --shadow-md: 0 12px 32px -16px rgba(20,22,30,.18);
+  --shadow-lg: 0 32px 64px -24px rgba(20,22,30,.22);
+}
+
+html[data-typography="modern"] {
+  --font-display: "Instrument Serif", "Times New Roman", Georgia, serif;
+  --font-sans:    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+}
+
+html[data-typography="classic"] {
+  --font-display: "Lora", "Times New Roman", Georgia, serif;
+  --font-sans:    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --display-weight: 500;
+  --display-tracking: -0.022em;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+::selection { background: var(--teal); color: var(--ink); }
+
+/* ── Layout ─────────────────────────────────────────────────────────── */
+.wrap        { max-width: var(--max);      margin: 0 auto; padding: 0 var(--gutter-x); }
+.wrap-wide   { max-width: var(--max-wide); margin: 0 auto; padding: 0 var(--gutter-x); }
+.wrap-narrow { max-width: 880px;           margin: 0 auto; padding: 0 var(--gutter-x); }
+
+.section    { padding: var(--section-y) 0; position: relative; }
+.section-sm { padding: clamp(56px, 6vw, 96px) 0; }
+
+/* ── Typography ────────────────────────────────────────────────────── */
+.eyebrow {
+  font: 600 12px/1 var(--font-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+.eyebrow.ink   { color: var(--ink); }
+.eyebrow.muted { color: var(--ink-quiet); }
+
+.display {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.02;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+.h1 { font-size: clamp(48px, 7.4vw, 104px); line-height: 0.98; }
+.h2 { font-size: clamp(38px, 4.8vw, 68px); line-height: 1.04; letter-spacing: -0.028em; }
+.h3 { font-size: clamp(28px, 3vw, 40px);   line-height: 1.1;  letter-spacing: -0.02em; }
+.h4 { font-size: clamp(22px, 1.9vw, 28px); line-height: 1.18; letter-spacing: -0.012em; }
+.display em { font-style: italic; font-weight: inherit; }
+
+/* Highlighter (teal block behind a word) */
+.mark { position: relative; display: inline; font-style: normal; z-index: 0; }
+.mark::after {
+  content: "";
+  position: absolute;
+  left: -0.06em; right: -0.06em;
+  bottom: 0.06em;
+  height: 0.36em;
+  background: var(--teal);
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.lede {
+  font-family: var(--font-sans);
+  font-size: clamp(18px, 1.45vw, 22px);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 40ch;
+  margin: 0;
+  text-wrap: pretty;
+}
+.body-lg { font-size: 19px; line-height: 1.55; color: var(--ink-soft); }
+.body    { font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+.small   { font-size: 13.5px; line-height: 1.45; color: var(--ink-quiet); }
+.mono    { font-family: var(--font-mono); }
+
+.dim { color: var(--ink-quiet); }
