@@ -1,130 +1,21 @@
-// Hero background: a living constellation of drifting nodes and connecting
-// lines, in brand teal/navy/blue, with an occasional pulse traveling along a
-// connection and gentle mouse parallax. Spans the whole hero as a genuine
-// background — brightness fades continuously near the copy (measured from
-// the real rendered text boxes) so it never fights legibility, instead of
-// being cut off in a hard box. Vanilla canvas, no framework needed.
+// Hero background: An interactive 3D perspective grid wave ("Chaos to Structure")
+// built with Vanilla HTML5 Canvas. As the page scrolls, the wave amplitude
+// dampens to 0 and the camera tilts, morphing fluid dynamic ripples into a
+// rigid, structured grid. Cursor movement deforms the grid locally.
 (function () {
   "use strict";
 
-  var COLORS = ["#4BECD7", "#375586", "#06c"];
-  var FEATHER = 120; // px over which brightness ramps from 0 to full near text
-  var MIN_ALPHA = 0.05; // never fully vanish behind copy — keeps it "whole hero"
-  var LINK_DIST_RATIO = 0.15;
-  var LINK_DIST_MIN = 90;
-  var LINK_DIST_MAX = 170;
-  var PARTICLE_AREA = 15000; // one particle per this many px² of hero
-  var PARTICLE_MIN = 26;
-  var PARTICLE_MAX = 70;
-  var DRIFT_SPEED = 0.10; // px/frame at 60fps baseline
-  var PARALLAX_MAX = 16; // px of camera shift toward the cursor
-  var PULSE_EVERY_MS = [1400, 3200]; // random interval between pulses
-  var PULSE_DURATION_MS = 950;
+  var COLORS = {
+    line: "rgba(55,85,134,", // Navy base
+    dot: "rgba(75,236,215,"  // Teal highlight
+  };
 
   var reduceMotion =
     window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function rand(min, max) {
-    return min + Math.random() * (max - min);
-  }
-
-  function smoothstep(edge0, edge1, x) {
-    var t = Math.min(1, Math.max(0, (x - edge0) / (edge1 - edge0)));
-    return t * t * (3 - 2 * t);
-  }
-
-  // Rectangles (in hero-local coordinates) that the copy occupies. Brightness
-  // fades toward 0 as a particle nears one of these, full-strength once it
-  // clears FEATHER px past the edge — measured live, not guessed.
-  function computeTextBoxes(hero) {
-    var heroBox = hero.getBoundingClientRect();
-    var metaRow = hero.querySelector(".hero-meta-row");
-    var h1 = hero.querySelector("h1");
-    var lede = hero.querySelector(".lede");
-    var ctaRow = hero.querySelector(".hero-cta-row");
-    var stats = hero.querySelector(".hero-stats");
-    var visual = hero.querySelector(".hero-visual");
-
-    function toLocal(el) {
-      if (!el) return null;
-      var b = el.getBoundingClientRect();
-      return {
-        left: b.left - heroBox.left,
-        top: b.top - heroBox.top,
-        right: b.right - heroBox.left,
-        bottom: b.bottom - heroBox.top,
-      };
-    }
-
-    var boxes = [];
-    // Meta row and stats each span the full row width already; the headline
-    // block only spans its own text width, so union it with the lede/CTA.
-    [metaRow, stats, visual].forEach(function (el) {
-      var b = toLocal(el);
-      if (b) boxes.push(b);
-    });
-    var copyRight = 0;
-    [h1, lede].forEach(function (el) {
-      var b = toLocal(el);
-      if (b) copyRight = Math.max(copyRight, b.right);
-    });
-    if (ctaRow) {
-      for (var i = 0; i < ctaRow.children.length; i++) {
-        copyRight = Math.max(copyRight, toLocal(ctaRow.children[i]).right);
-      }
-    }
-    var h1Box = toLocal(h1);
-    var ctaBox = toLocal(ctaRow);
-    if (h1Box && ctaBox) {
-      boxes.push({ left: 0, top: h1Box.top, right: copyRight, bottom: ctaBox.bottom });
-    }
-    return boxes;
-  }
-
-  // 0 = fully dimmed (inside a text box), 1 = full brightness.
-  function textFadeAt(x, y, boxes) {
-    var minFactor = 1;
-    for (var i = 0; i < boxes.length; i++) {
-      var b = boxes[i];
-      var dx = x < b.left ? b.left - x : x > b.right ? x - b.right : 0;
-      var dy = y < b.top ? b.top - y : y > b.bottom ? y - b.bottom : 0;
-      var dist = Math.sqrt(dx * dx + dy * dy);
-      var factor = smoothstep(0, FEATHER, dist);
-      if (factor < minFactor) minFactor = factor;
-    }
-    return MIN_ALPHA + (1 - MIN_ALPHA) * minFactor;
-  }
-
-  function makeParticles(width, height, count) {
-    var list = [];
-    for (var i = 0; i < count; i++) {
-      var angle = rand(0, Math.PI * 2);
-      list.push({
-        x: rand(0, width),
-        y: rand(0, height),
-        vx: Math.cos(angle) * DRIFT_SPEED * rand(0.5, 1.5),
-        vy: Math.sin(angle) * DRIFT_SPEED * rand(0.5, 1.5),
-        r: rand(1.4, 3.2),
-        color: COLORS[i % COLORS.length],
-      });
-    }
-    return list;
-  }
-
-  function hexToRgb(hex) {
-    var v = parseInt(hex.replace("#", ""), 16);
-    var r, g, b;
-    if (hex.length === 4) {
-      r = ((v >> 8) & 0xf) * 17;
-      g = ((v >> 4) & 0xf) * 17;
-      b = (v & 0xf) * 17;
-    } else {
-      r = (v >> 16) & 0xff;
-      g = (v >> 8) & 0xff;
-      b = v & 0xff;
-    }
-    return r + "," + g + "," + b;
+  function lerp(start, end, amt) {
+    return (1 - amt) * start + amt * end;
   }
 
   function init() {
@@ -143,46 +34,48 @@
       height = 0,
       activeHeight = 0,
       dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var particles = [];
-    var textBoxes = [];
-    var linkDist = 120;
 
-    var lastScrollY = window.scrollY;
-    var smoothScrollDeltaY = 0;
+    // 3D Grid Parameters
+    var cols = 28;
+    var rows = 24;
+    var spacing = 52;
+    var maxAmplitude = 34;
+    
+    // Camera settings
+    var fov = 420;
+    var camZ = -440;
 
-    var pointer = { x: null, y: null, targetX: 0, targetY: 0, curX: 0, curY: 0 };
+    var pointer = { x: null, y: null };
     hero.addEventListener("mousemove", function (e) {
       var box = hero.getBoundingClientRect();
-      var nx = (e.clientX - box.left) / box.width - 0.5;
-      var ny = (e.clientY - box.top) / box.height - 0.5;
-      pointer.targetX = -nx * PARALLAX_MAX * 2;
-      pointer.targetY = -ny * PARALLAX_MAX * 2;
+      pointer.x = e.clientX - box.left;
+      pointer.y = e.clientY - box.top;
     });
     hero.addEventListener("mouseleave", function () {
-      pointer.targetX = 0;
-      pointer.targetY = 0;
+      pointer.x = null;
+      pointer.y = null;
     });
 
-    var pulse = null; // { a, b, start, duration }
-    function maybeStartPulse(now) {
-      if (reduceMotion) return;
-      if (pulse && now - pulse.start < pulse.duration) return;
-      var links = [];
-      for (var i = 0; i < particles.length; i++) {
-        for (var j = i + 1; j < particles.length; j++) {
-          var dx = particles[i].x - particles[j].x;
-          var dy = particles[i].y - particles[j].y;
-          if (Math.sqrt(dx * dx + dy * dy) < linkDist) links.push([particles[i], particles[j]]);
-        }
-      }
-      if (!links.length) return;
-      var pick = links[Math.floor(Math.random() * links.length)];
-      pulse = {
-        a: pick[0],
-        b: pick[1],
-        start: now,
-        duration: PULSE_DURATION_MS,
-        next: now + rand(PULSE_EVERY_MS[0], PULSE_EVERY_MS[1]),
+    function project3D(x, y, z, pitch, yaw, camDist, centerX, centerY) {
+      // Yaw rotation (around Y axis)
+      var cosY = Math.cos(yaw), sinY = Math.sin(yaw);
+      var x1 = x * cosY - z * sinY;
+      var z1 = x * sinY + z * cosY;
+
+      // Pitch rotation (around X axis)
+      var cosX = Math.cos(pitch), sinX = Math.sin(pitch);
+      var y2 = y * cosX - z1 * sinX;
+      var z1Rot = y * sinX + z1 * cosX;
+
+      // Perspective projection
+      var depth = z1Rot - camDist;
+      if (depth <= 0) return null;
+
+      var scale = fov / depth;
+      return {
+        x: centerX + x1 * scale,
+        y: centerY + y2 * scale,
+        scale: scale
       };
     }
 
@@ -196,117 +89,146 @@
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      // The hero can be much taller than its visible "open" area once a
-      // full-width screenshot sits below the copy — spreading a fixed
-      // particle budget across the whole height would waste most of them
-      // behind that opaque image. Confine spawning/movement to the region
-      // above it, where the constellation is actually seen.
-      var visual = hero.querySelector(".hero-visual");
+      // Sizing adaptations for smaller devices
+      if (width < 600) {
+        cols = 16;
+        rows = 14;
+        spacing = 32;
+        maxAmplitude = 20;
+        fov = 300;
+        camZ = -320;
+      } else if (width < 1000) {
+        cols = 22;
+        rows = 18;
+        spacing = 42;
+        maxAmplitude = 26;
+        fov = 380;
+        camZ = -380;
+      } else {
+        cols = 28;
+        rows = 24;
+        spacing = 52;
+        maxAmplitude = 34;
+        fov = 420;
+        camZ = -440;
+      }
+
       activeHeight = height;
+      var visual = hero.querySelector(".hero-visual");
       if (visual) {
         var visualTop = visual.getBoundingClientRect().top - box.top;
         if (visualTop > 120) activeHeight = visualTop;
       }
-
-      var count = Math.round(
-        Math.max(PARTICLE_MIN, Math.min(PARTICLE_MAX, (width * activeHeight) / PARTICLE_AREA))
-      );
-      particles = makeParticles(width, activeHeight, count);
-      linkDist = Math.max(LINK_DIST_MIN, Math.min(LINK_DIST_MAX, Math.min(width, activeHeight) * LINK_DIST_RATIO));
-      textBoxes = computeTextBoxes(hero);
     }
 
     function step(now) {
       if (width && height) {
-        pointer.curX += (pointer.targetX - pointer.curX) * 0.08;
-        pointer.curY += (pointer.targetY - pointer.curY) * 0.08;
-
         ctx.clearRect(0, 0, width, height);
-        ctx.save();
-        ctx.translate(pointer.curX, pointer.curY);
 
-        if (!reduceMotion) {
-          var currentScrollY = window.scrollY;
-          var scrollDeltaY = currentScrollY - lastScrollY;
-          lastScrollY = currentScrollY;
-          smoothScrollDeltaY += (scrollDeltaY - smoothScrollDeltaY) * 0.1;
+        var currentScrollY = window.scrollY;
+        // Limit transitions within the active height bounds of the hero
+        var scrollPct = Math.min(currentScrollY / (activeHeight || 600), 1);
+        
+        // Morph grid parameters by scroll percentage
+        var amplitude = maxAmplitude * (1 - scrollPct);
+        var pitch = lerp(0.65, 1.25, scrollPct);
+        var yaw = lerp(0.20, 0.0, scrollPct);
+        var curCamZ = lerp(camZ, camZ - 60, scrollPct);
 
-          var driftBiasY = Math.max(-8, Math.min(8, -smoothScrollDeltaY * 0.12));
+        var projectedPoints = [];
+        var time = now * 0.001; // seconds
 
-          particles.forEach(function (p) {
-            var speedBoost = 1 + Math.min(Math.abs(smoothScrollDeltaY) * 0.08, 4);
-            p.x += p.vx * speedBoost;
-            p.y += p.vy * speedBoost + driftBiasY;
-            if (p.x < -20) p.x = width + 20;
-            if (p.x > width + 20) p.x = -20;
-            if (p.y < -20) p.y = activeHeight + 20;
-            if (p.y > activeHeight + 20) p.y = -20;
-          });
-          maybeStartPulse(now);
-        }
+        // 1. Calculate and project grid coordinates
+        for (var gx = 0; gx < cols; gx++) {
+          projectedPoints[gx] = [];
+          for (var gy = 0; gy < rows; gy++) {
+            // Coordinate relative to center of the grid plane
+            var x3d = (gx - (cols - 1) / 2) * spacing;
+            var z3d = (gy - (rows - 1) / 2) * spacing;
 
-        // Connections first, underneath the nodes.
-        for (var i = 0; i < particles.length; i++) {
-          for (var j = i + 1; j < particles.length; j++) {
-            var a = particles[i],
-              b = particles[j];
-            var dx = a.x - b.x,
-              dy = a.y - b.y;
-            var dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist >= linkDist) continue;
-            var proximity = 1 - dist / linkDist;
-            var fadeA = textFadeAt(a.x, a.y, textBoxes);
-            var fadeB = textFadeAt(b.x, b.y, textBoxes);
-            var alpha = proximity * 0.35 * Math.min(fadeA, fadeB);
-            if (alpha < 0.01) continue;
-            ctx.strokeStyle = "rgba(55,85,134," + alpha.toFixed(3) + ")";
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.stroke();
+            var y3d = 0;
+            if (!reduceMotion && amplitude > 0.1) {
+              // Sine wave combinations
+              var waveVal = Math.sin(gx * 0.26 + time * 1.3) * Math.cos(gy * 0.22 + time * 1.1);
+              waveVal += Math.sin((gx + gy) * 0.14 - time * 0.8) * 0.28;
+              y3d = waveVal * amplitude;
+            }
+
+            // Project 3D point to 2D Screen
+            var p2d = project3D(x3d, y3d, z3d, pitch, yaw, curCamZ, width / 2, height / 2.3);
+
+            // Apply interactive mouse magnetic force
+            if (p2d && pointer.x !== null && pointer.y !== null && !reduceMotion) {
+              var dx = p2d.x - pointer.x;
+              var dy = p2d.y - pointer.y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 160) {
+                var force = 1 - dist / 160;
+                // Pull vertical coordinate in 3D downwards
+                y3d += -45 * force * force * (1 - scrollPct);
+                // Re-project
+                p2d = project3D(x3d, y3d, z3d, pitch, yaw, curCamZ, width / 2, height / 2.3);
+              }
+            }
+
+            projectedPoints[gx][gy] = p2d;
           }
         }
 
-        // Nodes, with a soft glow.
-        particles.forEach(function (p) {
-          var fade = textFadeAt(p.x, p.y, textBoxes);
-          var alpha = 0.55 * fade;
-          if (alpha < 0.01) return;
-          var rgb = hexToRgb(p.color);
-          ctx.beginPath();
-          ctx.fillStyle = "rgba(" + rgb + "," + alpha.toFixed(3) + ")";
-          ctx.shadowColor = "rgba(" + rgb + "," + (0.5 * fade).toFixed(3) + ")";
-          ctx.shadowBlur = 6;
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fill();
-        });
-        ctx.shadowBlur = 0;
+        // 2. Draw connections (lines)
+        ctx.strokeStyle = COLORS.line + (0.16 * (1 - scrollPct * 0.35)).toFixed(3) + ")";
+        ctx.lineWidth = 1.2;
 
-        // A bright pulse traveling along one active connection at a time.
-        if (pulse && now - pulse.start < pulse.duration) {
-          var t = (now - pulse.start) / pulse.duration;
-          var px = pulse.a.x + (pulse.b.x - pulse.a.x) * t;
-          var py = pulse.a.y + (pulse.b.y - pulse.a.y) * t;
-          var pf = textFadeAt(px, py, textBoxes);
-          var pAlpha = Math.sin(t * Math.PI) * pf;
-          if (pAlpha > 0.02) {
+        for (var gx = 0; gx < cols; gx++) {
+          for (var gy = 0; gy < rows; gy++) {
+            var p = projectedPoints[gx][gy];
+            if (!p) continue;
+
+            if (gx < cols - 1) {
+              var pRight = projectedPoints[gx + 1][gy];
+              if (pRight) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(pRight.x, pRight.y);
+                ctx.stroke();
+              }
+            }
+            if (gy < rows - 1) {
+              var pBottom = projectedPoints[gx][gy + 1];
+              if (pBottom) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(pBottom.x, pBottom.y);
+                ctx.stroke();
+              }
+            }
+          }
+        }
+
+        // 3. Draw grid nodes (intersection dots)
+        for (var gx = 0; gx < cols; gx++) {
+          for (var gy = 0; gy < rows; gy++) {
+            var p = projectedPoints[gx][gy];
+            if (!p) continue;
+
+            // Fade grid edges dynamically to prevent hard borders
+            var edgeFactorX = Math.sin((gx / (cols - 1)) * Math.PI);
+            var edgeFactorY = Math.sin((gy / (rows - 1)) * Math.PI);
+            var vignette = edgeFactorX * edgeFactorY;
+
+            var dotAlpha = 0.65 * vignette * (1 - scrollPct * 0.3);
+            if (dotAlpha < 0.01) continue;
+
             ctx.beginPath();
-            ctx.fillStyle = "rgba(75,236,215," + pAlpha.toFixed(3) + ")";
-            ctx.shadowColor = "rgba(75,236,215," + pAlpha.toFixed(3) + ")";
-            ctx.shadowBlur = 10;
-            ctx.arc(px, py, 2.6, 0, Math.PI * 2);
+            ctx.fillStyle = COLORS.dot + dotAlpha.toFixed(3) + ")";
+            var r = Math.max(0.8, 1.6 * p.scale);
+            ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
             ctx.fill();
-            ctx.shadowBlur = 0;
           }
-        } else if (pulse && now >= pulse.next) {
-          pulse.start = now;
         }
-
-        ctx.restore();
       }
 
-      if (!reduceMotion) requestAnimationFrame(step);
+      requestAnimationFrame(step);
     }
 
     if (typeof ResizeObserver === "function") {
@@ -327,12 +249,9 @@
       });
     }
 
+    // Force initial sizing calculations
+    resize();
     requestAnimationFrame(step);
-    if (reduceMotion) {
-      // Draw a couple of extra static frames shortly after layout settles,
-      // since resize() (and therefore the first draw) may run async.
-      setTimeout(function () { requestAnimationFrame(step); }, 300);
-    }
   }
 
   if (document.readyState === "loading") {
