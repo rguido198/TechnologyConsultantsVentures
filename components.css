@@ -215,6 +215,14 @@
 
 .hero h1 { max-width: 17ch; margin: 0; }
 .hero .lede { margin-top: clamp(20px, 2vw, 32px); max-width: 46ch; }
+.gradient-text {
+  background: linear-gradient(135deg, #4BECD7, #06c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+}
 .hero-cta-row {
   margin-top: clamp(32px, 3vw, 48px);
   display: flex; gap: 12px; flex-wrap: wrap;
