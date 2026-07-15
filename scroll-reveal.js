@@ -311,87 +311,56 @@
   // How We Work: Pinned slide deck scrub for desktop
   var mm = gsap.matchMedia();
   mm.add("(min-width: 901px)", function () {
-    // Pin container
-    var cells = gsap.utils.toArray(".how-cell");
-    var progressEl = document.querySelector(".how-timeline-progress");
+    // Pin left column
+    ScrollTrigger.create({
+      trigger: ".how-container",
+      start: "top 104px",
+      end: "bottom bottom",
+      pin: ".how-left",
+      pinSpacing: false
+    });
 
+    // Animate progress line
+    var progressEl = document.querySelector(".how-timeline-progress");
+    if (progressEl) {
+      gsap.fromTo(progressEl,
+        { height: "0%" },
+        {
+          height: "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".how-grid",
+            start: "top 30%",
+            end: "bottom 70%",
+            scrub: true
+          }
+        }
+      );
+    }
+
+    // Toggle active state on scroll
+    var cells = gsap.utils.toArray(".how-cell");
     if (cells.length) {
       cells[0].classList.add("active");
-
-      // Single ScrollTrigger to handle pinning and scrubbing together (prevents positioning fights)
-      var tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".how-container",
-          start: "top 104px",
-          end: "+=" + (window.innerHeight * 1.5),
-          scrub: true,
-          pin: true,
-          id: "how-scrub-and-pin"
-        }
-      });
-
-      cells.forEach(function (cell, idx) {
-        var targetProgress = ((idx + 1) / cells.length) * 100;
-
-        if (idx > 0) {
-          var prevCell = cells[idx - 1];
-
-          // Cross-fade stacked elements
-          tl.to(prevCell, {
-            autoAlpha: 0,
-            scale: 0.94,
-            y: -20,
-            duration: 0.8,
-            ease: "power1.inOut",
-            onStart: function () {
-              prevCell.classList.remove("active");
-              prevCell.style.pointerEvents = "none";
-            },
-            onReverseComplete: function () {
-              prevCell.classList.add("active");
-              prevCell.style.pointerEvents = "auto";
-            }
-          }, idx * 1.5 - 0.8);
-
-          tl.to(cell, {
-            autoAlpha: 1,
-            scale: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power1.inOut",
-            onStart: function () {
-              cell.classList.add("active");
-              cell.style.pointerEvents = "auto";
-              var dot = document.querySelector('.how-timeline-dot[data-step="' + (idx + 1) + '"]');
-              if (dot) dot.classList.add("active");
-            },
-            onReverseComplete: function () {
-              cell.classList.remove("active");
-              cell.style.pointerEvents = "none";
-              var dot = document.querySelector('.how-timeline-dot[data-step="' + (idx + 1) + '"]');
-              if (dot) dot.classList.remove("active");
-            }
-          }, idx * 1.5 - 0.8);
-        }
-
-        if (progressEl) {
-          tl.to(progressEl, {
-            height: targetProgress + "%",
-            duration: 0.7,
-            ease: "none"
-          }, idx * 1.5 - 0.5);
-        }
-      });
     }
+    
+    cells.forEach(function (cell) {
+      ScrollTrigger.create({
+        trigger: cell,
+        start: "top 55%",
+        end: "bottom 45%",
+        onToggle: function (self) {
+          if (self.isActive) {
+            cells.forEach(function (c) { c.classList.remove("active"); });
+            cell.classList.add("active");
+          }
+        }
+      });
+    });
 
     return function () {
       var cells = gsap.utils.toArray(".how-cell");
-      cells.forEach(function (c) {
-        c.classList.remove("active");
-        c.style.opacity = "";
-        c.style.transform = "";
-        c.style.pointerEvents = "";
-      });
+      cells.forEach(function (c) { c.classList.remove("active"); });
     };
   });
 })();
