@@ -1037,21 +1037,26 @@
 }
 .cta-form input,
 .cta-form textarea {
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--r-md);
   padding: 14px 18px;
   font: inherit;
-  color: var(--ink);
+  color: #fff;
   outline: none;
-  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+.cta-form input::placeholder,
+.cta-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+  opacity: 1; /* override browser default opacity */
+}
 .cta-form input:focus,
 .cta-form textarea:focus {
-  border-color: var(--navy);
-  background: #fff;
+  border-color: var(--teal);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 0 4px rgba(75, 236, 215, 0.2);
 }
 .cta-form button[type="submit"] {
@@ -1060,9 +1065,9 @@
 .form-success-message {
   margin-top: 8px;
   font: 500 14px var(--font-sans);
-  color: #1a7f37;
-  background: #dafbe1;
-  border: 1px solid rgba(26, 127, 55, 0.2);
+  color: var(--teal);
+  background: rgba(75, 236, 215, 0.08);
+  border: 1px solid rgba(75, 236, 215, 0.25);
   border-radius: var(--r-md);
   padding: 12px 16px;
   animation: formSuccessFade 0.4s ease forwards;
