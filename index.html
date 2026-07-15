@@ -13,32 +13,6 @@
 
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="components.css" />
-
-<!-- Placeholder styling for case-study image slots until real screenshots are added -->
-<style>
-  .case-placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-    font: 500 13px/1.4 var(--font-sans);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: var(--ink-quiet);
-  }
-  .case-placeholder::before {
-    content: "";
-    position: absolute;
-    inset: 16px;
-    border: 1px dashed var(--line);
-    border-radius: var(--r-md);
-    pointer-events: none;
-  }
-  .case-placeholder span { position: relative; }
-</style>
 </head>
 <body>
 
@@ -67,49 +41,59 @@
 <section class="hero">
   <div class="hero-shapes" data-hero-shapes aria-hidden="true"></div>
   <div class="wrap-wide hero-inner">
-    <div class="hero-meta-row">
-      <p class="eyebrow">Technology Consultants</p>
-      <span class="sep" aria-hidden="true"></span>
-      <span class="meta">Web Applications &amp; AI Agents</span>
-      <span class="sep" aria-hidden="true"></span>
-      <span class="meta"><span class="dot" aria-hidden="true"></span>Booking projects · Q3 2026</span>
+    <div class="hero-copy">
+      <div class="hero-meta-row">
+        <p class="eyebrow">Technology Consultants</p>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="meta">Web Applications &amp; AI Agents</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="meta"><span class="dot" aria-hidden="true"></span>Booking projects · Q3 2026</span>
+      </div>
+
+      <h1 class="display h1">We design, build, and run software people rely on.</h1>
+
+      <p class="lede">
+        This is <strong>Appt&nbsp;Helper</strong> &mdash; one of four production products we&rsquo;ve built and operate
+        ourselves. It watches Global&nbsp;Entry &amp; SENTRI appointment slots 24/7 and texts travelers the instant
+        one opens. We bring the same senior team to client work &mdash; web apps and AI agents alike.
+      </p>
+
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+          Book a 30-min strategy call
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn-ghost" href="#work">See what we&rsquo;ve built</a>
+      </div>
+
+      <div class="hero-stats" aria-label="How we work">
+        <div class="hero-stat">
+          <div class="n">In production.</div>
+          <div class="l">Real users today on Appt Helper, Open Cita, Border Bills.</div>
+        </div>
+        <div class="hero-stat">
+          <div class="n">Senior team.</div>
+          <div class="l">The people who pitch your project ship&nbsp;it.</div>
+        </div>
+        <div class="hero-stat">
+          <div class="n">Code first.</div>
+          <div class="l">No decks before working software.</div>
+        </div>
+        <div class="hero-stat">
+          <div class="n">One team.</div>
+          <div class="l">Web apps and AI agents &mdash; same engineers, same stack.</div>
+        </div>
+      </div>
     </div>
 
-    <h1 class="display h1">
-      We build web applications. The ones worth building right now have <em>AI agents</em> in them.
-    </h1>
-
-    <p class="lede">
-      A consulting practice run by builders who ship their own products. We design, build, and operate
-      the web applications your business runs on &mdash; using the same stack that powers
-      Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care.
-    </p>
-
-    <div class="hero-cta-row">
-      <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
-        Book a 30-min strategy call
-        <span class="arr" aria-hidden="true">→</span>
-      </a>
-      <a class="btn btn-ghost" href="#work">See what we&rsquo;ve built</a>
-    </div>
-
-    <div class="hero-stats" aria-label="How we work">
-      <div class="hero-stat">
-        <div class="n">In production.</div>
-        <div class="l">Real users today on Appt Helper, Open Cita, Border Bills.</div>
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <img
+          src="images/appt-helper.jpg"
+          alt="Appt Helper live dashboard: a real-time feed of Global Entry and SENTRI appointment slots being claimed at enrollment centers across the US"
+          width="1200" height="630" loading="eager" />
       </div>
-      <div class="hero-stat">
-        <div class="n">Senior team.</div>
-        <div class="l">The people who pitch your project ship&nbsp;it.</div>
-      </div>
-      <div class="hero-stat">
-        <div class="n">Code first.</div>
-        <div class="l">No decks before working software.</div>
-      </div>
-      <div class="hero-stat">
-        <div class="n">One team.</div>
-        <div class="l">Web apps and AI agents &mdash; same engineers, same stack.</div>
-      </div>
+      <p class="hero-visual-caption">Appt Helper &mdash; a live product, not a mockup</p>
     </div>
   </div>
 </section>
@@ -124,12 +108,12 @@
     <div class="trust-grid">
       <a class="trust-cell" href="https://appthelper.com" target="_blank" rel="noreferrer">
         <div class="name">Appt Helper</div>
-        <div class="tag">Appointment infrastructure for schedule-driven businesses</div>
+        <div class="tag">Global Entry &amp; SENTRI appointment alerts, 24/7</div>
         <div class="status">Live · appthelper.com</div>
       </a>
       <a class="trust-cell" href="https://opencita.com" target="_blank" rel="noreferrer">
         <div class="name">Open Cita</div>
-        <div class="tag">Booking, simplified. Spanish-first markets.</div>
+        <div class="tag">The same alerts, built for Spanish-speaking travelers</div>
         <div class="status">Live · opencita.com</div>
       </a>
       <a class="trust-cell" href="#work">
@@ -234,15 +218,15 @@
 
       <article class="case">
         <div class="case-media">
-          <div class="case-placeholder"><span>Drop Appt Helper screenshot</span></div>
+          <img src="images/appt-helper.jpg" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">
             <span class="case-name">Appt Helper</span>
             <span class="case-status">Live · appthelper.com</span>
           </div>
-          <h3 class="case-title">Appointment infrastructure for businesses that live and die by their schedule.</h3>
-          <p class="case-desc">A scheduling platform for service businesses where every missed appointment is real money lost. Multi-tenant, SMS &amp; email reminders, calendar sync, embeddable booking widget.</p>
+          <h3 class="case-title">Global Entry &amp; SENTRI slots vanish in minutes. We built the alert that catches them.</h3>
+          <p class="case-desc">A consumer monitoring service that watches all 184 U.S. Trusted Traveler enrollment centers 24/7 and texts travelers the instant a cancellation opens &mdash; turning a 4-to-11-month wait into days.</p>
           <div class="case-foot">
             <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio</span>
             <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">Visit <span class="arr">↗</span></a>
@@ -252,15 +236,15 @@
 
       <article class="case">
         <div class="case-media">
-          <div class="case-placeholder"><span>Drop Open Cita screenshot</span></div>
+          <img src="images/open-cita.jpg" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">
             <span class="case-name">Open Cita</span>
             <span class="case-status">Live · opencita.com</span>
           </div>
-          <h3 class="case-title">Booking, simplified. For Spanish-first service businesses.</h3>
-          <p class="case-desc">An online appointment platform designed for Spanish-speaking service businesses underserved by US-built scheduling tools &mdash; built on the same engine as Appt Helper.</p>
+          <h3 class="case-title">The same alert engine, rebuilt in Spanish for the travelers it was missing.</h3>
+          <p class="case-desc">Open Cita is Appt Helper&rsquo;s Spanish-language mirror &mdash; the same 24/7 monitoring and instant SMS alerts, fully localized for Spanish-speaking travelers pursuing Global Entry, SENTRI, and NEXUS.</p>
           <div class="case-foot">
             <span class="case-stack mono">TypeScript · Next.js · next-intl · Postgres</span>
             <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">Visit <span class="arr">↗</span></a>
@@ -270,7 +254,7 @@
 
       <article class="case">
         <div class="case-media">
-          <div class="case-placeholder"><span>Drop Border Bills screenshot</span></div>
+          <div class="case-placeholder"><span>Screenshot coming soon</span></div>
         </div>
         <div class="case-body">
           <div class="case-meta">
@@ -288,7 +272,7 @@
 
       <article class="case" data-status="dev">
         <div class="case-media">
-          <div class="case-placeholder"><span>Drop Baja Care mockup</span></div>
+          <div class="case-placeholder"><span>Screenshot coming soon</span></div>
         </div>
         <div class="case-body">
           <div class="case-meta">
@@ -381,90 +365,6 @@
   </div>
 </section>
 
-<!-- ─────────────────── Why us ─────────────────── -->
-<section class="section why-bg">
-  <div class="wrap-wide">
-    <header class="sec-head">
-      <div>
-        <p class="eyebrow">Why teams pick us</p>
-        <h2 class="display h2">The differences <em>that</em> matter.</h2>
-      </div>
-      <p class="lede">Four small things that compound across an engagement. They&rsquo;re what we&rsquo;d look for if we were buying the service instead of selling it.</p>
-    </header>
-
-    <div class="why-grid">
-      <div class="why-item">
-        <span class="n">01 &mdash; Operators, not just advisors</span>
-        <h3 class="display h3">Products in production. Real users, real revenue.</h3>
-        <p class="body">Our recommendations come from the trenches &mdash; cancellations at 2&nbsp;AM, payment edge cases, real customer support tickets &mdash; not from a slide deck.</p>
-      </div>
-      <div class="why-item">
-        <span class="n">02 — Senior team, no bait-and-switch</span>
-        <h3 class="display h3">The people who pitch your project are the people who ship it.</h3>
-        <p class="body">No offshore handoff, no junior team you didn&rsquo;t sign up for. The first call is with the people writing the code.</p>
-      </div>
-      <div class="why-item">
-        <span class="n">03 — Stack we know cold</span>
-        <h3 class="display h3">React, TypeScript, Node, Python, Postgres, and modern AI tooling.</h3>
-        <p class="body">We don&rsquo;t pick stacks we can&rsquo;t operate at 2 AM. Claude, OpenAI, MCP, and agent frameworks are everyday tools here, not a learning curve we&rsquo;re billing you for.</p>
-      </div>
-      <div class="why-item">
-        <span class="n">04 — Reliability from day one</span>
-        <h3 class="display h3">Auth, data protection, observability, and a deployment story we can defend.</h3>
-        <p class="body">Not bolted on later. Every product we ship has the boring fundamentals in place before the marketing site goes live.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────────────── AI capabilities ─────────────────── -->
-<section class="section ai-bg">
-  <div class="wrap-wide">
-    <header class="sec-head">
-      <div>
-        <p class="eyebrow">AI agents — in practice</p>
-        <h2 class="display h2">What we <em>actually</em> build.</h2>
-      </div>
-      <p class="lede">Three patterns we&rsquo;ve shipped &mdash; or are shipping right now. Adapt them to your data, tools, and guardrails.</p>
-    </header>
-
-    <div class="ai-grid">
-      <article class="ai-card">
-        <div class="n">A · Customer-facing</div>
-        <h4 class="display h4">Agents that talk to your users.</h4>
-        <p class="body">Support, sales-qualification, and intake agents that operate inside your existing tools &mdash; chat, email, your app &mdash; with handoff to humans when it matters.</p>
-        <ul>
-          <li>Intake &amp; triage</li>
-          <li>Knowledge-base search</li>
-          <li>Lead qualification</li>
-        </ul>
-      </article>
-
-      <article class="ai-card">
-        <div class="n">B · Internal workflow</div>
-        <h4 class="display h4">Agents that compress hours into minutes.</h4>
-        <p class="body">Research, triage, document generation, data reconciliation. Built on Claude Code, Cowork, or whichever runtime fits your team&rsquo;s reality.</p>
-        <ul>
-          <li>Document generation</li>
-          <li>Data reconciliation</li>
-          <li>Inbound ops triage</li>
-        </ul>
-      </article>
-
-      <article class="ai-card">
-        <div class="n">C · Custom skills &amp; MCP</div>
-        <h4 class="display h4">Specialist agents for your business.</h4>
-        <p class="body">The skills and connectors that turn a generic LLM into a specialist for your business: your data, your tools, your guardrails, your tone.</p>
-        <ul>
-          <li>MCP servers</li>
-          <li>Tool &amp; API connectors</li>
-          <li>Skill bundles &amp; prompts</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ─────────────────── About ─────────────────── -->
 <section id="about" class="section about-bg">
   <div class="wrap-wide">
@@ -484,7 +384,7 @@
       </div>
       <aside class="about-card">
         <div style="display:flex; align-items:center; gap:14px;">
-          <div class="pfp" aria-hidden="true">RG</div>
+          <div class="pfp"><img src="images/roberto.png" alt="Roberto Guido" width="64" height="64" /></div>
           <div>
             <div class="name">Roberto Guido</div>
             <div class="role">Founder · Engineer + MBA</div>

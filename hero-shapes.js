@@ -44,6 +44,7 @@
     var lede = hero.querySelector(".lede");
     var ctaRow = hero.querySelector(".hero-cta-row");
     var stats = hero.querySelector(".hero-stats");
+    var visual = hero.querySelector(".hero-visual");
 
     function toLocal(el) {
       if (!el) return null;
@@ -59,7 +60,7 @@
     var boxes = [];
     // Meta row and stats each span the full row width already; the headline
     // block only spans its own text width, so union it with the lede/CTA.
-    [metaRow, stats].forEach(function (el) {
+    [metaRow, stats, visual].forEach(function (el) {
       var b = toLocal(el);
       if (b) boxes.push(b);
     });
