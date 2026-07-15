@@ -147,6 +147,9 @@
     var textBoxes = [];
     var linkDist = 120;
 
+    var lastScrollY = window.scrollY;
+    var smoothScrollDeltaY = 0;
+
     var pointer = { x: null, y: null, targetX: 0, targetY: 0, curX: 0, curY: 0 };
     hero.addEventListener("mousemove", function (e) {
       var box = hero.getBoundingClientRect();
@@ -223,9 +226,17 @@
         ctx.translate(pointer.curX, pointer.curY);
 
         if (!reduceMotion) {
+          var currentScrollY = window.scrollY;
+          var scrollDeltaY = currentScrollY - lastScrollY;
+          lastScrollY = currentScrollY;
+          smoothScrollDeltaY += (scrollDeltaY - smoothScrollDeltaY) * 0.1;
+
+          var driftBiasY = Math.max(-8, Math.min(8, -smoothScrollDeltaY * 0.12));
+
           particles.forEach(function (p) {
-            p.x += p.vx;
-            p.y += p.vy;
+            var speedBoost = 1 + Math.min(Math.abs(smoothScrollDeltaY) * 0.08, 4);
+            p.x += p.vx * speedBoost;
+            p.y += p.vy * speedBoost + driftBiasY;
             if (p.x < -20) p.x = width + 20;
             if (p.x > width + 20) p.x = -20;
             if (p.y < -20) p.y = activeHeight + 20;

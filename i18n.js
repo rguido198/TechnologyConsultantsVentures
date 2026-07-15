@@ -318,6 +318,7 @@
 
     var toggle = document.querySelector("[data-lang-toggle]");
     if (toggle) toggle.textContent = TOGGLE_LABEL[lang];
+    window.dispatchEvent(new CustomEvent("i18n-update", { detail: { lang: lang } }));
   }
 
   function init() {

@@ -733,3 +733,110 @@
   color: rgba(255,255,255,0.55);
   letter-spacing: 0.04em;
 }
+
+/* ── Tech-Forward Scroll & Interaction Enhancements ──────────────── */
+
+/* Word clipping for text reveal */
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.word-inner {
+  display: inline-block;
+  transform: translateY(115%);
+  will-change: transform;
+}
+
+/* Sticky Timeline overrides for desktop */
+@media (min-width: 901px) {
+  .how-container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .how-left {
+    position: sticky;
+    top: 104px; /* accounts for navbar */
+    padding-bottom: 40px;
+  }
+  .how-left .sec-head {
+    display: block;
+    margin-bottom: 0;
+  }
+  .how-left .sec-head h2 {
+    margin-bottom: 24px;
+  }
+  .how-right {
+    position: relative;
+    padding-left: 48px;
+  }
+  .how-timeline-line {
+    position: absolute;
+    left: 18px;
+    top: 24px;
+    bottom: 24px;
+    width: 2px;
+    background: var(--line-soft);
+    z-index: 1;
+  }
+  .how-timeline-progress {
+    width: 100%;
+    height: 0%;
+    background: var(--teal);
+    box-shadow: 0 0 10px rgba(75,236,215,0.8);
+    transform-origin: top;
+    will-change: height;
+  }
+  .how-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-top: 0;
+    border-left: 0;
+  }
+  .how-cell {
+    border: 1px solid var(--line-soft);
+    border-right: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-sm);
+    background: #fff;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  }
+  .how-cell:hover {
+    background: var(--bg-warm);
+    box-shadow: var(--shadow-md);
+  }
+  .how-cell.active {
+    border-color: var(--navy);
+    box-shadow: var(--shadow-md);
+    background: #fff;
+  }
+  /* Bullet indicator */
+  .how-cell::after {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 36px;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--line-soft);
+    border: 2px solid var(--bg);
+    z-index: 3;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .how-cell.active::after {
+    background: var(--teal);
+    border-color: var(--navy);
+    box-shadow: 0 0 8px var(--teal);
+    transform: scale(1.2);
+  }
+}
