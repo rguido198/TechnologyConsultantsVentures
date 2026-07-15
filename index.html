@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Technology Consultants — We earn our advice by shipping</title>
-<meta name="description" content="A consulting practice run by builders. We design, build, and operate React web apps and AI agents for startups, SMBs, and mid-market teams." />
+<title data-i18n="meta.title">Technology Consultants — We earn our advice by shipping</title>
+<meta name="description" data-i18n-attr="content:meta.description" content="A consulting practice run by builders. We design, build, and operate React web apps and AI agents for startups, SMBs, and mid-market teams." />
 
 <!-- Typography: Editorial pairing (Fraunces + Inter Tight) + JetBrains Mono for accents -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,11 +25,12 @@
     </a>
     <nav>
       <ul class="nav-links">
-        <li class="nav-li"><a href="#services">Services</a></li>
-        <li class="nav-li"><a href="#work">Work</a></li>
-        <li class="nav-li"><a href="#how">How we work</a></li>
-        <li class="nav-li"><a href="#about">About</a></li>
-        <li><a class="nav-cta" href="#contact">Book a call</a></li>
+        <li class="nav-li"><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li class="nav-li"><a href="#work" data-i18n="nav.work">Work</a></li>
+        <li class="nav-li"><a href="#how" data-i18n="nav.how">How we work</a></li>
+        <li class="nav-li"><a href="#about" data-i18n="nav.about">About</a></li>
+        <li class="nav-li-lang"><button type="button" class="lang-toggle" data-lang-toggle>ES · Español</button></li>
+        <li><a class="nav-cta" href="#contact" data-i18n="nav.cta">Book a call</a></li>
       </ul>
     </nav>
   </div>
@@ -45,43 +46,43 @@
       <div class="hero-meta-row">
         <p class="eyebrow">Technology Consultants</p>
         <span class="sep" aria-hidden="true"></span>
-        <span class="meta">Web Applications &amp; AI Agents</span>
+        <span class="meta" data-i18n="hero.meta1">Web Applications &amp; AI Agents</span>
         <span class="sep" aria-hidden="true"></span>
-        <span class="meta"><span class="dot" aria-hidden="true"></span>Booking projects · Q3 2026</span>
+        <span class="meta"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.meta2">Booking projects · Q3 2026</span></span>
       </div>
 
-      <h1 class="display h1">We design, build, and run software people rely on.</h1>
+      <h1 class="display h1" data-i18n="hero.h1">We design, build, and run software people rely on.</h1>
 
-      <p class="lede">
+      <p class="lede" data-i18n="hero.lede">
         This is <strong>Appt&nbsp;Helper</strong> &mdash; one of four production products we&rsquo;ve built and operate
         ourselves. It watches Global&nbsp;Entry &amp; SENTRI appointment slots 24/7 and texts travelers the instant
         one opens. We bring the same senior team to client work &mdash; web apps and AI agents alike.
       </p>
 
       <div class="hero-cta-row">
-        <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
-          Book a 30-min strategy call
+        <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+          <span data-i18n="hero.cta.primary">Book a 30-min strategy call</span>
           <span class="arr" aria-hidden="true">→</span>
         </a>
-        <a class="btn btn-ghost" href="#work">See what we&rsquo;ve built</a>
+        <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">See what we&rsquo;ve built</a>
       </div>
 
       <div class="hero-stats" aria-label="How we work">
         <div class="hero-stat">
-          <div class="n">In production.</div>
-          <div class="l">Real users today on Appt Helper and Open Cita.</div>
+          <div class="n" data-i18n="hero.stat1.n">In production.</div>
+          <div class="l" data-i18n="hero.stat1.l">Real users today on Appt Helper and Open Cita.</div>
         </div>
         <div class="hero-stat">
-          <div class="n">Senior team.</div>
-          <div class="l">The people who pitch your project ship&nbsp;it.</div>
+          <div class="n" data-i18n="hero.stat2.n">Senior team.</div>
+          <div class="l" data-i18n="hero.stat2.l">The people who pitch your project ship&nbsp;it.</div>
         </div>
         <div class="hero-stat">
-          <div class="n">Code first.</div>
-          <div class="l">No decks before working software.</div>
+          <div class="n" data-i18n="hero.stat3.n">Code first.</div>
+          <div class="l" data-i18n="hero.stat3.l">No decks before working software.</div>
         </div>
         <div class="hero-stat">
-          <div class="n">One team.</div>
-          <div class="l">Web apps and AI agents &mdash; same engineers, same stack.</div>
+          <div class="n" data-i18n="hero.stat4.n">One team.</div>
+          <div class="l" data-i18n="hero.stat4.l">Web apps and AI agents &mdash; same engineers, same stack.</div>
         </div>
       </div>
     </div>
@@ -90,10 +91,11 @@
       <div class="hero-visual-frame">
         <img
           src="images/appt-helper.jpg"
+          data-i18n-alt="hero.visual.alt"
           alt="Appt Helper live dashboard: a real-time feed of Global Entry and SENTRI appointment slots being claimed at enrollment centers across the US"
           width="1200" height="630" loading="eager" />
       </div>
-      <p class="hero-visual-caption">Appt Helper &mdash; a live product, not a mockup</p>
+      <p class="hero-visual-caption" data-i18n="hero.visual.caption">Appt Helper &mdash; a live product, not a mockup</p>
     </div>
   </div>
 </section>
@@ -102,29 +104,29 @@
 <section class="trust">
   <div class="wrap-wide">
     <div class="trust-head">
-      <p class="eyebrow ink">Built by us — in production today</p>
-      <p class="small">Products we&rsquo;ve developed &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care. The same team builds for our clients.</p>
+      <p class="eyebrow ink" data-i18n="trust.eyebrow">Built by us — in production today</p>
+      <p class="small" data-i18n="trust.small">Products we&rsquo;ve developed &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care. The same team builds for our clients.</p>
     </div>
     <div class="trust-grid">
       <a class="trust-cell" href="https://appthelper.com" target="_blank" rel="noreferrer">
         <div class="name">Appt Helper</div>
-        <div class="tag">Global Entry &amp; SENTRI appointment alerts, 24/7</div>
-        <div class="status">Live · appthelper.com</div>
+        <div class="tag" data-i18n="trust.appt.tag">Global Entry &amp; SENTRI appointment alerts, 24/7</div>
+        <div class="status" data-i18n="trust.appt.status">Live · appthelper.com</div>
       </a>
       <a class="trust-cell" href="https://opencita.com" target="_blank" rel="noreferrer">
         <div class="name">Open Cita</div>
-        <div class="tag">The same alerts, built for Spanish-speaking travelers</div>
-        <div class="status">Live · opencita.com</div>
+        <div class="tag" data-i18n="trust.opencita.tag">The same alerts, built for Spanish-speaking travelers</div>
+        <div class="status" data-i18n="trust.opencita.status">Live · opencita.com</div>
       </a>
       <a class="trust-cell" data-status="dev" href="#work">
         <div class="name">Border Bills</div>
-        <div class="tag">Pay Mexican utility bills from the US — in seconds.</div>
-        <div class="status">In development</div>
+        <div class="tag" data-i18n="trust.border.tag">Pay Mexican utility bills from the US — in seconds.</div>
+        <div class="status" data-i18n="trust.dev.status">In development</div>
       </a>
       <a class="trust-cell" data-status="dev" href="#work">
         <div class="name">Baja Care</div>
-        <div class="tag">Medical tourism, made navigable.</div>
-        <div class="status">In development</div>
+        <div class="tag" data-i18n="trust.baja.tag">Medical tourism, made navigable.</div>
+        <div class="status" data-i18n="trust.dev.status">In development</div>
       </a>
     </div>
   </div>
@@ -135,10 +137,10 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow">What we do</p>
-        <h2 class="display h2">One team.<br />One <em>stack</em>.</h2>
+        <p class="eyebrow" data-i18n="services.eyebrow">What we do</p>
+        <h2 class="display h2" data-i18n="services.h2">One team.<br />One <em>stack</em>.</h2>
       </div>
-      <p class="lede">Web development and AI agents are the same discipline now. We run both with the same senior engineers who ship our own products &mdash; not advisors with a slide deck.</p>
+      <p class="lede" data-i18n="services.lede">Web development and AI agents are the same discipline now. We run both with the same senior engineers who ship our own products &mdash; not advisors with a slide deck.</p>
     </header>
 
     <div class="services-grid">
@@ -155,19 +157,19 @@
           <span class="service-tag">01 · Web</span>
         </div>
         <header>
-          <h3 class="display h3">React &amp; Full-Stack Web Development</h3>
-          <p class="sub">From MVP to scale.</p>
+          <h3 class="display h3" data-i18n="services.web.h3">React &amp; Full-Stack Web Development</h3>
+          <p class="sub" data-i18n="services.web.sub">From MVP to scale.</p>
         </header>
-        <p class="body">
+        <p class="body" data-i18n="services.web.body">
           We build modern web products end-to-end &mdash; React on the front end, TypeScript and Node on the back end, Postgres, and the infrastructure to run them. You get senior engineers who&rsquo;ve shipped to real users, not a junior team learning on your dime.
         </p>
         <ul class="service-list">
-          <li>Product architecture &amp; technical strategy</li>
-          <li>Full-stack design and build</li>
-          <li>API design, integrations, data modeling</li>
-          <li>Performance, security, observability</li>
-          <li>Mobile-responsive on every breakpoint</li>
-          <li>Handoff with docs &mdash; or we operate it</li>
+          <li data-i18n="services.web.li1">Product architecture &amp; technical strategy</li>
+          <li data-i18n="services.web.li2">Full-stack design and build</li>
+          <li data-i18n="services.web.li3">API design, integrations, data modeling</li>
+          <li data-i18n="services.web.li4">Performance, security, observability</li>
+          <li data-i18n="services.web.li5">Mobile-responsive on every breakpoint</li>
+          <li data-i18n="services.web.li6">Handoff with docs &mdash; or we operate it</li>
         </ul>
       </article>
 
@@ -183,19 +185,19 @@
           <span class="service-tag">02 · AI</span>
         </div>
         <header>
-          <h3 class="display h3">AI Agent Consulting</h3>
-          <p class="sub">Strategy, build, and adoption &mdash; without the hype.</p>
+          <h3 class="display h3" data-i18n="services.ai.h3">AI Agent Consulting</h3>
+          <p class="sub" data-i18n="services.ai.sub">Strategy, build, and adoption &mdash; without the hype.</p>
         </header>
-        <p class="body">
+        <p class="body" data-i18n="services.ai.body">
           Most &ldquo;AI strategies&rdquo; stall because nobody on the team has shipped an agent. We assess where AI actually moves the needle, design and build the agents that do the work, and roll them out so your team uses them on Monday morning.
         </p>
         <ul class="service-list">
-          <li>AI readiness audits &amp; roadmaps</li>
-          <li>Custom agent design &amp; implementation</li>
-          <li>Claude, OpenAI, open-source models</li>
-          <li>Skills, plugins, MCP servers</li>
-          <li>Team enablement &amp; training</li>
-          <li>Ongoing operations and tuning</li>
+          <li data-i18n="services.ai.li1">AI readiness audits &amp; roadmaps</li>
+          <li data-i18n="services.ai.li2">Custom agent design &amp; implementation</li>
+          <li data-i18n="services.ai.li3">Claude, OpenAI, open-source models</li>
+          <li data-i18n="services.ai.li4">Skills, plugins, MCP servers</li>
+          <li data-i18n="services.ai.li5">Team enablement &amp; training</li>
+          <li data-i18n="services.ai.li6">Ongoing operations and tuning</li>
         </ul>
       </article>
 
@@ -208,82 +210,82 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow">Selected work</p>
-        <h2 class="display h2">Products we&rsquo;ve built.<br />Lessons we bring to <em>yours</em>.</h2>
+        <p class="eyebrow" data-i18n="work.eyebrow">Selected work</p>
+        <h2 class="display h2" data-i18n="work.h2">Products we&rsquo;ve built.<br />Lessons we bring to <em>yours</em>.</h2>
       </div>
-      <p class="lede">Two are live today; two are in development. Same team, same stack, either way.</p>
+      <p class="lede" data-i18n="work.lede">Two are live today; two are in development. Same team, same stack, either way.</p>
     </header>
 
     <div class="work-grid">
 
       <article class="case">
         <div class="case-media">
-          <img src="images/appt-helper.jpg" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" />
+          <img src="images/appt-helper.jpg" data-i18n-alt="work.appt.alt" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">
             <span class="case-name">Appt Helper</span>
-            <span class="case-status">Live · appthelper.com</span>
+            <span class="case-status" data-i18n="trust.appt.status">Live · appthelper.com</span>
           </div>
-          <h3 class="case-title">Global Entry &amp; SENTRI slots vanish in minutes. We built the alert that catches them.</h3>
-          <p class="case-desc">A consumer monitoring service that watches all 184 U.S. Trusted Traveler enrollment centers 24/7 and texts travelers the instant a cancellation opens &mdash; turning a 4-to-11-month wait into days.</p>
+          <h3 class="case-title" data-i18n="work.appt.title">Global Entry &amp; SENTRI slots vanish in minutes. We built the alert that catches them.</h3>
+          <p class="case-desc" data-i18n="work.appt.desc">A consumer monitoring service that watches all 184 U.S. Trusted Traveler enrollment centers 24/7 and texts travelers the instant a cancellation opens &mdash; turning a 4-to-11-month wait into days.</p>
           <div class="case-foot">
             <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio</span>
-            <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">Visit <span class="arr">↗</span></a>
+            <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer"><span data-i18n="work.visit">Visit</span> <span class="arr">↗</span></a>
           </div>
         </div>
       </article>
 
       <article class="case">
         <div class="case-media">
-          <img src="images/open-cita.jpg" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" />
+          <img src="images/open-cita.jpg" data-i18n-alt="work.opencita.alt" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">
             <span class="case-name">Open Cita</span>
-            <span class="case-status">Live · opencita.com</span>
+            <span class="case-status" data-i18n="trust.opencita.status">Live · opencita.com</span>
           </div>
-          <h3 class="case-title">The same alert engine, rebuilt in Spanish for the travelers it was missing.</h3>
-          <p class="case-desc">Open Cita is Appt Helper&rsquo;s Spanish-language mirror &mdash; the same 24/7 monitoring and instant SMS alerts, fully localized for Spanish-speaking travelers pursuing Global Entry, SENTRI, and NEXUS.</p>
+          <h3 class="case-title" data-i18n="work.opencita.title">The same alert engine, rebuilt in Spanish for the travelers it was missing.</h3>
+          <p class="case-desc" data-i18n="work.opencita.desc">Open Cita is Appt Helper&rsquo;s Spanish-language mirror &mdash; the same 24/7 monitoring and instant SMS alerts, fully localized for Spanish-speaking travelers pursuing Global Entry, SENTRI, and NEXUS.</p>
           <div class="case-foot">
             <span class="case-stack mono">TypeScript · Next.js · next-intl · Postgres</span>
-            <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">Visit <span class="arr">↗</span></a>
+            <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer"><span data-i18n="work.visit">Visit</span> <span class="arr">↗</span></a>
           </div>
         </div>
       </article>
 
       <article class="case" data-status="dev">
         <div class="case-media">
-          <img src="images/border-bills.png" alt="Border Bills landing page: pay Mexico utility bills instantly, stop driving to Tijuana" loading="lazy" />
+          <img src="images/border-bills.png" data-i18n-alt="work.border.alt" alt="Border Bills landing page: pay Mexico utility bills instantly, stop driving to Tijuana" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">
             <span class="case-name">Border Bills</span>
-            <span class="case-status">In development</span>
+            <span class="case-status" data-i18n="trust.dev.status">In development</span>
           </div>
-          <h3 class="case-title">Pay Mexican utility bills from the US &mdash; without the drive.</h3>
-          <p class="case-desc">A consumer payment app for US-based families paying CFE (electricity), Telmex / Izzi (internet), water, and predial &mdash; in seconds, instead of driving across the border or wiring cash.</p>
+          <h3 class="case-title" data-i18n="work.border.title">Pay Mexican utility bills from the US &mdash; without the drive.</h3>
+          <p class="case-desc" data-i18n="work.border.desc">A consumer payment app for US-based families paying CFE (electricity), Telmex / Izzi (internet), water, and predial &mdash; in seconds, instead of driving across the border or wiring cash.</p>
           <div class="case-foot">
             <span class="case-stack mono">Next.js 16 · React 19 · Stripe · Reloadly</span>
-            <a class="btn-link" href="#work">Case study <span class="arr">→</span></a>
+            <a class="btn-link" href="#work"><span data-i18n="work.casestudy">Case study</span> <span class="arr">→</span></a>
           </div>
         </div>
       </article>
 
       <article class="case" data-status="dev">
         <div class="case-media">
-          <div class="case-placeholder"><span>Screenshot coming soon</span></div>
+          <div class="case-placeholder"><span data-i18n="work.comingsoon">Screenshot coming soon</span></div>
         </div>
         <div class="case-body">
           <div class="case-meta">
             <span class="case-name">Baja Care</span>
-            <span class="case-status">In development</span>
+            <span class="case-status" data-i18n="trust.dev.status">In development</span>
           </div>
-          <h3 class="case-title">Medical tourism, made navigable.</h3>
-          <p class="case-desc">A patient-side discovery and intake platform connecting US patients with vetted Baja California providers &mdash; turning Facebook groups and word-of-mouth into a guided, transparent experience.</p>
+          <h3 class="case-title" data-i18n="work.baja.title">Medical tourism, made navigable.</h3>
+          <p class="case-desc" data-i18n="work.baja.desc">A patient-side discovery and intake platform connecting US patients with vetted Baja California providers &mdash; turning Facebook groups and word-of-mouth into a guided, transparent experience.</p>
           <div class="case-foot">
             <span class="case-stack mono">Next.js · React · TypeScript</span>
-            <a class="btn-link" href="#work">Watch this space <span class="arr">→</span></a>
+            <a class="btn-link" href="#work"><span data-i18n="work.baja.watch">Watch this space</span> <span class="arr">→</span></a>
           </div>
         </div>
       </article>
@@ -297,66 +299,66 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow">How we work</p>
-        <h2 class="display h2">We meet you <em>where</em> you are.</h2>
+        <p class="eyebrow" data-i18n="how.eyebrow">How we work</p>
+        <h2 class="display h2" data-i18n="how.h2">We meet you <em>where</em> you are.</h2>
       </div>
-      <p class="lede">Every engagement is structured around your reality &mdash; not a template. Pick what fits, or we&rsquo;ll help you choose.</p>
+      <p class="lede" data-i18n="how.lede">Every engagement is structured around your reality &mdash; not a template. Pick what fits, or we&rsquo;ll help you choose.</p>
     </header>
 
     <div class="how-grid">
 
       <article class="how-cell">
         <div class="how-num">01</div>
-        <h4 class="display h4">Fixed-scope project</h4>
-        <p class="body">For a defined deliverable with a clear edge &mdash; an MVP, a redesign, an AI integration. We scope tightly, ship on a date, and hand off cleanly.</p>
+        <h4 class="display h4" data-i18n="how.1.title">Fixed-scope project</h4>
+        <p class="body" data-i18n="how.1.body">For a defined deliverable with a clear edge &mdash; an MVP, a redesign, an AI integration. We scope tightly, ship on a date, and hand off cleanly.</p>
         <dl class="how-meta">
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Best for</dt><dd>validated ideas · planned launches</dd>
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.1.bestfor">validated ideas · planned launches</dd>
           </div>
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Typical length</dt><dd>4 – 16 weeks</dd>
+            <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.1.length">4 – 16 weeks</dd>
           </div>
         </dl>
       </article>
 
       <article class="how-cell">
         <div class="how-num">02</div>
-        <h4 class="display h4">Monthly retainer</h4>
-        <p class="body">For teams that need senior engineering or AI ops capacity on an ongoing basis. Predictable cost, flexible scope, no hiring overhead.</p>
+        <h4 class="display h4" data-i18n="how.2.title">Monthly retainer</h4>
+        <p class="body" data-i18n="how.2.body">For teams that need senior engineering or AI ops capacity on an ongoing basis. Predictable cost, flexible scope, no hiring overhead.</p>
         <dl class="how-meta">
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Best for</dt><dd>scaling startups · fractional CTO</dd>
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.2.bestfor">scaling startups · fractional CTO</dd>
           </div>
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Typical length</dt><dd>3+ months, month-to-month</dd>
+            <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.2.length">3+ months, month-to-month</dd>
           </div>
         </dl>
       </article>
 
       <article class="how-cell">
         <div class="how-num">03</div>
-        <h4 class="display h4">Strategy sprint</h4>
-        <p class="body">A one- to two-week deep dive: AI readiness audit, architecture review, or agent design sprint. You leave with a roadmap your team can execute &mdash; with or without us.</p>
+        <h4 class="display h4" data-i18n="how.3.title">Strategy sprint</h4>
+        <p class="body" data-i18n="how.3.body">A one- to two-week deep dive: AI readiness audit, architecture review, or agent design sprint. You leave with a roadmap your team can execute &mdash; with or without us.</p>
         <dl class="how-meta">
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Best for</dt><dd>&ldquo;we know we need this&hellip;&rdquo;</dd>
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.3.bestfor">&ldquo;we know we need this&hellip;&rdquo;</dd>
           </div>
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Typical length</dt><dd>1 – 2 weeks, fixed price</dd>
+            <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.3.length">1 – 2 weeks, fixed price</dd>
           </div>
         </dl>
       </article>
 
       <article class="how-cell">
         <div class="how-num">04</div>
-        <h4 class="display h4">Partnership / equity</h4>
-        <p class="body">For founders who want a long-term technical partner. We invest engineering time in exchange for equity or revenue share, with structure that protects both sides.</p>
+        <h4 class="display h4" data-i18n="how.4.title">Partnership / equity</h4>
+        <p class="body" data-i18n="how.4.body">For founders who want a long-term technical partner. We invest engineering time in exchange for equity or revenue share, with structure that protects both sides.</p>
         <dl class="how-meta">
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Best for</dt><dd>early-stage with a credible market</dd>
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.4.bestfor">early-stage with a credible market</dd>
           </div>
           <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-            <dt>Typical length</dt><dd>12+ months</dd>
+            <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.4.length">12+ months</dd>
           </div>
         </dl>
       </article>
@@ -370,33 +372,33 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow">About</p>
-        <h2 class="display h2">A small team of builders, led by an engineer who&rsquo;s been on <em>both</em> sides of the table.</h2>
+        <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+        <h2 class="display h2" data-i18n="about.h2">A small team of builders, led by an engineer who&rsquo;s been on <em>both</em> sides of the table.</h2>
       </div>
-      <p class="lede">We started by shipping our own products so we&rsquo;d know what we were talking about when we started shipping yours.</p>
+      <p class="lede" data-i18n="about.lede">We started by shipping our own products so we&rsquo;d know what we were talking about when we started shipping yours.</p>
     </header>
 
     <div class="about-grid">
       <div class="about-body">
-        <p>Technology Consultants was founded by <strong>Roberto Guido</strong> &mdash; an electrical engineer (UC&nbsp;San&nbsp;Diego) with an MBA from NYU&nbsp;Stern who&rsquo;s spent his career bridging the gap between what&rsquo;s technically possible and what actually moves a business. He leads a focused team of senior engineers and designers who&rsquo;ve shipped products together for years.</p>
-        <p>That bridge runs in both directions: he&rsquo;s done hardware and software design work on the voice AI system at Encounter&nbsp;AI, a drive-thru and kiosk ordering platform backed by investors including Morgan Stanley Inclusive Ventures Lab, and is a 2024 resident of Colorwave&rsquo;s Technical Residency in AI or Cybersecurity (TRAC) program &mdash; a competitive fellowship, accepting roughly 10% of applicants, that places emerging technologists into real artificial-intelligence and cybersecurity work.</p>
-        <p>We started by building our own products &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care &mdash; because we wanted to prove the architecture, the team, and the operating model worked before selling any of it to clients.</p>
-        <p>That portfolio is now the foundation of our consulting practice. Every recommendation we make has been tested against real users and real edge cases &mdash; not just slide decks.</p>
+        <p data-i18n="about.p1">Technology Consultants was founded by <strong>Roberto Guido</strong> &mdash; an electrical engineer (UC&nbsp;San&nbsp;Diego) with an MBA from NYU&nbsp;Stern who&rsquo;s spent his career bridging the gap between what&rsquo;s technically possible and what actually moves a business. He leads a focused team of senior engineers and designers who&rsquo;ve shipped products together for years.</p>
+        <p data-i18n="about.p2">That bridge runs in both directions: he&rsquo;s done hardware and software design work on the voice AI system at Encounter&nbsp;AI, a drive-thru and kiosk ordering platform backed by investors including Morgan Stanley Inclusive Ventures Lab, and is a 2024 resident of Colorwave&rsquo;s Technical Residency in AI or Cybersecurity (TRAC) program &mdash; a competitive fellowship, accepting roughly 10% of applicants, that places emerging technologists into real artificial-intelligence and cybersecurity work.</p>
+        <p data-i18n="about.p3">We started by building our own products &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care &mdash; because we wanted to prove the architecture, the team, and the operating model worked before selling any of it to clients.</p>
+        <p data-i18n="about.p4">That portfolio is now the foundation of our consulting practice. Every recommendation we make has been tested against real users and real edge cases &mdash; not just slide decks.</p>
       </div>
       <aside class="about-card">
         <div style="display:flex; align-items:center; gap:14px;">
           <div class="pfp"><img src="images/roberto.png" alt="Roberto Guido" width="64" height="64" /></div>
           <div>
             <div class="name">Roberto Guido</div>
-            <div class="role">Founder · EE, UC San Diego · MBA, NYU Stern</div>
+            <div class="role" data-i18n="about.card.role">Founder · EE, UC San Diego · MBA, NYU Stern</div>
           </div>
         </div>
         <dl>
-          <div class="row"><dt>Practice</dt><dd>Web &amp; AI agents</dd></div>
-          <div class="row"><dt>Residency</dt><dd>Colorwave TRAC, 2024</dd></div>
-          <div class="row"><dt>Based</dt><dd>San Diego · Tijuana</dd></div>
-          <div class="row"><dt>Languages</dt><dd>English · Spanish</dd></div>
-          <div class="row"><dt>Open to</dt><dd>SMB · startup · mid-market</dd></div>
+          <div class="row"><dt data-i18n="about.card.practice.label">Practice</dt><dd data-i18n="about.card.practice.value">Web &amp; AI agents</dd></div>
+          <div class="row"><dt data-i18n="about.card.residency.label">Residency</dt><dd>Colorwave TRAC, 2024</dd></div>
+          <div class="row"><dt data-i18n="about.card.based.label">Based</dt><dd>San Diego · Tijuana</dd></div>
+          <div class="row"><dt data-i18n="about.card.languages.label">Languages</dt><dd data-i18n="about.card.languages.value">English · Spanish</dd></div>
+          <div class="row"><dt data-i18n="about.card.opento.label">Open to</dt><dd data-i18n="about.card.opento.value">SMB · startup · mid-market</dd></div>
         </dl>
       </aside>
     </div>
@@ -408,16 +410,16 @@
   <div class="wrap-wide">
     <div class="cta-card">
       <div>
-        <p class="eyebrow">Next step</p>
-        <h2 class="display h2">Tell us what you&rsquo;re trying to build.</h2>
-        <p class="lede">A 30-minute call costs nothing and usually leaves you with at least one concrete idea &mdash; whether or not we end up working together.</p>
+        <p class="eyebrow" data-i18n="contact.eyebrow">Next step</p>
+        <h2 class="display h2" data-i18n="contact.h2">Tell us what you&rsquo;re trying to build.</h2>
+        <p class="lede" data-i18n="contact.lede">A 30-minute call costs nothing and usually leaves you with at least one concrete idea &mdash; whether or not we end up working together.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
-          Email us to book a call
+        <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+          <span data-i18n="contact.cta">Email us to book a call</span>
           <span class="arr" aria-hidden="true">→</span>
         </a>
-        <p class="cta-meta">contact@technologyconsultants.ventures · Typical reply within 24 hrs · M – F</p>
+        <p class="cta-meta" data-i18n="contact.meta">contact@technologyconsultants.ventures · Typical reply within 24 hrs · M – F</p>
       </div>
     </div>
   </div>
@@ -434,18 +436,18 @@
           <span class="nav-mark" aria-hidden="true"></span>
           <span style="color:#fff;">Technology Consultants</span>
         </a>
-        <p>A consulting practice run by builders. We design, build, and operate React web apps and AI agents.</p>
+        <p data-i18n="footer.tagline">A consulting practice run by builders. We design, build, and operate React web apps and AI agents.</p>
       </div>
       <div>
-        <h5>Services</h5>
+        <h5 data-i18n="footer.services.h5">Services</h5>
         <ul>
-          <li><a href="#services">Web development</a></li>
-          <li><a href="#services">AI agent consulting</a></li>
-          <li><a href="#how">Engagement models</a></li>
+          <li><a href="#services" data-i18n="footer.services.web">Web development</a></li>
+          <li><a href="#services" data-i18n="footer.services.ai">AI agent consulting</a></li>
+          <li><a href="#how" data-i18n="footer.services.engagement">Engagement models</a></li>
         </ul>
       </div>
       <div>
-        <h5>Our work</h5>
+        <h5 data-i18n="footer.work.h5">Our work</h5>
         <ul>
           <li><a href="https://appthelper.com" target="_blank" rel="noreferrer">Appt Helper</a></li>
           <li><a href="https://opencita.com" target="_blank" rel="noreferrer">Open Cita</a></li>
@@ -454,21 +456,22 @@
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <h5 data-i18n="footer.company.h5">Company</h5>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="mailto:contact@technologyconsultants.ventures">Email us</a></li>
+          <li><a href="#about" data-i18n="footer.company.about">About</a></li>
+          <li><a href="#contact" data-i18n="footer.company.contact">Contact</a></li>
+          <li><a href="mailto:contact@technologyconsultants.ventures" data-i18n="footer.company.email">Email us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="small">&copy; 2026 Technology Consultants. All rights reserved.</span>
-      <span class="mono">v2026.05 · made by builders</span>
+      <span class="small" data-i18n="footer.copyright">&copy; 2026 Technology Consultants. All rights reserved.</span>
+      <span class="mono" data-i18n="footer.version">v2026.05 · made by builders</span>
     </div>
   </div>
 </footer>
 
+<script defer src="i18n.js"></script>
 <script defer src="hero-shapes.js"></script>
 </body>
 </html>

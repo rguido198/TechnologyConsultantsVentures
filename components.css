@@ -113,6 +113,20 @@
 .nav-links > li > a.nav-cta:hover { background: #000; color: #fff; text-decoration: none; }
 @media (max-width: 800px) { .nav-links > li.nav-li { display: none; } }
 
+.lang-toggle {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font: 500 12.5px/1 var(--font-sans);
+  letter-spacing: 0.01em;
+  padding: 7px 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease;
+}
+.lang-toggle:hover { border-color: var(--ink); color: var(--ink); }
+
 /* ── Hero ──────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
