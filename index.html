@@ -38,54 +38,130 @@
 
 <main id="top">
 
-<!-- ─────────────────── Hero ─────────────────── -->
-<section class="hero">
+<div class="top-visual-wrapper">
   <div class="hero-shapes" data-hero-shapes aria-hidden="true"></div>
-  <div class="wrap-wide hero-inner">
-    <div class="hero-copy">
-      <div class="hero-meta-row">
-        <p class="eyebrow">Technology Consultants</p>
-        <span class="sep" aria-hidden="true"></span>
-        <span class="meta" data-i18n="hero.meta1">Web Applications &amp; AI Agents</span>
-        <span class="sep" aria-hidden="true"></span>
-        <span class="meta"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.meta2">Booking projects · Q3 2026</span></span>
+
+  <!-- ─────────────────── Hero ─────────────────── -->
+  <section class="hero">
+    <div class="wrap-wide hero-inner">
+      <div class="hero-copy">
+        <div class="hero-meta-row">
+          <p class="eyebrow">Technology Consultants</p>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="meta" data-i18n="hero.meta1">Web Applications &amp; AI Agents</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="meta"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.meta2">Booking projects · Q3 2026</span></span>
+        </div>
+
+        <h1 class="display h1" data-i18n="hero.h1">We design, build, and run software people rely on.</h1>
+
+        <p class="lede" data-i18n="hero.lede">
+          A senior engineering practice run by builders. We design, build, and operate custom web applications and AI agents. Because we ship and run our own production products, we know exactly what it takes to build software people rely on.
+        </p>
+
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+            <span data-i18n="hero.cta.primary">Book a 30-min strategy call</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">See what we&rsquo;ve built</a>
+        </div>
+
+        <div class="hero-stats" aria-label="How we work">
+          <div class="hero-stat">
+            <div class="n" data-i18n="hero.stat1.n">In production.</div>
+            <div class="l" data-i18n="hero.stat1.l">Real users today on our self-developed products.</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n" data-i18n="hero.stat2.n">Senior team.</div>
+            <div class="l" data-i18n="hero.stat2.l">The people who pitch your project ship&nbsp;it.</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n" data-i18n="hero.stat3.n">Code first.</div>
+            <div class="l" data-i18n="hero.stat3.l">No decks before working software.</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n" data-i18n="hero.stat4.n">One team.</div>
+            <div class="l" data-i18n="hero.stat4.l">Web apps and AI agents &mdash; same engineers, same stack.</div>
+          </div>
+        </div>
       </div>
 
-      <h1 class="display h1" data-i18n="hero.h1">We design, build, and run software people rely on.</h1>
+      <div class="hero-visual">
+        <div class="agent-flow-container">
+          <svg id="agent-flow-svg" viewBox="0 0 400 320" width="100%" height="100%" aria-label="AI Agent Flow Animation">
+            <defs>
+              <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4BECD7" />
+                <stop offset="100%" stop-color="#06c" />
+              </linearGradient>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3.5" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
 
-      <p class="lede" data-i18n="hero.lede">
-        A senior engineering practice run by builders. We design, build, and operate custom web applications and AI agents. Because we ship and run our own production products, we know exactly what it takes to build software people rely on.
-      </p>
+            <!-- Connector lines -->
+            <path class="flow-path" id="path-input-1" d="M 40,80 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-input-2" d="M 40,160 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-input-3" d="M 40,240 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            
+            <path class="flow-path" id="path-output-1" d="M 205,160 L 360,60" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-output-2" d="M 205,160 L 360,130" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-output-3" d="M 205,160 L 360,200" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-output-4" d="M 205,160 L 360,270" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
 
-      <div class="hero-cta-row">
-        <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
-          <span data-i18n="hero.cta.primary">Book a 30-min strategy call</span>
-          <span class="arr" aria-hidden="true">→</span>
-        </a>
-        <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">See what we&rsquo;ve built</a>
-      </div>
+            <!-- Floating pulses -->
+            <circle class="pulse-dot" id="pulse-in-1" cx="40" cy="80" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-in-2" cx="40" cy="160" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-in-3" cx="40" cy="240" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
+            
+            <circle class="pulse-dot" id="pulse-out-1" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-out-2" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-out-3" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-out-4" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
 
-      <div class="hero-stats" aria-label="How we work">
-        <div class="hero-stat">
-          <div class="n" data-i18n="hero.stat1.n">In production.</div>
-          <div class="l" data-i18n="hero.stat1.l">Real users today on our self-developed products.</div>
-        </div>
-        <div class="hero-stat">
-          <div class="n" data-i18n="hero.stat2.n">Senior team.</div>
-          <div class="l" data-i18n="hero.stat2.l">The people who pitch your project ship&nbsp;it.</div>
-        </div>
-        <div class="hero-stat">
-          <div class="n" data-i18n="hero.stat3.n">Code first.</div>
-          <div class="l" data-i18n="hero.stat3.l">No decks before working software.</div>
-        </div>
-        <div class="hero-stat">
-          <div class="n" data-i18n="hero.stat4.n">One team.</div>
-          <div class="l" data-i18n="hero.stat4.l">Web apps and AI agents &mdash; same engineers, same stack.</div>
+            <!-- Nodes -->
+            <g class="node-group" id="node-in-1" transform="translate(40, 80)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">User</text>
+            </g>
+            <g class="node-group" id="node-in-2" transform="translate(40, 160)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Email</text>
+            </g>
+            <g class="node-group" id="node-in-3" transform="translate(40, 240)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">API</text>
+            </g>
+
+            <g class="node-group" id="node-core" transform="translate(200, 160)">
+              <circle class="core-outer" r="28" fill="url(#grad-teal)" opacity="0.16" />
+              <circle class="core-inner" r="22" fill="url(#grad-teal)" filter="url(#glow)" />
+              <text y="4" font-family="var(--font-mono)" font-size="9" text-anchor="middle" font-weight="600" fill="#fff">CORE</text>
+            </g>
+
+            <g class="node-group" id="node-out-1" transform="translate(360, 60)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Web</text>
+            </g>
+            <g class="node-group" id="node-out-2" transform="translate(360, 130)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Stripe</text>
+            </g>
+            <g class="node-group" id="node-out-3" transform="translate(360, 200)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">DB</text>
+            </g>
+            <g class="node-group" id="node-out-4" transform="translate(360, 270)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">Slack</text>
+            </g>
+          </svg>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -161,6 +237,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <!-- ─────────────────── Selected work ─────────────────── -->
 <section id="work" class="section work-bg">
@@ -231,7 +308,29 @@
 
       <article class="case" data-status="dev">
         <div class="case-media">
-          <div class="case-placeholder"><span data-i18n="work.comingsoon">Screenshot coming soon</span></div>
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <div class="browser-address">bajacare.com/search</div>
+            </div>
+            <div class="browser-content">
+              <div class="mock-search">
+                <span class="mock-search-icon">🔍</span>
+                <span class="mock-search-placeholder" data-i18n="work.baja.mock.search">Find vetted doctors in Tijuana...</span>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-avatar">DR</div>
+                <div class="mock-card-info">
+                  <div class="mock-card-title">Dr. Sofia Rodriguez</div>
+                  <div class="mock-card-subtitle" data-i18n="work.baja.mock.specialty">Cardiology · Tijuana, MX</div>
+                  <div class="mock-tags">
+                    <span class="mock-tag" data-i18n="work.baja.mock.vetted">Vetted</span>
+                    <span class="mock-tag highlight" data-i18n="work.baja.mock.available">Available Today</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="case-body">
           <div class="case-meta">
@@ -267,8 +366,7 @@
       <div class="how-timeline-line" aria-hidden="true">
         <div class="how-timeline-progress"></div>
       </div>
-      <div class="how-grid">
-
+      <div class="how-deck">
         <article class="how-cell">
           <div class="how-num">01</div>
           <h4 class="display h4" data-i18n="how.1.title">Fixed-scope project</h4>
@@ -324,7 +422,6 @@
             </div>
           </dl>
         </article>
-
       </div>
     </div>
   </div>
@@ -378,11 +475,20 @@
         <p class="lede" data-i18n="contact.lede">A 30-minute call costs nothing and usually leaves you with at least one concrete idea &mdash; whether or not we end up working together.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
-          <span data-i18n="contact.cta">Email us to book a call</span>
-          <span class="arr" aria-hidden="true">→</span>
-        </a>
-        <p class="cta-meta" data-i18n="contact.meta">contact@technologyconsultants.ventures · Typical reply within 24 hrs · M – F</p>
+        <form id="contact-form" class="cta-form" autocomplete="on">
+          <div class="form-row">
+            <input type="text" id="form-name" required placeholder="Your Name" data-i18n-attr="placeholder:contact.form.name" aria-label="Your Name" />
+            <input type="email" id="form-email" required placeholder="Your Email" data-i18n-attr="placeholder:contact.form.email" aria-label="Your Email" />
+          </div>
+          <textarea id="form-message" required rows="3" placeholder="Tell us about your project..." data-i18n-attr="placeholder:contact.form.message" aria-label="Project Details"></textarea>
+          <button type="submit" class="btn btn-primary">
+            <span data-i18n="contact.form.submit">Book a strategy call</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </button>
+          <div id="form-success" class="form-success-message" style="display:none;" data-i18n="contact.form.success">
+            ✓ We've received your request. We'll reply within 24 hours to schedule our call.
+          </div>
+        </form>
       </div>
     </div>
   </div>

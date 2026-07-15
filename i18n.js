@@ -113,7 +113,7 @@
       "about.p1": "Technology Consultants was founded by <strong>Roberto Guido</strong> &mdash; an electrical engineer (UC&nbsp;San&nbsp;Diego) with an MBA from NYU&nbsp;Stern who&rsquo;s spent his career bridging the gap between what&rsquo;s technically possible and what actually moves a business. He leads a focused team of senior engineers and designers who&rsquo;ve shipped products together for years.",
       "about.p2": "That bridge runs in both directions: he&rsquo;s done hardware and software design work on the voice AI system at Encounter&nbsp;AI, a drive-thru and kiosk ordering platform backed by investors including Morgan Stanley Inclusive Ventures Lab, and is a 2024 resident of Colorwave&rsquo;s Technical Residency in AI or Cybersecurity (TRAC) program &mdash; a competitive fellowship, accepting roughly 10% of applicants, that places emerging technologists into real artificial-intelligence and cybersecurity work.",
       "about.p3": "We started by building our own products &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care &mdash; because we wanted to prove the architecture, the team, and the operating model worked before selling any of it to clients.",
-      "about.p4": "That portfolio is now the foundation of our consulting practice. Every recommendation we make has been tested against real users and real edge cases &mdash; not just slide decks.",
+      "about.p4": "That portfolio is now the foundation of our consulting practice. We bring the exact same battle-tested patterns, performance optimizations, and robust deployment pipelines directly to client projects.",
       "about.card.role": "Founder · EE, UC San Diego · MBA, NYU Stern",
       "about.card.practice.label": "Practice",
       "about.card.practice.value": "Web &amp; AI agents",
@@ -124,6 +124,17 @@
       "about.card.languages.value": "English · Spanish",
       "about.card.opento.label": "Open to",
       "about.card.opento.value": "SMB · startup · mid-market",
+
+      "work.baja.mock.search": "Find vetted doctors in Tijuana...",
+      "work.baja.mock.specialty": "Cardiology · Tijuana, MX",
+      "work.baja.mock.vetted": "Vetted",
+      "work.baja.mock.available": "Available Today",
+
+      "contact.form.name": "Your Name",
+      "contact.form.email": "Your Email",
+      "contact.form.message": "Tell us about your project...",
+      "contact.form.submit": "Book a strategy call",
+      "contact.form.success": "✓ Request received. We'll reply within 24 hours to schedule our call.",
 
       "contact.eyebrow": "Next step",
       "contact.h2": "Tell us what you&rsquo;re trying to build.",
@@ -252,7 +263,7 @@
       "about.p1": "Technology Consultants fue fundada por <strong>Roberto Guido</strong> &mdash; ingeniero eléctrico (UC San Diego) con un MBA de NYU Stern que ha dedicado su carrera a cerrar la brecha entre lo técnicamente posible y lo que realmente mueve un negocio. Lidera un equipo enfocado de ingenieros y diseñadores senior que han lanzado productos juntos durante años.",
       "about.p2": "Ese puente funciona en ambas direcciones: ha trabajado en el diseño de hardware y software del sistema de IA de voz en Encounter&nbsp;AI, una plataforma de pedidos para drive-thru y kioscos respaldada por inversionistas como Morgan Stanley Inclusive Ventures Lab, y es residente 2024 del programa de Residencia Técnica en IA o Ciberseguridad (TRAC) de Colorwave &mdash; una beca competitiva, que acepta aproximadamente al 10% de los solicitantes, que coloca a tecnólogos emergentes en trabajo real de inteligencia artificial y ciberseguridad.",
       "about.p3": "Empezamos construyendo nuestros propios productos &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills y Baja&nbsp;Care &mdash; porque queríamos probar que la arquitectura, el equipo y el modelo de operación funcionaban antes de vendérselo a clientes.",
-      "about.p4": "Ese portafolio es ahora la base de nuestra práctica de consultoría. Cada recomendación que hacemos ha sido probada contra usuarios reales y casos límite reales &mdash; no solo presentaciones.",
+      "about.p4": "Ese portafolio es ahora la base de nuestra práctica de consultoría. Llevamos exactamente los mismos patrones probados en batalla, optimizaciones de rendimiento y pipelines de despliegue robustos directamente a los proyectos de nuestros clientes.",
       "about.card.role": "Fundador · Ing. Eléctrico, UC San Diego · MBA, NYU Stern",
       "about.card.practice.label": "Práctica",
       "about.card.practice.value": "Aplicaciones web y agentes de IA",
@@ -263,6 +274,17 @@
       "about.card.languages.value": "Inglés · Español",
       "about.card.opento.label": "Disponible para",
       "about.card.opento.value": "Pequeñas empresas · startups · empresas medianas",
+
+      "work.baja.mock.search": "Buscar médicos acreditados en Tijuana...",
+      "work.baja.mock.specialty": "Cardiología · Tijuana, MX",
+      "work.baja.mock.vetted": "Acreditado",
+      "work.baja.mock.available": "Disponible Hoy",
+
+      "contact.form.name": "Tu Nombre",
+      "contact.form.email": "Tu Correo",
+      "contact.form.message": "Cuéntanos sobre tu proyecto...",
+      "contact.form.submit": "Reservar llamada de estrategia",
+      "contact.form.success": "✓ Solicitud recibida. Responderemos en menos de 24 horas para programar la llamada.",
 
       "contact.eyebrow": "Siguiente paso",
       "contact.h2": "Cuéntanos qué estás tratando de construir.",
@@ -307,6 +329,16 @@
     document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
       var key = el.getAttribute("data-i18n-alt");
       if (dict[key] !== undefined) el.setAttribute("alt", dict[key]);
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
+      var attrVal = el.getAttribute("data-i18n-attr") || "";
+      var parts = attrVal.split(":");
+      var attrName = parts[0];
+      var key = parts[1];
+      if (attrName && key && dict[key] !== undefined) {
+        el.setAttribute(attrName, dict[key]);
+      }
     });
 
     var descEl = document.querySelector('meta[name="description"]');

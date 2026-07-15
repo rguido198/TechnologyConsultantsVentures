@@ -20,8 +20,8 @@
 
   function init() {
     var container = document.querySelector("[data-hero-shapes]");
-    var hero = container && container.closest(".hero");
-    if (!container || !hero) return;
+    var wrapper = container && container.closest(".top-visual-wrapper");
+    if (!container || !wrapper) return;
 
     var canvas = document.createElement("canvas");
     canvas.style.width = "100%";
@@ -46,12 +46,12 @@
     var camZ = -440;
 
     var pointer = { x: null, y: null };
-    hero.addEventListener("mousemove", function (e) {
-      var box = hero.getBoundingClientRect();
+    wrapper.addEventListener("mousemove", function (e) {
+      var box = wrapper.getBoundingClientRect();
       pointer.x = e.clientX - box.left;
       pointer.y = e.clientY - box.top;
     });
-    hero.addEventListener("mouseleave", function () {
+    wrapper.addEventListener("mouseleave", function () {
       pointer.x = null;
       pointer.y = null;
     });
@@ -80,7 +80,7 @@
     }
 
     function resize() {
-      var box = hero.getBoundingClientRect();
+      var box = wrapper.getBoundingClientRect();
       width = box.width;
       height = box.height;
       if (!width || !height) return;
@@ -114,11 +114,6 @@
       }
 
       activeHeight = height;
-      var visual = hero.querySelector(".hero-visual");
-      if (visual) {
-        var visualTop = visual.getBoundingClientRect().top - box.top;
-        if (visualTop > 120) activeHeight = visualTop;
-      }
     }
 
     function step(now) {
@@ -126,17 +121,28 @@
         ctx.clearRect(0, 0, width, height);
 
         var currentScrollY = window.scrollY;
-        // Limit transitions within the active height bounds of the hero
-        var scrollPct = Math.min(currentScrollY / (activeHeight || 600), 1);
+        // Limit transitions within the active height bounds of the wrapper
+        var scrollPct = Math.min(currentScrollY / (activeHeight || 1200), 1);
         
-        // Morph grid parameters by scroll percentage
-        var amplitude = maxAmplitude * (1 - scrollPct);
-        var pitch = lerp(0.65, 1.25, scrollPct);
-        var yaw = lerp(0.20, 0.0, scrollPct);
-        var curCamZ = lerp(camZ, camZ - 60, scrollPct);
+        // Morph grid parameters by scroll percentage:
+        // Transition completely to flat & orthogonal at 45% scroll
+        var transitionPct = Math.min(scrollPct / 0.45, 1);
+        var amplitude = maxAmplitude * (1 - transitionPct);
+        var pitch = lerp(0.65, 1.5707, transitionPct); // 1.5707 is roughly Math.PI / 2 (top-down)
+        var yaw = lerp(0.20, 0.0, transitionPct);
+        var curCamZ = lerp(camZ, camZ - 60, transitionPct);
+
+        // Grid opacity fade-out as we approach Selected Work (between 78% and 96% scroll)
+        var fadeOutFactor = 1;
+        if (scrollPct > 0.78) {
+          fadeOutFactor = Math.max(0, 1 - (scrollPct - 0.78) / 0.18);
+        }
 
         var projectedPoints = [];
         var time = now * 0.001; // seconds
+
+        // Keep projection centerY dynamic relative to scroll viewport
+        var viewCenterY = currentScrollY + window.innerHeight / 2.3;
 
         // 1. Calculate and project grid coordinates
         for (var gx = 0; gx < cols; gx++) {
@@ -155,7 +161,7 @@
             }
 
             // Project 3D point to 2D Screen
-            var p2d = project3D(x3d, y3d, z3d, pitch, yaw, curCamZ, width / 2, height / 2.3);
+            var p2d = project3D(x3d, y3d, z3d, pitch, yaw, curCamZ, width / 2, viewCenterY);
 
             // Apply interactive mouse magnetic force
             if (p2d && pointer.x !== null && pointer.y !== null && !reduceMotion) {
@@ -164,10 +170,11 @@
               var dist = Math.sqrt(dx * dx + dy * dy);
               if (dist < 160) {
                 var force = 1 - dist / 160;
-                // Pull vertical coordinate in 3D downwards
-                y3d += -45 * force * force * (1 - scrollPct);
+                // Dampen the force as we scroll down, but maintain a subtle hover warp (15% min)
+                var dampFactor = Math.max(0.15, 1 - transitionPct);
+                y3d += -45 * force * force * dampFactor;
                 // Re-project
-                p2d = project3D(x3d, y3d, z3d, pitch, yaw, curCamZ, width / 2, height / 2.3);
+                p2d = project3D(x3d, y3d, z3d, pitch, yaw, curCamZ, width / 2, viewCenterY);
               }
             }
 
@@ -176,7 +183,7 @@
         }
 
         // 2. Draw connections (lines)
-        ctx.strokeStyle = COLORS.line + (0.16 * (1 - scrollPct * 0.35)).toFixed(3) + ")";
+        ctx.strokeStyle = COLORS.line + (0.16 * (1 - scrollPct * 0.35) * fadeOutFactor).toFixed(3) + ")";
         ctx.lineWidth = 1.2;
 
         for (var gx = 0; gx < cols; gx++) {
@@ -216,7 +223,7 @@
             var edgeFactorY = Math.sin((gy / (rows - 1)) * Math.PI);
             var vignette = edgeFactorX * edgeFactorY;
 
-            var dotAlpha = 0.65 * vignette * (1 - scrollPct * 0.3);
+            var dotAlpha = 0.65 * vignette * (1 - scrollPct * 0.3) * fadeOutFactor;
             if (dotAlpha < 0.01) continue;
 
             ctx.beginPath();
@@ -239,7 +246,7 @@
         lastWidth = box.width;
         resize();
       });
-      ro.observe(hero);
+      ro.observe(wrapper);
     } else {
       window.addEventListener("load", resize);
       var resizeTimer;

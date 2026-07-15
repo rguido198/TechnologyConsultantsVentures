@@ -130,14 +130,19 @@
 .lang-toggle:hover { border-color: var(--ink); background: var(--bg-soft); }
 
 /* ── Hero ──────────────────────────────────────────────────────────── */
+.top-visual-wrapper {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(1100px 540px at 18% -10%, rgba(75,236,215,0.18), transparent 60%),
+    radial-gradient(900px 480px at 90% 0%,    rgba(0,102,204,0.06), transparent 65%),
+    linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 50%, var(--bg) 100%);
+}
 .hero {
   position: relative;
   padding: clamp(64px, 8vw, 112px) 0 clamp(48px, 7vw, 96px);
   overflow: hidden;
-  background:
-    radial-gradient(1100px 540px at 18% -10%, rgba(75,236,215,0.20), transparent 60%),
-    radial-gradient(900px 480px at 90% 0%,    rgba(0,102,204,0.07), transparent 65%),
-    linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 75%);
+  background: transparent;
 }
 .hero-shapes {
   position: absolute; inset: 0;
@@ -319,7 +324,7 @@
 .sec-head h2 { margin-top: 14px; }
 
 /* ── Services (2 cards) ───────────────────────────────────────────── */
-.services-bg { background: var(--bg); }
+.services-bg { background: transparent; }
 
 .services-grid {
   display: grid;
@@ -791,40 +796,47 @@
     transform-origin: top;
     will-change: height;
   }
-  .how-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    border-top: 0;
-    border-left: 0;
+  .how-deck {
+    position: relative;
+    width: 100%;
+    height: 380px; /* fixed height to hold stacked cards */
+    z-index: 2;
   }
   .how-cell {
+    position: absolute;
+    inset: 0;
+    margin: 0 !important;
+    opacity: 0;
+    transform: scale(0.96) translateY(24px);
+    pointer-events: none;
+    will-change: transform, opacity;
+    z-index: 2;
+    background: #fff;
     border: 1px solid var(--line-soft);
-    border-right: 1px solid var(--line-soft);
-    border-bottom: 1px solid var(--line-soft);
     border-radius: var(--r-xl);
     box-shadow: var(--shadow-sm);
-    background: #fff;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 2;
-    transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
   }
-  .how-cell:hover {
-    background: var(--bg-warm);
-    box-shadow: var(--shadow-md);
+  .how-cell:first-child {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
   }
   .how-cell.active {
     border-color: var(--navy);
     box-shadow: var(--shadow-md);
-    background: #fff;
   }
   /* Bullet indicator */
   .how-cell::after {
     content: "";
     position: absolute;
     left: -35px;
-    top: 36px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 12px;
     height: 12px;
     border-radius: 999px;
@@ -837,6 +849,234 @@
     background: var(--teal);
     border-color: var(--navy);
     box-shadow: 0 0 8px var(--teal);
-    transform: scale(1.2);
+    transform: translateY(-50%) scale(1.2);
   }
+}
+
+/* ── Split Hero & SVG Agent Flow Layout ───────────────────────────── */
+@media (min-width: 901px) {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(48px, 4vw, 80px);
+  }
+  .hero-copy {
+    flex: 1.15;
+    max-width: 660px;
+  }
+  .hero-visual {
+    flex: 0.85;
+    max-width: 480px;
+    display: block;
+    position: relative;
+  }
+}
+.hero-visual {
+  display: block;
+  width: 100%;
+}
+.agent-flow-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  aspect-ratio: 400 / 320;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(55,85,134,0.12);
+  border-radius: var(--r-xl);
+  padding: 16px;
+  box-shadow: var(--shadow-md);
+}
+.flow-path {
+  stroke-dasharray: 6, 6;
+  animation: flowLine 20s linear infinite;
+}
+@keyframes flowLine {
+  to { stroke-dashoffset: -360; }
+}
+.node-group circle {
+  transition: filter 0.3s ease, stroke 0.3s ease, fill 0.3s ease;
+}
+.node-group:hover circle {
+  stroke: var(--navy);
+  filter: drop-shadow(0 4px 8px rgba(55,85,134,0.15));
+}
+.pulse-dot {
+  will-change: cx, cy, opacity;
+}
+
+/* ── Browser Mockup (Baja Care) ────────────────────────────────── */
+.browser-mockup {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-warm);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  overflow: hidden;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--line-soft);
+}
+.browser-bar {
+  background: var(--bg-warm-2);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  border-bottom: 1px solid var(--line-soft);
+  flex-shrink: 0;
+}
+.browser-bar .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  display: inline-block;
+}
+.browser-bar .dot.red { background: #ff5f56; }
+.browser-bar .dot.yellow { background: #ffbd2e; }
+.browser-bar .dot.green { background: #27c93f; }
+.browser-bar .browser-address {
+  margin-left: 12px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 3px 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-quiet);
+  flex-grow: 1;
+  max-width: 220px;
+  text-align: center;
+  border: 1px solid var(--line-soft);
+}
+.browser-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+  background: #fff;
+}
+.mock-search {
+  background: var(--bg-soft);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-quiet);
+}
+.mock-card {
+  background: #fff;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.mock-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--navy), var(--teal));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 13px;
+}
+.mock-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
+}
+.mock-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.mock-card-subtitle {
+  font-size: 12px;
+  color: var(--ink-quiet);
+}
+.mock-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+.mock-tag {
+  font-size: 10px;
+  background: var(--bg-soft);
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.mock-tag.highlight {
+  background: var(--teal-soft);
+  color: var(--navy);
+}
+
+/* ── Interactive Booking Form ──────────────────────────────────── */
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+.cta-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 480px) {
+  .cta-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.cta-form input,
+.cta-form textarea {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  font: inherit;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cta-form input:focus,
+.cta-form textarea:focus {
+  border-color: var(--navy);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(75, 236, 215, 0.2);
+}
+.cta-form button[type="submit"] {
+  align-self: flex-start;
+}
+.form-success-message {
+  margin-top: 8px;
+  font: 500 14px var(--font-sans);
+  color: #1a7f37;
+  background: #dafbe1;
+  border: 1px solid rgba(26, 127, 55, 0.2);
+  border-radius: var(--r-md);
+  padding: 12px 16px;
+  animation: formSuccessFade 0.4s ease forwards;
+}
+@keyframes formSuccessFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
