@@ -312,27 +312,21 @@
   var mm = gsap.matchMedia();
   mm.add("(min-width: 901px)", function () {
     // Pin container
-    ScrollTrigger.create({
-      trigger: ".how-container",
-      start: "top 104px",
-      end: "+=" + (window.innerHeight * 1.5),
-      pin: true,
-      scrub: true,
-      id: "how-pin"
-    });
-
     var cells = gsap.utils.toArray(".how-cell");
     var progressEl = document.querySelector(".how-timeline-progress");
 
     if (cells.length) {
       cells[0].classList.add("active");
 
+      // Single ScrollTrigger to handle pinning and scrubbing together (prevents positioning fights)
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".how-container",
           start: "top 104px",
           end: "+=" + (window.innerHeight * 1.5),
-          scrub: true
+          scrub: true,
+          pin: true,
+          id: "how-scrub-and-pin"
         }
       });
 
@@ -368,10 +362,14 @@
             onStart: function () {
               cell.classList.add("active");
               cell.style.pointerEvents = "auto";
+              var dot = document.querySelector('.how-timeline-dot[data-step="' + (idx + 1) + '"]');
+              if (dot) dot.classList.add("active");
             },
             onReverseComplete: function () {
               cell.classList.remove("active");
               cell.style.pointerEvents = "none";
+              var dot = document.querySelector('.how-timeline-dot[data-step="' + (idx + 1) + '"]');
+              if (dot) dot.classList.remove("active");
             }
           }, idx * 1.5 - 0.8);
         }
