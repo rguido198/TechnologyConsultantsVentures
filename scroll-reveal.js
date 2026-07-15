@@ -344,7 +344,7 @@
 
           // Cross-fade stacked elements
           tl.to(prevCell, {
-            opacity: 0,
+            autoAlpha: 0,
             scale: 0.94,
             y: -20,
             duration: 0.8,
@@ -360,7 +360,7 @@
           }, idx * 1.5 - 0.8);
 
           tl.to(cell, {
-            opacity: 1,
+            autoAlpha: 1,
             scale: 1,
             y: 0,
             duration: 0.8,

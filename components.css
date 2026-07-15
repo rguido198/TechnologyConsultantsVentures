@@ -807,9 +807,10 @@
     inset: 0;
     margin: 0 !important;
     opacity: 0;
+    visibility: hidden;
     transform: scale(0.96) translateY(24px);
     pointer-events: none;
-    will-change: transform, opacity;
+    will-change: transform, opacity, visibility;
     z-index: 2;
     background: #fff;
     border: 1px solid var(--line-soft);
@@ -823,6 +824,7 @@
   }
   .how-cell:first-child {
     opacity: 1;
+    visibility: visible;
     transform: scale(1) translateY(0);
     pointer-events: auto;
   }
