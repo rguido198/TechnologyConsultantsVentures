@@ -233,35 +233,59 @@
 
       var submitBtn = form.querySelector('button[type="submit"]');
       var successMsg = document.getElementById("form-success");
+      var errorMsg = document.getElementById("form-error");
+      var btnText = submitBtn && submitBtn.querySelector("span");
+      var originalBtnText = btnText && btnText.textContent;
 
+      if (errorMsg) errorMsg.style.display = "none";
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.style.opacity = "0.5";
-        var btnText = submitBtn.querySelector("span");
         if (btnText) btnText.textContent = "...";
       }
 
-      setTimeout(function () {
-        var row = form.querySelector(".form-row");
-        var text = form.querySelector("textarea");
-        gsap.to([row, text, submitBtn], {
-          opacity: 0,
-          y: -10,
-          duration: 0.35,
-          stagger: 0.05,
-          onComplete: function () {
-            if (row) row.style.display = "none";
-            if (text) text.style.display = "none";
-            if (submitBtn) submitBtn.style.display = "none";
+      fetch(form.action, {
+        method: form.method || "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Form submission failed");
 
-            successMsg.style.display = "block";
-            gsap.fromTo(successMsg,
+          var row = form.querySelector(".form-row");
+          var text = form.querySelector("textarea");
+          gsap.to([row, text, submitBtn], {
+            opacity: 0,
+            y: -10,
+            duration: 0.35,
+            stagger: 0.05,
+            onComplete: function () {
+              if (row) row.style.display = "none";
+              if (text) text.style.display = "none";
+              if (submitBtn) submitBtn.style.display = "none";
+
+              successMsg.style.display = "block";
+              gsap.fromTo(successMsg,
+                { opacity: 0, y: 10 },
+                { opacity: 1, y: 0, duration: 0.4, ease: EASE }
+              );
+            }
+          });
+        })
+        .catch(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+            if (btnText) btnText.textContent = originalBtnText;
+          }
+          if (errorMsg) {
+            errorMsg.style.display = "block";
+            gsap.fromTo(errorMsg,
               { opacity: 0, y: 10 },
               { opacity: 1, y: 0, duration: 0.4, ease: EASE }
             );
           }
         });
-      }, 950);
     });
   }
 

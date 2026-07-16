@@ -134,6 +134,7 @@
       "contact.form.message": "Tell us about your project...",
       "contact.form.submit": "Book a strategy call",
       "contact.form.success": "✓ Request received. We'll reply within 24 hours to schedule our call.",
+      "contact.form.error": "Something went wrong sending that. Please email us directly at contact@technologyconsultants.ventures instead.",
 
       "contact.eyebrow": "Next step",
       "contact.h2": "Tell us what you&rsquo;re trying to build.",
@@ -283,6 +284,7 @@
       "contact.form.message": "Cuéntanos sobre tu proyecto...",
       "contact.form.submit": "Reservar llamada de estrategia",
       "contact.form.success": "✓ Solicitud recibida. Responderemos en menos de 24 horas para programar la llamada.",
+      "contact.form.error": "Hubo un problema al enviar esto. Por favor escríbenos directamente a contact@technologyconsultants.ventures.",
 
       "contact.eyebrow": "Siguiente paso",
       "contact.h2": "Cuéntanos qué estás tratando de construir.",

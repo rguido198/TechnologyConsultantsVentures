@@ -480,18 +480,21 @@
         <p class="lede" data-i18n="contact.lede">A 30-minute call costs nothing and usually leaves you with at least one concrete idea &mdash; whether or not we end up working together.</p>
       </div>
       <div class="cta-actions">
-        <form id="contact-form" class="cta-form" autocomplete="on">
+        <form id="contact-form" class="cta-form" autocomplete="on" action="https://formspree.io/f/xeeyezkr" method="POST">
           <div class="form-row">
-            <input type="text" id="form-name" required placeholder="Your Name" data-i18n-attr="placeholder:contact.form.name" aria-label="Your Name" />
-            <input type="email" id="form-email" required placeholder="Your Email" data-i18n-attr="placeholder:contact.form.email" aria-label="Your Email" />
+            <input type="text" id="form-name" name="name" required placeholder="Your Name" data-i18n-attr="placeholder:contact.form.name" aria-label="Your Name" />
+            <input type="email" id="form-email" name="email" required placeholder="Your Email" data-i18n-attr="placeholder:contact.form.email" aria-label="Your Email" />
           </div>
-          <textarea id="form-message" required rows="3" placeholder="Tell us about your project..." data-i18n-attr="placeholder:contact.form.message" aria-label="Project Details"></textarea>
+          <textarea id="form-message" name="message" required rows="3" placeholder="Tell us about your project..." data-i18n-attr="placeholder:contact.form.message" aria-label="Project Details"></textarea>
           <button type="submit" class="btn btn-primary">
             <span data-i18n="contact.form.submit">Book a strategy call</span>
             <span class="arr" aria-hidden="true">→</span>
           </button>
           <div id="form-success" class="form-success-message" style="display:none;" data-i18n="contact.form.success">
             ✓ We've received your request. We'll reply within 24 hours to schedule our call.
+          </div>
+          <div id="form-error" class="form-error-message" style="display:none;" data-i18n="contact.form.error">
+            Something went wrong sending that. Please email us directly at contact@technologyconsultants.ventures instead.
           </div>
         </form>
       </div>
