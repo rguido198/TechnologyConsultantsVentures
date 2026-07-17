@@ -14,7 +14,7 @@
 
 ## Founder Credentials
 - **Roberto Guido**: Founder & Principal Engineer. BS Electrical Engineering (UC San Diego), MBA (NYU Stern).
-- Experienced in voice AI design (Encounter AI) and 2024 Technical Resident in AI or Cybersecurity (TRAC) at Colorwave.
+- Experienced in voice AI design (Encounter AI), 2024 Technical Resident in AI or Cybersecurity (TRAC) at Colorwave, and enterprise integrations with Workday Finance & Workday Adaptive Planning.
 
 ## Portfolio & Production Products
 - **Appt Helper** ([appthelper.com](https://appthelper.com)) — 24/7 monitor and instant SMS alerts for Global Entry & SENTRI slots.
