@@ -95,9 +95,7 @@
 </script>
 
 <!-- Typography: Editorial pairing (Fraunces + Inter Tight) + JetBrains Mono for accents -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="fonts.css" />
 
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="components.css" />
@@ -112,19 +110,21 @@
       <span class="nav-brand-text">Technology Consultants</span>
     </a>
     <nav>
-      <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
       <ul class="nav-links">
         <li class="nav-li"><a href="#services" data-i18n="nav.services">Services</a></li>
         <li class="nav-li"><a href="#work" data-i18n="nav.work">Work</a></li>
         <li class="nav-li"><a href="#how" data-i18n="nav.how">How we work</a></li>
         <li class="nav-li"><a href="#about" data-i18n="nav.about">About</a></li>
-        <li class="nav-li-lang"><button type="button" class="lang-toggle" data-lang-toggle>ES · Español</button></li>
-        <li><a class="nav-cta" href="#contact" data-i18n="nav.cta">Book a call</a></li>
       </ul>
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle" data-lang-toggle>ES · Español</button>
+        <a class="nav-cta" href="#contact" data-i18n="nav.cta">Book a call</a>
+        <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </nav>
   </div>
 </header>
@@ -348,7 +348,7 @@
 
       <article class="case">
         <div class="case-media">
-          <img src="images/appt-helper.jpg" data-i18n-alt="work.appt.alt" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" />
+          <img src="images/appt-helper.webp" width="1200" height="630" data-i18n-alt="work.appt.alt" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">
@@ -366,7 +366,7 @@
 
       <article class="case">
         <div class="case-media">
-          <img src="images/open-cita.jpg" data-i18n-alt="work.opencita.alt" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" />
+          <img src="images/open-cita.webp" width="1200" height="630" data-i18n-alt="work.opencita.alt" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">
@@ -384,7 +384,7 @@
 
       <article class="case" data-status="dev">
         <div class="case-media">
-          <img src="images/border-bills.png" data-i18n-alt="work.border.alt" alt="Border Bills landing page: pay Mexico utility bills instantly, stop driving to Tijuana" loading="lazy" />
+          <img src="images/border-bills.webp" width="1200" height="630" data-i18n-alt="work.border.alt" alt="Border Bills landing page: pay Mexico utility bills instantly, stop driving to Tijuana" loading="lazy" />
         </div>
         <div class="case-body">
           <div class="case-meta">

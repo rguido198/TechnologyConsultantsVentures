@@ -96,6 +96,7 @@
   51%, 100% { opacity: 0; }
 }
 .nav-brand .dim { color: var(--ink-quiet); font-weight: 450; }
+nav { display: flex; align-items: center; gap: 30px; }
 .nav-links {
   display: flex; align-items: center; gap: 30px;
   list-style: none; margin: 0; padding: 0;
@@ -106,14 +107,17 @@
   text-decoration: none;
 }
 .nav-links > li > a:hover { color: var(--blue); text-decoration: none; }
-.nav-links > li > a.nav-cta {
+.nav-actions {
+  display: flex; align-items: center; gap: 16px;
+}
+.nav-actions .nav-cta {
   background: var(--ink); color: #fff;
   padding: 9px 16px; border-radius: 999px;
   font: 500 14px/1 var(--font-sans);
   text-decoration: none;
   transition: background .18s ease;
 }
-.nav-links > li > a.nav-cta:hover { background: #000; color: #fff; text-decoration: none; }
+.nav-actions .nav-cta:hover { background: #000; color: #fff; text-decoration: none; }
 .nav-toggle-btn {
   display: none;
 }
@@ -208,46 +212,42 @@
   .nav.nav-open .nav-links > li.nav-li:nth-child(2) { transition-delay: 0.15s; }
   .nav.nav-open .nav-links > li.nav-li:nth-child(3) { transition-delay: 0.2s; }
   .nav.nav-open .nav-links > li.nav-li:nth-child(4) { transition-delay: 0.25s; }
-  .nav.nav-open .nav-links > li.nav-li-lang { transition-delay: 0.3s; }
-  .nav.nav-open .nav-links > li:last-child { transition-delay: 0.35s; }
 
   .nav-links > li > a {
     font-size: 20px;
     font-weight: 500;
   }
 
-  .nav-links > li > a.nav-cta {
-    font-size: 16px;
-    padding: 12px 28px;
-    width: 100%;
-    max-width: 240px;
-    text-align: center;
+  /* Lang toggle + CTA stay visible in the collapsed top bar (not tucked into
+     the drawer) — only the section links collapse. Sized to the 44px+
+     touch-target minimum here since they're always tappable, not just an
+     occasional drawer item. */
+  nav { gap: 12px; }
+  .nav-actions {
+    gap: 8px;
   }
-  
-  .nav-links > li.nav-li-lang {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .lang-toggle {
+    padding: 10px 12px;
+    font-size: 13px;
+    min-height: 44px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
   }
-  .nav.nav-open .nav-links > li.nav-li-lang {
-    opacity: 1;
-    transform: translateY(0);
+  .nav-actions .nav-cta {
+    padding: 10px 16px;
+    font-size: 13px;
+    min-height: 44px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
   }
-  
-  .nav-links > li:last-child {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .nav.nav-open .nav-links > li:last-child {
-    opacity: 1;
-    transform: translateY(0);
+  /* Enlarge the tap target via padding without disturbing the icon's own
+     22x14px line layout (flex-direction:column + justify-content:space-between
+     from the base .nav-toggle-btn rule above still applies here). */
+  .nav-toggle-btn {
+    padding: 15px 11px;
+    box-sizing: content-box;
   }
 }
 
