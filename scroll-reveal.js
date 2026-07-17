@@ -332,6 +332,22 @@
   var ctaCard = document.querySelector(".cta-card");
   if (ctaCard) reveal(ctaCard);
 
+  // Fail-safe: reveal-on-scroll relies on a real scroll event to fire
+  // ScrollTrigger. Single-pass renderers (crawlers, screenshot/QA tools,
+  // link-preview bots) never dispatch one, which would otherwise leave the
+  // services grid, portfolio cards, about section, and CTA permanently at
+  // opacity:0. Force everything visible after a grace period if it hasn't
+  // revealed itself yet, so content is never structurally unreachable.
+  setTimeout(function () {
+    var selector = ".services-grid > *, .work-grid > *, .about-grid > *, .cta-card";
+    document.querySelectorAll(selector).forEach(function (el) {
+      if (parseFloat(window.getComputedStyle(el).opacity) < 1) {
+        gsap.killTweensOf(el);
+        gsap.set(el, { opacity: 1, y: 0, rotateX: 0, scale: 1, clearProps: "transform" });
+      }
+    });
+  }, 3000);
+
   // How We Work: Pinned slide deck scrub for desktop
   var mm = gsap.matchMedia();
   mm.add("(min-width: 901px)", function () {

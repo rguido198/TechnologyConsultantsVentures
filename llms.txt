@@ -1,0 +1,27 @@
+# Technology Consultants
+
+> A consulting practice run by builders. We design, build, and operate React web applications and AI agents for startups, SMBs, and mid-market teams.
+
+## Services
+- [React & Full-Stack Web Development](https://technologyconsultants.ventures/#services)
+- [AI Agent Consulting](https://technologyconsultants.ventures/#services)
+
+## Engagement Models
+- [Fixed-scope project](https://technologyconsultants.ventures/#how) (4 - 16 weeks) — Best for MVPs, redesigns, AI integrations.
+- [Monthly retainer](https://technologyconsultants.ventures/#how) (month-to-month) — Best for fractional CTO & scaling capacity.
+- [Strategy sprint](https://technologyconsultants.ventures/#how) (1 - 2 weeks) — Fixed price AI audits and roadmaps.
+- [Partnership / equity](https://technologyconsultants.ventures/#how) (12+ months) — Long-term technical investment.
+
+## Founder Credentials
+- **Roberto Guido**: Founder & Principal Engineer. BS Electrical Engineering (UC San Diego), MBA (NYU Stern).
+- Experienced in voice AI design (Encounter AI) and 2024 Technical Resident in AI or Cybersecurity (TRAC) at Colorwave.
+
+## Portfolio & Production Products
+- **Appt Helper** ([appthelper.com](https://appthelper.com)) — 24/7 monitor and instant SMS alerts for Global Entry & SENTRI slots.
+- **Open Cita** ([opencita.com](https://opencita.com)) — Spanish localized monitor engine for Trusted Traveler program.
+- **Border Bills** — Utility payment app for Mexican bills from the US.
+- **Baja Care** — Intake & discovery platform for vetted healthcare providers in Baja California.
+
+## Contact
+- Email: contact@technologyconsultants.ventures
+- Book a call: [Strategy call request form](https://technologyconsultants.ventures/#contact)

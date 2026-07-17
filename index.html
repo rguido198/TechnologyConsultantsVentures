@@ -9,6 +9,90 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<link rel="canonical" href="https://technologyconsultants.ventures/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://technologyconsultants.ventures/" />
+<meta property="og:title" data-i18n-attr="content:meta.title" content="Technology Consultants — We earn our advice by shipping" />
+<meta property="og:description" data-i18n-attr="content:meta.description" content="A consulting practice run by builders. We design, build, and operate React web apps and AI agents for startups, SMBs, and mid-market teams." />
+<meta property="og:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://technologyconsultants.ventures/" />
+<meta name="twitter:title" data-i18n-attr="content:meta.title" content="Technology Consultants — We earn our advice by shipping" />
+<meta name="twitter:description" data-i18n-attr="content:meta.description" content="A consulting practice run by builders. We design, build, and operate React web apps and AI agents for startups, SMBs, and mid-market teams." />
+<meta name="twitter:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://technologyconsultants.ventures/#organization",
+      "name": "Technology Consultants",
+      "url": "https://technologyconsultants.ventures",
+      "logo": "https://technologyconsultants.ventures/images/apple-touch-icon.png",
+      "image": "https://technologyconsultants.ventures/images/roberto.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "React Web Development",
+        "Full-Stack Web Development",
+        "AI Agent Consulting",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Stripe Integrations",
+        "Model Context Protocol"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://technologyconsultants.ventures/#founder",
+        "name": "Roberto Guido",
+        "jobTitle": "Founder & Principal Engineer",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of California San Diego"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "NYU Stern School of Business"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://technologyconsultants.ventures/#web-service",
+      "name": "React & Full-Stack Web Development",
+      "provider": {
+        "@id": "https://technologyconsultants.ventures/#organization"
+      },
+      "description": "End-to-end full-stack web application development utilizing React, TypeScript, Node.js, Postgres, and modern cloud infrastructure.",
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://technologyconsultants.ventures/#ai-service",
+      "name": "AI Agent Consulting & Development",
+      "provider": {
+        "@id": "https://technologyconsultants.ventures/#organization"
+      },
+      "description": "Strategy, design, implementation, and roll-out of custom autonomous AI agents, Model Context Protocol (MCP) servers, and integrations.",
+      "areaServed": "Worldwide"
+    }
+  ]
+}
+</script>
 
 <!-- Typography: Editorial pairing (Fraunces + Inter Tight) + JetBrains Mono for accents -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +112,11 @@
       <span class="nav-brand-text">Technology Consultants</span>
     </a>
     <nav>
+      <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
       <ul class="nav-links">
         <li class="nav-li"><a href="#services" data-i18n="nav.services">Services</a></li>
         <li class="nav-li"><a href="#work" data-i18n="nav.work">Work</a></li>
@@ -549,6 +638,7 @@
 </footer>
 
 <script defer src="i18n.js"></script>
+<script defer src="nav.js"></script>
 <script defer src="hero-shapes.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>

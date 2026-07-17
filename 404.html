@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page Not Found — Technology Consultants</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+
+<!-- Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="components.css" />
+<style>
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 160px);
+    text-align: center;
+    padding: var(--gutter-x);
+    background: radial-gradient(900px 480px at 50% 30%, rgba(75,236,215,0.06), transparent 70%);
+  }
+  .error-code {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+  }
+  .error-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: var(--display-weight);
+    letter-spacing: var(--display-tracking);
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+    color: var(--ink);
+  }
+  .error-text {
+    font-size: clamp(16px, 2.5vw, 19px);
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 40px auto;
+  }
+  .error-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  @media (max-width: 480px) {
+    .error-actions {
+      flex-direction: column;
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Nav (Simplified for 404 page) -->
+<header class="nav">
+  <div class="wrap-wide nav-inner">
+    <a class="nav-brand" href="/" aria-label="Technology Consultants home">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-brand-text">Technology Consultants</span>
+    </a>
+    <a class="nav-cta" href="/" style="font-size: 14px; font-weight: 500;">Go Home</a>
+  </div>
+</header>
+
+<main class="error-container">
+  <div class="error-code">Error 404</div>
+  <h1 class="error-title">Page not found.</h1>
+  <p class="error-text">
+    The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+  </p>
+  <div class="error-actions">
+    <a class="btn btn-primary" href="/">
+      Back to Home
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer" style="border-top: 1px solid var(--line-soft); margin-top: 0; padding-top: 24px; padding-bottom: 24px;">
+  <div class="wrap-wide" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+    <span class="small" style="color: var(--ink-quiet); font-size: 13px;">&copy; 2026 Technology Consultants. All rights reserved.</span>
+    <span class="mono" style="color: var(--ink-quiet); font-size: 12px;">v2026.05 · made by builders</span>
+  </div>
+</footer>
+
+</body>
+</html>

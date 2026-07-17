@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Allow AI Search & Citation Bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Disallow non-citing training harvesters
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://technologyconsultants.ventures/sitemap.xml
