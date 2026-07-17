@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+  (function() {
+    var saved = localStorage.getItem("tcv-lang");
+    var isEs = saved === "es" || (!saved && navigator.language && navigator.language.toLowerCase().indexOf("es") === 0);
+    if (isEs && window.location.pathname === "/") {
+      window.location.replace("/es/");
+    }
+  })();
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title data-i18n="meta.title">Technology Consultants — We earn our advice by shipping</title>
@@ -10,6 +19,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 <link rel="canonical" href="https://technologyconsultants.ventures/" />
+<link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/" />
+<link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/" />
+<link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -33,7 +45,7 @@
     {
       "@type": "ProfessionalService",
       "@id": "https://technologyconsultants.ventures/#organization",
-      "name": "Technology Consultants",
+      "name": "Technology Consultants Inc",
       "url": "https://technologyconsultants.ventures",
       "logo": "https://technologyconsultants.ventures/images/apple-touch-icon.png",
       "image": "https://technologyconsultants.ventures/images/roberto.png",
@@ -74,6 +86,7 @@
       "@type": "Service",
       "@id": "https://technologyconsultants.ventures/#web-service",
       "name": "React & Full-Stack Web Development",
+      "url": "https://technologyconsultants.ventures/services/react-web-development",
       "provider": {
         "@id": "https://technologyconsultants.ventures/#organization"
       },
@@ -84,11 +97,58 @@
       "@type": "Service",
       "@id": "https://technologyconsultants.ventures/#ai-service",
       "name": "AI Agent Consulting & Development",
+      "url": "https://technologyconsultants.ventures/services/ai-agent-consulting",
       "provider": {
         "@id": "https://technologyconsultants.ventures/#organization"
       },
       "description": "Strategy, design, implementation, and roll-out of custom autonomous AI agents, Model Context Protocol (MCP) servers, and integrations.",
       "areaServed": "Worldwide"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://technologyconsultants.ventures/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is your typical engagement model?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We operate either on a scoped, milestone-driven project basis (like MVPs, redesigns, or specific integrations) or as a fractional CTO retainer for ongoing senior development and operational capacity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you advertise pricing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consulting and development projects are tailored to each client's specific business context and technical complexity. We scope every project individually to provide transparent, flat-rate phase pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your standard technology stack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build with React and TypeScript on the front-end, Node.js on the back-end, and PostgreSQL for databases. Our AI work leverages Claude, OpenAI, and custom Model Context Protocol (MCP) integrations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is technical handoff managed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We deliver fully documented git repositories and assist with cloud deployment. Your internal team can take over immediately, or we can continue running and monitoring the setup under a retainer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are you based?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are based in San Diego, California, and work with clients globally across the United States and Mexican cross-border markets."
+          }
+        }
+      ]
     }
   ]
 }
@@ -115,9 +175,10 @@
         <li class="nav-li"><a href="#work" data-i18n="nav.work">Work</a></li>
         <li class="nav-li"><a href="#how" data-i18n="nav.how">How we work</a></li>
         <li class="nav-li"><a href="#about" data-i18n="nav.about">About</a></li>
+        <li class="nav-li"><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
       </ul>
       <div class="nav-actions">
-        <button type="button" class="lang-toggle" data-lang-toggle>ES · Español</button>
+        <a class="lang-toggle" href="/es/" onclick="localStorage.setItem('tcv-lang', 'es');">ES · Español</a>
         <a class="nav-cta" href="#contact" data-i18n="nav.cta">Book a call</a>
         <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
           <span class="hamburger-line"></span>
@@ -288,7 +349,7 @@
           <p class="sub" data-i18n="services.web.sub">From MVP to scale.</p>
         </header>
         <p class="body" data-i18n="services.web.body">
-          We build modern web products end-to-end &mdash; React on the front end, TypeScript and Node on the back end, Postgres, and the infrastructure to run them. You get senior engineers who&rsquo;ve shipped to real users, not a junior team learning on your dime.
+          We build modern web products end-to-end &mdash; React on the front end, TypeScript and Node on the back end, Postgres, and the infrastructure to run them. You get senior engineers for web development consulting who&rsquo;ve shipped to real users, not a junior team learning on your dime.
         </p>
         <ul class="service-list">
           <li data-i18n="services.web.li1">Product architecture &amp; technical strategy</li>
@@ -298,6 +359,10 @@
           <li data-i18n="services.web.li5">Mobile-responsive on every breakpoint</li>
           <li data-i18n="services.web.li6">Handoff with docs &mdash; or we operate it</li>
         </ul>
+        <a href="/services/react-web-development.html" class="service-link" data-i18n="services.web.link">
+          <span>Explore React Web Dev</span>
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
       </article>
 
       <article class="service">
@@ -326,6 +391,10 @@
           <li data-i18n="services.ai.li5">Team enablement &amp; training</li>
           <li data-i18n="services.ai.li6">Ongoing operations and tuning</li>
         </ul>
+        <a href="/services/ai-agent-consulting.html" class="service-link" data-i18n="services.ai.link">
+          <span>Explore AI Consulting</span>
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
       </article>
 
     </div>
@@ -395,7 +464,7 @@
           <p class="case-desc" data-i18n="work.border.desc">A consumer payment app for US-based families paying CFE (electricity), Telmex / Izzi (internet), water, and predial &mdash; in seconds, instead of driving across the border or wiring cash.</p>
           <div class="case-foot">
             <span class="case-stack mono">Next.js 16 · React 19 · Stripe · Reloadly</span>
-            <a class="btn-link" href="#work"><span data-i18n="work.casestudy">Case study</span> <span class="arr">→</span></a>
+            <a class="btn-link" href="#work"><span data-i18n="work.baja.watch">Watch this space</span> <span class="arr">→</span></a>
           </div>
         </div>
       </article>
@@ -559,6 +628,53 @@
   </div>
 </section>
 
+<!-- ─────────────────── FAQ ─────────────────── -->
+<section id="faq" class="section faq-bg">
+  <div class="wrap-wide">
+    <header class="sec-head" style="text-align: center; max-width: 600px; margin: 0 auto 40px; display: flex; flex-direction: column; align-items: center;">
+      <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+      <h2 class="display h2" data-i18n="faq.h2" style="margin-top: 12px;">Frequently asked questions</h2>
+    </header>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary data-i18n="faq.q1">What is your typical engagement model?</summary>
+        <div class="faq-answer">
+          <p data-i18n="faq.a1">We operate either on a scoped, milestone-driven project basis (like MVPs, redesigns, or specific integrations) or as a fractional CTO retainer for ongoing senior development and operational capacity.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q2">Do you advertise pricing?</summary>
+        <div class="faq-answer">
+          <p data-i18n="faq.a2">Consulting and development projects are tailored to each client's specific B2B business context and technical complexity. We scope every project individually to provide transparent, flat-rate phase pricing rather than flat pre-advertised rates.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q3">What is your standard technology stack?</summary>
+        <div class="faq-answer">
+          <p data-i18n="faq.a3">We build with React and TypeScript on the front-end, Node.js on the back-end, and PostgreSQL for databases. Our AI work leverages Claude, OpenAI, and custom Model Context Protocol (MCP) integrations.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q4">How is technical handoff managed?</summary>
+        <div class="faq-answer">
+          <p data-i18n="faq.a4">We deliver fully documented git repositories and assist with cloud deployment. Your internal team can take over immediately, or we can continue running and monitoring the setup under a retainer.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q5">Where are you based?</summary>
+        <div class="faq-answer">
+          <p data-i18n="faq.a5">We are based in San Diego, California, and work with clients globally across the United States and Mexican cross-border markets.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ─────────────────── Final CTA ─────────────────── -->
 <section id="contact" class="section cta-bg">
   <div class="wrap-wide">
@@ -625,14 +741,16 @@
         <h5 data-i18n="footer.company.h5">Company</h5>
         <ul>
           <li><a href="#about" data-i18n="footer.company.about">About</a></li>
+          <li><a href="#faq" data-i18n="footer.company.faq">FAQ</a></li>
           <li><a href="#contact" data-i18n="footer.company.contact">Contact</a></li>
           <li><a href="mailto:contact@technologyconsultants.ventures" data-i18n="footer.company.email">Email us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="small" data-i18n="footer.copyright">&copy; 2026 Technology Consultants. All rights reserved.</span>
-      <span class="mono" data-i18n="footer.version">v2026.05 · made by builders</span>
+      <span class="small" data-i18n="footer.copyright">&copy; 2026 Technology Consultants Inc. All rights reserved.</span>
+      <span class="small"><a href="/privacy.html" class="footer-legal-link" style="color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4BECD7'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Privacy &amp; Terms</a></span>
+      <span class="mono" data-i18n="footer.version">v2026.06 · made by builders</span>
     </div>
   </div>
 </footer>

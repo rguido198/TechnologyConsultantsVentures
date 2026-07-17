@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="es">
+<head>
+<script>
+  localStorage.setItem("tcv-lang", "es");
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Technology Consultants — Ganamos nuestra credibilidad construyendo</title>
+<meta name="description" content="Una consultoría dirigida por quienes construyen software real. Diseñamos, construimos y operamos aplicaciones web en React y agentes de IA para startups, pequeñas empresas y empresas medianas." />
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+<link rel="canonical" href="https://technologyconsultants.ventures/es/" />
+<link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/" />
+<link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/" />
+<link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://technologyconsultants.ventures/es/" />
+<meta property="og:title" content="Technology Consultants — Ganamos nuestra credibilidad construyendo" />
+<meta property="og:description" content="Una consultoría dirigida por quienes construyen software real. Diseñamos, construimos y operamos aplicaciones web en React y agentes de IA." />
+<meta property="og:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://technologyconsultants.ventures/es/" />
+<meta name="twitter:title" content="Technology Consultants — Ganamos nuestra credibilidad construyendo" />
+<meta name="twitter:description" content="Una consultoría dirigida por quienes construyen software real. Diseñamos, construimos y operamos aplicaciones web en React y agentes de IA." />
+<meta name="twitter:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://technologyconsultants.ventures/#organization",
+      "name": "Technology Consultants Inc",
+      "url": "https://technologyconsultants.ventures/es/",
+      "logo": "https://technologyconsultants.ventures/images/apple-touch-icon.png",
+      "image": "https://technologyconsultants.ventures/images/roberto.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "Desarrollo Web React",
+        "Desarrollo Web Full-Stack",
+        "Consultoría en Agentes de IA",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Integración de Stripe",
+        "Model Context Protocol"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://technologyconsultants.ventures/#founder",
+        "name": "Roberto Guido",
+        "jobTitle": "Fundador e Ingeniero Principal",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of California San Diego"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "NYU Stern School of Business"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://technologyconsultants.ventures/es/#web-service",
+      "name": "Desarrollo Web Full-Stack con React",
+      "url": "https://technologyconsultants.ventures/es/services/react-web-development.html",
+      "provider": {
+        "@id": "https://technologyconsultants.ventures/#organization"
+      },
+      "description": "Desarrollo de aplicaciones web modernas de principio a fin utilizando React, TypeScript, Node.js, Postgres e infraestructura en la nube.",
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://technologyconsultants.ventures/es/#ai-service",
+      "name": "Consultoría en Agentes de IA",
+      "url": "https://technologyconsultants.ventures/es/services/ai-agent-consulting.html",
+      "provider": {
+        "@id": "https://technologyconsultants.ventures/#organization"
+      },
+      "description": "Estrategia, diseño, implementación y lanzamiento de agentes de IA autónomos a medida, servidores MCP e integraciones.",
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://technologyconsultants.ventures/es/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuál es su modelo de colaboración típico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Operamos ya sea bajo un proyecto de alcance y hitos definidos (como MVPs, rediseños o integraciones específicas) o mediante un retainer mensual de CTO fraccional para capacidad continua de ingeniería y operaciones de IA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Publican sus precios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los proyectos de consultoría y desarrollo se estructuran a la medida de la complejidad técnica de cada cliente. Cotizamos cada proyecto de forma individual para ofrecer presupuestos fijos y transparentes en lugar de tarifas estándar pre-anunciadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es su stack tecnológico estándar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Construimos con React y TypeScript en el frontend, Node.js en el backend y PostgreSQL para bases de datos. Nuestro trabajo de IA utiliza Claude, OpenAI e integraciones personalizadas de Model Context Protocol (MCP)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se maneja la entrega técnica del código?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entregamos repositorios de git completamente documentados y asistimos con la implementación en la nube. Tu equipo interno puede tomar el control de inmediato, o bien, podemos continuar operando y monitoreando el sistema bajo un retainer mensual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde están ubicados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos ubicados en San Diego, California, y trabajamos con clientes de forma global en Estados Unidos y mercados transfronterizos con México."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="../fonts.css" />
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../components.css" />
+</head>
+<body>
+
+<!-- ─────────────────── Nav ─────────────────── -->
+<header class="nav">
+  <div class="wrap-wide nav-inner">
+    <a class="nav-brand" href="#top" aria-label="Technology Consultants home">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-brand-text">Technology Consultants</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-li"><a href="#services">Servicios</a></li>
+        <li class="nav-li"><a href="#work">Trabajo</a></li>
+        <li class="nav-li"><a href="#how">Cómo trabajamos</a></li>
+        <li class="nav-li"><a href="#about">Nosotros</a></li>
+        <li class="nav-li"><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="lang-toggle" href="/" onclick="localStorage.setItem('tcv-lang', 'en');">EN · English</a>
+        <a class="nav-cta" href="#contact">Contáctanos</a>
+        <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<div class="top-visual-wrapper">
+  <div class="hero-shapes" data-hero-shapes aria-hidden="true"></div>
+
+  <!-- ─────────────────── Hero ─────────────────── -->
+  <section class="hero">
+    <div class="wrap-wide hero-inner">
+      <div class="hero-copy">
+        <div class="hero-meta-row">
+          <p class="eyebrow">Technology Consultants</p>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="meta">Aplicaciones Web y Agentes de IA</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="meta"><span class="dot" aria-hidden="true"></span><span>Agendando proyectos · T3 2026</span></span>
+        </div>
+
+        <h1 class="display h1">Diseñamos, construimos y operamos software en el que la gente confía.</h1>
+
+        <p class="lede">
+          Una práctica de ingeniería senior dirigida por creadores. Diseñamos, construimos y operamos <span class="gradient-text">aplicaciones web y agentes de IA</span> personalizados. Dado que lanzamos y operamos nuestros propios productos de producción, sabemos exactamente lo que se necesita para construir software en el que la gente confíe.
+        </p>
+
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Llamada%20de%20estrategia">
+            <span>Reserva una llamada de estrategia de 30 minutos</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="#work">Mira lo que hemos construido</a>
+        </div>
+
+        <div class="hero-stats" aria-label="Cómo trabajamos">
+          <div class="hero-stat">
+            <div class="n">En producción.</div>
+            <div class="l">Usuarios reales hoy en nuestros propios productos desarrollados.</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">Equipo senior.</div>
+            <div class="l">Quienes te proponen el proyecto son quienes lo construyen.</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">Código primero.</div>
+            <div class="l">Sin presentaciones antes de tener software funcionando.</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">Un solo equipo.</div>
+            <div class="l">Aplicaciones web y agentes de IA &mdash; los mismos ingenieros, el mismo stack.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="agent-flow-container">
+          <svg viewBox="0 0 400 320" width="100%" height="100%">
+            <!-- SVG details remain unchanged, mapping paths correctly -->
+            <defs>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+              <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4BECD7" />
+                <stop offset="100%" stop-color="#06c" />
+              </linearGradient>
+            </defs>
+
+            <!-- Grid backdrop -->
+            <rect width="400" height="320" fill="none" />
+
+            <!-- Connection lines -->
+            <path class="flow-path" id="path-input-1" d="M 40,80 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-input-2" d="M 40,160 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-input-3" d="M 40,240 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            
+            <path class="flow-path" id="path-output-1" d="M 205,160 L 360,60" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-output-2" d="M 205,160 L 360,130" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-output-3" d="M 205,160 L 360,200" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+            <path class="flow-path" id="path-output-4" d="M 205,160 L 360,270" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
+
+            <!-- Floating pulses -->
+            <circle class="pulse-dot" id="pulse-in-1" cx="40" cy="80" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-in-2" cx="40" cy="160" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-in-3" cx="40" cy="240" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
+            
+            <circle class="pulse-dot" id="pulse-out-1" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-out-2" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-out-3" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
+            <circle class="pulse-dot" id="pulse-out-4" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
+
+            <!-- Nodes -->
+            <g class="node-group" id="node-in-1" transform="translate(40, 80)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">User</text>
+            </g>
+            <g class="node-group" id="node-in-2" transform="translate(40, 160)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Email</text>
+            </g>
+            <g class="node-group" id="node-in-3" transform="translate(40, 240)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">API</text>
+            </g>
+
+            <g class="node-group" id="node-core" transform="translate(200, 160)">
+              <circle class="core-outer" r="28" fill="url(#grad-teal)" opacity="0.16" />
+              <circle class="core-inner" r="22" fill="url(#grad-teal)" filter="url(#glow)" />
+              <text y="4" font-family="var(--font-mono)" font-size="8" text-anchor="middle" font-weight="600" fill="#fff">AGENT</text>
+            </g>
+
+            <g class="node-group" id="node-out-1" transform="translate(360, 60)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Web</text>
+            </g>
+            <g class="node-group" id="node-out-2" transform="translate(360, 130)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Stripe</text>
+            </g>
+            <g class="node-group" id="node-out-3" transform="translate(360, 200)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">DB</text>
+            </g>
+            <g class="node-group" id="node-out-4" transform="translate(360, 270)">
+              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
+              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">Slack</text>
+            </g>
+          </svg>
+        </div>
+        <p class="hero-visual-caption">Un solo agente de IA &mdash; conectado a cada canal e integración que operas.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─────────────────── Services ─────────────────── -->
+<section id="services" class="section services-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Qué hacemos</p>
+        <h2 class="display h2">Un equipo.<br />Un <em>stack</em>.</h2>
+      </div>
+      <p class="lede">El desarrollo web y los agentes de IA son hoy la misma disciplina. Llevamos ambos con los mismos ingenieros senior que lanzan nuestros propios productos a producción &mdash; no asesores con una presentación.</p>
+    </header>
+
+    <div class="services-grid">
+
+      <article class="service">
+        <div class="service-icon-row">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7l9-4 9 4-9 4-9-4z"/>
+              <path d="M3 12l9 4 9-4"/>
+              <path d="M3 17l9 4 9-4"/>
+            </svg>
+          </div>
+          <span class="service-tag">01 · Web</span>
+        </div>
+        <header>
+          <h3 class="display h3">Desarrollo Web Full-Stack con React</h3>
+          <p class="sub">Del MVP a la escala.</p>
+        </header>
+        <p class="body">
+          Construimos productos web modernos de principio a fin &mdash; React en el frontend, TypeScript y Node en el backend, Postgres, y la infraestructura para operarlos. Trabajas con ingenieros senior que ya han lanzado a usuarios reales, no un equipo junior aprendiendo a tu costa.
+        </p>
+        <ul class="service-list">
+          <li>Arquitectura de producto y estrategia técnica</li>
+          <li>Diseño y construcción full-stack</li>
+          <li>Diseño de APIs, integraciones, modelado de datos</li>
+          <li>Rendimiento, seguridad, observabilidad</li>
+          <li>Responsive en todos los tamaños de pantalla</li>
+          <li>Entrega con documentación &mdash; o lo operamos nosotros</li>
+        </ul>
+        <a href="/es/services/react-web-development.html" class="service-link">
+          <span>Explorar desarrollo web React</span>
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <article class="service">
+        <div class="service-icon-row">
+          <div class="service-icon alt" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="6" width="16" height="12" rx="3"/>
+              <path d="M9 12h.01M15 12h.01"/>
+              <path d="M12 2v4M5 10H3M21 10h-2M5 14H3M21 14h-2"/>
+            </svg>
+          </div>
+          <span class="service-tag">02 · IA</span>
+        </div>
+        <header>
+          <h3 class="display h3">Consultoría en Agentes de IA</h3>
+          <p class="sub">Estrategia, construcción y adopción &mdash; sin el ruido.</p>
+        </header>
+        <p class="body">
+          La mayoría de las &ldquo;estrategias de IA&rdquo; se estancan porque nadie en el equipo ha lanzado un agente. Evaluamos dónde la IA realmente mueve la aguja, diseñamos y construimos los agentes que hacen el trabajo, y los implementamos para que tu equipo los use desde el lunes.
+        </p>
+        <ul class="service-list">
+          <li>Auditorías de preparación en IA y hojas de ruta</li>
+          <li>Diseño e implementación de agentes a medida</li>
+          <li>Claude, OpenAI, modelos de código abierto</li>
+          <li>Skills, plugins, servidores MCP</li>
+          <li>Capacitación y adopción del equipo</li>
+          <li>Operación continua y ajuste</li>
+        </ul>
+        <a href="/es/services/ai-agent-consulting.html" class="service-link">
+          <span>Explorar consultoría de IA</span>
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Selected work ─────────────────── -->
+<section id="work" class="section work-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Trabajo seleccionado</p>
+        <h2 class="display h2">Productos que hemos construido.<br />Lecciones que traemos al <em>tuyo</em>.</h2>
+      </div>
+      <p class="lede">Dos están en vivo hoy; dos están en desarrollo. Mismo equipo, mismo stack, en cualquier caso.</p>
+    </header>
+
+    <div class="work-grid">
+
+      <article class="case">
+        <div class="case-media">
+          <img src="../images/appt-helper.webp" width="1200" height="630" alt="Panel en vivo de Appt Helper mostrando citas de Global Entry y SENTRI siendo tomadas en tiempo real" />
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Appt Helper</span>
+            <span class="case-status">En vivo</span>
+          </div>
+          <h3 class="case-title">Los espacios de Global Entry y SENTRI desaparecen en minutos. Construimos la alerta que los atrapa.</h3>
+          <p class="case-desc">Un servicio de monitoreo para consumidores que vigila los 184 centros de inscripción Trusted Traveler de EE. UU. las 24 horas y avisa por mensaje de texto en el instante en que se libera una cancelación &mdash; convirtiendo una espera de 4 a 11 meses en días.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">Node.js · Redis · PostgreSQL · Twilio</span>
+            <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">Visitar <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-media">
+          <img src="../images/open-cita.webp" width="1200" height="630" alt="Panel en vivo de Open Cita, la versión en español de Appt Helper, mostrando citas siendo tomadas" />
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Open Cita</span>
+            <span class="case-status">En vivo</span>
+          </div>
+          <h3 class="case-title">El mismo motor de alertas, reconstruido en español para los viajeros que faltaban.</h3>
+          <p class="case-desc">Open Cita es el espejo en español de Appt Helper &mdash; el mismo monitoreo 24/7 y alertas SMS instantáneas, completamente localizado para viajeros de habla hispana que buscan Global Entry, SENTRI y NEXUS.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">Node.js · Redis · PostgreSQL · Twilio</span>
+            <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">Visitar <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" data-status="dev">
+        <div class="case-media">
+          <img src="../images/border-bills.webp" width="1200" height="630" alt="Página de Border Bills: paga servicios de México al instante, deja de manejar a Tijuana" loading="lazy" />
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Border Bills</span>
+            <span class="case-status">En desarrollo</span>
+          </div>
+          <h3 class="case-title">Paga servicios mexicanos desde EE. UU. — sin cruzar la frontera.</h3>
+          <p class="case-desc">Una app de pagos para familias en EE. UU. que pagan CFE (electricidad), Telmex / Izzi (internet), agua y predial &mdash; en segundos, en lugar de cruzar la frontera o enviar efectivo.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">Next.js 16 · React 19 · Stripe · Reloadly</span>
+            <a class="btn-link" href="#work"><span>Mantente al pendiente</span> <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" data-status="dev">
+        <div class="case-media">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <div class="browser-address">bajacare.com/search</div>
+            </div>
+            <div class="browser-content">
+              <div class="mock-search">
+                <span>Buscar médicos acreditados en Tijuana...</span>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-avatar">Dr</div>
+                <div class="mock-card-info">
+                  <div class="mock-card-title">Baja Care Cardiology</div>
+                  <div class="mock-card-subtitle">Cardiología · Tijuana, MX</div>
+                  <div class="mock-tags">
+                    <span class="mock-tag">Acreditado</span>
+                    <span class="mock-tag highlight">Disponible Hoy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="case-name">Baja Care</span>
+            <span class="case-status">En desarrollo</span>
+          </div>
+          <h3 class="case-title">Turismo médico, hecho navegable.</h3>
+          <p class="case-desc">Una plataforma de descubrimiento y admisión de pacientes que conecta a pacientes de EE. UU. con proveedores verificados en Baja California &mdash; convirtiendo grupos de Facebook y el boca a boca en una experiencia guiada y transparente.</p>
+          <div class="case-foot">
+            <span class="case-stack mono">Next.js · React · TypeScript</span>
+            <a class="btn-link" href="#work"><span>Mantente al pendiente</span> <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── How we work ─────────────────── -->
+<section id="how" class="section how-bg">
+  <div class="wrap-wide how-container">
+    <div class="how-left">
+      <header class="sec-head">
+        <div>
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2 class="display h2">Te encontramos <em>donde</em> estés.</h2>
+        </div>
+        <p class="lede">Cada proyecto se estructura alrededor de tu realidad &mdash; no de una plantilla. Elige lo que encaje, o te ayudamos a decidir.</p>
+      </header>
+    </div>
+
+    <div class="how-right">
+      <div class="how-timeline-line"><div class="how-timeline-progress"></div></div>
+      <div class="how-grid">
+
+        <div class="how-cell" data-timeline-index="1">
+          <div class="how-num">01</div>
+          <h4 class="display h4">Proyecto de alcance fijo</h4>
+          <p class="body">Para un entregable definido y con un límite claro &mdash; un MVP, un rediseño, una integración de IA. Delimitamos el alcance con precisión, entregamos en una fecha y hacemos un traspaso limpio.</p>
+          <dl class="how-meta">
+            <div class="meta-item">
+              <dt>Ideal para</dt>
+              <dd>ideas validadas · lanzamientos planeados</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Duración típica</dt>
+              <dd>4 – 16 semanas</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="how-cell" data-timeline-index="2">
+          <div class="how-num">02</div>
+          <h4 class="display h4">Retainer mensual</h4>
+          <p class="body">Para equipos que necesitan capacidad continua de ingeniería senior u operaciones de IA. Costo predecible, alcance flexible, sin la carga de contratar.</p>
+          <dl class="how-meta">
+            <div class="meta-item">
+              <dt>Ideal para</dt>
+              <dd>startups en crecimiento · CTO fraccional</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Duración típica</dt>
+              <dd>3+ meses, mes a mes</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="how-cell" data-timeline-index="3">
+          <div class="how-num">03</div>
+          <h4 class="display h4">Sprint de estrategia</h4>
+          <p class="body">Una inmersión de una a dos semanas: auditoría de preparación en IA, revisión de arquitectura, o sprint de diseño de agentes. Terminas con una hoja de ruta que tu equipo puede ejecutar &mdash; con o sin nosotros.</p>
+          <dl class="how-meta">
+            <div class="meta-item">
+              <dt>Ideal para</dt>
+              <dd>&ldquo;sabemos que necesitamos esto&hellip;&rdquo;</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Duración típica</dt>
+              <dd>1 – 2 semanas, precio fijo</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="how-cell" data-timeline-index="4">
+          <div class="how-num">04</div>
+          <h4 class="display h4">Sociedad / participación accionaria</h4>
+          <p class="body">Para fundadores que buscan un socio técnico a largo plazo. Invertimos tiempo de ingeniería a cambio de participación accionaria o de ingresos, con una estructura que protege a ambas partes.</p>
+          <dl class="how-meta">
+            <div class="meta-item">
+              <dt>Ideal para</dt>
+              <dd>etapa temprana con un mercado creíble</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Duración típica</dt>
+              <dd>12+ meses</dd>
+            </div>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── About ─────────────────── -->
+<section id="about" class="section about-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Nosotros</p>
+        <h2 class="display h2">Un equipo pequeño de personas que construyen, liderado por un ingeniero que ha estado en <em>ambos</em> lados de la mesa.</h2>
+      </div>
+      <p class="lede">Empezamos lanzando nuestros propios productos para saber de qué hablábamos cuando empezáramos a lanzar los tuyos.</p>
+    </header>
+
+    <div class="about-grid">
+      <div class="about-body">
+        <p>Technology Consultants fue fundada por <strong>Roberto Guido</strong> &mdash; ingeniero eléctrico (UC San Diego) con un MBA de NYU Stern que ha dedicado su carrera a cerrar la brecha entre lo técnicamente posible y lo que realmente mueve un negocio. Lidera un equipo enfocado de ingenieros y diseñadores senior que han lanzado productos juntos durante años.</p>
+        <p>Ese puente funciona en ambas direcciones: ha trabajado en el diseño de hardware y software del sistema de IA de voz en Encounter&nbsp;AI, una plataforma de pedidos para drive-thru y kioscos respaldada por inversionistas como Morgan Stanley Inclusive Ventures Lab, y es residente 2024 del programa de Residencia Técnica en IA o Ciberseguridad (TRAC) de Colorwave &mdash; una beca competitiva, que acepta aproximadamente al 10% de los solicitantes, que coloca a tecnólogos emergentes en trabajo real de inteligencia artificial y ciberseguridad.</p>
+        <p>Empezamos construyendo nuestros propios productos &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills y Baja&nbsp;Care &mdash; porque queríamos probar que la arquitectura, el equipo y el modelo de operación funcionaban antes de vendérselo a clientes.</p>
+        <p>Ese portafolio es ahora la base de nuestra práctica de consultoría. Llevamos exactamente los mismos patrones probados en batalla, optimizaciones de rendimiento y pipelines de despliegue robustos directamente a los proyectos de nuestros clientes.</p>
+      </div>
+      <aside class="about-card">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div class="pfp"><img src="../images/roberto.png" alt="Roberto Guido" width="64" height="64" /></div>
+          <div>
+            <div class="name">Roberto Guido</div>
+            <div class="role">Fundador · Ing. Eléctrico, UC San Diego · MBA, NYU Stern</div>
+          </div>
+        </div>
+        <dl>
+          <div class="row"><dt>Práctica</dt><dd>Aplicaciones web y agentes de IA</dd></div>
+          <div class="row"><dt>Residencia</dt><dd>AI TRAC, 2024</dd></div>
+          <div class="row"><dt>Ubicación</dt><dd>San Diego · Tijuana</dd></div>
+          <div class="row"><dt>Idiomas</dt><dd>Inglés · Español</dd></div>
+          <div class="row"><dt>Disponible para</dt><dd>Pequeñas empresas · startups · empresas medianas</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── FAQ ─────────────────── -->
+<section id="faq" class="section faq-bg">
+  <div class="wrap-wide">
+    <header class="sec-head" style="text-align: center; max-width: 600px; margin: 0 auto 40px; display: flex; flex-direction: column; align-items: center;">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="display h2" style="margin-top: 12px;">Preguntas frecuentes</h2>
+    </header>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuál es su modelo de colaboración típico?</summary>
+        <div class="faq-answer">
+          <p>Operamos ya sea bajo un proyecto de alcance y hitos definidos (como MVPs, rediseños o integraciones específicas) o mediante un retainer mensual de CTO fraccional para capacidad continua de ingeniería y operaciones de IA.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Publican sus precios?</summary>
+        <div class="faq-answer">
+          <p>Los proyectos de consultoría y desarrollo se estructuran a la medida de la complejidad técnica de cada cliente. Cotizamos cada proyecto de forma individual para ofrecer presupuestos fijos y transparentes en lugar de tarifas estándar pre-anunciadas.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cuál es su stack tecnológico estándar?</summary>
+        <div class="faq-answer">
+          <p>Construimos con React y TypeScript en el frontend, Node.js en el backend y PostgreSQL para bases de datos. Nuestro trabajo de IA utiliza Claude, OpenAI e integraciones personalizadas de Model Context Protocol (MCP).</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cómo se maneja la entrega técnica del código?</summary>
+        <div class="faq-answer">
+          <p>Entregamos repositorios de git completamente documentados y asistimos con la implementación en la nube. Tu equipo interno puede tomar el control de inmediato, o bien, podemos continuar operando y monitoreando el sistema bajo un retainer mensual.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Dónde están ubicados?</summary>
+        <div class="faq-answer">
+          <p>Estamos ubicados en San Diego, California, y trabajamos con clientes de forma global en Estados Unidos y mercados transfronterizos con México.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Final CTA ─────────────────── -->
+<section id="contact" class="section cta-bg">
+  <div class="wrap-wide">
+    <div class="cta-card">
+      <div>
+        <p class="eyebrow">Siguiente paso</p>
+        <h2 class="display h2">Cuéntanos qué estás tratando de construir.</h2>
+        <p class="lede">Una llamada de 30 minutos no cuesta nada y normalmente te deja con al menos una idea concreta &mdash; trabajemos juntos o no.</p>
+      </div>
+      <div class="cta-actions">
+        <form id="contact-form" class="cta-form" autocomplete="on" action="https://formspree.io/f/xeeyezkr" method="POST">
+          <div class="form-row">
+            <input type="text" id="form-name" name="name" required placeholder="Tu Nombre" aria-label="Tu Nombre" />
+            <input type="email" id="form-email" name="email" required placeholder="Tu Correo" aria-label="Tu Correo" />
+          </div>
+          <textarea id="form-message" name="message" required rows="3" placeholder="Cuéntanos sobre tu proyecto..." aria-label="Detalles del Proyecto"></textarea>
+          <button type="submit" class="btn btn-primary">
+            <span>Reservar llamada de estrategia</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </button>
+          <div id="form-success" class="form-success-message" style="display:none;">
+            ✓ Solicitud recibida. Responderemos en menos de 24 horas para programar la llamada.
+          </div>
+          <div id="form-error" class="form-error-message" style="display:none;">
+            Hubo un problema al enviar esto. Por favor escríbenos directamente a contact@technologyconsultants.ventures.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ─────────────────── Footer ─────────────────── -->
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-brand" href="#top">
+          <span class="nav-mark" aria-hidden="true"></span>
+          <span style="color:#fff;">Technology Consultants</span>
+        </a>
+        <p>Una consultoría dirigida por quienes construyen software real. Diseñamos, construimos y operamos aplicaciones web en React y agentes de IA.</p>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#services">Desarrollo web</a></li>
+          <li><a href="#services">Consultoría en agentes de IA</a></li>
+          <li><a href="#how">Modelos de colaboración</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Nuestro trabajo</h5>
+        <ul>
+          <li><a href="https://appthelper.com" target="_blank" rel="noreferrer">Appt Helper</a></li>
+          <li><a href="https://opencita.com" target="_blank" rel="noreferrer">Open Cita</a></li>
+          <li><a href="#work">Border Bills</a></li>
+          <li><a href="#work">Baja Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li><a href="mailto:contact@technologyconsultants.ventures">Escríbenos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="small">&copy; 2026 Technology Consultants Inc. Todos los derechos reservados.</span>
+      <span class="small"><a href="/es/privacy.html" class="footer-legal-link" style="color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4BECD7'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Privacidad y Condiciones</a></span>
+      <span class="mono">v2026.06 · hecho por quienes construyen</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="../i18n.js"></script>
+<script defer src="../nav.js"></script>
+<script defer src="../hero-shapes.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="../scroll-reveal.js"></script>
+</body>
+</html>

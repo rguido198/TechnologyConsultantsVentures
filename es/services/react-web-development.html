@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+<script>
+  localStorage.setItem("tcv-lang", "es");
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Consultoría de Desarrollo Web React y Full-Stack — Technology Consultants Inc</title>
+<meta name="description" content="Desarrollo de aplicaciones web React y full-stack de principio a fin. Construimos sistemas de alto rendimiento con TypeScript, Node.js y Postgres." />
+
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png" />
+<link rel="canonical" href="https://technologyconsultants.ventures/es/services/react-web-development.html" />
+<link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/react-web-development.html" />
+<link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/react-web-development.html" />
+<link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/react-web-development.html" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://technologyconsultants.ventures/es/services/react-web-development.html" />
+<meta property="og:title" content="Consultoría de Desarrollo Web React y Full-Stack — Technology Consultants Inc" />
+<meta property="og:description" content="Desarrollo de aplicaciones web React y full-stack de principio a fin. Construimos sistemas de alto rendimiento con TypeScript, Node.js y Postgres." />
+<meta property="og:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://technologyconsultants.ventures/es/services/react-web-development.html" />
+<meta name="twitter:title" content="Consultoría de Desarrollo Web React y Full-Stack — Technology Consultants Inc" />
+<meta name="twitter:description" content="Desarrollo de aplicaciones web React y full-stack de principio a fin. Construimos sistemas de alto rendimiento con TypeScript, Node.js y Postgres." />
+<meta name="twitter:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://technologyconsultants.ventures/#organization",
+      "name": "Technology Consultants Inc",
+      "url": "https://technologyconsultants.ventures/es/",
+      "logo": "https://technologyconsultants.ventures/images/apple-touch-icon.png",
+      "image": "https://technologyconsultants.ventures/images/roberto.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://technologyconsultants.ventures/es/services/react-web-development.html#service",
+      "name": "Consultoría de Desarrollo Web React y Full-Stack",
+      "provider": {
+        "@id": "https://technologyconsultants.ventures/#organization"
+      },
+      "description": "Desarrollo de aplicaciones web modernas de principio a fin utilizando React, TypeScript, Node.js, Postgres e infraestructura en la nube.",
+      "areaServed": "Worldwide"
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="../../fonts.css" />
+<link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="../../components.css" />
+<style>
+  .service-detail-hero {
+    padding: clamp(100px, 10vw, 160px) 0 clamp(60px, 6vw, 100px);
+    background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .service-detail-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: clamp(48px, 6vw, 96px);
+    margin-top: 64px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .service-detail-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+  .content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .content-block h2 {
+    font-size: clamp(28px, 2.5vw, 36px);
+    margin-top: 24px;
+  }
+  .content-block p {
+    font-size: 17.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .content-block ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .content-block li {
+    font-size: 16.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .sidebar-box {
+    background: var(--bg-warm);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-xl);
+    padding: clamp(24px, 2.5vw, 36px);
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .sidebar-box h4 {
+    margin: 0;
+  }
+  .sidebar-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sidebar-box li {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sidebar-box li::before {
+    content: "✓";
+    color: var(--teal);
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────────────────── Nav ─────────────────── -->
+<header class="nav">
+  <div class="wrap-wide nav-inner">
+    <a class="nav-brand" href="/es/" aria-label="Technology Consultants home">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-brand-text">Technology Consultants</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-li"><a href="/es/#services">Servicios</a></li>
+        <li class="nav-li"><a href="/es/#work">Trabajo</a></li>
+        <li class="nav-li"><a href="/es/#how">Cómo trabajamos</a></li>
+        <li class="nav-li"><a href="/es/#about">Nosotros</a></li>
+        <li class="nav-li"><a href="/es/#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="lang-toggle" href="/services/react-web-development.html" onclick="localStorage.setItem('tcv-lang', 'en');">EN · English</a>
+        <a class="nav-cta" href="/es/#contact">Contáctanos</a>
+        <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ─────────────────── Hero ─────────────────── -->
+  <section class="service-detail-hero">
+    <div class="wrap-wide">
+      <div class="hero-meta-row">
+        <span class="meta">Detalle de Servicio</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="meta">Arquitectura Full-Stack</span>
+      </div>
+      <h1 class="display h1" style="max-width: 800px; margin-top: 16px;">Consultoría de Desarrollo Web React y Full-Stack</h1>
+      <p class="lede" style="max-width: 720px; margin-top: 24px;">
+        Diseñamos, construimos y operamos aplicaciones web de alto rendimiento con React. Al trabajar directamente con ingenieros senior, entregamos código limpio y escalable listo para el crecimiento de tu negocio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────────────── Content Grid ─────────────────── -->
+  <section class="section" style="padding-top: 0;">
+    <div class="wrap-wide service-detail-grid">
+      
+      <div class="content-block">
+        
+        <h2>Probado en Producción: Appt Helper y Open Cita</h2>
+        <p>
+          A diferencia de los consultores teóricos, nosotros operamos nuestros propios productos de software. <strong>Appt Helper</strong> y su versión en español <strong>Open Cita</strong> son sistemas de monitoreo para consumidores que vigilan de forma continua los 184 centros de inscripción Trusted Traveler de EE. UU. las 24 horas del día. En cuanto se libera una cita, el backend procesa y envía alertas SMS instantáneas a miles de suscriptores activos en menos de dos segundos.
+        </p>
+        <p>
+          Operar estas plataformas nos ha llevado a dominar el ajuste de rendimiento en el mundo real, la gestión de pools de conexiones de bases de datos, la programación distribuida y el enrutamiento en el borde (edge routing). Al contratarnos para consultoría de desarrollo web, trabajas con un equipo que ya ha resuelto los cuellos de botella de latencia, almacenamiento en caché y concurrencia que limitan el crecimiento de las startups.
+        </p>
+
+        <h2>Nuestro Stack Técnico</h2>
+        <p>
+          No creemos en seguir modas pasajeras de frameworks. Construimos con un núcleo tecnológico robusto, seguro y altamente optimizado:
+        </p>
+        <ul>
+          <li><strong>Frontend:</strong> React (incluyendo las capacidades de React 19), TypeScript, vanilla CSS y HTML semántico y accesible. Nos enfocamos en renderizados ligeros en el DOM, optimizando las Core Web Vitals (LCP, INP, CLS) y eliminando el desfase de diseño (layout shift).</li>
+          <li><strong>Backend:</strong> Node.js y Express. Diseñamos APIs RESTful limpias, implementamos esquemas estrictos de validación con JSON y estructuramos middlewares de manejo de errores robustos.</li>
+          <li><strong>Base de Datos:</strong> PostgreSQL. Estructuramos modelos relacionales normalizados, escribimos consultas SQL directas y optimizadas, diseñamos estrategias de indexación y configuramos pools de conexiones para soportar cargas de alta concurrencia.</li>
+          <li><strong>Edge Hosting:</strong> Cloudflare Workers y assets estáticos. Aprovechamos las redes perimetrales para entregar tiempos de carga inferiores a 100ms a nivel global, con arquitecturas serverless de mantenimiento mínimo.</li>
+        </ul>
+
+        <h2>Principios Técnicos</h2>
+        <p>
+          Seguimos cuatro reglas arquitectónicas estrictas en todos nuestros desarrollos web:
+        </p>
+        <ul>
+          <li><strong>Tipado Seguro del DOM a la Base de Datos:</strong> Al utilizar TypeScript en todo el ciclo de desarrollo, eliminamos por completo los errores en tiempo de ejecución. Generamos tipos de base de datos automáticamente que alimentan nuestros esquemas del backend y llamados del frontend. Si una columna de la base de datos cambia, el compilador señala el elemento afectado antes de que el código sea enviado a producción.</li>
+          <li><strong>Cero Código Basura en el Cliente:</strong> El desarrollo web moderno sufre de bundles de JavaScript sobrecargados. Compilamos nuestros frontends de React con objetivos limpios, evitamos librerías externas innecesarias para interacciones simples y optimizamos las imágenes. Esto se traduce en aplicaciones que cargan al instante incluso en conexiones móviles de bajo ancho de banda.</li>
+          <li><strong>Diseño de APIs sin Estado (Stateless):</strong> Nuestros backends se construyen como servicios sin estado. Esto les permite escalar horizontalmente a través de múltiples nodos perimetrales sin cuellos de botella de sincronización.</li>
+          <li><strong>Normalización Estricta de Datos:</strong> Muchas startups optan por bases de datos NoSQL para terminar arrepintiéndose al necesitar reportes complejos, transacciones seguras y relaciones consistentes. Estructuramos los datos con lógica relacional estricta, usando llaves foráneas, restricciones nativas e índices para garantizar la integridad a escala.</li>
+        </ul>
+
+        <h2>Gobernanza y Retainers de CTO Fraccional</h2>
+        <p>
+          Para organizaciones que requieren capacidad continua de ingeniería senior o liderazgo técnico, ofrecemos esquemas de retainer mensual y servicios de CTO fraccional. Implementamos lineamientos de gobernanza claros:
+        </p>
+        <ul>
+          <li><strong>Canales de Comunicación:</strong> Cada retainer incluye un canal de Slack dedicado con acceso directo a nuestros ingenieros principales. Publicamos resúmenes diarios de avance y escalamos bloqueos técnicos en menos de dos horas.</li>
+          <li><strong>Límites de SLA:</strong> Los incidentes críticos de producción reciben respuesta y triaje garantizados en menos de 4 horas dentro del horario laboral estándar de la zona Pacífica. Las tareas no críticas se analizan, estiman y programan en sprints semanales.</li>
+          <li><strong>Integración Continua:</strong> Todo el código se entrega mediante Pull Requests estructurados en GitHub, acompañados de suites de pruebas automatizadas y reglas estrictas de linter para mantener la coherencia del código.</li>
+        </ul>
+
+        <h2>Nuestro Proceso de Desarrollo</h2>
+        <p>
+          Dividimos nuestros ciclos de desarrollo en fases bien definidas y medibles:
+        </p>
+        <ol style="padding-left: 20px; display: flex; flex-direction: column; gap: 16px;">
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Fase 1: Diseño de Arquitectura (Semana 1)</strong> — Modelamos tus esquemas de base de datos, definimos los endpoints de las APIs y mapeamos los flujos de datos. No se escribe código hasta acordar la arquitectura.
+          </li>
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Fase 2: Sprints de Ingeniería (Semanas 2-8)</strong> — Construimos la aplicación en incrementos semanales probables. Recibes un URL de pruebas (staging) al final de cada semana para validar avances.
+          </li>
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Fase 3: Auditoría de Seguridad y Rendimiento (Semana 9)</strong> — Corremos pruebas de carga, configuramos las cabeceras de seguridad (HSTS, CSP) y verificamos los estándares de accesibilidad.
+          </li>
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Fase 4: Despliegue y Traspaso (Semana 10)</strong> — Lanzamos a producción, entregamos la documentación completa y capacitamos a tu equipo interno para operar el sistema de forma autónoma.
+          </li>
+        </ol>
+
+      </div>
+
+      <div class="sidebar-box">
+        <h4 class="display h4">De un Vistazo</h4>
+        <ul>
+          <li>Ingenieros 100% Senior</li>
+          <li>Cero Subcontratación</li>
+          <li>Arquitecturas Edge-First</li>
+          <li>Bases de Datos Relacionales (Postgres)</li>
+          <li>Tipado Seguro con TypeScript</li>
+          <li>Documentación de Entrega Completa</li>
+        </ul>
+        <hr style="border: 0; border-top: 1px solid var(--line-soft); margin: 8px 0;" />
+        <p style="font-size: 14px; line-height: 1.5; color: var(--ink-quiet); margin: 0;">
+          ¿Buscas escalar tu aplicación o reescribir un sistema legado? Analicemos tu arquitectura.
+        </p>
+        <a class="btn btn-primary" href="/es/#contact" style="text-align: center; width: 100%;">Reservar Llamada de Estrategia</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─────────────────── Footer ─────────────────── -->
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-brand" href="/es/">
+          <span class="nav-mark" aria-hidden="true"></span>
+          <span style="color:#fff;">Technology Consultants</span>
+        </a>
+        <p>Una consultoría dirigida por quienes construyen software real. Diseñamos, construimos y operamos aplicaciones web en React y agentes de IA.</p>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="/es/#services">Desarrollo web</a></li>
+          <li><a href="/es/#services">Consultoría en agentes de IA</a></li>
+          <li><a href="/es/#how">Modelos de colaboración</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Nuestro trabajo</h5>
+        <ul>
+          <li><a href="https://appthelper.com" target="_blank" rel="noreferrer">Appt Helper</a></li>
+          <li><a href="https://opencita.com" target="_blank" rel="noreferrer">Open Cita</a></li>
+          <li><a href="/es/#work">Border Bills</a></li>
+          <li><a href="/es/#work">Baja Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="/es/#about">Nosotros</a></li>
+          <li><a href="/es/#faq">FAQ</a></li>
+          <li><a href="/es/#contact">Contacto</a></li>
+          <li><a href="mailto:contact@technologyconsultants.ventures">Escríbenos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="small">&copy; 2026 Technology Consultants Inc. Todos los derechos reservados.</span>
+      <span class="small"><a href="/es/privacy.html" class="footer-legal-link" style="color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4BECD7'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Privacidad y Condiciones</a></span>
+      <span class="mono">v2026.06 · hecho por quienes construyen</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="../../nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>
+  (function() {
+    var saved = localStorage.getItem("tcv-lang");
+    if (saved === "es") {
+      window.location.replace("/es/services/ai-agent-consulting.html");
+    }
+  })();
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Agent Consulting & Development — Technology Consultants Inc</title>
+<meta name="description" content="Custom autonomous AI agent consulting and development. We design, build, and deploy Model Context Protocol (MCP) integrations and secure agent systems." />
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+<link rel="canonical" href="https://technologyconsultants.ventures/services/ai-agent-consulting.html" />
+<link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/ai-agent-consulting.html" />
+<link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/ai-agent-consulting.html" />
+<link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/ai-agent-consulting.html" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://technologyconsultants.ventures/services/ai-agent-consulting.html" />
+<meta property="og:title" content="AI Agent Consulting & Development — Technology Consultants Inc" />
+<meta property="og:description" content="Custom autonomous AI agent consulting and development. We design, build, and deploy Model Context Protocol (MCP) integrations." />
+<meta property="og:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://technologyconsultants.ventures/services/ai-agent-consulting.html" />
+<meta name="twitter:title" content="AI Agent Consulting & Development — Technology Consultants Inc" />
+<meta name="twitter:description" content="Custom autonomous AI agent consulting and development. We design, build, and deploy Model Context Protocol (MCP) integrations." />
+<meta name="twitter:image" content="https://technologyconsultants.ventures/images/roberto.png" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://technologyconsultants.ventures/#organization",
+      "name": "Technology Consultants Inc",
+      "url": "https://technologyconsultants.ventures",
+      "logo": "https://technologyconsultants.ventures/images/apple-touch-icon.png",
+      "image": "https://technologyconsultants.ventures/images/roberto.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://technologyconsultants.ventures/services/ai-agent-consulting.html#service",
+      "name": "AI Agent Consulting & Development",
+      "provider": {
+        "@id": "https://technologyconsultants.ventures/#organization"
+      },
+      "description": "Strategy, design, implementation, and roll-out of custom autonomous AI agents, Model Context Protocol (MCP) servers, and integrations.",
+      "areaServed": "Worldwide"
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="../fonts.css" />
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../components.css" />
+<style>
+  .service-detail-hero {
+    padding: clamp(100px, 10vw, 160px) 0 clamp(60px, 6vw, 100px);
+    background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .service-detail-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: clamp(48px, 6vw, 96px);
+    margin-top: 64px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .service-detail-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+  .content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .content-block h2 {
+    font-size: clamp(28px, 2.5vw, 36px);
+    margin-top: 24px;
+  }
+  .content-block p {
+    font-size: 17.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .content-block ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .content-block li {
+    font-size: 16.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .sidebar-box {
+    background: var(--bg-warm);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-xl);
+    padding: clamp(24px, 2.5vw, 36px);
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .sidebar-box h4 {
+    margin: 0;
+  }
+  .sidebar-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sidebar-box li {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sidebar-box li::before {
+    content: "✓";
+    color: var(--teal);
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────────────────── Nav ─────────────────── -->
+<header class="nav">
+  <div class="wrap-wide nav-inner">
+    <a class="nav-brand" href="/" aria-label="Technology Consultants home">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-brand-text">Technology Consultants</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-li"><a href="/#services">Services</a></li>
+        <li class="nav-li"><a href="/#work">Work</a></li>
+        <li class="nav-li"><a href="/#how">How we work</a></li>
+        <li class="nav-li"><a href="/#about">About</a></li>
+        <li class="nav-li"><a href="/#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="lang-toggle" href="/es/services/ai-agent-consulting.html" onclick="localStorage.setItem('tcv-lang', 'es');">ES · Español</a>
+        <a class="nav-cta" href="/#contact">Book a call</a>
+        <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ─────────────────── Hero ─────────────────── -->
+  <section class="service-detail-hero">
+    <div class="wrap-wide">
+      <div class="hero-meta-row">
+        <span class="meta">Service Deep Dive</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="meta">AI Agent Consulting</span>
+      </div>
+      <h1 class="display h1" style="max-width: 800px; margin-top: 16px;">AI Agent Consulting &amp; Development</h1>
+      <p class="lede" style="max-width: 720px; margin-top: 24px;">
+        We cut through the AI hype to build autonomous systems that solve concrete operational bottlenecks. From secure model integration to custom Model Context Protocol (MCP) servers, we deliver code that works on day one.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────────────── Content Grid ─────────────────── -->
+  <section class="section" style="padding-top: 0;">
+    <div class="wrap-wide service-detail-grid">
+      
+      <div class="content-block">
+        
+        <h2>Autonomous Workflows: Real-World Trust</h2>
+        <p>
+          We do not just evaluate AI tools — we write, deploy, and operate them. Our consumer-facing alerts engines, such as <strong>Appt Helper</strong>, operate continuously at scale, processing real-time government databases and routing high-frequency SMS data.
+        </p>
+        <p>
+          This operational background is the foundation of our AI consulting practice. We know how to deploy AI agents that are deterministic, secure, and cost-efficient. We bypass slide decks and focus entirely on creating autonomous workflows that execute tasks, connect to your internal systems, and interact with your users reliably.
+        </p>
+
+        <h2>Our Technical Stack</h2>
+        <p>
+          We build with state-of-the-art LLMs, orchestration tools, and strict data validation layers:
+        </p>
+        <ul>
+          <li><strong>Large Language Models:</strong> Anthropic Claude (using custom system prompting and prompt engineering best practices), OpenAI GPT-4o, and highly optimized open-source models (Llama-3, Mistral) deployed on cost-efficient cloud hardware.</li>
+          <li><strong>Agent Orchestration:</strong> Custom Python agent pipelines. We design state machines that transition between planning, execution, and self-correction phases.</li>
+          <li><strong>Integrations &amp; MCP:</strong> Model Context Protocol (MCP). We build custom MCP servers that expose clean, permissioned schemas to LLMs, allowing them to safely query internal databases, fetch APIs, and read filesystem hierarchies.</li>
+          <li><strong>Observability &amp; Cost Control:</strong> Token tracking, prompt caching structures, and error boundary logging to monitor agent behavior and manage runtime API expenses.</li>
+        </ul>
+
+        <h2>Deep-Dive: Our AI Principles</h2>
+        <p>
+          To move AI from sandbox experiments to production systems, we enforce four core design guidelines:
+        </p>
+        <ul>
+          <li><strong>Deterministic Agent Boundaries:</strong> AI models are non-deterministic by nature. We wrap LLMs in strict validation wrappers (using Pydantic, Zod, and JSON schema constraints) to ensure that model outputs match expected structures exactly. Hallucinations are intercepted and corrected automatically by the agent pipeline before they reach users or databases.</li>
+          <li><strong>Context Window Management:</strong> Long prompts are expensive and slow. We implement strict context management strategies, dynamic rag (Retrieval-Augmented Generation) injection, and Anthropic's prompt caching features to reduce latency and API billing by up to 50%.</li>
+          <li><strong>Human-in-the-Loop (HITL) Triggers:</strong> We isolate critical actions. An agent can research a topic, write code, or draft an email autonomously, but actions involving financial transactions, database writes, or direct client outreach trigger manual approval flows.</li>
+          <li><strong>Secure Sandbox Execution:</strong> When agents need to run custom code or parse uploaded files, we deploy secure, sandboxed execution runtimes (like Docker or gVisor) to ensure that the model has zero access to the host machine's resources.</li>
+        </ul>
+
+        <h2>Retainer &amp; Fractional CTO Governance</h2>
+        <p>
+          AI integration requires ongoing oversight as models evolve. Our fractional CTO and retainer models provide direct access to technical strategy:
+        </p>
+        <ul>
+          <li><strong>SLA &amp; Incident Routing:</strong> Retainers guarantee that production pipeline exceptions (such as API rate limits or model drift) are resolved immediately. We monitor LLM provider statuses and maintain automatic fallback mechanisms to alternative models.</li>
+          <li><strong>Security &amp; Privacy Safeguards:</strong> We verify that client data is never utilized for LLM model training. All integrations are mapped against strict enterprise privacy standards, using zero-data-retention APIs where available.</li>
+        </ul>
+
+        <h2>Our AI Readiness Roadmap</h2>
+        <p>
+          We guide organizations through structured, measurable iterations:
+        </p>
+        <ol style="padding-left: 20px; display: flex; flex-direction: column; gap: 16px;">
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Phase 1: AI Readiness Audit (Weeks 1-2)</strong> — We review your workflows and databases to identify where AI can actually drive efficiency, delivering a complete architectural blueprint.
+          </li>
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Phase 2: Sandbox Prototype (Weeks 3-5)</strong> — We build a working agent inside a sandboxed environment, testing prompt efficiency and structured tool calls.
+          </li>
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Phase 3: Integration &amp; Safety (Weeks 6-8)</strong> — We connect the prototype to your live APIs, implement Human-in-the-Loop triggers, and configure logging tools.
+          </li>
+          <li style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.5;">
+            <strong>Phase 4: Handoff &amp; Rollout (Week 9)</strong> — We ship the system to production, configure automated telemetry, and train your team to maintain prompt templates.
+          </li>
+        </ol>
+
+      </div>
+
+      <div class="sidebar-box">
+        <h4 class="display h4">At a Glance</h4>
+        <ul>
+          <li>Model Context Protocol (MCP)</li>
+          <li>Structured JSON Outputs</li>
+          <li>Claude &amp; GPT Orchestration</li>
+          <li>Human-in-the-Loop Control</li>
+          <li>Prompt Caching (50% Cost Drop)</li>
+          <li>Zero Outsource Engineering</li>
+        </ul>
+        <hr style="border: 0; border-top: 1px solid var(--line-soft); margin: 8px 0;" />
+        <p style="font-size: 14px; line-height: 1.5; color: var(--ink-quiet); margin: 0;">
+          Ready to deploy agents that actually perform work? Let's design your pipeline.
+        </p>
+        <a class="btn btn-primary" href="/#contact" style="text-align: center; width: 100%;">Book a Strategy Call</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─────────────────── Footer ─────────────────── -->
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-brand" href="/">
+          <span class="nav-mark" aria-hidden="true"></span>
+          <span style="color:#fff;">Technology Consultants</span>
+        </a>
+        <p>A consulting practice run by builders. We design, build, and operate React web apps and AI agents.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="/#services">Web development</a></li>
+          <li><a href="/#services">AI agent consulting</a></li>
+          <li><a href="/#how">Engagement models</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Our work</h5>
+        <ul>
+          <li><a href="https://appthelper.com" target="_blank" rel="noreferrer">Appt Helper</a></li>
+          <li><a href="https://opencita.com" target="_blank" rel="noreferrer">Open Cita</a></li>
+          <li><a href="/#work">Border Bills</a></li>
+          <li><a href="/#work">Baja Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="mailto:contact@technologyconsultants.ventures">Email us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="small">&copy; 2026 Technology Consultants Inc. All rights reserved.</span>
+      <span class="small"><a href="/privacy.html" class="footer-legal-link" style="color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4BECD7'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Privacy &amp; Terms</a></span>
+      <span class="mono">v2026.06 · made by builders</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="../nav.js"></script>
+</body>
+</html>
