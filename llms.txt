@@ -3,8 +3,8 @@
 > A consulting practice run by builders. We design, build, and operate React web applications and AI agents for startups, SMBs, and mid-market teams.
 
 ## Services
-- [React & Full-Stack Web Development](https://technologyconsultants.ventures/#services)
-- [AI Agent Consulting](https://technologyconsultants.ventures/#services)
+- [React & Full-Stack Web Development](https://technologyconsultants.ventures/services/react-web-development.html) — Dedicated service page detailing stack, type safety, SLAs, and engineering workflow.
+- [AI Agent Consulting](https://technologyconsultants.ventures/services/ai-agent-consulting.html) — Detailed service page covering LLM pipelines, prompt caching, human-in-the-loop, and MCP.
 
 ## Engagement Models
 - [Fixed-scope project](https://technologyconsultants.ventures/#how) (4 - 16 weeks) — Best for MVPs, redesigns, AI integrations.
@@ -21,6 +21,15 @@
 - **Open Cita** ([opencita.com](https://opencita.com)) — Spanish localized monitor engine for Trusted Traveler program.
 - **Border Bills** — Utility payment app for Mexican bills from the US.
 - **Baja Care** — Intake & discovery platform for vetted healthcare providers in Baja California.
+
+## Spanish / Localization (Mexican Spanish)
+- [Inicio en Español](https://technologyconsultants.ventures/es/) — Localized home page.
+- [Desarrollo Web React (ES)](https://technologyconsultants.ventures/es/services/react-web-development.html) — React consulting in Spanish.
+- [Consultoría de Agentes de IA (ES)](https://technologyconsultants.ventures/es/services/ai-agent-consulting.html) — AI agent consulting in Spanish.
+
+## Legal
+- [Privacy Policy & Terms](https://technologyconsultants.ventures/privacy.html) (Technology Consultants Inc)
+- [Políticas de Privacidad y Condiciones](https://technologyconsultants.ventures/es/privacy.html) (Spanish version)
 
 ## Contact
 - Email: contact@technologyconsultants.ventures
