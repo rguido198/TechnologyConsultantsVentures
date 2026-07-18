@@ -64,85 +64,6 @@
 <link rel="stylesheet" href="../fonts.css" />
 <link rel="stylesheet" href="../styles.css" />
 <link rel="stylesheet" href="../components.css" />
-<style>
-  .service-detail-hero {
-    padding: clamp(100px, 10vw, 160px) 0 clamp(60px, 6vw, 100px);
-    background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
-    border-bottom: 1px solid var(--line-soft);
-  }
-  .service-detail-grid {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: clamp(48px, 6vw, 96px);
-    margin-top: 64px;
-    align-items: start;
-  }
-  @media (max-width: 900px) {
-    .service-detail-grid {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-  }
-  .content-block {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-  .content-block h2 {
-    font-size: clamp(28px, 2.5vw, 36px);
-    margin-top: 24px;
-  }
-  .content-block p {
-    font-size: 17.5px;
-    line-height: 1.65;
-    color: var(--ink-soft);
-  }
-  .content-block ul {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .content-block li {
-    font-size: 16.5px;
-    color: var(--ink-soft);
-    line-height: 1.5;
-  }
-  .sidebar-box {
-    background: var(--bg-warm);
-    border: 1px solid var(--line-soft);
-    border-radius: var(--r-xl);
-    padding: clamp(24px, 2.5vw, 36px);
-    position: sticky;
-    top: 104px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  .sidebar-box h4 {
-    margin: 0;
-  }
-  .sidebar-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .sidebar-box li {
-    font-size: 14.5px;
-    color: var(--ink-soft);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .sidebar-box li::before {
-    content: "✓";
-    color: var(--teal);
-    font-weight: bold;
-  }
-</style>
 </head>
 <body>
 
@@ -180,17 +101,26 @@
   <div class="hero-shapes" data-hero-shapes aria-hidden="true"></div>
 
   <!-- ─────────────────── Hero ─────────────────── -->
-  <section class="hero service-detail-hero" style="background: transparent; border-bottom: 0;">
+  <section class="hero service-detail-hero">
     <div class="wrap-wide">
       <div class="hero-meta-row">
-        <span class="meta">Service Deep Dive</span>
+        <p class="eyebrow">Technology Consultants</p>
         <span class="sep" aria-hidden="true"></span>
         <span class="meta">AI Agent Consulting</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="meta"><span class="dot" aria-hidden="true"></span>Booking projects · Q3 2026</span>
       </div>
-      <h1 class="display h1" style="max-width: 800px; margin-top: 16px;">AI Agent Consulting &amp; Development</h1>
-      <p class="lede" style="max-width: 720px; margin-top: 24px;">
+      <h1 class="display h1">AI Agent Consulting &amp; Development</h1>
+      <p class="lede">
         We cut through the AI hype to build autonomous systems that solve concrete operational bottlenecks. From secure model integration to custom Model Context Protocol (MCP) servers, we deliver code that works on day one.
       </p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="/#contact">
+          Book a Strategy Call
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn-ghost" href="/#work">See what we&rsquo;ve built</a>
+      </div>
     </div>
   </section>
 </div>

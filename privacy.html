@@ -17,32 +17,6 @@
 <link rel="stylesheet" href="fonts.css" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="components.css" />
-<style>
-  .legal-hero {
-    padding: clamp(100px, 10vw, 160px) 0 clamp(40px, 4vw, 60px);
-    background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
-    border-bottom: 1px solid var(--line-soft);
-  }
-  .legal-content {
-    max-width: 720px;
-    margin: 48px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    font-size: 16.5px;
-    line-height: 1.65;
-    color: var(--ink-soft);
-  }
-  .legal-content h2 {
-    font-family: var(--font-sans);
-    font-size: 24px;
-    color: var(--ink);
-    margin-top: 16px;
-  }
-  .legal-content p {
-    margin: 0;
-  }
-</style>
 </head>
 <body>
 
@@ -80,8 +54,13 @@
   <div class="hero-shapes" data-hero-shapes aria-hidden="true"></div>
 
   <!-- ─────────────────── Hero ─────────────────── -->
-  <section class="hero legal-hero" style="background: transparent; border-bottom: 0;">
+  <section class="hero legal-hero">
     <div class="wrap-wide" style="max-width: 720px; margin: 0 auto;">
+      <div class="hero-meta-row">
+        <p class="eyebrow">Technology Consultants</p>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="meta">Privacy &amp; Terms</span>
+      </div>
       <h1 class="display h1">Privacy Policy &amp; Terms</h1>
       <p style="font-size: 14px; font-family: var(--font-mono); color: var(--ink-quiet); margin-top: 16px;">
         Last Updated: July 17, 2026 · Technology Consultants Inc

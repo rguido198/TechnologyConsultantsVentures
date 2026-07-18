@@ -815,6 +815,95 @@ nav { display: flex; align-items: center; gap: 30px; }
   .cta-card { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* ── Service / legal detail pages ────────────────────────────────────
+   Single source of truth for the six service/privacy pages (EN+ES).
+   Previously this block was duplicated verbatim inline in each page's
+   <style> tag, which is how the content-block/legal-content headings
+   drifted from the site's Fraunces display type onto the plain body
+   sans — nothing enforced them staying in sync. */
+.service-detail-hero,
+.legal-hero {
+  padding: clamp(100px, 10vw, 160px) 0 clamp(48px, 6vw, 96px);
+}
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: clamp(48px, 6vw, 96px);
+  margin-top: 64px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .service-detail-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+.content-block { display: flex; flex-direction: column; gap: 32px; }
+.content-block h2,
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  font-size: clamp(28px, 2.5vw, 36px);
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0;
+  margin-top: 24px;
+}
+.content-block p {
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.content-block ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.content-block li {
+  font-size: 16.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.sidebar-box {
+  background: var(--bg-warm);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-xl);
+  padding: clamp(24px, 2.5vw, 36px);
+  position: sticky;
+  top: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sidebar-box h4 { margin: 0; }
+.sidebar-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sidebar-box li {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sidebar-box li::before { content: "✓"; color: var(--teal); font-weight: bold; }
+
+.legal-content {
+  max-width: 720px;
+  margin: 48px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.legal-content p { margin: 0; }
+
 /* ── Reading progress (long-form service/privacy pages) ─────────────── */
 .reading-progress {
   position: fixed;
