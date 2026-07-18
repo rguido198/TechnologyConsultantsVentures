@@ -332,14 +332,69 @@
   var ctaCard = document.querySelector(".cta-card");
   if (ctaCard) reveal(ctaCard);
 
+  // Long-form detail pages (service pages, privacy/terms): each heading,
+  // paragraph, and list in the article reveals progressively as the reader
+  // scrolls to it, rather than bursting in all at once like the homepage's
+  // grid cards — more appropriate for a long editorial-style article.
+  // ScrollTrigger.batch() coordinates nearby elements into one tween so a
+  // fast scroll doesn't fire 15 separate tweens back to back.
+  gsap.utils.toArray(".content-block, .legal-content").forEach(function (container) {
+    var children = gsap.utils.toArray(container.children);
+    if (!children.length) return;
+    gsap.set(children, { opacity: 0, y: 20 });
+    ScrollTrigger.batch(children, {
+      start: "top 88%",
+      once: true,
+      onEnter: function (batch) {
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          duration: DURATION,
+          ease: EASE,
+          stagger: 0.08,
+          overwrite: true
+        });
+      }
+    });
+  });
+
+  var sidebarBox = document.querySelector(".sidebar-box");
+  if (sidebarBox) reveal(sidebarBox, sidebarBox, { y: 24 });
+
+  // Reading progress bar for long-form article pages. Injected via JS so no
+  // markup changes were needed across the six service/privacy pages.
+  var article = document.querySelector(".content-block, .legal-content");
+  if (article) {
+    var progressWrap = document.createElement("div");
+    progressWrap.className = "reading-progress";
+    progressWrap.setAttribute("aria-hidden", "true");
+    var progressBar = document.createElement("div");
+    progressBar.className = "reading-progress-bar";
+    progressWrap.appendChild(progressBar);
+    document.body.appendChild(progressWrap);
+
+    gsap.to(progressBar, {
+      scaleX: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: article,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 0.3
+      }
+    });
+  }
+
   // Fail-safe: reveal-on-scroll relies on a real scroll event to fire
   // ScrollTrigger. Single-pass renderers (crawlers, screenshot/QA tools,
   // link-preview bots) never dispatch one, which would otherwise leave the
-  // services grid, portfolio cards, about section, and CTA permanently at
-  // opacity:0. Force everything visible after a grace period if it hasn't
-  // revealed itself yet, so content is never structurally unreachable.
+  // services grid, portfolio cards, about section, CTA, and long-form
+  // article content permanently at opacity:0. Force everything visible
+  // after a grace period if it hasn't revealed itself yet, so content is
+  // never structurally unreachable.
   setTimeout(function () {
-    var selector = ".services-grid > *, .work-grid > *, .about-grid > *, .cta-card";
+    var selector = ".services-grid > *, .work-grid > *, .about-grid > *, .cta-card, "
+      + ".content-block > *, .legal-content > *, .sidebar-box";
     document.querySelectorAll(selector).forEach(function (el) {
       if (parseFloat(window.getComputedStyle(el).opacity) < 1) {
         gsap.killTweensOf(el);
@@ -348,9 +403,13 @@
     });
   }, 3000);
 
-  // How We Work: Pinned slide deck scrub for desktop
+  // How We Work: Pinned slide deck scrub for desktop (homepage only — guard
+  // since scroll-reveal.js now also runs on service/privacy pages that
+  // don't have this section).
   var mm = gsap.matchMedia();
   mm.add("(min-width: 901px)", function () {
+    if (!document.querySelector(".how-container")) return;
+
     // Pin left column
     ScrollTrigger.create({
       trigger: ".how-container",
