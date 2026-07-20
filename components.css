@@ -515,7 +515,6 @@ nav { display: flex; align-items: center; gap: 30px; }
 .ai-cred:hover {
   border-color: var(--line);
   box-shadow: var(--shadow-sm);
-  transform: translateY(-2px);
 }
 .ai-cred-tag {
   font: 600 11px/1 var(--font-mono);
@@ -657,7 +656,6 @@ nav { display: flex; align-items: center; gap: 30px; }
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .service:hover {
-  transform: translateY(-3px);
   border-color: var(--line);
   box-shadow: var(--shadow-md);
 }
@@ -723,9 +721,16 @@ nav { display: flex; align-items: center; gap: 30px; }
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .case:hover {
-  transform: translateY(-3px);
   border-color: var(--line);
   box-shadow: var(--shadow-md);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .service:hover,
+  .case:hover,
+  .ai-cred:hover {
+    transform: translateY(-3px);
+  }
+  .ai-cred:hover { transform: translateY(-2px); }
 }
 .case-media {
   position: relative;
@@ -1332,6 +1337,10 @@ nav { display: flex; align-items: center; gap: 30px; }
 .flow-path {
   stroke-dasharray: 6, 6;
   animation: flowLine 20s linear infinite;
+  animation-play-state: paused;
+}
+.hero-visual-in-view .flow-path {
+  animation-play-state: running;
 }
 @keyframes flowLine {
   to { stroke-dashoffset: -360; }
@@ -1573,6 +1582,11 @@ nav { display: flex; align-items: center; gap: 30px; }
   align-items: center;
   user-select: none;
   outline: none;
+}
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
 }
 .faq-item summary::-webkit-details-marker {
   display: none; /* Hides safari default triangle */

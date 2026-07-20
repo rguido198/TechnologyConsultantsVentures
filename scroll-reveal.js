@@ -121,11 +121,11 @@
   // Case study card hovers (screenshot scales 1.03, arrow shifts, shadow lifts)
   function initCardHovers() {
     gsap.utils.toArray(".case").forEach(function (card) {
-      var media = card.querySelector(".case-placeholder, .browser-mockup");
-      var arr = card.querySelector(".btn-link .arr");
+      var media = card.querySelectorAll(".case-placeholder, .browser-mockup, .shot img");
+      var arrs = card.querySelectorAll(".btn-link .arr");
 
       var tl = gsap.timeline({ paused: true });
-      if (media) {
+      if (media.length) {
         tl.to(media, {
           scale: 1.03,
           boxShadow: "0 24px 48px -16px rgba(20,30,50,0.16)",
@@ -133,8 +133,8 @@
           ease: "power2.out"
         }, 0);
       }
-      if (arr) {
-        tl.to(arr, {
+      if (arrs.length) {
+        tl.to(arrs, {
           x: 4,
           duration: 0.25,
           ease: "power2.out"
@@ -221,6 +221,31 @@
         transformOrigin: "center center"
       }, "-=" + (0.4 - i * 0.08));
     });
+
+    // Pause the infinite timeline when the SVG is scrolled out of view or the
+    // tab is hidden -- otherwise it ticks forever, animating invisible nodes.
+    // Mirrors the pause/resume pattern in hero-shapes.js for the canvas grid.
+    tl.pause();
+    var onScreen = false;
+    function syncPlayState() {
+      if (onScreen && !document.hidden) {
+        tl.play();
+      } else {
+        tl.pause();
+      }
+    }
+    if (typeof IntersectionObserver === "function") {
+      new IntersectionObserver(function (entries) {
+        onScreen = entries[0].isIntersecting;
+        syncPlayState();
+        var wrap = svg.closest(".hero-visual");
+        if (wrap) wrap.classList.toggle("hero-visual-in-view", onScreen);
+      }).observe(svg);
+    } else {
+      onScreen = true;
+      tl.play();
+    }
+    document.addEventListener("visibilitychange", syncPlayState);
   }
 
   // Booking CTA form submission
