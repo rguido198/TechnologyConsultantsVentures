@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Impeccable design-hook cache (re-derivable); config.json (reviewed
+# ignore-value exceptions) is intentionally kept and committed.
+.impeccable/hook.cache.json

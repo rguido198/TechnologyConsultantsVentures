@@ -498,13 +498,20 @@ nav { display: flex; align-items: center; gap: 30px; }
 }
 
 /* ── Applied-AI credentials row ────────────────────────────────────── */
+/* Asymmetric on purpose: these three credentials don't carry equal weight
+   (Encounter AI is production voice-AI work; the other two are a residency
+   and a capability statement), so an evenly-sized 3-up grid overstated the
+   weaker two and understated the strongest one. Widening the first card
+   and giving it a filled accent border communicates that hierarchy instead
+   of flattening it into another identical-card-grid tell. */
 .ai-creds {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.35fr 1fr 1fr;
   gap: 16px;
   margin: clamp(28px, 3vw, 40px) 0 clamp(24px, 2.6vw, 36px);
 }
 .ai-cred {
+  position: relative;
   border: 1px solid var(--line-soft);
   border-radius: var(--r-lg);
   padding: clamp(20px, 2vw, 28px);
@@ -515,6 +522,43 @@ nav { display: flex; align-items: center; gap: 30px; }
 .ai-cred:hover {
   border-color: var(--line);
   box-shadow: var(--shadow-sm);
+}
+
+/* Spotlight border: a soft teal glow traces the card edge, anchored to
+   cursor position via --mx/--my (set in scroll-reveal.js on mousemove).
+   Paint-only (a masked radial-gradient), no layout impact. Skipped
+   entirely on touch devices since there's no persistent cursor to track. */
+@media (hover: hover) and (pointer: fine) {
+  .service::before,
+  .case::before,
+  .ai-cred::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(180px circle at var(--mx, 50%) var(--my, 50%), rgba(75,236,215,0.65), transparent 70%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .service:hover::before,
+  .case:hover::before,
+  .ai-cred:hover::before {
+    opacity: 1;
+  }
+  .case-featured::before {
+    background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(75,236,215,0.85), transparent 70%);
+  }
+}
+.ai-cred:first-child {
+  border-color: var(--navy);
+  border-width: 1.5px;
+  background: linear-gradient(165deg, rgba(75,236,215,0.06), transparent 55%), #fff;
 }
 .ai-cred-tag {
   font: 600 11px/1 var(--font-mono);
@@ -531,6 +575,7 @@ nav { display: flex; align-items: center; gap: 30px; }
   color: var(--ink);
   margin: 2px 0 0;
 }
+.ai-cred:first-child .ai-cred-h { font-size: clamp(22px, 1.9vw, 28px); }
 .ai-cred-d {
   font-size: 14px;
   line-height: 1.5;
@@ -647,6 +692,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
 
 .service {
+  position: relative;
   background: #fff;
   border: 1px solid var(--line-soft);
   border-radius: var(--r-xl);
@@ -713,6 +759,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 @media (max-width: 900px) { .work-grid { grid-template-columns: 1fr; } }
 
 .case {
+  position: relative;
   background: #fff;
   border: 1px solid var(--line-soft);
   border-radius: var(--r-xl);
@@ -828,7 +875,20 @@ nav { display: flex; align-items: center; gap: 30px; }
 }
 
 /* Featured case study: spans the grid, 2-up media (one engine, two markets) */
-.case-featured { grid-column: 1 / -1; }
+/* Committed dark treatment -- this is the flagship proof piece (the only
+   card with a real production system, MCP + x402 agent layer behind it),
+   and its screenshots are already dark-UI. Matching the card to them makes
+   it read as the confident centerpiece instead of one more white box
+   identical to every other card on the page. */
+.case-featured {
+  grid-column: 1 / -1;
+  background: var(--ink);
+  border-color: rgba(255,255,255,0.12);
+}
+.case-featured:hover {
+  border-color: rgba(255,255,255,0.28);
+  box-shadow: 0 32px 64px -24px rgba(0,0,0,0.5);
+}
 .case-featured .case-media {
   aspect-ratio: auto;
   display: grid;
@@ -838,8 +898,19 @@ nav { display: flex; align-items: center; gap: 30px; }
   position: relative;
   aspect-ratio: 16 / 10;
 }
-.case-featured .case-media .shot + .shot { border-left: 1px solid var(--line-soft); }
-.case-featured .case-desc { max-width: 72ch; }
+.case-featured .case-media .shot + .shot { border-left: 1px solid rgba(255,255,255,0.12); }
+.case-featured .case-name { color: #fff; }
+.case-featured .case-status { color: rgba(255,255,255,0.55); }
+.case-featured .case-title { color: #fff; }
+.case-featured .case-desc {
+  max-width: 72ch;
+  color: rgba(255,255,255,0.72);
+}
+.case-featured .case-desc strong { color: #fff; }
+.case-featured .case-foot { border-top-color: rgba(255,255,255,0.12); }
+.case-featured .case-stack { color: rgba(255,255,255,0.5); }
+.case-featured .btn-link { color: var(--teal); }
+.case-featured .btn-link:hover { color: #6efce7; }
 .case-links { display: inline-flex; gap: 18px; flex-wrap: wrap; }
 
 .work-footnote {

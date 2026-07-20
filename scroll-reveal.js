@@ -146,6 +146,23 @@
     });
   }
 
+  // Spotlight-border glow: sets --mx/--my (percentages) on each card so the
+  // ::before radial-gradient mask in components.css can trace the cursor.
+  // Paint-only -- no transform/layout touched here. The CSS itself already
+  // gates this to (hover: hover) and (pointer: fine), so this JS is inert
+  // (harmless extra listeners) on touch devices.
+  function initSpotlightCards() {
+    gsap.utils.toArray(".service, .case, .ai-cred").forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var rect = card.getBoundingClientRect();
+        var mx = ((e.clientX - rect.left) / rect.width) * 100;
+        var my = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty("--mx", mx + "%");
+        card.style.setProperty("--my", my + "%");
+      });
+    });
+  }
+
   // Dynamic numerical count-up triggered by ScrollTrigger
   function initCountUps() {
     gsap.utils.toArray(".count-up").forEach(function (el) {
@@ -350,6 +367,7 @@
   applyHeadingAnimations();
   initHeroIntro();
   initCardHovers();
+  initSpotlightCards();
   initCountUps();
   initAgentFlowAnimation();
   initBookingForm();
