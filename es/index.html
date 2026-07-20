@@ -156,6 +156,18 @@
 </head>
 <body>
 
+<!-- Scroll-driven expansion of the nav terminal mark. Purely decorative
+     overlay; the real hero content underneath is always present and
+     visible regardless of JS/motion support. See terminal-portal.js. -->
+<div class="terminal-portal" aria-hidden="true">
+  <div class="terminal-portal-frame">
+    <div class="terminal-portal-inner">
+      <div class="terminal-portal-line" data-line="1">$ whoami<span class="terminal-portal-cursor"></span></div>
+      <div class="terminal-portal-line" data-line="2"><span class="out">technology_consultants</span></div>
+    </div>
+  </div>
+</div>
+
 <!-- ─────────────────── Nav ─────────────────── -->
 <header class="nav">
   <div class="wrap-wide nav-inner">
@@ -795,5 +807,6 @@
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script defer src="../scroll-reveal.js"></script>
+<script defer src="../terminal-portal.js"></script>
 </body>
 </html>
