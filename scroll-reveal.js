@@ -289,8 +289,40 @@
     });
   }
 
+  // Hero intro choreography: headline words lead (see applyHeadingAnimations),
+  // then meta row, lede, CTAs, stats, and the agent-flow visual cascade in
+  // behind it from the same direction. Load-only — no ScrollTrigger needed.
+  function initHeroIntro() {
+    var els = [".hero-meta-row", ".hero .lede", ".hero-cta-row", ".hero-stats"]
+      .map(function (s) { return document.querySelector(s); })
+      .filter(Boolean);
+    if (els.length) {
+      gsap.from(els, {
+        opacity: 0,
+        y: 18,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.09,
+        delay: 0.25,
+        clearProps: "all"
+      });
+    }
+    var visual = document.querySelector(".hero-visual");
+    if (visual) {
+      gsap.from(visual, {
+        opacity: 0,
+        y: 24,
+        duration: 0.7,
+        ease: "power2.out",
+        delay: 0.45,
+        clearProps: "all"
+      });
+    }
+  }
+
   // Initial runs
   applyHeadingAnimations();
+  initHeroIntro();
   initCardHovers();
   initCountUps();
   initAgentFlowAnimation();

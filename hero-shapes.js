@@ -234,9 +234,38 @@
           }
         }
       }
-
-      requestAnimationFrame(step);
     }
+
+    // Only run the render loop while the wrapper is actually on screen and
+    // the tab is visible — the grid is expensive (hundreds of strokes per
+    // frame) and invisible for most of the page's scroll depth.
+    var running = false;
+    var onScreen = true;
+
+    function loop(now) {
+      if (!onScreen || document.hidden) {
+        running = false;
+        return;
+      }
+      step(now);
+      requestAnimationFrame(loop);
+    }
+
+    function start() {
+      if (running) return;
+      running = true;
+      requestAnimationFrame(loop);
+    }
+
+    if (typeof IntersectionObserver === "function") {
+      new IntersectionObserver(function (entries) {
+        onScreen = entries[0].isIntersecting;
+        if (onScreen) start();
+      }).observe(wrapper);
+    }
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden && onScreen) start();
+    });
 
     if (typeof ResizeObserver === "function") {
       var lastWidth = -1;
@@ -258,7 +287,7 @@
 
     // Force initial sizing calculations
     resize();
-    requestAnimationFrame(step);
+    start();
   }
 
   if (document.readyState === "loading") {

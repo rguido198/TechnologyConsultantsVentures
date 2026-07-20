@@ -404,108 +404,72 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow">Trabajo seleccionado</p>
-        <h2 class="display h2">Productos que hemos construido.<br />Lecciones que traemos al <em>tuyo</em>.</h2>
+        <p class="eyebrow">IA aplicada, en la práctica</p>
+        <h2 class="display h2">IA de verdad.<br />Anclada en sistemas que <em>operamos</em>.</h2>
       </div>
-      <p class="lede">Dos están en vivo hoy; dos están en desarrollo. Mismo equipo, mismo stack, en cualquier caso.</p>
+      <p class="lede">Nuestra postura de IA no es teórica &mdash; trabajo de IA de voz en producción, una residencia de IA competitiva y sistemas de clientes que hemos entregado, respaldados por productos que construimos y operamos nosotros mismos.</p>
     </header>
+
+    <div class="ai-creds" aria-label="Trayectoria en IA aplicada">
+      <article class="ai-cred">
+        <p class="ai-cred-tag">IA de voz · en producción</p>
+        <h3 class="ai-cred-h">Encounter AI</h3>
+        <p class="ai-cred-d">Hardware y software en el sistema de pedidos por voz con IA de Encounter AI &mdash; una plataforma de drive-thru y kiosco respaldada por Morgan Stanley Inclusive Ventures Lab.</p>
+      </article>
+      <article class="ai-cred">
+        <p class="ai-cred-tag">Residencia de IA · 2024</p>
+        <h3 class="ai-cred-h">Colorwave TRAC</h3>
+        <p class="ai-cred-d">Seleccionado para la Residencia Técnica en IA (TRAC) &mdash; una beca que acepta aproximadamente al 10% de los solicitantes para trabajo real de inteligencia artificial.</p>
+      </article>
+      <article class="ai-cred">
+        <p class="ai-cred-tag">Lo que entregamos</p>
+        <h3 class="ai-cred-h">Agentes y pipelines</h3>
+        <p class="ai-cred-d">Flujos de agentes personalizados, servidores MCP y análisis inteligente de datos &mdash; con controles humanos (HITL) y validación determinista.</p>
+      </article>
+    </div>
+
+    <div class="proof-strip" aria-label="Trayectoria">
+      <div class="proof-item">
+        <div class="proof-n"><span class="count-up" data-target="184">184</span></div>
+        <div class="proof-l">centros de inscripción en EE.&nbsp;UU. monitoreados 24/7 por nuestro motor de alertas</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-n"><span class="count-up" data-target="4">4</span></div>
+        <div class="proof-l">productos diseñados, construidos y operados de principio a fin</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-n"><span class="count-up" data-target="2">2</span></div>
+        <div class="proof-l">en producción hoy, con usuarios reales</div>
+      </div>
+    </div>
 
     <div class="work-grid">
 
-      <article class="case">
+      <article class="case case-featured">
         <div class="case-media">
-          <img src="../images/appt-helper.webp" width="1200" height="630" alt="Panel en vivo de Appt Helper mostrando citas de Global Entry y SENTRI siendo tomadas en tiempo real" />
+          <div class="shot"><img src="../images/appt-helper.webp" width="1200" height="630" alt="Panel en vivo de Appt Helper mostrando citas de Global Entry y SENTRI siendo tomadas en tiempo real" loading="lazy" /></div>
+          <div class="shot"><img src="../images/open-cita.webp" width="1200" height="630" alt="Panel en vivo de Open Cita, la versión en español de Appt Helper, mostrando citas siendo tomadas" loading="lazy" /></div>
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="case-name">Appt Helper</span>
-            <span class="case-status">En vivo</span>
+            <span class="case-name">Appt Helper · Open Cita</span>
+            <span class="case-status">En vivo · MCP + x402</span>
           </div>
-          <h3 class="case-title">Los espacios de Global Entry y SENTRI desaparecen en minutos. Construimos la alerta que los atrapa.</h3>
-          <p class="case-desc">Un servicio de monitoreo para consumidores que vigila los 184 centros de inscripción Trusted Traveler de EE. UU. las 24 horas y avisa por mensaje de texto en el instante en que se libera una cancelación &mdash; convirtiendo una espera de 4 a 11 meses en días.</p>
+          <h3 class="case-title">Un motor de alertas nativo para agentes &mdash; capturando citas de gobierno que desaparecen en minutos.</h3>
+          <p class="case-desc"><strong>El problema:</strong> las cancelaciones de Global Entry y SENTRI desaparecen en minutos, y no existe ninguna alerta oficial. <strong>El sistema:</strong> un pipeline automatizado vigila los 184 centros de inscripción de EE.&nbsp;UU. las 24 horas, detecta una apertura en el momento en que aparece y envía un SMS segundos después &mdash; reduciendo una espera de 4 a 11 meses a días. <strong>La capa de agentes:</strong> expone un servidor MCP para que agentes de IA consulten la disponibilidad en vivo como una herramienta, y acepta pagos autónomos por uso mediante el protocolo x402 de Coinbase &mdash; infraestructura nativa para agentes, no solo un sitio web. Opera sin intervención en producción, localizado en inglés (Appt&nbsp;Helper) y español (Open&nbsp;Cita).</p>
           <div class="case-foot">
-            <span class="case-stack mono">Node.js · Redis · PostgreSQL · Twilio</span>
-            <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">Visitar <span class="arr">→</span></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="case-media">
-          <img src="../images/open-cita.webp" width="1200" height="630" alt="Panel en vivo de Open Cita, la versión en español de Appt Helper, mostrando citas siendo tomadas" />
-        </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Open Cita</span>
-            <span class="case-status">En vivo</span>
-          </div>
-          <h3 class="case-title">El mismo motor de alertas, reconstruido en español para los viajeros que faltaban.</h3>
-          <p class="case-desc">Open Cita es el espejo en español de Appt Helper &mdash; el mismo monitoreo 24/7 y alertas SMS instantáneas, completamente localizado para viajeros de habla hispana que buscan Global Entry, SENTRI y NEXUS.</p>
-          <div class="case-foot">
-            <span class="case-stack mono">Node.js · Redis · PostgreSQL · Twilio</span>
-            <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">Visitar <span class="arr">→</span></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case" data-status="dev">
-        <div class="case-media">
-          <img src="../images/border-bills.webp" width="1200" height="630" alt="Página de Border Bills: paga servicios de México al instante, deja de manejar a Tijuana" loading="lazy" />
-        </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Border Bills</span>
-            <span class="case-status">En desarrollo</span>
-          </div>
-          <h3 class="case-title">Paga servicios mexicanos desde EE. UU. — sin cruzar la frontera.</h3>
-          <p class="case-desc">Una app de pagos para familias en EE. UU. que pagan CFE (electricidad), Telmex / Izzi (internet), agua y predial &mdash; en segundos, en lugar de cruzar la frontera o enviar efectivo.</p>
-          <div class="case-foot">
-            <span class="case-stack mono">Next.js 16 · React 19 · Stripe · Reloadly</span>
-            <a class="btn-link" href="#work"><span>Mantente al pendiente</span> <span class="arr">→</span></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case" data-status="dev">
-        <div class="case-media">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-              <div class="browser-address">bajacare.com/search</div>
-            </div>
-            <div class="browser-content">
-              <div class="mock-search">
-                <span>Buscar médicos acreditados en Tijuana...</span>
-              </div>
-              <div class="mock-card">
-                <div class="mock-card-avatar">Dr</div>
-                <div class="mock-card-info">
-                  <div class="mock-card-title">Baja Care Cardiology</div>
-                  <div class="mock-card-subtitle">Cardiología · Tijuana, MX</div>
-                  <div class="mock-tags">
-                    <span class="mock-tag">Acreditado</span>
-                    <span class="mock-tag highlight">Disponible Hoy</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Baja Care</span>
-            <span class="case-status">En desarrollo</span>
-          </div>
-          <h3 class="case-title">Turismo médico, hecho navegable.</h3>
-          <p class="case-desc">Una plataforma de descubrimiento y admisión de pacientes que conecta a pacientes de EE. UU. con proveedores verificados en Baja California &mdash; convirtiendo grupos de Facebook y el boca a boca en una experiencia guiada y transparente.</p>
-          <div class="case-foot">
-            <span class="case-stack mono">Next.js · React · TypeScript</span>
-            <a class="btn-link" href="#work"><span>Mantente al pendiente</span> <span class="arr">→</span></a>
+            <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio · MCP · x402 (Coinbase)</span>
+            <span class="case-links">
+              <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">appthelper.com <span class="arr">↗</span></a>
+              <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">opencita.com <span class="arr">↗</span></a>
+            </span>
           </div>
         </div>
       </article>
 
     </div>
+
+    <p class="work-footnote">En el laboratorio: <strong>Border Bills</strong> (pago transfronterizo de servicios) y <strong>Baja Care</strong> (descubrimiento e ingreso para turismo médico) &mdash; ambos en desarrollo activo sobre el mismo stack.</p>
   </div>
 </section>
 

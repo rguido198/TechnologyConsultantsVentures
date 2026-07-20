@@ -34,7 +34,7 @@
   --r-xl:  28px;
 
   /* Rhythm */
-  --section-y: clamp(96px, 9vw, 144px);
+  --section-y: clamp(80px, 7.5vw, 112px);
   --gutter-x:  clamp(20px, 4vw, 56px);
   --max:       1200px;
   --max-wide:  1320px;

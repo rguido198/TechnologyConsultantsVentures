@@ -410,109 +410,72 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow" data-i18n="work.eyebrow">Selected work</p>
-        <h2 class="display h2" data-i18n="work.h2">Products we&rsquo;ve built.<br />Lessons we bring to <em>yours</em>.</h2>
+        <p class="eyebrow" data-i18n="work.eyebrow">Applied AI, in practice</p>
+        <h2 class="display h2" data-i18n="work.h2">Real AI work.<br />Grounded in systems we <em>run</em>.</h2>
       </div>
-      <p class="lede" data-i18n="work.lede">Two are live today; two are in development. Same team, same stack, either way.</p>
+      <p class="lede" data-i18n="work.lede">Our AI stance isn&rsquo;t theoretical &mdash; production voice-AI work, a competitive AI residency, and client systems we&rsquo;ve shipped, backed by products we build and operate ourselves.</p>
     </header>
+
+    <div class="ai-creds" aria-label="Applied AI track record">
+      <article class="ai-cred">
+        <p class="ai-cred-tag" data-i18n="work.cred1.tag">Voice AI · in production</p>
+        <h3 class="ai-cred-h" data-i18n="work.cred1.h">Encounter AI</h3>
+        <p class="ai-cred-d" data-i18n="work.cred1.d">Hardware and software on the voice-AI ordering system at Encounter AI &mdash; a drive-thru &amp; kiosk platform backed by Morgan Stanley Inclusive Ventures Lab.</p>
+      </article>
+      <article class="ai-cred">
+        <p class="ai-cred-tag" data-i18n="work.cred2.tag">AI residency · 2024</p>
+        <h3 class="ai-cred-h" data-i18n="work.cred2.h">Colorwave TRAC</h3>
+        <p class="ai-cred-d" data-i18n="work.cred2.d">Selected to the Technical Residency in AI (TRAC) &mdash; a fellowship that accepts roughly 10% of applicants into real artificial-intelligence work.</p>
+      </article>
+      <article class="ai-cred">
+        <p class="ai-cred-tag" data-i18n="work.cred3.tag">What we ship</p>
+        <h3 class="ai-cred-h" data-i18n="work.cred3.h">Agents &amp; pipelines</h3>
+        <p class="ai-cred-d" data-i18n="work.cred3.d">Custom agent workflows, MCP servers, and intelligent data parsing &mdash; with human-in-the-loop gates and deterministic validation.</p>
+      </article>
+    </div>
+
+    <div class="proof-strip" aria-label="Track record">
+      <div class="proof-item">
+        <div class="proof-n"><span class="count-up" data-target="184">184</span></div>
+        <div class="proof-l" data-i18n="work.proof1">U.S. enrollment centers monitored 24/7 by our alert engine</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-n"><span class="count-up" data-target="4">4</span></div>
+        <div class="proof-l" data-i18n="work.proof2">products designed, built, and operated end-to-end</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-n"><span class="count-up" data-target="2">2</span></div>
+        <div class="proof-l" data-i18n="work.proof3">live in production today, serving real users</div>
+      </div>
+    </div>
 
     <div class="work-grid">
 
-      <article class="case">
+      <article class="case case-featured">
         <div class="case-media">
-          <img src="images/appt-helper.webp" width="1200" height="630" data-i18n-alt="work.appt.alt" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" />
+          <div class="shot"><img src="images/appt-helper.webp" width="1200" height="630" data-i18n-alt="work.appt.alt" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" /></div>
+          <div class="shot"><img src="images/open-cita.webp" width="1200" height="630" data-i18n-alt="work.opencita.alt" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" /></div>
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="case-name">Appt Helper</span>
-            <span class="case-status" data-i18n="trust.appt.status">Live · appthelper.com</span>
+            <span class="case-name">Appt Helper · Open Cita</span>
+            <span class="case-status" data-i18n="work.engine.status">Live · MCP + x402</span>
           </div>
-          <h3 class="case-title" data-i18n="work.appt.title">Global Entry &amp; SENTRI slots vanish in minutes. We built the alert that catches them.</h3>
-          <p class="case-desc" data-i18n="work.appt.desc">A consumer monitoring service that watches all 184 U.S. Trusted Traveler enrollment centers 24/7 and texts travelers the instant a cancellation opens &mdash; turning a 4-to-11-month wait into days.</p>
+          <h3 class="case-title" data-i18n="work.engine.title">An agent-native alert engine &mdash; catching government slots that vanish in minutes.</h3>
+          <p class="case-desc" data-i18n="work.engine.desc"><strong>The problem:</strong> Global Entry &amp; SENTRI cancellations disappear within minutes, and no official alert exists. <strong>The system:</strong> an automated pipeline watches all 184 U.S. enrollment centers 24/7, detects an opening the moment it appears, and fires an SMS seconds later &mdash; cutting a 4-to-11-month wait to days. <strong>The agent layer:</strong> it exposes an MCP server so AI agents can query live availability as a tool, and accepts autonomous, pay-per-use payments over Coinbase&rsquo;s x402 protocol &mdash; agent-native infrastructure, not just a website. Runs unattended in production, localized in English (Appt&nbsp;Helper) and Spanish (Open&nbsp;Cita).</p>
           <div class="case-foot">
-            <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio</span>
-            <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer"><span data-i18n="work.visit">Visit</span> <span class="arr">↗</span></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="case-media">
-          <img src="images/open-cita.webp" width="1200" height="630" data-i18n-alt="work.opencita.alt" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" />
-        </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Open Cita</span>
-            <span class="case-status" data-i18n="trust.opencita.status">Live · opencita.com</span>
-          </div>
-          <h3 class="case-title" data-i18n="work.opencita.title">The same alert engine, rebuilt in Spanish for the travelers it was missing.</h3>
-          <p class="case-desc" data-i18n="work.opencita.desc">Open Cita is Appt Helper&rsquo;s Spanish-language mirror &mdash; the same 24/7 monitoring and instant SMS alerts, fully localized for Spanish-speaking travelers pursuing Global Entry, SENTRI, and NEXUS.</p>
-          <div class="case-foot">
-            <span class="case-stack mono">TypeScript · Next.js · next-intl · Postgres</span>
-            <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer"><span data-i18n="work.visit">Visit</span> <span class="arr">↗</span></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case" data-status="dev">
-        <div class="case-media">
-          <img src="images/border-bills.webp" width="1200" height="630" data-i18n-alt="work.border.alt" alt="Border Bills landing page: pay Mexico utility bills instantly, stop driving to Tijuana" loading="lazy" />
-        </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Border Bills</span>
-            <span class="case-status" data-i18n="trust.dev.status">In development</span>
-          </div>
-          <h3 class="case-title" data-i18n="work.border.title">Pay Mexican utility bills from the US &mdash; without the drive.</h3>
-          <p class="case-desc" data-i18n="work.border.desc">A consumer payment app for US-based families paying CFE (electricity), Telmex / Izzi (internet), water, and predial &mdash; in seconds, instead of driving across the border or wiring cash.</p>
-          <div class="case-foot">
-            <span class="case-stack mono">Next.js 16 · React 19 · Stripe · Reloadly</span>
-            <a class="btn-link" href="#work"><span data-i18n="work.baja.watch">Watch this space</span> <span class="arr">→</span></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case" data-status="dev">
-        <div class="case-media">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-              <div class="browser-address">bajacare.com/search</div>
-            </div>
-            <div class="browser-content">
-              <div class="mock-search">
-                <span class="mock-search-icon">🔍</span>
-                <span class="mock-search-placeholder" data-i18n="work.baja.mock.search">Find vetted doctors in Tijuana...</span>
-              </div>
-              <div class="mock-card">
-                <div class="mock-card-avatar">DR</div>
-                <div class="mock-card-info">
-                  <div class="mock-card-title">Dr. Sofia Rodriguez</div>
-                  <div class="mock-card-subtitle" data-i18n="work.baja.mock.specialty">Cardiology · Tijuana, MX</div>
-                  <div class="mock-tags">
-                    <span class="mock-tag" data-i18n="work.baja.mock.vetted">Vetted</span>
-                    <span class="mock-tag highlight" data-i18n="work.baja.mock.available">Available Today</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Baja Care</span>
-            <span class="case-status" data-i18n="trust.dev.status">In development</span>
-          </div>
-          <h3 class="case-title" data-i18n="work.baja.title">Medical tourism, made navigable.</h3>
-          <p class="case-desc" data-i18n="work.baja.desc">A patient-side discovery and intake platform connecting US patients with vetted Baja California providers &mdash; turning Facebook groups and word-of-mouth into a guided, transparent experience.</p>
-          <div class="case-foot">
-            <span class="case-stack mono">Next.js · React · TypeScript</span>
-            <a class="btn-link" href="#work"><span data-i18n="work.baja.watch">Watch this space</span> <span class="arr">→</span></a>
+            <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio · MCP · x402 (Coinbase)</span>
+            <span class="case-links">
+              <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">appthelper.com <span class="arr">↗</span></a>
+              <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">opencita.com <span class="arr">↗</span></a>
+            </span>
           </div>
         </div>
       </article>
 
     </div>
+
+    <p class="work-footnote" data-i18n="work.footnote">In the lab: <strong>Border Bills</strong> (cross-border utility payments) and <strong>Baja Care</strong> (medical-tourism discovery &amp; intake) &mdash; both in active development on the same stack.</p>
   </div>
 </section>
 
