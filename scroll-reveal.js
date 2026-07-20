@@ -290,10 +290,11 @@
   }
 
   // Hero intro choreography: headline words lead (see applyHeadingAnimations),
-  // then meta row, lede, CTAs, stats, and the agent-flow visual cascade in
-  // behind it from the same direction. Load-only — no ScrollTrigger needed.
+  // then meta row, lede, and CTAs cascade in behind it from the same
+  // direction. Load-only — no ScrollTrigger needed. The proof band right
+  // below the hero reveals on scroll instead (see the grid registrations).
   function initHeroIntro() {
-    var els = [".hero-meta-row", ".hero .lede", ".hero-cta-row", ".hero-stats"]
+    var els = [".hero-meta-row", ".hero .lede", ".hero-cta-row"]
       .map(function (s) { return document.querySelector(s); })
       .filter(Boolean);
     if (els.length) {
@@ -363,6 +364,11 @@
 
   var ctaCard = document.querySelector(".cta-card");
   if (ctaCard) reveal(ctaCard);
+
+  var proofBand = document.querySelector(".proof-band");
+  if (proofBand && proofBand.children.length) {
+    reveal(proofBand.children, proofBand, { stagger: 0.06 });
+  }
 
   // Long-form detail pages (service pages, privacy/terms): each heading,
   // paragraph, and list in the article reveals progressively as the reader
