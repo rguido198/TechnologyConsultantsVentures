@@ -104,6 +104,13 @@
   <!-- ─────────────────── Hero ─────────────────── -->
   <section class="hero service-detail-hero">
     <div class="wrap-wide">
+      <div class="breadcrumbs-row" style="margin-bottom: 24px; font: 400 12.5px/1 var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-quiet);">
+        <a href="/es/" style="color: var(--ink-quiet); text-decoration: none;">Inicio</a>
+        <span style="margin: 0 8px;">/</span>
+        <a href="/es/#services" style="color: var(--ink-quiet); text-decoration: none;">Integración de Sistemas</a>
+        <span style="margin: 0 8px;">/</span>
+        <span style="color: var(--ink);">Salesforce CRM</span>
+      </div>
       <div class="hero-meta-row">
         <p class="eyebrow">Technology Consultants</p>
         <span class="sep" aria-hidden="true"></span>
@@ -147,6 +154,15 @@ const getLeadDetailsTool = {
         
         <h2 class="h3">Modelo de Entrega del Proyecto</h2>
         <p>Despliegue de alcance fijo: 3 a 5 semanas dependiendo de la complejidad de los objetos personalizados y la arquitectura de permisos a nivel de campo.</p>
+
+        <div class="spoke-links" style="margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line-soft);">
+          <h3 class="h4">Otros Planos de Integración y Stack</h3>
+          <ul style="list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 14.5px;">
+            <li><a href="/es/integrations/workday-finance-mcp">Integración Workday MCP</a></li>
+            <li><a href="/es/integrations/postgresql-mcp-server">Integración PostgreSQL MCP</a></li>
+            <li><a href="/es/stack-comparisons/vapi-vs-retell-ai">Comparativa Vapi vs Retell AI</a></li>
+          </ul>
+        </div>
         
       </div>
 
@@ -176,10 +192,10 @@ const getLeadDetailsTool = {
 <footer class="footer">
   <div class="wrap-wide">
     <div class="footer-grid">
-      <div class="footer-brand-col">
-        <a class="footer-brand" href="/es/" aria-label="Technology Consultants home">
-          <span class="footer-brand-mark" aria-hidden="true"></span>
-          <span class="footer-brand-text">Technology Consultants</span>
+      <div class="footer-brand">
+        <a class="nav-brand" href="/es/" aria-label="Technology Consultants home">
+          <span class="nav-mark" aria-hidden="true"></span>
+          <span>Technology Consultants</span>
         </a>
         <p class="footer-tagline">Ganamos nuestra credibilidad construyendo y operando código real.</p>
       </div>
@@ -191,9 +207,28 @@ const getLeadDetailsTool = {
         </ul>
       </div>
       <div class="footer-links-col">
+        <h5 class="footer-h">Nuestro trabajo</h5>
+        <ul class="footer-links">
+          <li><a href="https://appthelper.com" target="_blank" rel="noreferrer">Appt Helper</a></li>
+          <li><a href="https://opencita.com" target="_blank" rel="noreferrer">Open Cita</a></li>
+          <li><a href="/es/#work">Border Bills</a></li>
+          <li><a href="/es/#work">Baja Care</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h5 class="footer-h">Integraciones y Stack</h5>
+        <ul class="footer-links">
+          <li><a href="/es/stack-comparisons/vapi-vs-retell-ai">Vapi vs Retell AI</a></li>
+          <li><a href="/es/stack-comparisons/deepgram-vs-soniox">Deepgram vs Soniox</a></li>
+          <li><a href="/es/integrations/workday-finance-mcp">Servidor Workday MCP</a></li>
+          <li><a href="/es/services/commercial-real-estate">Agentes de Bienes Raíces</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
         <h5 class="footer-h">Compañía</h5>
         <ul class="footer-links">
           <li><a href="/es/#about">Nosotros</a></li>
+          <li><a href="/es/#faq">FAQ</a></li>
           <li><a href="/es/#contact">Contacto</a></li>
           <li><a href="mailto:contact@technologyconsultants.ventures">Email</a></li>
         </ul>
