@@ -1504,6 +1504,10 @@ nav { display: flex; align-items: center; gap: 30px; }
   opacity: 0;
   animation: heroEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.28s forwards;
 }
+.hero-helper-row {
+  opacity: 0;
+  animation: heroEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.32s forwards;
+}
 .hero-visual {
   opacity: 0;
   animation: heroEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
@@ -1514,6 +1518,7 @@ nav { display: flex; align-items: center; gap: 30px; }
   .hero h1,
   .hero .lede,
   .hero-cta-row,
+  .hero-helper-row,
   .hero-visual {
     opacity: 1 !important;
     transform: none !important;
