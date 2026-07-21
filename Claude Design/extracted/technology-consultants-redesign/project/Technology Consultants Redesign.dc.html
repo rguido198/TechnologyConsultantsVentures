@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<title>Technology Consultants — We earn our advice by shipping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #f4f1ea; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #16161a; -webkit-font-smoothing: antialiased; }
+  a { color: #2b59d9; text-decoration: none; }
+  a:hover { color: #16161a; }
+  @keyframes tcblink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+  @keyframes tcpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+  ::selection { background: #2b59d9; color: #f4f1ea; }
+</style>
+</helmet>
+<div data-tc-root="true" style="--tc-accent: #2b59d9; background: #f4f1ea; min-height: 100vh; letter-spacing: -0.01em;">
+
+  <!-- NAV -->
+  <div id="top" style="position: sticky; top: 0; z-index: 50; background: #121216; color: #f4f1ea; display: flex; align-items: center; justify-content: space-between; padding: 0 36px; height: 64px; gap: 24px;">
+    <a href="#top" style="display: flex; align-items: center; gap: 12px; color: #f4f1ea; font-weight: 700; font-size: 16px; letter-spacing: -0.02em;">
+      <span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 7px; background: var(--tc-accent, #2b59d9); color: #f4f1ea; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">&gt;</span>
+      Technology Consultants
+    </a>
+    <div style="display: flex; align-items: center; gap: 28px; font-size: 14.5px;">
+      <a href="#services" style="color: #c9c5ba;" style-hover="color: #ffffff;">Services</a>
+      <a href="#work" style="color: #c9c5ba;" style-hover="color: #ffffff;">Work</a>
+      <a href="#how" style="color: #c9c5ba;" style-hover="color: #ffffff;">How we work</a>
+      <a href="#about" style="color: #c9c5ba;" style-hover="color: #ffffff;">About</a>
+      <a href="#faq" style="color: #c9c5ba;" style-hover="color: #ffffff;">FAQ</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <a href="https://technologyconsultants.ventures/es/" style="color: #c9c5ba; font-size: 13.5px; border: 1px solid #3a3a42; border-radius: 999px; padding: 8px 16px;" style-hover="color: #ffffff; border-color: #6a6a74;">ES · Español</a>
+      <a href="#contact" style="background: #f4f1ea; color: #121216; font-size: 13.5px; font-weight: 600; border-radius: 999px; padding: 9px 18px;" style-hover="background: var(--tc-accent, #2b59d9); color: #f4f1ea;">Book a call</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position: relative; overflow: hidden; border-bottom: 1px solid #ddd7c8;">
+    <sc-if value="{{ heroGrid }}" hint-placeholder-val="{{ true }}">
+      <div style="position: absolute; inset: 0; pointer-events: none; opacity: 0.5; background-image: repeating-linear-gradient(0deg, #ddd7c8 0px, #ddd7c8 1px, transparent 1px, transparent 72px), repeating-linear-gradient(90deg, #ddd7c8 0px, #ddd7c8 1px, transparent 1px, transparent 72px); mask-image: linear-gradient(180deg, transparent 0%, #000 40%, transparent 100%);"></div>
+    </sc-if>
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 88px 36px 80px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 72px; align-items: center;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 34px; flex-wrap: wrap;">
+          <span style="color: var(--tc-accent, #2b59d9);">Technology Consultants</span>
+          <span style="color: #b6b1a3;">|</span>
+          <span style="color: #5f5c52;">Applied AI &amp; Intelligent Automation</span>
+          <span style="color: #b6b1a3;">|</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px; color: #5f5c52;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #35b9cc; animation: tcpulse 2.4s ease-in-out infinite;"></span>Booking projects · Q3 2026</span>
+        </div>
+        <h1 style="margin: 0 0 26px; font-size: 66px; line-height: 1.0; letter-spacing: -0.035em; font-weight: 700;">We bridge advanced AI models and <em>real-world</em> business operations.</h1>
+        <p style="margin: 0 0 36px; font-size: 19px; line-height: 1.55; color: #5f5c52; max-width: 34em; text-wrap: pretty;">A senior engineering practice run by builders. We integrate advanced AI tools, intelligent agents, and automated data pipelines into your existing systems to streamline operations, cut overhead, and accelerate revenue.</p>
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <a href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call" style="background: #121216; color: #f4f1ea; font-size: 15.5px; font-weight: 600; border-radius: 999px; padding: 15px 28px; display: inline-flex; align-items: center; gap: 10px;" style-hover="background: var(--tc-accent, #2b59d9);">Book a 30-min strategy call <span style="font-family: 'IBM Plex Mono', monospace;">→</span></a>
+          <a href="#work" style="color: #16161a; font-size: 15.5px; font-weight: 600; border: 1px solid #c9c3b2; border-radius: 999px; padding: 14px 26px;" style-hover="border-color: #16161a;">See what we've built</a>
+        </div>
+      </div>
+      <div>
+        <div style="background: #121216; border-radius: 14px; box-shadow: 0 24px 60px -24px rgba(18,18,22,0.45); overflow: hidden;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #26262c;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 9px; height: 9px; border-radius: 50%; background: #35353d;"></span>
+              <span style="width: 9px; height: 9px; border-radius: 50%; background: #35353d;"></span>
+              <span style="width: 9px; height: 9px; border-radius: 50%; background: #35b9cc;"></span>
+            </div>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #8a8794; letter-spacing: 0.06em;">applied-ai · intelligent-automation · invoice-intake</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #55b47a;">● live</span>
+          </div>
+          <div style="padding: 20px 20px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 2.1; color: #cfccc2; display: grid; grid-template-columns: auto auto 1fr auto; column-gap: 14px;">
+            <span style="color: #5c5a66;">09:41:02</span><span style="color: #6db3f2;">ingest</span><span>247 PDFs from shared inbox</span><span style="color: #55b47a;">✓</span>
+            <span style="color: #5c5a66;">09:41:14</span><span style="color: #6db3f2;">parse</span><span>line items → structured data</span><span style="color: #55b47a;">✓</span>
+            <span style="color: #5c5a66;">09:41:15</span><span style="color: #6db3f2;">validate</span><span>contract check (Zod) · 245 pass</span><span style="color: #55b47a;">✓</span>
+            <span style="color: #5c5a66;">09:41:15</span><span style="color: #e5b567;">escalate</span><span>2 ambiguous totals → human review</span><span style="color: #e5b567;">⚠ HITL</span>
+            <span style="color: #5c5a66;">09:41:31</span><span style="color: #6db3f2;">approve</span><span>ops@client signed off</span><span style="color: #55b47a;">✓</span>
+            <span style="color: #5c5a66;">09:41:32</span><span style="color: #6db3f2;">write</span><span>ERP + CRM updated · receipts logged</span><span style="color: #55b47a;">✓</span>
+          </div>
+          <div style="padding: 12px 20px 18px; border-top: 1px solid #26262c; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8a8794; display: flex; justify-content: space-between; gap: 12px;">
+            <span>done in 30s · 0 unreviewed numbers</span>
+            <span style="color: #35b9cc;">▮<span style="animation: tcblink 1.1s step-end infinite;">▮</span></span>
+          </div>
+        </div>
+        <p style="margin: 14px 6px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.6; color: #8b8779; text-align: center;">Applied AI &amp; Intelligent Automation: agents wired into your operational stack — with a human gate where it matters.</p>
+      </div>
+    </div>
+    <!-- PRINCIPLES -->
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 0 36px 64px;">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; border-top: 1px solid #ddd7c8; padding-top: 32px;">
+        <div><h3 style="margin: 0 0 8px; font-size: 20px; font-style: italic; font-weight: 700; letter-spacing: -0.02em;">In production.</h3><p style="margin: 0; font-size: 14.5px; line-height: 1.5; color: #5f5c52;">Real users today on our self-developed products.</p></div>
+        <div><h3 style="margin: 0 0 8px; font-size: 20px; font-style: italic; font-weight: 700; letter-spacing: -0.02em;">Senior team.</h3><p style="margin: 0; font-size: 14.5px; line-height: 1.5; color: #5f5c52;">The people who pitch your project ship it.</p></div>
+        <div><h3 style="margin: 0 0 8px; font-size: 20px; font-style: italic; font-weight: 700; letter-spacing: -0.02em;">Code first.</h3><p style="margin: 0; font-size: 14.5px; line-height: 1.5; color: #5f5c52;">No decks before working software.</p></div>
+        <div><h3 style="margin: 0 0 8px; font-size: 20px; font-style: italic; font-weight: 700; letter-spacing: -0.02em;">One team.</h3><p style="margin: 0; font-size: 14.5px; line-height: 1.5; color: #5f5c52;">Interfaces and automations: same engineers, same stack.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 SERVICES -->
+  <div id="services" style="max-width: 1240px; margin: 0 auto; padding: 96px 36px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 22px;">
+      <span style="color: #b6b1a3;">01</span><span style="color: var(--tc-accent, #2b59d9);">What we do</span>
+    </div>
+    <h2 style="margin: 0 0 18px; font-size: 52px; line-height: 1.02; letter-spacing: -0.03em; font-weight: 700; max-width: 15em;">Intelligent systems. Built to <em>operate</em>.</h2>
+    <p style="margin: 0 0 48px; font-size: 17.5px; line-height: 1.55; color: #5f5c52; max-width: 42em; text-wrap: pretty;">We build the automated workflows that replace manual bottlenecks, and the production-grade web interfaces your team and customers need to interact with them.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="background: #fbfaf5; border: 1px solid #ddd7c8; border-radius: 14px; padding: 36px 36px 32px; display: flex; flex-direction: column; gap: 0;" style-hover="border-color: #b6b1a3;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8b8779; margin-bottom: 18px;">Interfaces</div>
+        <h3 style="margin: 0 0 6px; font-size: 26px; letter-spacing: -0.025em; font-weight: 700;">Custom Interfaces &amp; Systems Integration</h3>
+        <p style="margin: 0 0 20px; font-size: 15.5px; font-style: italic; color: #5f5c52;">Interactive portals for complex workflows.</p>
+        <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.6; color: #454337; text-wrap: pretty;">Automation is useless if your team can't control it. We build secure, responsive React dashboards and full-stack architectures that connect your custom workflows directly to enterprise databases and systems of record.</p>
+        <div style="display: flex; flex-direction: column; gap: 9px; font-size: 14.5px; color: #454337; margin-bottom: 26px;">
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>React 19 &amp; TypeScript user interfaces</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Stateless, high-concurrency API backends</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Relational database design &amp; query tuning</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Secure API integration (Stripe, Workday, etc.)</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Edge-first hosting &amp; sub-100ms loads</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Complete architectural handoff &amp; docs</div>
+        </div>
+        <a href="https://technologyconsultants.ventures/services/react-web-development.html" style="margin-top: auto; font-weight: 600; font-size: 15px;">Explore Systems Integration →</a>
+      </div>
+      <div style="background: #fbfaf5; border: 1px solid #ddd7c8; border-radius: 14px; padding: 36px 36px 32px; display: flex; flex-direction: column;" style-hover="border-color: #b6b1a3;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8b8779; margin-bottom: 18px;">Automation</div>
+        <h3 style="margin: 0 0 6px; font-size: 26px; letter-spacing: -0.025em; font-weight: 700;">Applied AI &amp; Intelligent Automation</h3>
+        <p style="margin: 0 0 20px; font-size: 15.5px; font-style: italic; color: #5f5c52;">Practical workflows that cut costs and save hours.</p>
+        <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.6; color: #454337; text-wrap: pretty;">We don't build foundation models; we operationalize them. We design and deploy custom intelligent agents and data parsing pipelines that ingest unstructured inputs and run automated, multi-step actions.</p>
+        <div style="display: flex; flex-direction: column; gap: 9px; font-size: 14.5px; color: #454337; margin-bottom: 26px;">
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Intelligent data parsing &amp; extraction pipelines</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Model Context Protocol (MCP) server development</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Agent state machines (planning &amp; self-correction)</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Deterministic validation wrappers (Zod, Pydantic)</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Human-in-the-loop (HITL) approval gates</div>
+          <div style="display: flex; gap: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; color: var(--tc-accent, #2b59d9);">—</span>Latency &amp; cost optimization (prompt caching)</div>
+        </div>
+        <a href="https://technologyconsultants.ventures/services/ai-agent-consulting.html" style="margin-top: auto; font-weight: 600; font-size: 15px;">Explore Intelligent Automation →</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 24px;">
+      <div style="border-top: 2px solid #16161a; padding-top: 16px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; margin-bottom: 8px; color: #16161a;">MCP integration layer</div><p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #5f5c52;">A standard pattern for exposing your systems as tools AI agents can call.</p></div>
+      <div style="border-top: 2px solid #16161a; padding-top: 16px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; margin-bottom: 8px; color: #16161a;">HITL approval framework</div><p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #5f5c52;">Human-in-the-loop gates for any automation touching money, data, or customers.</p></div>
+      <div style="border-top: 2px solid #16161a; padding-top: 16px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; margin-bottom: 8px; color: #16161a;">Agent state-machine pattern</div><p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #5f5c52;">Planning and self-correction logic for multi-step agent workflows.</p></div>
+      <div style="border-top: 2px solid #16161a; padding-top: 16px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; margin-bottom: 8px; color: #16161a;">Deterministic validation layer</div><p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #5f5c52;">Zod/Pydantic wrappers that keep model output contract-safe before it acts.</p></div>
+    </div>
+  </div>
+
+  <!-- 02 INDUSTRIES -->
+  <div style="max-width: 1240px; margin: 0 auto; padding: 104px 36px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 22px;">
+      <span style="color: #b6b1a3;">02</span><span style="color: var(--tc-accent, #2b59d9);">Where it pays</span>
+    </div>
+    <h2 style="margin: 0 0 18px; font-size: 52px; line-height: 1.02; letter-spacing: -0.03em; font-weight: 700; max-width: 16em;">Three industries. One question: does it <em>pay for itself</em>?</h2>
+    <p style="margin: 0 0 24px; font-size: 17.5px; line-height: 1.55; color: #5f5c52; max-width: 44em; text-wrap: pretty;">Not client case studies: realistic examples of where the automation and agent patterns above turn into measurable ROI, based on problems we hear about often in these industries.</p>
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: grid; grid-template-columns: 300px 1fr; gap: 48px; border-top: 1px solid #ddd7c8; padding: 40px 0;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #5f5c52; line-height: 1.7;">Restaurant &amp;<br>multi-location food service</div>
+        <div>
+          <h3 style="margin: 0 0 14px; font-size: 27px; letter-spacing: -0.025em; font-weight: 700; max-width: 24em;">An ordering agent that closes the loop — and knows when to hand off.</h3>
+          <p style="margin: 0 0 20px; font-size: 15.5px; line-height: 1.62; color: #454337; max-width: 48em; text-wrap: pretty;">A conversational agent takes the order by phone, drive-thru mic, or chat, confirms it against the live menu and today's inventory, and sends it straight to the kitchen display and payment system. The design isn't "the AI handles everything" — it's a deterministic escalation path: an allergen question, an unusual substitution, or a frustrated customer routes to a person immediately.</p>
+          <div style="border-top: 1px dashed #c9c3b2; padding-top: 14px; display: grid; grid-template-columns: auto 1fr; gap: 18px; max-width: 48em;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tc-accent, #2b59d9); padding-top: 2px;">The math ↳</span>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #5f5c52; text-wrap: pretty;">The AI drive-thru failures that made headlines tried to handle every case themselves. Automating the routine orders and escalating the rest keeps the labor savings real — without ever shipping an order nobody asked for.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 300px 1fr; gap: 48px; border-top: 1px solid #ddd7c8; padding: 40px 0;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #5f5c52; line-height: 1.7;">Commercial<br>real estate</div>
+        <div>
+          <h3 style="margin: 0 0 14px; font-size: 27px; letter-spacing: -0.025em; font-weight: 700; max-width: 24em;">Turning weeks of lease abstraction into a same-day review.</h3>
+          <p style="margin: 0 0 20px; font-size: 15.5px; line-height: 1.62; color: #454337; max-width: 48em; text-wrap: pretty;">Every lease, amendment, and estoppel sits in a PDF someone has to read line by line to find the rent escalation, the renewal window, the CAM reconciliation clause. An agent-based abstraction pipeline extracts key terms into structured data, flags anything ambiguous for a human reviewer, and surfaces upcoming deadlines before they're missed.</p>
+          <div style="border-top: 1px dashed #c9c3b2; padding-top: 14px; display: grid; grid-template-columns: auto 1fr; gap: 18px; max-width: 48em;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tc-accent, #2b59d9); padding-top: 2px;">The math ↳</span>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #5f5c52; text-wrap: pretty;">A missed renewal-notice date can cost more in lost leverage than a year of the system that would have caught it.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 300px 1fr; gap: 48px; border-top: 1px solid #ddd7c8; padding: 40px 0 8px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #5f5c52; line-height: 1.7;">Investment<br>management</div>
+        <div>
+          <h3 style="margin: 0 0 14px; font-size: 27px; letter-spacing: -0.025em; font-weight: 700; max-width: 24em;">Getting through the filing before the market moves on it.</h3>
+          <p style="margin: 0 0 20px; font-size: 15.5px; line-height: 1.62; color: #454337; max-width: 48em; text-wrap: pretty;">Analysts spend hours pulling the same handful of numbers out of 10-Ks, earnings transcripts, and portfolio reports before the actual analysis can start. A validation-first extraction pipeline pulls the structured metrics, checks them against source, and hands the analyst a reviewed summary instead of a stack of PDFs.</p>
+          <div style="border-top: 1px dashed #c9c3b2; padding-top: 14px; display: grid; grid-template-columns: auto 1fr; gap: 18px; max-width: 48em;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tc-accent, #2b59d9); padding-top: 2px;">The math ↳</span>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #5f5c52; text-wrap: pretty;">Hours reclaimed per filing add up across a portfolio faster than the system costs to run — and deterministic validation means no one's trusting a hallucinated number in a memo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="margin: 28px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8b8779;">These scenarios are illustrative: built from the same patterns above, not completed client engagements.</p>
+  </div>
+
+  <!-- 03 WORK / PROOF -->
+  <div id="work" style="background: #121216; color: #f4f1ea; margin-top: 104px;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 36px 88px;">
+      <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 22px;">
+        <span style="color: #55545e;">03</span><span style="color: #35b9cc;">Proof</span>
+      </div>
+      <h2 style="margin: 0 0 18px; font-size: 52px; line-height: 1.02; letter-spacing: -0.03em; font-weight: 700; max-width: 15em;">Real AI work. Grounded in systems we <em>run</em>.</h2>
+      <p style="margin: 0 0 52px; font-size: 17.5px; line-height: 1.55; color: #a5a2ac; max-width: 42em; text-wrap: pretty;">Our AI stance isn't theoretical: production voice-AI work, a competitive AI residency, and client systems we've shipped — backed by products we build and operate ourselves.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 64px;">
+        <div style="border: 1px solid #2c2c33; border-radius: 14px; padding: 28px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #35b9cc; margin-bottom: 16px;">Voice AI · in production</div>
+          <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -0.02em;">Encounter AI</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #a5a2ac;">Hardware and software on the voice-AI ordering system at Encounter AI, a drive-thru &amp; kiosk platform backed by Morgan Stanley Inclusive Ventures Lab.</p>
+        </div>
+        <div style="border: 1px solid #2c2c33; border-radius: 14px; padding: 28px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #35b9cc; margin-bottom: 16px;">AI residency · 2024</div>
+          <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -0.02em;">Colorwave TRAC</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #a5a2ac;">Selected to the Technical Residency in AI (TRAC), a fellowship that accepts roughly 10% of applicants into real artificial-intelligence work.</p>
+        </div>
+        <div style="border: 1px solid #2c2c33; border-radius: 14px; padding: 28px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #35b9cc; margin-bottom: 16px;">What we ship</div>
+          <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -0.02em;">Agents &amp; pipelines</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #a5a2ac;">Custom agent workflows, MCP servers, and intelligent data parsing, with human-in-the-loop gates and deterministic validation.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border-top: 1px solid #2c2c33; border-bottom: 1px solid #2c2c33; padding: 36px 0; margin-bottom: 64px;">
+        <div><div style="font-size: 64px; font-weight: 700; letter-spacing: -0.04em; line-height: 1;">184</div><p style="margin: 12px 0 0; font-size: 14px; color: #a5a2ac; max-width: 22em;">U.S. enrollment centers monitored 24/7 by our alert engine</p></div>
+        <div><div style="font-size: 64px; font-weight: 700; letter-spacing: -0.04em; line-height: 1;">4</div><p style="margin: 12px 0 0; font-size: 14px; color: #a5a2ac; max-width: 22em;">products designed, built, and operated end-to-end</p></div>
+        <div><div style="font-size: 64px; font-weight: 700; letter-spacing: -0.04em; line-height: 1;">2</div><p style="margin: 12px 0 0; font-size: 14px; color: #a5a2ac; max-width: 22em;">live in production today, serving real users</p></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <img src="https://technologyconsultants.ventures/images/appt-helper.webp" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" style="width: 100%; border-radius: 10px; border: 1px solid #2c2c33; display: block;">
+          <img src="https://technologyconsultants.ventures/images/open-cita.webp" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper" style="width: 100%; border-radius: 10px; border: 1px solid #2c2c33; display: block;">
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #35b9cc; margin-bottom: 18px;">Appt Helper · Open Cita — Live · MCP + x402</div>
+          <h3 style="margin: 0 0 16px; font-size: 30px; line-height: 1.1; letter-spacing: -0.025em; font-weight: 700;">An agent-native alert engine, catching government slots that vanish in minutes.</h3>
+          <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.65; color: #cfccc2; text-wrap: pretty;"><strong style="color: #f4f1ea;">The problem:</strong> Global Entry &amp; SENTRI cancellations disappear within minutes, and no official alert exists. <strong style="color: #f4f1ea;">The system:</strong> an automated pipeline watches all 184 U.S. enrollment centers 24/7, detects an opening the moment it appears, and fires an SMS seconds later — cutting a 4-to-11-month wait to days.</p>
+          <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: #cfccc2; text-wrap: pretty;"><strong style="color: #f4f1ea;">The agent layer:</strong> it exposes an MCP server so AI agents can query live availability as a tool, and accepts autonomous, pay-per-use payments over Coinbase's x402 protocol. That's agent-native infrastructure, not just a website.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8a8794; margin-bottom: 20px;">TypeScript · Next.js · Postgres · Twilio · MCP · x402 (Coinbase)</div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 26px;">
+            <a href="https://appthelper.com" style="color: #f4f1ea; border: 1px solid #3a3a42; border-radius: 999px; padding: 9px 18px; font-size: 14px; font-weight: 600;" style-hover="border-color: #35b9cc; color: #35b9cc;">appthelper.com ↗</a>
+            <a href="https://opencita.com" style="color: #f4f1ea; border: 1px solid #3a3a42; border-radius: 999px; padding: 9px 18px; font-size: 14px; font-weight: 600;" style-hover="border-color: #35b9cc; color: #35b9cc;">opencita.com ↗</a>
+          </div>
+          <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.7; color: #8a8794;">In the lab: <span style="color: #cfccc2;">Border Bills</span> (cross-border utility payments) and <span style="color: #cfccc2;">Baja Care</span> (medical-tourism discovery &amp; intake), in active development on the same stack.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 HOW WE WORK -->
+  <div id="how" style="max-width: 1240px; margin: 0 auto; padding: 104px 36px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 22px;">
+      <span style="color: #b6b1a3;">04</span><span style="color: var(--tc-accent, #2b59d9);">How we work</span>
+    </div>
+    <h2 style="margin: 0 0 18px; font-size: 52px; line-height: 1.02; letter-spacing: -0.03em; font-weight: 700;">We meet you <em>where</em> you are.</h2>
+    <p style="margin: 0 0 48px; font-size: 17.5px; line-height: 1.55; color: #5f5c52; max-width: 40em;">Every engagement is structured around your reality, not a template. Pick what fits, or we'll help you choose.</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      <div style="background: #fbfaf5; border: 1px solid #ddd7c8; border-radius: 14px; padding: 28px; display: flex; flex-direction: column;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #b6b1a3; margin-bottom: 20px;">01</div>
+        <h3 style="margin: 0 0 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Fixed-scope project</h3>
+        <p style="margin: 0 0 22px; font-size: 14px; line-height: 1.6; color: #5f5c52; text-wrap: pretty;">For a defined deliverable with a clear edge: an MVP, a redesign, an AI integration. We scope tightly, ship on a date, and hand off cleanly.</p>
+        <div style="margin-top: auto; border-top: 1px dashed #c9c3b2; padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px;">
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Best for</span><span style="color: #454337; text-align: right;">validated ideas · launches</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Length</span><span style="color: #454337; text-align: right;">4 – 16 weeks</span></div>
+        </div>
+      </div>
+      <div style="background: #fbfaf5; border: 1px solid #ddd7c8; border-radius: 14px; padding: 28px; display: flex; flex-direction: column;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #b6b1a3; margin-bottom: 20px;">02</div>
+        <h3 style="margin: 0 0 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Monthly retainer</h3>
+        <p style="margin: 0 0 22px; font-size: 14px; line-height: 1.6; color: #5f5c52; text-wrap: pretty;">For teams that need senior engineering or AI ops capacity on an ongoing basis. Predictable cost, flexible scope, no hiring overhead.</p>
+        <div style="margin-top: auto; border-top: 1px dashed #c9c3b2; padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px;">
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Best for</span><span style="color: #454337; text-align: right;">scaling startups · fractional CTO</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Length</span><span style="color: #454337; text-align: right;">3+ months, month-to-month</span></div>
+        </div>
+      </div>
+      <div style="background: #fbfaf5; border: 1px solid #ddd7c8; border-radius: 14px; padding: 28px; display: flex; flex-direction: column;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #b6b1a3; margin-bottom: 20px;">03</div>
+        <h3 style="margin: 0 0 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Strategy sprint</h3>
+        <p style="margin: 0 0 22px; font-size: 14px; line-height: 1.6; color: #5f5c52; text-wrap: pretty;">A one- to two-week deep dive: AI readiness audit, architecture review, or agent design sprint. You leave with a roadmap your team can execute, with or without us.</p>
+        <div style="margin-top: auto; border-top: 1px dashed #c9c3b2; padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px;">
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Best for</span><span style="color: #454337; text-align: right;">"we know we need this…"</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Length</span><span style="color: #454337; text-align: right;">1 – 2 weeks, fixed price</span></div>
+        </div>
+      </div>
+      <div style="background: #fbfaf5; border: 1px solid #ddd7c8; border-radius: 14px; padding: 28px; display: flex; flex-direction: column;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #b6b1a3; margin-bottom: 20px;">04</div>
+        <h3 style="margin: 0 0 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Partnership / equity</h3>
+        <p style="margin: 0 0 22px; font-size: 14px; line-height: 1.6; color: #5f5c52; text-wrap: pretty;">For founders who want a long-term technical partner. We invest engineering time in exchange for equity or revenue share, with structure that protects both sides.</p>
+        <div style="margin-top: auto; border-top: 1px dashed #c9c3b2; padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px;">
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Best for</span><span style="color: #454337; text-align: right;">early-stage, credible market</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; color: #8b8779; text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px;">Length</span><span style="color: #454337; text-align: right;">12+ months</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 ABOUT -->
+  <div id="about" style="max-width: 1240px; margin: 0 auto; padding: 104px 36px 0;">
+    <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 22px;">
+      <span style="color: #b6b1a3;">05</span><span style="color: var(--tc-accent, #2b59d9);">About</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: start;">
+      <div>
+        <h2 style="margin: 0 0 24px; font-size: 44px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 700;">A small team of builders, led by an engineer who's been on <em>both</em> sides of the table.</h2>
+        <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: #454337; text-wrap: pretty;">Technology Consultants was founded by <strong>Roberto Guido</strong>, an electrical engineer (UC San Diego) with an MBA from NYU Stern who's spent his career bridging the gap between what's technically possible and what actually moves a business. He leads a focused team of senior engineers and designers who've shipped products together for years.</p>
+        <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: #454337; text-wrap: pretty;">That bridge runs in both directions: hardware and software design work on the voice AI system at Encounter AI — a drive-thru and kiosk ordering platform backed by investors including Morgan Stanley Inclusive Ventures Lab — and a 2024 residency in Colorwave's Technical Residency in AI or Cybersecurity (TRAC), a competitive fellowship accepting roughly 10% of applicants.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #454337; text-wrap: pretty;">We started by building our own products — Appt Helper, Open Cita, Border Bills, and Baja Care — to prove the architecture, the team, and the operating model before selling any of it to clients. That portfolio is now the foundation of our consulting practice: every recommendation has been tested against real users and real edge cases, not just slide decks.</p>
+      </div>
+      <div style="background: #fbfaf5; border: 1px solid #ddd7c8; border-radius: 14px; overflow: hidden;">
+        <img src="https://technologyconsultants.ventures/images/roberto.png" alt="Roberto Guido" style="width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover;">
+        <div style="padding: 24px 28px 28px;">
+          <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px;">Roberto Guido</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #8b8779; margin-bottom: 20px;">Founder · EE, UC San Diego · MBA, NYU Stern</div>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13.5px;">
+            <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed #ddd7c8; padding-top: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #8b8779;">Practice</span><span style="color: #454337; text-align: right;">Interfaces &amp; automation</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed #ddd7c8; padding-top: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #8b8779;">Residency</span><span style="color: #454337; text-align: right;">AI TRAC, 2024</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed #ddd7c8; padding-top: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #8b8779;">Based</span><span style="color: #454337; text-align: right;">San Diego · Tijuana</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed #ddd7c8; padding-top: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #8b8779;">Languages</span><span style="color: #454337; text-align: right;">English · Spanish</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed #ddd7c8; padding-top: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #8b8779;">Open to</span><span style="color: #454337; text-align: right;">SMB · startup · mid-market</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 FAQ -->
+  <div id="faq" style="max-width: 1240px; margin: 0 auto; padding: 104px 36px 0;">
+    <div style="display: grid; grid-template-columns: 300px 1fr; gap: 48px;">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 22px;">
+          <span style="color: #b6b1a3;">06</span><span style="color: var(--tc-accent, #2b59d9);">FAQ</span>
+        </div>
+        <h2 style="margin: 0; font-size: 36px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 700;">Frequently asked questions</h2>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <div style="border-top: 1px solid #ddd7c8; padding: 26px 0;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; letter-spacing: -0.015em;">What is your typical engagement model?</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5f5c52; max-width: 50em; text-wrap: pretty;">We operate either on a scoped, milestone-driven project basis (MVPs, redesigns, specific integrations) or as a fractional CTO retainer for ongoing senior development and operational capacity.</p>
+        </div>
+        <div style="border-top: 1px solid #ddd7c8; padding: 26px 0;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; letter-spacing: -0.015em;">Do you advertise pricing?</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5f5c52; max-width: 50em; text-wrap: pretty;">Projects are tailored to each client's specific business context and technical complexity. We scope every project individually to provide transparent, flat-rate phase pricing rather than pre-advertised rates.</p>
+        </div>
+        <div style="border-top: 1px solid #ddd7c8; padding: 26px 0;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; letter-spacing: -0.015em;">What is your standard technology stack?</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5f5c52; max-width: 50em; text-wrap: pretty;">React and TypeScript on the front-end, Node.js on the back-end, and PostgreSQL for databases. Our AI work leverages Claude, OpenAI, and custom Model Context Protocol (MCP) integrations.</p>
+        </div>
+        <div style="border-top: 1px solid #ddd7c8; padding: 26px 0;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; letter-spacing: -0.015em;">How is technical handoff managed?</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5f5c52; max-width: 50em; text-wrap: pretty;">We deliver fully documented git repositories and assist with cloud deployment. Your internal team can take over immediately, or we can continue running and monitoring the setup under a retainer.</p>
+        </div>
+        <div style="border-top: 1px solid #ddd7c8; border-bottom: 1px solid #ddd7c8; padding: 26px 0;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; letter-spacing: -0.015em;">Where are you based?</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5f5c52; max-width: 50em; text-wrap: pretty;">San Diego, California — working with clients globally across the United States and Mexican cross-border markets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 CONTACT -->
+  <div id="contact" style="max-width: 1240px; margin: 104px auto 0; padding: 0 36px 104px;">
+    <div style="background: #121216; color: #f4f1ea; border-radius: 18px; padding: 80px 64px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items: center;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #35b9cc; margin-bottom: 20px;">07 · Contact</div>
+        <h2 style="margin: 0 0 18px; font-size: 46px; line-height: 1.03; letter-spacing: -0.03em; font-weight: 700;">Tell us what you're trying to <em>build</em>.</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #a5a2ac; max-width: 32em; text-wrap: pretty;">A 30-minute call costs nothing and usually leaves you with at least one concrete idea, whether or not we end up working together.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+        <a href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call" style="background: #f4f1ea; color: #121216; font-size: 16px; font-weight: 600; border-radius: 999px; padding: 16px 30px; display: inline-flex; align-items: center; gap: 10px;" style-hover="background: #35b9cc; color: #121216;">Book a strategy call <span style="font-family: 'IBM Plex Mono', monospace;">→</span></a>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #8a8794;">contact@technologyconsultants.ventures</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #8a8794;"><span style="color: #55b47a;">✓</span> replies within 24 hours</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top: 1px solid #ddd7c8; background: #f4f1ea;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 36px 40px;">
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px;">
+        <div>
+          <a href="#top" style="display: inline-flex; align-items: center; gap: 10px; color: #16161a; font-weight: 700; font-size: 15px; margin-bottom: 14px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 6px; background: var(--tc-accent, #2b59d9); color: #f4f1ea; font-family: 'IBM Plex Mono', monospace; font-size: 11px;">&gt;</span>Technology Consultants</a>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #5f5c52; max-width: 26em;">A senior engineering practice run by builders. We integrate advanced AI, intelligent agents, and automated data pipelines into business operations.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8b8779; margin-bottom: 4px;">Services</div>
+          <a href="#services" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Interfaces &amp; integration</a>
+          <a href="#services" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Intelligent automation</a>
+          <a href="#how" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Engagement models</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8b8779; margin-bottom: 4px;">Our work</div>
+          <a href="https://appthelper.com" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Appt Helper</a>
+          <a href="https://opencita.com" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Open Cita</a>
+          <a href="#work" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Border Bills</a>
+          <a href="#work" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Baja Care</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8b8779; margin-bottom: 4px;">Company</div>
+          <a href="#about" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">About</a>
+          <a href="#faq" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">FAQ</a>
+          <a href="#contact" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Contact</a>
+          <a href="mailto:contact@technologyconsultants.ventures" style="color: #454337; font-size: 14px;" style-hover="color: var(--tc-accent, #2b59d9);">Email us</a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #ddd7c8; padding-top: 22px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #8b8779;">
+        <span>© 2026 Technology Consultants Inc. All rights reserved.</span>
+        <span><a href="https://technologyconsultants.ventures/privacy.html" style="color: #8b8779;" style-hover="color: #16161a;">Privacy &amp; Terms</a> · v2026.07 · made by builders</span>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#2b59d9&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#2b59d9&quot;, &quot;#0f7f8c&quot;, &quot;#6b4fd0&quot;, &quot;#b0501f&quot;], &quot;section&quot;: &quot;Brand&quot;}, &quot;heroGrid&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() { this.applyAccent(); }
+  componentDidUpdate() { this.applyAccent(); }
+  applyAccent() {
+    const el = document.querySelector('[data-tc-root]');
+    if (el) el.style.setProperty('--tc-accent', this.props.accent ?? '#2b59d9');
+  }
+  renderVals() {
+    return { heroGrid: this.props.heroGrid ?? true };
+  }
+}
+</script>
+</body>
+</html>

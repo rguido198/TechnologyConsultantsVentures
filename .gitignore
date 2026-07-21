@@ -26,3 +26,7 @@ dist-ssr
 # Impeccable design-hook cache (re-derivable); config.json (reviewed
 # ignore-value exceptions) is intentionally kept and committed.
 .impeccable/hook.cache.json
+
+# SEO Audit Deliverable
+seo-audit/
+
