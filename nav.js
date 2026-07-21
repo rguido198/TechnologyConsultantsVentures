@@ -29,5 +29,18 @@
         });
       });
     }
+
+    // Language toggle dynamic binding for CSP compliance
+    var langToggles = document.querySelectorAll(".lang-toggle");
+    langToggles.forEach(function (toggle) {
+      toggle.addEventListener("click", function () {
+        var href = toggle.getAttribute("href") || "";
+        if (href.indexOf("/es") !== -1 || href.indexOf("es/") !== -1) {
+          localStorage.setItem("tcv-lang", "es");
+        } else {
+          localStorage.setItem("tcv-lang", "en");
+        }
+      });
+    });
   });
 })();
