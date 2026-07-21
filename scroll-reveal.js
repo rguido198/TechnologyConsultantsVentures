@@ -278,16 +278,17 @@
     ".services-grid",
     ".work-grid",
   ].forEach(function (sel) {
-    var grid = document.querySelector(sel);
-    if (!grid || !grid.children.length) return;
-    reveal(grid.children, grid, {
-      stagger: 0.06,
-      y: 16,
-      rotateX: 2,
-      scale: 0.98,
-      transformOrigin: "center top",
-      ease: EASE,
-      duration: DURATION
+    document.querySelectorAll(sel).forEach(function (grid) {
+      if (!grid.children.length) return;
+      reveal(grid.children, grid, {
+        stagger: 0.06,
+        y: 16,
+        rotateX: 2,
+        scale: 0.98,
+        transformOrigin: "center top",
+        ease: EASE,
+        duration: DURATION
+      });
     });
   });
 

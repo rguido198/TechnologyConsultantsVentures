@@ -732,6 +732,11 @@ nav { display: flex; align-items: center; gap: 30px; }
   gap: clamp(32px, 4vw, 56px);
   align-items: center;
 }
+.work-grid + .work-grid {
+  margin-top: clamp(56px, 6vw, 96px);
+  padding-top: clamp(56px, 6vw, 96px);
+  border-top: 1px solid #2c2c33;
+}
 @media (max-width: 900px) { .work-grid { grid-template-columns: 1fr; } }
 
 .case-media {
