@@ -1,0 +1,35 @@
+[
+  {
+    "comparison_id": "vapi-vs-retell-ai",
+    "title": "Vapi vs Retell AI for Voice Agents",
+    "tool_a": "Vapi",
+    "tool_b": "Retell AI",
+    "use_case": "Managed voice AI pipelines and telephony integration",
+    "latency_comparison": "Retell AI uses a custom, highly optimized voice-first streaming pipeline that often shows slightly lower latency under high concurrency. Vapi relies on standard WebRTC endpoints and is highly customisable.",
+    "customizability": "Vapi is a modular developer toolbox, letting you easily bring your own LLM, transcriber, and TTS provider. Retell AI is more of an integrated appliance, providing a smoother initial out-of-the-box experience.",
+    "crossover_math": "At low volumes (<5,000 minutes/month), Vapi's lower platform fees are highly cost-effective. At high scale (>50,000 minutes/month), Retell AI's volume pricing is competitive, but building custom open-source pipelines becomes the logical crossover choice.",
+    "developer_experience": "Vapi offers clean SDKs and direct control over WebSocket data feeds. Retell AI provides a cleaner drag-and-drop conversational designer for prompt layout."
+  },
+  {
+    "comparison_id": "deepgram-vs-soniox",
+    "title": "Deepgram vs Soniox for Spanish Voice Transcription",
+    "tool_a": "Deepgram",
+    "tool_b": "Soniox",
+    "use_case": "Real-time speech-to-text (STT) for cross-border Spanish voice agents",
+    "latency_comparison": "Deepgram's Nova-2 model features sub-300ms latency, making it ideal for conversational speed. Soniox features highly competitive transcription latency but specializes in deep phonetic precision.",
+    "spanish_accuracy": "Soniox provides industry-leading accuracy for conversational Spanish, particularly in recognizing diverse regional Mexican dialects without getting tripped up by ambient noise. Deepgram Nova-2 is robust but can occasionally miss subtle phonetic transitions.",
+    "crossover_math": "Deepgram's developer tier is excellent for multi-language bots. Soniox is the recommended choice for dedicated Spanish-first applications in regions like Mexico where dialectal precision dictates call conversion.",
+    "developer_experience": "Deepgram has extensive SDK support and pre-built integrations with Vapi/Retell. Soniox requires custom API configurations for real-time WebSocket streams."
+  },
+  {
+    "comparison_id": "claude-caching-vs-openai",
+    "title": "Claude Prompt Caching vs OpenAI for High-Volume Pipelines",
+    "tool_a": "Claude Prompt Caching",
+    "tool_b": "OpenAI",
+    "use_case": "Cost and speed optimization for agent systems with large persistent system prompts",
+    "latency_comparison": "Claude prompt caching reduces time-to-first-token by up to 50% because the model skips parsing the cached prefix. OpenAI runs standard prompt evaluations unless using assistant thread caches.",
+    "customizability": "Claude allows developers to set explicit breakpoints (up to 4 cache checkpoints) in their prompt. OpenAI manages caching automatically behind the scenes (less control).",
+    "crossover_math": "For agents with large system prompts (>10k tokens) or long conversation histories, Claude prompt caching reduces input token cost by up to 90%. For short, stateless completions, OpenAI's raw token pricing remains highly competitive.",
+    "developer_experience": "Anthropic Claude requires setting the `cache_control` header in the message payload. OpenAI requires no code modifications but offers no visibility into cache hit rates."
+  }
+]

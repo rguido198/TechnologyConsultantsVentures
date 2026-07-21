@@ -48,4 +48,131 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <url>
+    <loc>https://technologyconsultants.ventures/services/commercial-real-estate</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/commercial-real-estate"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/commercial-real-estate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/commercial-real-estate"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/services/commercial-real-estate</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/commercial-real-estate"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/commercial-real-estate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/commercial-real-estate"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/services/restaurant-food-service</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/restaurant-food-service"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/restaurant-food-service"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/restaurant-food-service"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/services/restaurant-food-service</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/restaurant-food-service"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/restaurant-food-service"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/restaurant-food-service"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/services/investment-management</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/investment-management"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/investment-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/investment-management"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/services/investment-management</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/services/investment-management"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/services/investment-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/services/investment-management"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/stack-comparisons/vapi-vs-retell-ai</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/stack-comparisons/vapi-vs-retell-ai"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/stack-comparisons/vapi-vs-retell-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/stack-comparisons/vapi-vs-retell-ai"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/stack-comparisons/vapi-vs-retell-ai</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/stack-comparisons/vapi-vs-retell-ai"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/stack-comparisons/vapi-vs-retell-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/stack-comparisons/vapi-vs-retell-ai"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/stack-comparisons/deepgram-vs-soniox</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/stack-comparisons/deepgram-vs-soniox"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/stack-comparisons/deepgram-vs-soniox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/stack-comparisons/deepgram-vs-soniox"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/stack-comparisons/deepgram-vs-soniox</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/stack-comparisons/deepgram-vs-soniox"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/stack-comparisons/deepgram-vs-soniox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/stack-comparisons/deepgram-vs-soniox"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/stack-comparisons/claude-caching-vs-openai</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/stack-comparisons/claude-caching-vs-openai"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/stack-comparisons/claude-caching-vs-openai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/stack-comparisons/claude-caching-vs-openai"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/stack-comparisons/claude-caching-vs-openai</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/stack-comparisons/claude-caching-vs-openai"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/stack-comparisons/claude-caching-vs-openai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/stack-comparisons/claude-caching-vs-openai"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/integrations/workday-finance-mcp</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/integrations/workday-finance-mcp"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/integrations/workday-finance-mcp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/integrations/workday-finance-mcp"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/integrations/workday-finance-mcp</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/integrations/workday-finance-mcp"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/integrations/workday-finance-mcp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/integrations/workday-finance-mcp"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/integrations/salesforce-openai-agent</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/integrations/salesforce-openai-agent"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/integrations/salesforce-openai-agent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/integrations/salesforce-openai-agent"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/integrations/salesforce-openai-agent</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/integrations/salesforce-openai-agent"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/integrations/salesforce-openai-agent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/integrations/salesforce-openai-agent"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/integrations/postgresql-mcp-server</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/integrations/postgresql-mcp-server"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/integrations/postgresql-mcp-server"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/integrations/postgresql-mcp-server"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/integrations/postgresql-mcp-server</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/integrations/postgresql-mcp-server"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/integrations/postgresql-mcp-server"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/integrations/postgresql-mcp-server"/>
+  </url>
 </urlset>

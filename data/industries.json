@@ -1,0 +1,32 @@
+[
+  {
+    "industry_id": "commercial-real-estate",
+    "title": "AI Agent Solutions for Commercial Real Estate",
+    "industry": "Commercial Real Estate",
+    "primary_automation": "Automated Lease Abstraction",
+    "business_pain": "Lease documents (estoppels, amendments, riders) are long, unstructured PDFs. Reviewing them manually leads to missed renewal deadlines, CAM reconciliation errors, and high operational costs.",
+    "solution_details": "We deploy validation-first document processing pipelines. An AI agent parses the lease PDF, extracts key terms (escalation percentages, renewal windows, default terms) into structured JSON, and flags ambiguities for manual review.",
+    "roi_calculation": "Reclaims 90% of analyst time spent reading documents. More importantly, it eliminates the risk of missed renewal-notice dates, which can cost hundreds of thousands of dollars in lost leverage.",
+    "trust_credentials": "Our principal engineer has extensive experience connecting Workday Finance databases with customized LLM pipelines for audit compliance."
+  },
+  {
+    "industry_id": "restaurant-food-service",
+    "title": "AI Agent Solutions for Restaurant & Multi-Location Food Service",
+    "industry": "Restaurant & Multi-Location Food Service",
+    "primary_automation": "Automated Phone & Drive-Thru Dispatch",
+    "business_pain": "High staff turnover and staffing shortages lead to missed calls, long drive-thru wait times, and lost revenue. Previous automated tools tried to handle every case and failed, leading to poor customer experiences.",
+    "solution_details": "A natural voice AI agent takes orders over the phone or drive-thru mic. It queries the live POS menu and today's inventory. If it encounters a complex case (e.g., severe allergies, unusual substitutions, or customer frustration), it triggers a deterministic handoff to a human operator.",
+    "roi_calculation": "Maintains 100% call capture rate, reduces labor requirements during off-peak hours, and increases average order value through consistent, data-driven cross-selling prompts.",
+    "trust_credentials": "Voice AI expertise derived from building production-grade voice pipelines at Encounter AI."
+  },
+  {
+    "industry_id": "investment-management",
+    "title": "AI Agent Solutions for Investment Management",
+    "industry": "Investment Management",
+    "primary_automation": "Filing & Transcript Introspection",
+    "business_pain": "Analysts spend hours copying metrics from earnings call transcripts, 10-Ks, and portfolio reports into spreadsheets before they can start their actual evaluation work.",
+    "solution_details": "We build custom retrieval-augmented generation (RAG) pipelines that ingest filings, parse tabular data precisely, verify extracted numbers against source equations, and produce a structured, reviewed summary memo for the analyst.",
+    "roi_calculation": "Reclaims hours of preparation work per filing. Validated structures ensure analysts never base investment theses on hallucinated metrics.",
+    "trust_credentials": "Solid background in mathematical modeling and systems safety (UCSD Electrical Engineering background)."
+  }
+]

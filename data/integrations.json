@@ -1,0 +1,35 @@
+[
+  {
+    "integration_id": "workday-finance-mcp",
+    "title": "Workday Finance to Claude Desktop MCP Server Integration",
+    "source_system": "Workday Finance",
+    "destination_system": "Anthropic Claude",
+    "protocol": "Model Context Protocol (MCP)",
+    "use_case": "Automated expense auditing, ledger anomaly detection, and natural language report queries",
+    "code_snippet": "import { Server } from '@modelcontextprotocol/sdk/server.js';\nimport { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';\n\nconst server = new Server({\n  name: 'workday-finance-connector',\n  version: '1.0.0'\n}, {\n  capabilities: {\n    tools: {}\n  }\n});\n// Exposes tools to list transactions...",
+    "risk_mitigation": "Workday API requests are heavily throttled under high concurrency. We mitigate this by implementing a Redis-based cache layer with sliding-window rate limiting.",
+    "delivery_model": "Consulting fixed-scope implementation: standard deployment is 4 to 6 weeks including secure OAuth configuration and audit logs."
+  },
+  {
+    "integration_id": "salesforce-openai-agent",
+    "title": "Salesforce CRM to OpenAI Agent Integration",
+    "source_system": "Salesforce CRM",
+    "destination_system": "OpenAI Agent",
+    "protocol": "REST API / LangChain Tools",
+    "use_case": "Autonomous lead enrichment, automated meeting transcript logging, and real-time pipeline velocity scoring",
+    "code_snippet": "const { SalesforceConnection } = require('./salesforce');\n// Define custom Tool for OpenAI function calling\nconst getLeadDetailsTool = {\n  name: 'get_lead_details',\n  description: 'Retrieves Salesforce lead pipeline details',\n  parameters: { type: 'object', properties: { leadId: { type: 'string' } } }\n};",
+    "risk_mitigation": "Data exposure risk. We implement field-level security constraints so the AI agent only reads fields authorized by the user's Salesforce profile context.",
+    "delivery_model": "Fixed-scope rollout: 3 to 5 weeks depending on custom object complexity and field-level permissions architecture."
+  },
+  {
+    "integration_id": "postgresql-mcp-server",
+    "title": "PostgreSQL Database to Claude Desktop via Custom MCP Server",
+    "source_system": "PostgreSQL Database",
+    "destination_system": "Claude Desktop",
+    "protocol": "Model Context Protocol (MCP)",
+    "use_case": "Allows developers to execute read-only queries, schema introspection, and index optimization audits using natural language",
+    "code_snippet": "const server = new Server({ name: 'postgres-mcp', version: '1.0.0' }, { capabilities: { tools: {} } });\nserver.setRequestHandler(ListToolsRequestSchema, async () => ({\n  tools: [{\n    name: 'run_query',\n    description: 'Execute a read-only SQL query on the database',\n    inputSchema: { type: 'object', properties: { sql: { type: 'string' } } }\n  }]\n}));",
+    "risk_mitigation": "SQL injection and unauthorized database modifications. The MCP server restricts queries to a read-only user session and blocks DDL/DML commands (e.g., DROP, DELETE, UPDATE) at the parser layer.",
+    "delivery_model": "Custom deployment: 2 weeks. Best suited for development teams looking to speed up internal data exploration workflows safely."
+  }
+]
