@@ -85,7 +85,7 @@
   }
 
   function applyHeadingAnimations() {
-    gsap.utils.toArray(".hero h1, .sec-head h2").forEach(function (h) {
+    gsap.utils.toArray(".sec-head h2").forEach(function (h) {
       prepareTextReveal(h);
       var inners = h.querySelectorAll(".word-inner");
       if (!inners.length) return;
@@ -251,41 +251,8 @@
     });
   }
 
-  // Hero intro choreography: headline words lead (see applyHeadingAnimations),
-  // then meta row, lede, and CTAs cascade in behind it from the same
-  // direction. Load-only — no ScrollTrigger needed. The proof band right
-  // below the hero reveals on scroll instead (see the grid registrations).
-  function initHeroIntro() {
-    var els = [".hero-meta-row", ".hero .lede", ".hero-cta-row"]
-      .map(function (s) { return document.querySelector(s); })
-      .filter(Boolean);
-    if (els.length) {
-      gsap.from(els, {
-        opacity: 0,
-        y: 18,
-        duration: 0.6,
-        ease: "power2.out",
-        stagger: 0.09,
-        delay: 0.25,
-        clearProps: "all"
-      });
-    }
-    var visual = document.querySelector(".hero-visual");
-    if (visual) {
-      gsap.from(visual, {
-        opacity: 0,
-        y: 24,
-        duration: 0.7,
-        ease: "power2.out",
-        delay: 0.45,
-        clearProps: "all"
-      });
-    }
-  }
-
   // Initial runs
   applyHeadingAnimations();
-  initHeroIntro();
   initCardHovers();
   initSpotlightCards();
   initCountUps();

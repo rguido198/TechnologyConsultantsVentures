@@ -1,15 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<script>
-  (function() {
-    var saved = localStorage.getItem("tcv-lang");
-    var isEs = saved === "es" || (!saved && navigator.language && navigator.language.toLowerCase().indexOf("es") === 0);
-    if (isEs && window.location.pathname === "/") {
-      window.location.replace("/es/");
-    }
-  })();
-</script>
+<script src="redirect.js"></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title data-i18n="meta.title">Technology Consultants: We earn our advice by shipping</title>
@@ -217,7 +209,7 @@
           </p>
 
           <div class="hero-cta-row">
-            <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+            <a class="btn btn-primary" href="#contact">
               <span data-i18n="hero.cta.primary">Book a 30-min strategy call</span>
               <span class="arr" aria-hidden="true">→</span>
             </a>
@@ -371,6 +363,7 @@
       <article class="value-card">
         <p class="value-tag" data-i18n="value.1.tag">Restaurant &amp;<br />multi-location food service</p>
         <div class="value-body">
+          <div class="value-scenario-badge">Illustrative Scenario</div>
           <h3 class="value-h" data-i18n="value.1.h">An ordering agent that closes the loop &mdash; and knows when to hand off.</h3>
           <p class="value-d" data-i18n="value.1.d">A conversational agent takes the order by phone, drive-thru mic, or chat, confirms it against the live menu and today&rsquo;s inventory, and sends it straight to the kitchen display and payment system. The design isn&rsquo;t &ldquo;the AI handles everything&rdquo;, it&rsquo;s a deterministic escalation path: an allergen question, an unusual substitution, or a frustrated customer routes to a person immediately.</p>
           <div class="value-roi">
@@ -383,6 +376,7 @@
       <article class="value-card">
         <p class="value-tag" data-i18n="value.2.tag">Commercial<br />real estate</p>
         <div class="value-body">
+          <div class="value-scenario-badge">Illustrative Scenario</div>
           <h3 class="value-h" data-i18n="value.2.h">Turning weeks of lease abstraction into a same-day review.</h3>
           <p class="value-d" data-i18n="value.2.d">Every lease, amendment, and estoppel sits in a PDF someone has to read line by line to find the rent escalation, the renewal window, the CAM reconciliation clause. An agent-based abstraction pipeline extracts key terms into structured data, flags anything ambiguous for a human reviewer, and surfaces upcoming deadlines before they're missed.</p>
           <div class="value-roi">
@@ -395,6 +389,7 @@
       <article class="value-card">
         <p class="value-tag" data-i18n="value.3.tag">Investment<br />management</p>
         <div class="value-body">
+          <div class="value-scenario-badge">Illustrative Scenario</div>
           <h3 class="value-h" data-i18n="value.3.h">Getting through the filing before the market moves on it.</h3>
           <p class="value-d" data-i18n="value.3.d">Analysts spend hours pulling the same handful of numbers out of 10-Ks, earnings transcripts, and portfolio reports before the actual analysis can start. A validation-first extraction pipeline pulls the structured metrics, checks them against source, and hands the analyst a reviewed summary instead of a stack of PDFs.</p>
           <div class="value-roi">
@@ -701,7 +696,7 @@
 <script defer src="i18n.js"></script>
 <script defer src="nav.js"></script>
 <script defer src="hero-shapes.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="gsap.min.js"></script>
+<script defer src="ScrollTrigger.min.js"></script>
 <script defer src="scroll-reveal.js"></script></body>
 </html>
