@@ -111,11 +111,9 @@
         <span style="color: var(--ink);">PostgreSQL MCP</span>
       </div>
       <div class="hero-meta-row">
-        <p class="eyebrow">Technology Consultants</p>
+        <p class="eyebrow">System Integration</p>
         <span class="sep" aria-hidden="true"></span>
-        <span class="meta">System Integration</span>
-        <span class="sep" aria-hidden="true"></span>
-        <span class="meta"><span class="dot" aria-hidden="true"></span>Booking Q3 2026</span>
+        <span class="meta"><span class="dot" aria-hidden="true"></span>Booking projects · Q3 2026</span>
       </div>
       <h1 class="display h1">PostgreSQL Database to Claude Desktop via Custom MCP Server</h1>
       <p class="lede">Inspect schemas, execute read-only queries, and audit indexes using natural language.</p>
@@ -141,7 +139,7 @@
         <h2 class="h3">System Integration Blueprint</h2>
         <p>We connect <strong>PostgreSQL Database</strong> securely to <strong>Claude Desktop</strong> via Model Context Protocol (MCP). Here is a simplified code reference of our implementation wrapper:</p>
         <pre style="background: #1e1e24; color: #d4d4d4; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 13.5px; margin: 16px 0;">const server = new Server({ name: 'postgres-mcp', version: '1.0.0' }, { capabilities: { tools: {} } });
-server.setRequestHandler(ListToolsRequestSchema, async () => ({ 
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [{
     name: 'run_query',
     description: 'Execute a read-only SQL query on the database',
