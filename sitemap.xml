@@ -49,6 +49,7 @@
     <priority>0.3</priority>
   </url>
 
+  
   <url>
     <loc>https://technologyconsultants.ventures/services/commercial-real-estate</loc>
     <lastmod>2026-07-21</lastmod>
@@ -174,5 +175,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/integrations/postgresql-mcp-server"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/integrations/postgresql-mcp-server"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/integrations/postgresql-mcp-server"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/resources/what-is-an-ai-agent</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/resources/what-is-an-ai-agent"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/resources/what-is-an-ai-agent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/resources/what-is-an-ai-agent"/>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/resources/what-is-an-ai-agent</loc>
+    <lastmod>2026-07-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technologyconsultants.ventures/resources/what-is-an-ai-agent"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://technologyconsultants.ventures/es/resources/what-is-an-ai-agent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technologyconsultants.ventures/resources/what-is-an-ai-agent"/>
   </url>
 </urlset>
