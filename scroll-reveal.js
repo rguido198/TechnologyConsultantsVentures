@@ -120,8 +120,8 @@
 
   // Case study card hovers (screenshot scales 1.03, arrow shifts, shadow lifts)
   function initCardHovers() {
-    gsap.utils.toArray(".case").forEach(function (card) {
-      var media = card.querySelectorAll(".case-placeholder, .browser-mockup, .shot img");
+    gsap.utils.toArray(".work-grid").forEach(function (card) {
+      var media = card.querySelectorAll(".shot img");
       var arrs = card.querySelectorAll(".btn-link .arr");
 
       var tl = gsap.timeline({ paused: true });
@@ -152,7 +152,7 @@
   // gates this to (hover: hover) and (pointer: fine), so this JS is inert
   // (harmless extra listeners) on touch devices.
   function initSpotlightCards() {
-    gsap.utils.toArray(".service, .case, .ai-cred").forEach(function (card) {
+    gsap.utils.toArray(".service, .ai-cred").forEach(function (card) {
       card.addEventListener("mousemove", function (e) {
         var rect = card.getBoundingClientRect();
         var mx = ((e.clientX - rect.left) / rect.width) * 100;
@@ -183,86 +183,6 @@
         }
       );
     });
-  }
-
-  // AI Agent Flow Looping Animation in Hero
-  function initAgentFlowAnimation() {
-    var svg = document.getElementById("agent-flow-svg");
-    if (!svg) return;
-
-    var tl = gsap.timeline({ repeat: -1, repeatDelay: 0.6 });
-
-    // 1. Pulse dots travel from inputs (left) to Core (center)
-    tl.fromTo(["#pulse-in-1", "#pulse-in-2", "#pulse-in-3"],
-      { cx: 40, cy: function(i) { return [80, 160, 240][i]; }, opacity: 0 },
-      {
-        cx: 200,
-        cy: 160,
-        opacity: 1,
-        duration: 1.1,
-        stagger: 0.15,
-        ease: "power1.in"
-      }
-    );
-
-    // 2. Trigger core glow expands on arrival
-    tl.to(["#pulse-in-1", "#pulse-in-2", "#pulse-in-3"], { opacity: 0, duration: 0.05 }, "-=0.05");
-    tl.to("#node-core .core-outer", { scale: 1.3, opacity: 0.3, duration: 0.25, yoyo: true, repeat: 1, transformOrigin: "center center" }, "-=0.05");
-    tl.to("#node-core .core-inner", { scale: 1.08, duration: 0.25, yoyo: true, repeat: 1, transformOrigin: "center center" }, "-=0.2");
-
-    // 3. Pulse dots dispatch from Core (center) to outputs (right)
-    tl.fromTo(["#pulse-out-1", "#pulse-out-2", "#pulse-out-3", "#pulse-out-4"],
-      { cx: 200, cy: 160, opacity: 0 },
-      {
-        cx: 360,
-        cy: function(i) { return [60, 130, 200, 270][i]; },
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.1,
-        ease: "power2.out"
-      },
-      "-=0.15"
-    );
-
-    // 4. Output nodes expand slightly when hit
-    tl.to(["#pulse-out-1", "#pulse-out-2", "#pulse-out-3", "#pulse-out-4"], { opacity: 0, duration: 0.05 }, "-=0.05");
-    
-    var outputs = ["#node-out-1", "#node-out-2", "#node-out-3", "#node-out-4"];
-    outputs.forEach(function (sel, i) {
-      tl.to(sel + " circle", {
-        scale: 1.08,
-        stroke: "#06c",
-        duration: 0.18,
-        yoyo: true,
-        repeat: 1,
-        transformOrigin: "center center"
-      }, "-=" + (0.4 - i * 0.08));
-    });
-
-    // Pause the infinite timeline when the SVG is scrolled out of view or the
-    // tab is hidden -- otherwise it ticks forever, animating invisible nodes.
-    // Mirrors the pause/resume pattern in hero-shapes.js for the canvas grid.
-    tl.pause();
-    var onScreen = false;
-    function syncPlayState() {
-      if (onScreen && !document.hidden) {
-        tl.play();
-      } else {
-        tl.pause();
-      }
-    }
-    if (typeof IntersectionObserver === "function") {
-      new IntersectionObserver(function (entries) {
-        onScreen = entries[0].isIntersecting;
-        syncPlayState();
-        var wrap = svg.closest(".hero-visual");
-        if (wrap) wrap.classList.toggle("hero-visual-in-view", onScreen);
-      }).observe(svg);
-    } else {
-      onScreen = true;
-      tl.play();
-    }
-    document.addEventListener("visibilitychange", syncPlayState);
   }
 
   // Booking CTA form submission
@@ -369,7 +289,6 @@
   initCardHovers();
   initSpotlightCards();
   initCountUps();
-  initAgentFlowAnimation();
   initBookingForm();
 
   // Re-split, refresh triggers, and update count-ups when language toggles
@@ -483,64 +402,4 @@
       }
     });
   }, 3000);
-
-  // How We Work: Pinned slide deck scrub for desktop (homepage only — guard
-  // since scroll-reveal.js now also runs on service/privacy pages that
-  // don't have this section).
-  var mm = gsap.matchMedia();
-  mm.add("(min-width: 901px)", function () {
-    if (!document.querySelector(".how-container")) return;
-
-    // Pin left column
-    ScrollTrigger.create({
-      trigger: ".how-container",
-      start: "top 104px",
-      end: "bottom bottom",
-      pin: ".how-left",
-      pinSpacing: false
-    });
-
-    // Animate progress line
-    var progressEl = document.querySelector(".how-timeline-progress");
-    if (progressEl) {
-      gsap.fromTo(progressEl,
-        { height: "0%" },
-        {
-          height: "100%",
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".how-grid",
-            start: "top 30%",
-            end: "bottom 70%",
-            scrub: true
-          }
-        }
-      );
-    }
-
-    // Toggle active state on scroll
-    var cells = gsap.utils.toArray(".how-cell");
-    if (cells.length) {
-      cells[0].classList.add("active");
-    }
-    
-    cells.forEach(function (cell) {
-      ScrollTrigger.create({
-        trigger: cell,
-        start: "top 55%",
-        end: "bottom 45%",
-        onToggle: function (self) {
-          if (self.isActive) {
-            cells.forEach(function (c) { c.classList.remove("active"); });
-            cell.classList.add("active");
-          }
-        }
-      });
-    });
-
-    return function () {
-      var cells = gsap.utils.toArray(".how-cell");
-      cells.forEach(function (c) { c.classList.remove("active"); });
-    };
-  });
 })();

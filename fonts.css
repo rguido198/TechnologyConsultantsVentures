@@ -2,31 +2,23 @@
    characters). Replaces the fonts.googleapis.com stylesheet fetch, which was
    a 2-hop render-blocking dependency (HTML -> Google Fonts CSS -> font
    files) ahead of first paint. Collapsing that to a single same-origin
-   request improves mobile LCP. */
+   request improves mobile LCP. Display/body type is a system-sans stack
+   (no webfont needed); IBM Plex Mono is self-hosted for mono accents. */
 
 @font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url('fonts/geist-sans-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'JetBrains Mono';
+  font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/jetbrains-mono-400-latin.woff2') format('woff2');
+  src: url('fonts/ibm-plex-mono-400-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('fonts/jetbrains-mono-400-latin.woff2') format('woff2');
+  src: url('fonts/ibm-plex-mono-500-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

@@ -117,7 +117,7 @@
           "name": "¿Publican sus precios?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Los proyectos de consultoría y desarrollo se estructuran a la medida de la complejidad técnica de cada cliente. Cotizamos cada proyecto de forma individual para ofrecer presupuestos fijos y transparentes en lugar de tarifas estándar pre-anunciadas."
+            "text": "Los proyectos se adaptan al contexto de negocio y la complejidad técnica de cada cliente. Cotizamos cada proyecto de forma individual para ofrecer precios fijos y transparentes por fase, en lugar de tarifas pre-anunciadas."
           }
         },
         {
@@ -141,7 +141,7 @@
           "name": "¿Dónde están ubicados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Estamos ubicados en San Diego, California, y trabajamos con clientes de forma global en Estados Unidos y mercados transfronterizos con México."
+            "text": "San Diego, California, trabajando con clientes de forma global en Estados Unidos y mercados transfronterizos con México."
           }
         }
       ]
@@ -192,172 +192,105 @@
   <!-- ─────────────────── Hero ─────────────────── -->
   <section class="hero">
     <div class="wrap-wide hero-inner">
-      <div class="hero-copy">
-        <div class="hero-meta-row">
-          <p class="eyebrow">Technology Consultants</p>
-          <span class="sep" aria-hidden="true"></span>
-          <span class="meta">IA Aplicada y Automatización Inteligente</span>
-          <span class="sep" aria-hidden="true"></span>
-          <span class="meta"><span class="dot" aria-hidden="true"></span><span>Agendando proyectos · T3 2026</span></span>
+      <div class="hero-top">
+        <div class="hero-copy">
+          <div class="hero-meta-row">
+            <p class="eyebrow">Technology Consultants</p>
+            <span class="sep" aria-hidden="true"></span>
+            <span class="meta">IA Aplicada y Automatización Inteligente</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span class="meta"><span class="dot" aria-hidden="true"></span><span>Agendando proyectos · T3 2026</span></span>
+          </div>
+
+          <h1 class="display h1">Conectamos modelos avanzados de IA con operaciones comerciales <em>reales</em>.</h1>
+
+          <p class="lede">
+            Una práctica de ingeniería senior dirigida por desarrolladores. Integramos herramientas de IA avanzadas, agentes inteligentes y flujos de datos automatizados en tus sistemas existentes para <span class="mark">optimizar operaciones, reducir costos e impulsar ingresos</span>.
+          </p>
+
+          <div class="hero-cta-row">
+            <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Llamada%20de%20estrategia">
+              <span>Reserva una llamada de estrategia de 30 minutos</span>
+              <span class="arr" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-ghost" href="#work">Mira lo que hemos construido</a>
+          </div>
         </div>
 
-        <h1 class="display h1">Conectamos modelos avanzados de IA con operaciones comerciales reales.</h1>
-
-        <p class="lede">
-          Una práctica de ingeniería senior dirigida por desarrolladores. Integramos herramientas de IA avanzadas, agentes inteligentes y flujos de datos automatizados en sus sistemas existentes para <span class="mark">optimizar operaciones, reducir costos e impulsar ingresos</span>.
-        </p>
-
-        <div class="hero-cta-row">
-          <a class="btn btn-primary" href="mailto:contact@technologyconsultants.ventures?subject=Llamada%20de%20estrategia">
-            <span>Reserva una llamada de estrategia de 30 minutos</span>
-            <span class="arr" aria-hidden="true">→</span>
-          </a>
-          <a class="btn btn-ghost" href="#work">Mira lo que hemos construido</a>
+        <div class="hero-visual">
+          <div class="hero-terminal" aria-label="Ejemplo de registro de una automatización">
+            <div class="hero-terminal-bar">
+              <div class="hero-terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span class="hero-terminal-title">applied-ai · intelligent-automation · invoice-intake</span>
+              <span class="hero-terminal-live">● en vivo</span>
+            </div>
+            <div class="hero-terminal-log">
+              <span class="ht-time">09:41:02</span><span class="ht-verb">ingest</span><span class="ht-desc">247 PDFs desde bandeja compartida</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:14</span><span class="ht-verb">parse</span><span class="ht-desc">líneas de detalle → datos estructurados</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:15</span><span class="ht-verb">validate</span><span class="ht-desc">validación de contrato (Zod) · 245 OK</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:15</span><span class="ht-verb ht-warn">escalate</span><span class="ht-desc">2 totales ambiguos → revisión humana</span><span class="ht-warn">⚠ HITL</span>
+              <span class="ht-time">09:41:31</span><span class="ht-verb">approve</span><span class="ht-desc">ops@cliente aprobó</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:32</span><span class="ht-verb">write</span><span class="ht-desc">ERP + CRM actualizados · recibos registrados</span><span class="ht-ok">✓</span>
+            </div>
+            <div class="hero-terminal-foot">
+              <span>listo en 30s · 0 cifras sin revisar</span>
+              <span class="ht-cursor" aria-hidden="true">▮<span class="ht-blink">▮</span></span>
+            </div>
+          </div>
+          <p class="hero-visual-caption">IA Aplicada y Automatización Inteligente: agentes conectados a tu stack operativo, con una puerta humana donde importa.</p>
         </div>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="agent-flow-container">
-          <svg viewBox="0 0 400 320" width="100%" height="100%">
-            <!-- SVG details remain unchanged, mapping paths correctly -->
-            <defs>
-              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
-              <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#4BECD7" />
-                <stop offset="100%" stop-color="#06c" />
-              </linearGradient>
-            </defs>
-
-            <!-- Grid backdrop -->
-            <rect width="400" height="320" fill="none" />
-
-            <!-- Connection lines -->
-            <path class="flow-path" id="path-input-1" d="M 40,80 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-input-2" d="M 40,160 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-input-3" d="M 40,240 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            
-            <path class="flow-path" id="path-output-1" d="M 205,160 L 360,60" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-output-2" d="M 205,160 L 360,130" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-output-3" d="M 205,160 L 360,200" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-output-4" d="M 205,160 L 360,270" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-
-            <!-- Floating pulses -->
-            <circle class="pulse-dot" id="pulse-in-1" cx="40" cy="80" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-in-2" cx="40" cy="160" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-in-3" cx="40" cy="240" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
-            
-            <circle class="pulse-dot" id="pulse-out-1" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-out-2" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-out-3" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-out-4" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-
-            <!-- Nodes -->
-            <g class="node-group" id="node-in-1" transform="translate(40, 80)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Docs</text>
-            </g>
-            <g class="node-group" id="node-in-2" transform="translate(40, 160)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Feeds</text>
-            </g>
-            <g class="node-group" id="node-in-3" transform="translate(40, 240)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">APIs</text>
-            </g>
-
-            <g class="node-group" id="node-core" transform="translate(200, 160)">
-              <circle class="core-outer" r="28" fill="url(#grad-teal)" opacity="0.16" />
-              <circle class="core-inner" r="22" fill="url(#grad-teal)" filter="url(#glow)" />
-              <text y="-1" font-family="var(--font-mono)" font-size="7.5" text-anchor="middle" font-weight="600" fill="#fff">APPLIED</text>
-              <text y="8" font-family="var(--font-mono)" font-size="7.5" text-anchor="middle" font-weight="600" fill="#fff">AI</text>
-            </g>
-
-            <g class="node-group" id="node-out-1" transform="translate(360, 60)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">CRM</text>
-            </g>
-            <g class="node-group" id="node-out-2" transform="translate(360, 130)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">ERP</text>
-            </g>
-            <g class="node-group" id="node-out-3" transform="translate(360, 200)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">DB</text>
-            </g>
-            <g class="node-group" id="node-out-4" transform="translate(360, 270)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">Comms</text>
-            </g>
-          </svg>
+      <div class="proof-band" aria-label="Cómo trabajamos">
+        <div class="proof-band-item">
+          <div class="n">En producción.</div>
+          <div class="l">Usuarios reales hoy en nuestros propios productos desarrollados.</div>
         </div>
-        <p class="hero-visual-caption">IA Aplicada: conectando modelos inteligentes directamente a tu ecosistema operativo.</p>
+        <div class="proof-band-item">
+          <div class="n">Equipo senior.</div>
+          <div class="l">Quienes te proponen el proyecto son quienes lo construyen.</div>
+        </div>
+        <div class="proof-band-item">
+          <div class="n">Código primero.</div>
+          <div class="l">Sin presentaciones antes de tener software funcionando.</div>
+        </div>
+        <div class="proof-band-item">
+          <div class="n">Un solo equipo.</div>
+          <div class="l">Interfaces y automatización: los mismos ingenieros, el mismo stack.</div>
+        </div>
       </div>
     </div>
   </section>
-
-  <div class="wrap-wide">
-    <div class="proof-band" aria-label="Cómo trabajamos">
-      <div class="proof-band-item">
-        <div class="n">En producción.</div>
-        <div class="l">Usuarios reales hoy en nuestros propios productos desarrollados.</div>
-      </div>
-      <div class="proof-band-item">
-        <div class="n">Equipo senior.</div>
-        <div class="l">Quienes te proponen el proyecto son quienes lo construyen.</div>
-      </div>
-      <div class="proof-band-item">
-        <div class="n">Código primero.</div>
-        <div class="l">Sin presentaciones antes de tener software funcionando.</div>
-      </div>
-      <div class="proof-band-item">
-        <div class="n">Un solo equipo.</div>
-        <div class="l">Interfaces y automatización: los mismos ingenieros, el mismo stack.</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ─────────────────── Services ─────────────────── -->
 <section id="services" class="section services-bg">
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow">Qué hacemos</p>
-        <h2 class="display h2">Sistemas inteligentes.<br />Diseñados para <em>operar</em>.</h2>
+        <div class="eyebrow-row"><span class="eyebrow-num">01</span><p class="eyebrow">Qué hacemos</p></div>
+        <h2 class="display h2">Sistemas inteligentes. Diseñados para <em>operar</em>.</h2>
       </div>
-      <p class="lede">Construimos los flujos de trabajo automatizados que eliminan los cuellos de botella manuales, y las interfaces web de producción que su equipo y clientes necesitan para interactuar con ellos.</p>
+      <p class="lede">Construimos los flujos de trabajo automatizados que eliminan los cuellos de botella manuales, y las interfaces web de producción que tu equipo y clientes necesitan para interactuar con ellos.</p>
     </header>
 
     <div class="services-grid">
 
       <article class="service">
-        <div class="service-icon-row">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="8" width="6" height="8" rx="1.5"/>
-              <rect x="16" y="8" width="6" height="8" rx="1.5"/>
-              <path d="M8 12h2M14 12h2"/>
-              <circle cx="12" cy="12" r="2"/>
-            </svg>
-          </div>
-        </div>
+        <div class="service-kicker">Interfaces</div>
         <header>
           <h3 class="display h3">Interfaces a Medida e Integración de Sistemas</h3>
           <p class="sub">Portales interactivos para flujos de trabajo complejos.</p>
         </header>
         <p class="body">
-          La automatización no sirve de nada si tu equipo no puede controlarla. Construimos dashboards interactivos y seguros con React y arquitecturas full-stack (Node.js, PostgreSQL) que conectan tus flujos de trabajo personalizados directamente con bases de datos y sistemas de registro empresariales.
+          La automatización no sirve de nada si tu equipo no puede controlarla. Construimos dashboards interactivos y seguros con React y arquitecturas full-stack que conectan tus flujos de trabajo personalizados directamente con bases de datos y sistemas de registro empresariales.
         </p>
         <ul class="service-list">
           <li>Interfaces de usuario con React 19 y TypeScript</li>
           <li>Backends de API sin estado de alta concurrencia</li>
           <li>Diseño de bases de datos relacionales y optimización de consultas</li>
           <li>Integración segura de APIs (Stripe, Workday, etc.)</li>
-          <li>Alojamiento global edge-first y cargas sub-100ms</li>
-          <li>Entrega con documentación completa de arquitectura</li>
+          <li>Alojamiento edge-first y cargas sub-100ms</li>
+          <li>Traspaso completo de arquitectura y documentación</li>
         </ul>
         <a href="/es/services/react-web-development.html" class="service-link">
           <span>Explorar integración de sistemas</span>
@@ -366,20 +299,13 @@
       </article>
 
       <article class="service">
-        <div class="service-icon-row">
-          <div class="service-icon alt" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 8l5 4-5 4"/>
-              <path d="M14 17h4"/>
-            </svg>
-          </div>
-        </div>
+        <div class="service-kicker">Automatización</div>
         <header>
           <h3 class="display h3">IA Aplicada y Automatización Inteligente</h3>
           <p class="sub">Flujos de trabajo prácticos que reducen costos y ahorran horas.</p>
         </header>
         <p class="body">
-          No construimos modelos fundacionales; los hacemos operativos. Diseñamos y desplegamos agentes inteligentes personalizados y pipelines de procesamiento de datos que ingieren entradas no estructuradas (PDFs, correos, tickets de soporte) y ejecutan acciones automatizadas de múltiples pasos.
+          No construimos modelos fundacionales; los hacemos operativos. Diseñamos y desplegamos agentes inteligentes personalizados y pipelines de procesamiento de datos que ingieren entradas no estructuradas y ejecutan acciones automatizadas de múltiples pasos.
         </p>
         <ul class="service-list">
           <li>Pipelines de extracción y procesamiento de datos inteligentes</li>
@@ -419,13 +345,15 @@
     </div>
   </div>
 </section>
+</div>
 
 <!-- ─────────────────── AI value scenarios (illustrative) ─────────────────── -->
 <section id="ai-value" class="section value-bg">
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <h2 class="display h2">Tres industrias.<br />Una pregunta: ¿se <em>paga solo</em>?</h2>
+        <div class="eyebrow-row"><span class="eyebrow-num">02</span><p class="eyebrow">Dónde rinde</p></div>
+        <h2 class="display h2">Tres industrias. Una pregunta: ¿se <em>paga solo</em>?</h2>
       </div>
       <p class="lede">No son casos de clientes: son ejemplos realistas de dónde los patrones de automatización y agentes de arriba se convierten en ROI medible, basados en problemas que escuchamos con frecuencia en estas industrias.</p>
     </header>
@@ -433,32 +361,38 @@
     <div class="value-grid">
 
       <article class="value-card">
-        <p class="value-tag">Restaurantes y cadenas multi-sede</p>
-        <h3 class="value-h">Un agente de pedidos que cierra el ciclo, y sabe cuándo derivar a un humano.</h3>
-        <p class="value-d">Un agente conversacional toma el pedido por teléfono, micrófono de drive-thru o chat, lo confirma contra el menú en vivo y el inventario del día, y lo envía directamente al sistema de cocina y de pago sin que un cajero lo transmita a mano. El diseño no es &ldquo;la IA lo maneja todo.&rdquo; Es una ruta de escalamiento determinista: una pregunta sobre alérgenos, una modificación inusual, una tarjeta rechazada o un cliente que suena molesto se deriva de inmediato a una persona, antes de que el agente adivine y arruine el pedido.</p>
-        <div class="value-roi">
-          <p class="value-roi-label">La cuenta</p>
-          <p class="value-roi-text">Los fallos de los drive-thru con IA que se hicieron virales vinieron de sistemas que intentaron manejar cada caso por sí mismos. Automatizar los pedidos rutinarios y derivar el resto es lo que mantiene reales los ahorros de mano de obra, sin enviar jamás un pedido que nadie pidió.</p>
+        <p class="value-tag">Restaurantes y<br />cadenas multi-sede</p>
+        <div class="value-body">
+          <h3 class="value-h">Un agente de pedidos que cierra el ciclo &mdash; y sabe cuándo derivar a un humano.</h3>
+          <p class="value-d">Un agente conversacional toma el pedido por teléfono, micrófono de drive-thru o chat, lo confirma contra el menú en vivo y el inventario del día, y lo envía directamente al sistema de cocina y de pago. El diseño no es &ldquo;la IA lo maneja todo&rdquo;: es una ruta de escalamiento determinista: una pregunta sobre alérgenos, una modificación inusual, o un cliente molesto se deriva de inmediato a una persona.</p>
+          <div class="value-roi">
+            <p class="value-roi-label">La cuenta ↳</p>
+            <p class="value-roi-text">Los fallos de los drive-thru con IA que se hicieron virales vinieron de sistemas que intentaron manejar cada caso por sí mismos. Automatizar los pedidos rutinarios y derivar el resto mantiene reales los ahorros de mano de obra &mdash; sin enviar jamás un pedido que nadie pidió.</p>
+          </div>
         </div>
       </article>
 
       <article class="value-card">
-        <p class="value-tag">Bienes raíces comerciales</p>
-        <h3 class="value-h">Convertir semanas de análisis de contratos en una revisión de un día.</h3>
-        <p class="value-d">Cada contrato, enmienda y estoppel está en un PDF que alguien tiene que leer línea por línea para encontrar el aumento de renta, la ventana de renovación, la cláusula de reconciliación de CAM. Un pipeline de extracción basado en agentes convierte los términos clave en datos estructurados, marca cualquier ambigüedad para revisión humana y muestra los plazos próximos antes de que se pasen por alto.</p>
-        <div class="value-roi">
-          <p class="value-roi-label">La cuenta</p>
-          <p class="value-roi-text">Una fecha de aviso de renovación perdida puede costar más en pérdida de poder de negociación que un año del sistema que la habría detectado.</p>
+        <p class="value-tag">Bienes raíces<br />comerciales</p>
+        <div class="value-body">
+          <h3 class="value-h">Convertir semanas de análisis de contratos en una revisión de un día.</h3>
+          <p class="value-d">Cada contrato, enmienda y estoppel está en un PDF que alguien tiene que leer línea por línea para encontrar el aumento de renta, la ventana de renovación, la cláusula de reconciliación de CAM. Un pipeline de extracción basado en agentes convierte los términos clave en datos estructurados, marca cualquier ambigüedad para revisión humana y muestra los plazos próximos antes de que se pasen por alto.</p>
+          <div class="value-roi">
+            <p class="value-roi-label">La cuenta ↳</p>
+            <p class="value-roi-text">Una fecha de aviso de renovación perdida puede costar más en pérdida de poder de negociación que un año del sistema que la habría detectado.</p>
+          </div>
         </div>
       </article>
 
       <article class="value-card">
-        <p class="value-tag">Gestión de inversiones</p>
-        <h3 class="value-h">Terminar de revisar el informe antes de que el mercado reaccione.</h3>
-        <p class="value-d">Los analistas dedican horas a extraer manualmente los mismos datos de reportes 10-K, transcripciones de resultados y reportes de portafolio antes de poder empezar el análisis real. Un pipeline de extracción con validación primero extrae las métricas estructuradas, las verifica contra la fuente y entrega al analista un resumen revisado en lugar de una pila de PDFs.</p>
-        <div class="value-roi">
-          <p class="value-roi-label">La cuenta</p>
-          <p class="value-roi-text">Las horas recuperadas por informe se acumulan en todo un portafolio más rápido de lo que cuesta operar el sistema, y la validación determinista significa que nadie confía en un número alucinado en un memo.</p>
+        <p class="value-tag">Gestión de<br />inversiones</p>
+        <div class="value-body">
+          <h3 class="value-h">Terminar de revisar el informe antes de que el mercado reaccione.</h3>
+          <p class="value-d">Los analistas dedican horas a extraer manualmente los mismos datos de reportes 10-K, transcripciones de resultados y reportes de portafolio antes de poder empezar el análisis real. Un pipeline de extracción con validación primero extrae las métricas estructuradas, las verifica contra la fuente y entrega al analista un resumen revisado en lugar de una pila de PDFs.</p>
+          <div class="value-roi">
+            <p class="value-roi-label">La cuenta ↳</p>
+            <p class="value-roi-text">Las horas recuperadas por informe se acumulan en todo un portafolio más rápido de lo que cuesta operar el sistema &mdash; y la validación determinista significa que nadie confía en un número alucinado en un memo.</p>
+          </div>
         </div>
       </article>
 
@@ -473,7 +407,8 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <h2 class="display h2">IA de verdad.<br />Anclada en sistemas que <em>operamos</em>.</h2>
+        <div class="eyebrow-row"><span class="eyebrow-num">03</span><p class="eyebrow">Prueba</p></div>
+        <h2 class="display h2">IA de verdad. Anclada en sistemas que <em>operamos</em>.</h2>
       </div>
       <p class="lede">Nuestra postura de IA no es teórica: trabajo de IA de voz en producción, una residencia de IA competitiva y sistemas de clientes que hemos entregado, respaldados por productos que construimos y operamos nosotros mismos.</p>
     </header>
@@ -512,117 +447,93 @@
     </div>
 
     <div class="work-grid">
-
-      <article class="case case-featured">
-        <div class="case-media">
-          <div class="shot"><img src="../images/appt-helper.webp" width="1200" height="630" alt="Panel en vivo de Appt Helper mostrando citas de Global Entry y SENTRI siendo tomadas en tiempo real" loading="lazy" /></div>
-          <div class="shot"><img src="../images/open-cita.webp" width="1200" height="630" alt="Panel en vivo de Open Cita, la versión en español de Appt Helper, mostrando citas siendo tomadas" loading="lazy" /></div>
+      <div class="case-media">
+        <div class="shot"><img src="../images/appt-helper.webp" width="1200" height="630" alt="Panel en vivo de Appt Helper mostrando citas de Global Entry y SENTRI siendo tomadas en tiempo real" loading="lazy" /></div>
+        <div class="shot"><img src="../images/open-cita.webp" width="1200" height="630" alt="Panel en vivo de Open Cita, la versión en español de Appt Helper, mostrando citas siendo tomadas" loading="lazy" /></div>
+      </div>
+      <div class="case-body">
+        <p class="case-meta-line">Appt Helper · Open Cita &mdash; En vivo · MCP + x402</p>
+        <h3 class="case-title">Un motor de alertas nativo para agentes, capturando citas de gobierno que desaparecen en minutos.</h3>
+        <p class="case-desc"><strong>El problema:</strong> las cancelaciones de Global Entry y SENTRI desaparecen en minutos, y no existe ninguna alerta oficial. <strong>El sistema:</strong> un pipeline automatizado vigila los 184 centros de inscripción de EE.&nbsp;UU. las 24 horas, detecta una apertura en el momento en que aparece y envía un SMS segundos después &mdash; reduciendo una espera de 4 a 11 meses a días.</p>
+        <p class="case-desc"><strong>La capa de agentes:</strong> expone un servidor MCP para que agentes de IA consulten la disponibilidad en vivo como una herramienta, y acepta pagos autónomos por uso mediante el protocolo x402 de Coinbase. Eso es infraestructura nativa para agentes, no solo un sitio web.</p>
+        <div class="case-stack mono">TypeScript · Next.js · Postgres · Twilio · MCP · x402 (Coinbase)</div>
+        <div class="case-links">
+          <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">appthelper.com <span class="arr">↗</span></a>
+          <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">opencita.com <span class="arr">↗</span></a>
         </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Appt Helper · Open Cita</span>
-            <span class="case-status">En vivo · MCP + x402</span>
-          </div>
-          <h3 class="case-title">Un motor de alertas nativo para agentes, capturando citas de gobierno que desaparecen en minutos.</h3>
-          <p class="case-desc"><strong>El problema:</strong> las cancelaciones de Global Entry y SENTRI desaparecen en minutos, y no existe ninguna alerta oficial. <strong>El sistema:</strong> un pipeline automatizado vigila los 184 centros de inscripción de EE.&nbsp;UU. las 24 horas, detecta una apertura en el momento en que aparece y envía un SMS segundos después, reduciendo una espera de 4 a 11 meses a días. <strong>La capa de agentes:</strong> expone un servidor MCP para que agentes de IA consulten la disponibilidad en vivo como una herramienta, y acepta pagos autónomos por uso mediante el protocolo x402 de Coinbase. Eso es infraestructura nativa para agentes, no solo un sitio web. Opera sin intervención en producción, localizado en inglés (Appt&nbsp;Helper) y español (Open&nbsp;Cita).</p>
-          <div class="case-foot">
-            <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio · MCP · x402 (Coinbase)</span>
-            <span class="case-links">
-              <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">appthelper.com <span class="arr">↗</span></a>
-              <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">opencita.com <span class="arr">↗</span></a>
-            </span>
-          </div>
-        </div>
-      </article>
-
+        <p class="work-footnote">En el laboratorio: <strong>Border Bills</strong> (pago transfronterizo de servicios) y <strong>Baja Care</strong> (descubrimiento e ingreso para turismo médico), en desarrollo activo sobre el mismo stack.</p>
+      </div>
     </div>
-
-    <p class="work-footnote">En el laboratorio: <strong>Border Bills</strong> (pago transfronterizo de servicios) y <strong>Baja Care</strong> (descubrimiento e ingreso para turismo médico), ambos en desarrollo activo sobre el mismo stack.</p>
   </div>
 </section>
 
 <!-- ─────────────────── How we work ─────────────────── -->
 <section id="how" class="section how-bg">
-  <div class="wrap-wide how-container">
-    <div class="how-left">
-      <header class="sec-head">
-        <div>
-          <p class="eyebrow">Cómo trabajamos</p>
-          <h2 class="display h2">Te encontramos <em>donde</em> estés.</h2>
-        </div>
-        <p class="lede">Cada proyecto se estructura alrededor de tu realidad, no de una plantilla. Elige lo que encaje, o te ayudamos a decidir.</p>
-      </header>
-    </div>
-
-    <div class="how-right">
-      <div class="how-timeline-line"><div class="how-timeline-progress"></div></div>
-      <div class="how-grid">
-
-        <div class="how-cell" data-timeline-index="1">
-          <div class="how-num">01</div>
-          <h3 class="display h4">Proyecto de alcance fijo</h3>
-          <p class="body">Para un entregable definido y con un límite claro: un MVP, un rediseño, una integración de IA. Delimitamos el alcance con precisión, entregamos en una fecha y hacemos un traspaso limpio.</p>
-          <dl class="how-meta">
-            <div class="meta-item">
-              <dt>Ideal para</dt>
-              <dd>ideas validadas · lanzamientos planeados</dd>
-            </div>
-            <div class="meta-item">
-              <dt>Duración típica</dt>
-              <dd>4 – 16 semanas</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="how-cell" data-timeline-index="2">
-          <div class="how-num">02</div>
-          <h3 class="display h4">Retainer mensual</h3>
-          <p class="body">Para equipos que necesitan capacidad continua de ingeniería senior u operaciones de IA. Costo predecible, alcance flexible, sin la carga de contratar.</p>
-          <dl class="how-meta">
-            <div class="meta-item">
-              <dt>Ideal para</dt>
-              <dd>startups en crecimiento · CTO fraccional</dd>
-            </div>
-            <div class="meta-item">
-              <dt>Duración típica</dt>
-              <dd>3+ meses, mes a mes</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="how-cell" data-timeline-index="3">
-          <div class="how-num">03</div>
-          <h3 class="display h4">Sprint de estrategia</h3>
-          <p class="body">Una inmersión de una a dos semanas: auditoría de preparación en IA, revisión de arquitectura, o sprint de diseño de agentes. Terminas con una hoja de ruta que tu equipo puede ejecutar, con o sin nosotros.</p>
-          <dl class="how-meta">
-            <div class="meta-item">
-              <dt>Ideal para</dt>
-              <dd>&ldquo;sabemos que necesitamos esto&hellip;&rdquo;</dd>
-            </div>
-            <div class="meta-item">
-              <dt>Duración típica</dt>
-              <dd>1 – 2 semanas, precio fijo</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="how-cell" data-timeline-index="4">
-          <div class="how-num">04</div>
-          <h3 class="display h4">Sociedad / participación accionaria</h3>
-          <p class="body">Para fundadores que buscan un socio técnico a largo plazo. Invertimos tiempo de ingeniería a cambio de participación accionaria o de ingresos, con una estructura que protege a ambas partes.</p>
-          <dl class="how-meta">
-            <div class="meta-item">
-              <dt>Ideal para</dt>
-              <dd>etapa temprana con un mercado creíble</dd>
-            </div>
-            <div class="meta-item">
-              <dt>Duración típica</dt>
-              <dd>12+ meses</dd>
-            </div>
-          </dl>
-        </div>
-
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <div class="eyebrow-row"><span class="eyebrow-num">04</span><p class="eyebrow">Cómo trabajamos</p></div>
+        <h2 class="display h2">Te encontramos <em>donde</em> estés.</h2>
       </div>
+      <p class="lede">Cada proyecto se estructura alrededor de tu realidad, no de una plantilla. Elige lo que encaje, o te ayudamos a decidir.</p>
+    </header>
+
+    <div class="how-grid">
+      <article class="how-cell">
+        <div class="how-num">01</div>
+        <h3 class="display h4">Proyecto de alcance fijo</h3>
+        <p class="body">Para un entregable definido y con un límite claro: un MVP, un rediseño, una integración de IA. Delimitamos el alcance con precisión, entregamos en una fecha y hacemos un traspaso limpio.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Ideal para</dt><dd>ideas validadas · lanzamientos</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Duración</dt><dd>4 – 16 semanas</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="how-cell">
+        <div class="how-num">02</div>
+        <h3 class="display h4">Retainer mensual</h3>
+        <p class="body">Para equipos que necesitan capacidad continua de ingeniería senior u operaciones de IA. Costo predecible, alcance flexible, sin la carga de contratar.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Ideal para</dt><dd>startups en crecimiento · CTO fraccional</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Duración</dt><dd>3+ meses, mes a mes</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="how-cell">
+        <div class="how-num">03</div>
+        <h3 class="display h4">Sprint de estrategia</h3>
+        <p class="body">Una inmersión de una a dos semanas: auditoría de preparación en IA, revisión de arquitectura, o sprint de diseño de agentes. Terminas con una hoja de ruta que tu equipo puede ejecutar, con o sin nosotros.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Ideal para</dt><dd>&ldquo;sabemos que necesitamos esto&hellip;&rdquo;</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Duración</dt><dd>1 – 2 semanas, precio fijo</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="how-cell">
+        <div class="how-num">04</div>
+        <h3 class="display h4">Sociedad / participación accionaria</h3>
+        <p class="body">Para fundadores que buscan un socio técnico a largo plazo. Invertimos tiempo de ingeniería a cambio de participación accionaria o de ingresos, con una estructura que protege a ambas partes.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Ideal para</dt><dd>etapa temprana, mercado creíble</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt>Duración</dt><dd>12+ meses</dd>
+          </div>
+        </dl>
+      </article>
     </div>
   </div>
 </section>
@@ -630,35 +541,29 @@
 <!-- ─────────────────── About ─────────────────── -->
 <section id="about" class="section about-bg">
   <div class="wrap-wide">
-    <header class="sec-head">
-      <div>
-        <h2 class="display h2">Un equipo pequeño de personas que construyen, liderado por un ingeniero que ha estado en <em>ambos</em> lados de la mesa.</h2>
-      </div>
-      <p class="lede">Empezamos lanzando nuestros propios productos para saber de qué hablábamos cuando empezáramos a lanzar los tuyos.</p>
-    </header>
+    <div class="eyebrow-row"><span class="eyebrow-num">05</span><p class="eyebrow">Nosotros</p></div>
 
     <div class="about-grid">
       <div class="about-body">
+        <h2 class="display h2 about-h2">Un equipo pequeño de personas que construyen, liderado por un ingeniero que ha estado en <em>ambos</em> lados de la mesa.</h2>
         <p>Technology Consultants fue fundada por <strong>Roberto Guido</strong>, ingeniero eléctrico (UC San Diego) con un MBA de NYU Stern que ha dedicado su carrera a cerrar la brecha entre lo técnicamente posible y lo que realmente mueve un negocio. Lidera un equipo enfocado de ingenieros y diseñadores senior que han lanzado productos juntos durante años.</p>
-        <p>Ese puente funciona en ambas direcciones: ha trabajado en el diseño de hardware y software del sistema de IA de voz en Encounter&nbsp;AI, una plataforma de pedidos para drive-thru y kioscos respaldada por inversionistas como Morgan Stanley Inclusive Ventures Lab, y es residente 2024 del programa de Residencia Técnica en IA o Ciberseguridad (TRAC) de Colorwave, una beca competitiva, que acepta aproximadamente al 10% de los solicitantes, que coloca a tecnólogos emergentes en trabajo real de inteligencia artificial y ciberseguridad.</p>
-        <p>Empezamos construyendo nuestros propios productos (Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills y Baja&nbsp;Care) porque queríamos probar que la arquitectura, el equipo y el modelo de operación funcionaban antes de vendérselo a clientes.</p>
-        <p>Ese portafolio es ahora la base de nuestra práctica de consultoría. Llevamos exactamente los mismos patrones probados en batalla, optimizaciones de rendimiento y pipelines de despliegue robustos directamente a los proyectos de nuestros clientes.</p>
+        <p>Ese puente funciona en ambas direcciones: trabajo de diseño de hardware y software en el sistema de IA de voz de Encounter&nbsp;AI &mdash; una plataforma de pedidos para drive-thru y kioscos respaldada por inversionistas como Morgan Stanley Inclusive Ventures Lab &mdash; y una residencia 2024 en la Residencia Técnica en IA o Ciberseguridad (TRAC) de Colorwave, una beca competitiva que acepta aproximadamente al 10% de los solicitantes.</p>
+        <p>Empezamos construyendo nuestros propios productos &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills y Baja&nbsp;Care &mdash; para probar la arquitectura, el equipo y el modelo de operación antes de vendérselo a clientes.</p>
+        <p>Ese portafolio es ahora la base de nuestra práctica de consultoría: cada recomendación ha sido probada contra usuarios reales y casos límite reales, no solo presentaciones.</p>
       </div>
       <aside class="about-card">
-        <div style="display:flex; align-items:center; gap:14px;">
-          <div class="pfp"><img src="../images/roberto.png" alt="Roberto Guido" width="64" height="64" /></div>
-          <div>
-            <div class="name">Roberto Guido</div>
-            <div class="role">Fundador · Ing. Eléctrico, UC San Diego · MBA, NYU Stern</div>
-          </div>
+        <div class="about-card-photo"><img src="../images/roberto.png" alt="Roberto Guido" /></div>
+        <div class="about-card-body">
+          <div class="name">Roberto Guido</div>
+          <div class="role">Fundador · Ing. Eléctrico, UC San Diego · MBA, NYU Stern</div>
+          <dl>
+            <div class="row"><dt>Práctica</dt><dd>Interfaces y automatización</dd></div>
+            <div class="row"><dt>Residencia</dt><dd>AI TRAC, 2024</dd></div>
+            <div class="row"><dt>Ubicación</dt><dd>San Diego · Tijuana</dd></div>
+            <div class="row"><dt>Idiomas</dt><dd>Inglés · Español</dd></div>
+            <div class="row"><dt>Disponible para</dt><dd>Pymes · startups · empresas medianas</dd></div>
+          </dl>
         </div>
-        <dl>
-          <div class="row"><dt>Práctica</dt><dd>Interfaces y automatización</dd></div>
-          <div class="row"><dt>Residencia</dt><dd>AI TRAC, 2024</dd></div>
-          <div class="row"><dt>Ubicación</dt><dd>San Diego · Tijuana</dd></div>
-          <div class="row"><dt>Idiomas</dt><dd>Inglés · Español</dd></div>
-          <div class="row"><dt>Disponible para</dt><dd>Pequeñas empresas · startups · empresas medianas</dd></div>
-        </dl>
       </aside>
     </div>
   </div>
@@ -667,45 +572,38 @@
 <!-- ─────────────────── FAQ ─────────────────── -->
 <section id="faq" class="section faq-bg">
   <div class="wrap-wide">
-    <header class="sec-head" style="text-align: center; max-width: 600px; margin: 0 auto 40px; display: flex; flex-direction: column; align-items: center;">
-      <h2 class="display h2">Preguntas frecuentes</h2>
-    </header>
+    <div class="faq-grid">
+      <div class="faq-heading">
+        <div class="eyebrow-row"><span class="eyebrow-num">06</span><p class="eyebrow">FAQ</p></div>
+        <h2 class="display h2 faq-h2">Preguntas frecuentes</h2>
+      </div>
 
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>¿Cuál es su modelo de colaboración típico?</summary>
-        <div class="faq-answer">
-          <p>Operamos ya sea bajo un proyecto de alcance y hitos definidos (como MVPs, rediseños o integraciones específicas) o mediante un retainer mensual de CTO fraccional para capacidad continua de ingeniería y operaciones de IA.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>¿Cuál es su modelo de colaboración típico?</h3>
+          <p>Operamos ya sea bajo un proyecto de alcance y hitos definidos (MVPs, rediseños, integraciones específicas) o mediante un retainer mensual de CTO fraccional para capacidad continua de ingeniería y operaciones de IA.</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary>¿Publican sus precios?</summary>
-        <div class="faq-answer">
-          <p>Los proyectos de consultoría y desarrollo se estructuran a la medida de la complejidad técnica de cada cliente. Cotizamos cada proyecto de forma individual para ofrecer presupuestos fijos y transparentes en lugar de tarifas estándar pre-anunciadas.</p>
+        <div class="faq-item">
+          <h3>¿Publican sus precios?</h3>
+          <p>Los proyectos se adaptan al contexto de negocio y la complejidad técnica de cada cliente. Cotizamos cada proyecto de forma individual para ofrecer precios fijos y transparentes por fase, en lugar de tarifas pre-anunciadas.</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary>¿Cuál es su stack tecnológico estándar?</summary>
-        <div class="faq-answer">
-          <p>Construimos con React y TypeScript en el frontend, Node.js en el backend y PostgreSQL para bases de datos. Nuestro trabajo de IA utiliza Claude, OpenAI e integraciones personalizadas de Model Context Protocol (MCP).</p>
+        <div class="faq-item">
+          <h3>¿Cuál es su stack tecnológico estándar?</h3>
+          <p>React y TypeScript en el frontend, Node.js en el backend y PostgreSQL para bases de datos. Nuestro trabajo de IA utiliza Claude, OpenAI e integraciones personalizadas de Model Context Protocol (MCP).</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary>¿Cómo se maneja la entrega técnica del código?</summary>
-        <div class="faq-answer">
+        <div class="faq-item">
+          <h3>¿Cómo se maneja la entrega técnica del código?</h3>
           <p>Entregamos repositorios de git completamente documentados y asistimos con la implementación en la nube. Tu equipo interno puede tomar el control de inmediato, o bien, podemos continuar operando y monitoreando el sistema bajo un retainer mensual.</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary>¿Dónde están ubicados?</summary>
-        <div class="faq-answer">
-          <p>Estamos ubicados en San Diego, California, y trabajamos con clientes de forma global en Estados Unidos y mercados transfronterizos con México.</p>
+        <div class="faq-item faq-item-last">
+          <h3>¿Dónde están ubicados?</h3>
+          <p>San Diego, California, trabajando con clientes de forma global en Estados Unidos y mercados transfronterizos con México.</p>
         </div>
-      </details>
+      </div>
     </div>
   </div>
 </section>
@@ -715,7 +613,8 @@
   <div class="wrap-wide">
     <div class="cta-card">
       <div>
-        <h2 class="display h2">Cuéntanos qué estás tratando de construir.</h2>
+        <p class="eyebrow">07 · Contacto</p>
+        <h2 class="display h2">Cuéntanos qué estás tratando de <em>construir</em>.</h2>
         <p class="lede">Una llamada de 30 minutos no cuesta nada y normalmente te deja con al menos una idea concreta, trabajemos juntos o no.</p>
       </div>
       <div class="cta-actions">
@@ -736,6 +635,8 @@
             Hubo un problema al enviar esto. Por favor escríbenos directamente a contact@technologyconsultants.ventures.
           </div>
         </form>
+        <div class="cta-meta mono">contact@technologyconsultants.ventures</div>
+        <div class="cta-meta mono"><span class="cta-check">✓</span> respondemos en menos de 24 horas</div>
       </div>
     </div>
   </div>
@@ -750,7 +651,7 @@
       <div class="footer-brand">
         <a class="nav-brand" href="#top">
           <span class="nav-mark" aria-hidden="true"></span>
-          <span style="color:#fff;">Technology Consultants</span>
+          <span>Technology Consultants</span>
         </a>
         <p>Una práctica de ingeniería senior dirigida por desarrolladores. Integramos herramientas de IA avanzadas, agentes inteligentes y flujos de datos automatizados en operaciones comerciales.</p>
       </div>
@@ -783,8 +684,8 @@
     </div>
     <div class="footer-bottom">
       <span class="small">&copy; 2026 Technology Consultants Inc. Todos los derechos reservados.</span>
-      <span class="small"><a href="/es/privacy.html" class="footer-legal-link" style="color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4BECD7'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Privacidad y Condiciones</a></span>
-      <span class="mono">v2026.06 · hecho por quienes construyen</span>
+      <span class="small"><a href="/es/privacy.html" class="footer-legal-link" style="color: #8b8779; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#16161a'" onmouseout="this.style.color='#8b8779'">Privacidad y Condiciones</a></span>
+      <span class="mono">v2026.07 · hecho por quienes construyen</span>
     </div>
   </div>
 </footer>

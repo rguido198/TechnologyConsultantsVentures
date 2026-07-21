@@ -2,13 +2,6 @@
   "detector": {
     "ignoreRules": [],
     "ignoreFiles": [],
-    "ignoreValues": [
-      {
-        "rule": "overused-font",
-        "value": "geist",
-        "createdAt": "2026-07-20T23:34:31.476Z",
-        "reason": "User explicitly confirmed Geist as the site's new display/body typeface after reviewing the taste-frontend audit recommendation (chosen over keeping Inter Tight)"
-      }
-    ]
+    "ignoreValues": []
   }
 }

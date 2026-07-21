@@ -156,7 +156,7 @@
 }
 </script>
 
-<!-- Typography: Geist sitewide, JetBrains Mono for accents -->
+<!-- Typography: system sans sitewide, IBM Plex Mono for accents -->
 <link rel="stylesheet" href="fonts.css" />
 
 <link rel="stylesheet" href="styles.css" />
@@ -200,136 +200,83 @@
   <!-- ─────────────────── Hero ─────────────────── -->
   <section class="hero">
     <div class="wrap-wide hero-inner">
-      <div class="hero-copy">
-        <div class="hero-meta-row">
-          <p class="eyebrow">Technology Consultants</p>
-          <span class="sep" aria-hidden="true"></span>
-          <span class="meta" data-i18n="hero.meta1">Applied AI &amp; Intelligent Automation</span>
-          <span class="sep" aria-hidden="true"></span>
-          <span class="meta"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.meta2">Booking projects · Q3 2026</span></span>
+      <div class="hero-top">
+        <div class="hero-copy">
+          <div class="hero-meta-row">
+            <p class="eyebrow">Technology Consultants</p>
+            <span class="sep" aria-hidden="true"></span>
+            <span class="meta" data-i18n="hero.meta1">Applied AI &amp; Intelligent Automation</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span class="meta"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.meta2">Booking projects · Q3 2026</span></span>
+          </div>
+
+          <h1 class="display h1" data-i18n="hero.h1">We bridge advanced AI models and <em>real-world</em> business operations.</h1>
+
+          <p class="lede" data-i18n="hero.lede">
+            A senior engineering practice run by builders. We integrate advanced AI tools, intelligent agents, and automated data pipelines into your existing systems to <span class="mark">streamline operations, cut overhead, and accelerate revenue</span>.
+          </p>
+
+          <div class="hero-cta-row">
+            <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
+              <span data-i18n="hero.cta.primary">Book a 30-min strategy call</span>
+              <span class="arr" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">See what we&rsquo;ve built</a>
+          </div>
         </div>
 
-        <h1 class="display h1" data-i18n="hero.h1">We bridge advanced AI models and real-world business operations.</h1>
-
-        <p class="lede" data-i18n="hero.lede">
-          A senior engineering practice run by builders. We integrate advanced AI tools, intelligent agents, and automated data pipelines into your existing systems to <span class="mark">streamline operations, cut overhead, and accelerate revenue</span>.
-        </p>
-
-        <div class="hero-cta-row">
-          <a class="btn btn-primary" data-mailto-cta href="mailto:contact@technologyconsultants.ventures?subject=Strategy%20call">
-            <span data-i18n="hero.cta.primary">Book a 30-min strategy call</span>
-            <span class="arr" aria-hidden="true">→</span>
-          </a>
-          <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">See what we&rsquo;ve built</a>
+        <div class="hero-visual">
+          <div class="hero-terminal" aria-label="Example automation run log">
+            <div class="hero-terminal-bar">
+              <div class="hero-terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span class="hero-terminal-title">applied-ai · intelligent-automation · invoice-intake</span>
+              <span class="hero-terminal-live">● live</span>
+            </div>
+            <div class="hero-terminal-log">
+              <span class="ht-time">09:41:02</span><span class="ht-verb">ingest</span><span class="ht-desc" data-i18n="hero.term.l1">247 PDFs from shared inbox</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:14</span><span class="ht-verb">parse</span><span class="ht-desc" data-i18n="hero.term.l2">line items → structured data</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:15</span><span class="ht-verb">validate</span><span class="ht-desc" data-i18n="hero.term.l3">contract check (Zod) · 245 pass</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:15</span><span class="ht-verb ht-warn">escalate</span><span class="ht-desc" data-i18n="hero.term.l4">2 ambiguous totals → human review</span><span class="ht-warn">⚠ HITL</span>
+              <span class="ht-time">09:41:31</span><span class="ht-verb">approve</span><span class="ht-desc" data-i18n="hero.term.l5">ops@client signed off</span><span class="ht-ok">✓</span>
+              <span class="ht-time">09:41:32</span><span class="ht-verb">write</span><span class="ht-desc" data-i18n="hero.term.l6">ERP + CRM updated · receipts logged</span><span class="ht-ok">✓</span>
+            </div>
+            <div class="hero-terminal-foot">
+              <span data-i18n="hero.term.foot">done in 30s · 0 unreviewed numbers</span>
+              <span class="ht-cursor" aria-hidden="true">▮<span class="ht-blink">▮</span></span>
+            </div>
+          </div>
+          <p class="hero-visual-caption" data-i18n="hero.visual.caption">Applied AI &amp; Intelligent Automation: agents wired into your operational stack, with a human gate where it matters.</p>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="agent-flow-container">
-          <svg id="agent-flow-svg" viewBox="0 0 400 320" width="100%" height="100%" aria-label="AI Agent Flow Animation">
-            <defs>
-              <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#4BECD7" />
-                <stop offset="100%" stop-color="#06c" />
-              </linearGradient>
-              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="3.5" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
-            </defs>
-
-            <!-- Connector lines -->
-            <path class="flow-path" id="path-input-1" d="M 40,80 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-input-2" d="M 40,160 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-input-3" d="M 40,240 L 195,160" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            
-            <path class="flow-path" id="path-output-1" d="M 205,160 L 360,60" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-output-2" d="M 205,160 L 360,130" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-output-3" d="M 205,160 L 360,200" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-            <path class="flow-path" id="path-output-4" d="M 205,160 L 360,270" stroke="rgba(55,85,134,0.18)" stroke-width="1.8" fill="none" />
-
-            <!-- Floating pulses -->
-            <circle class="pulse-dot" id="pulse-in-1" cx="40" cy="80" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-in-2" cx="40" cy="160" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-in-3" cx="40" cy="240" r="3.5" fill="#4BECD7" opacity="0" filter="url(#glow)" />
-            
-            <circle class="pulse-dot" id="pulse-out-1" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-out-2" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-out-3" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-            <circle class="pulse-dot" id="pulse-out-4" cx="205" cy="160" r="3.5" fill="#06c" opacity="0" filter="url(#glow)" />
-
-            <!-- Nodes -->
-            <g class="node-group" id="node-in-1" transform="translate(40, 80)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Docs</text>
-            </g>
-            <g class="node-group" id="node-in-2" transform="translate(40, 160)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">Feeds</text>
-            </g>
-            <g class="node-group" id="node-in-3" transform="translate(40, 240)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">APIs</text>
-            </g>
-
-            <g class="node-group" id="node-core" transform="translate(200, 160)">
-              <circle class="core-outer" r="28" fill="url(#grad-teal)" opacity="0.16" />
-              <circle class="core-inner" r="22" fill="url(#grad-teal)" filter="url(#glow)" />
-              <text y="-1" font-family="var(--font-mono)" font-size="7.5" text-anchor="middle" font-weight="600" fill="#fff">APPLIED</text>
-              <text y="8" font-family="var(--font-mono)" font-size="7.5" text-anchor="middle" font-weight="600" fill="#fff">AI</text>
-            </g>
-
-            <g class="node-group" id="node-out-1" transform="translate(360, 60)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">CRM</text>
-            </g>
-            <g class="node-group" id="node-out-2" transform="translate(360, 130)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="9" text-anchor="middle" font-weight="600" fill="#1d1d1f">ERP</text>
-            </g>
-            <g class="node-group" id="node-out-3" transform="translate(360, 200)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">DB</text>
-            </g>
-            <g class="node-group" id="node-out-4" transform="translate(360, 270)">
-              <circle r="20" fill="#faf7f0" stroke="#d2d2d7" stroke-width="1.2" />
-              <text y="4" font-family="var(--font-sans)" font-size="8.5" text-anchor="middle" font-weight="600" fill="#1d1d1f">Comms</text>
-            </g>
-          </svg>
+      <div class="proof-band" aria-label="How we work">
+        <div class="proof-band-item">
+          <div class="n" data-i18n="hero.stat1.n">In production.</div>
+          <div class="l" data-i18n="hero.stat1.l">Real users today on our self-developed products.</div>
         </div>
-        <p class="hero-visual-caption" data-i18n="hero.visual.caption">Applied AI: connecting intelligent models directly to your operational stack.</p>
+        <div class="proof-band-item">
+          <div class="n" data-i18n="hero.stat2.n">Senior team.</div>
+          <div class="l" data-i18n="hero.stat2.l">The people who pitch your project ship&nbsp;it.</div>
+        </div>
+        <div class="proof-band-item">
+          <div class="n" data-i18n="hero.stat3.n">Code first.</div>
+          <div class="l" data-i18n="hero.stat3.l">No decks before working software.</div>
+        </div>
+        <div class="proof-band-item">
+          <div class="n" data-i18n="hero.stat4.n">One team.</div>
+          <div class="l" data-i18n="hero.stat4.l">Interfaces and automations: same engineers, same stack.</div>
+        </div>
       </div>
     </div>
   </section>
-
-  <div class="wrap-wide">
-    <div class="proof-band" aria-label="How we work">
-      <div class="proof-band-item">
-        <div class="n" data-i18n="hero.stat1.n">In production.</div>
-        <div class="l" data-i18n="hero.stat1.l">Real users today on our self-developed products.</div>
-      </div>
-      <div class="proof-band-item">
-        <div class="n" data-i18n="hero.stat2.n">Senior team.</div>
-        <div class="l" data-i18n="hero.stat2.l">The people who pitch your project ship&nbsp;it.</div>
-      </div>
-      <div class="proof-band-item">
-        <div class="n" data-i18n="hero.stat3.n">Code first.</div>
-        <div class="l" data-i18n="hero.stat3.l">No decks before working software.</div>
-      </div>
-      <div class="proof-band-item">
-        <div class="n" data-i18n="hero.stat4.n">One team.</div>
-        <div class="l" data-i18n="hero.stat4.l">Interfaces and automations: same engineers, same stack.</div>
-      </div>
-    </div>
-  </div>
 
 <!-- ─────────────────── Services ─────────────────── -->
 <section id="services" class="section services-bg">
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <p class="eyebrow" data-i18n="services.eyebrow">What we do</p>
-        <h2 class="display h2" data-i18n="services.h2">Intelligent systems.<br />Built to <em>operate</em>.</h2>
+        <div class="eyebrow-row"><span class="eyebrow-num">01</span><p class="eyebrow" data-i18n="services.eyebrow">What we do</p></div>
+        <h2 class="display h2" data-i18n="services.h2">Intelligent systems. Built to <em>operate</em>.</h2>
       </div>
       <p class="lede" data-i18n="services.lede">We build the automated workflows that replace manual bottlenecks, and the production-grade web interfaces your team and customers need to interact with them.</p>
     </header>
@@ -337,30 +284,21 @@
     <div class="services-grid">
 
       <article class="service">
-        <div class="service-icon-row">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="8" width="6" height="8" rx="1.5"/>
-              <rect x="16" y="8" width="6" height="8" rx="1.5"/>
-              <path d="M8 12h2M14 12h2"/>
-              <circle cx="12" cy="12" r="2"/>
-            </svg>
-          </div>
-        </div>
+        <div class="service-kicker" data-i18n="services.web.kicker">Interfaces</div>
         <header>
           <h3 class="display h3" data-i18n="services.web.h3">Custom Interfaces &amp; Systems Integration</h3>
           <p class="sub" data-i18n="services.web.sub">Interactive portals for complex workflows.</p>
         </header>
         <p class="body" data-i18n="services.web.body">
-          Automation is useless if your team can't control it. We build secure, responsive React dashboards and full-stack architectures (Node.js, PostgreSQL) that connect your custom workflows directly to enterprise databases and systems of record.
+          Automation is useless if your team can't control it. We build secure, responsive React dashboards and full-stack architectures that connect your custom workflows directly to enterprise databases and systems of record.
         </p>
         <ul class="service-list">
           <li data-i18n="services.web.li1">React 19 &amp; TypeScript user interfaces</li>
           <li data-i18n="services.web.li2">Stateless, high-concurrency API backends</li>
           <li data-i18n="services.web.li3">Relational database design &amp; query tuning</li>
           <li data-i18n="services.web.li4">Secure API integration (Stripe, Workday, etc.)</li>
-          <li data-i18n="services.web.li5">Edge-first global hosting &amp; sub-100ms loads</li>
-          <li data-i18n="services.web.li6">Complete architectural handoff &amp; documentation</li>
+          <li data-i18n="services.web.li5">Edge-first hosting &amp; sub-100ms loads</li>
+          <li data-i18n="services.web.li6">Complete architectural handoff &amp; docs</li>
         </ul>
         <a href="/services/react-web-development.html" class="service-link" data-i18n="services.web.link">
           <span>Explore Systems Integration</span>
@@ -369,20 +307,13 @@
       </article>
 
       <article class="service">
-        <div class="service-icon-row">
-          <div class="service-icon alt" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 8l5 4-5 4"/>
-              <path d="M14 17h4"/>
-            </svg>
-          </div>
-        </div>
+        <div class="service-kicker" data-i18n="services.ai.kicker">Automation</div>
         <header>
           <h3 class="display h3" data-i18n="services.ai.h3">Applied AI &amp; Intelligent Automation</h3>
           <p class="sub" data-i18n="services.ai.sub">Practical workflows that cut costs and save hours.</p>
         </header>
         <p class="body" data-i18n="services.ai.body">
-          We don't build foundation models; we operationalize them. We design and deploy custom intelligent agents and data parsing pipelines that ingest unstructured inputs (PDFs, support tickets, emails) and run automated, multi-step actions.
+          We don't build foundation models; we operationalize them. We design and deploy custom intelligent agents and data parsing pipelines that ingest unstructured inputs and run automated, multi-step actions.
         </p>
         <ul class="service-list">
           <li data-i18n="services.ai.li1">Intelligent data parsing &amp; extraction pipelines</li>
@@ -429,7 +360,8 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <h2 class="display h2" data-i18n="value.h2">Three industries.<br />One question: does it <em>pay for itself</em>?</h2>
+        <div class="eyebrow-row"><span class="eyebrow-num">02</span><p class="eyebrow" data-i18n="value.eyebrow">Where it pays</p></div>
+        <h2 class="display h2" data-i18n="value.h2">Three industries. One question: does it <em>pay for itself</em>?</h2>
       </div>
       <p class="lede" data-i18n="value.lede">Not client case studies: realistic examples of where the automation and agent patterns above turn into measurable ROI, based on problems we hear about often in these industries.</p>
     </header>
@@ -437,32 +369,38 @@
     <div class="value-grid">
 
       <article class="value-card">
-        <p class="value-tag" data-i18n="value.1.tag">Restaurant &amp; multi-location food service</p>
-        <h3 class="value-h" data-i18n="value.1.h">An ordering agent that closes the loop, and knows when to hand off.</h3>
-        <p class="value-d" data-i18n="value.1.d">A conversational agent takes the order by phone, drive-thru mic, or chat, confirms it against the live menu and today&rsquo;s inventory, and sends it straight to the kitchen display and payment system without a cashier relaying it by hand. The design isn&rsquo;t &ldquo;the AI handles everything.&rdquo; It&rsquo;s a deterministic escalation path: an allergen question, an unusual substitution, a declined card, or a customer who sounds frustrated routes to a person immediately, before the agent guesses its way into a bad order.</p>
-        <div class="value-roi">
-          <p class="value-roi-label" data-i18n="value.roi.label">The math</p>
-          <p class="value-roi-text" data-i18n="value.1.roi">The AI drive-thru failures that made headlines came from systems that tried to handle every case themselves. Automating the routine orders and escalating the rest is what keeps the labor savings real, without ever shipping an order nobody asked for.</p>
+        <p class="value-tag" data-i18n="value.1.tag">Restaurant &amp;<br />multi-location food service</p>
+        <div class="value-body">
+          <h3 class="value-h" data-i18n="value.1.h">An ordering agent that closes the loop &mdash; and knows when to hand off.</h3>
+          <p class="value-d" data-i18n="value.1.d">A conversational agent takes the order by phone, drive-thru mic, or chat, confirms it against the live menu and today&rsquo;s inventory, and sends it straight to the kitchen display and payment system. The design isn&rsquo;t &ldquo;the AI handles everything&rdquo;, it&rsquo;s a deterministic escalation path: an allergen question, an unusual substitution, or a frustrated customer routes to a person immediately.</p>
+          <div class="value-roi">
+            <p class="value-roi-label" data-i18n="value.roi.label">The math ↳</p>
+            <p class="value-roi-text" data-i18n="value.1.roi">The AI drive-thru failures that made headlines tried to handle every case themselves. Automating the routine orders and escalating the rest keeps the labor savings real &mdash; without ever shipping an order nobody asked for.</p>
+          </div>
         </div>
       </article>
 
       <article class="value-card">
-        <p class="value-tag" data-i18n="value.2.tag">Commercial real estate</p>
-        <h3 class="value-h" data-i18n="value.2.h">Turning weeks of lease abstraction into a same-day review.</h3>
-        <p class="value-d" data-i18n="value.2.d">Every lease, amendment, and estoppel sits in a PDF someone has to read line by line to find the rent escalation, the renewal window, the CAM reconciliation clause. An agent-based abstraction pipeline extracts key terms into structured data, flags anything ambiguous for a human reviewer, and surfaces upcoming deadlines before they're missed.</p>
-        <div class="value-roi">
-          <p class="value-roi-label" data-i18n="value.roi.label">The math</p>
-          <p class="value-roi-text" data-i18n="value.2.roi">A missed renewal-notice date can cost more in lost leverage than a year of the system that would have caught it.</p>
+        <p class="value-tag" data-i18n="value.2.tag">Commercial<br />real estate</p>
+        <div class="value-body">
+          <h3 class="value-h" data-i18n="value.2.h">Turning weeks of lease abstraction into a same-day review.</h3>
+          <p class="value-d" data-i18n="value.2.d">Every lease, amendment, and estoppel sits in a PDF someone has to read line by line to find the rent escalation, the renewal window, the CAM reconciliation clause. An agent-based abstraction pipeline extracts key terms into structured data, flags anything ambiguous for a human reviewer, and surfaces upcoming deadlines before they're missed.</p>
+          <div class="value-roi">
+            <p class="value-roi-label" data-i18n="value.roi.label">The math ↳</p>
+            <p class="value-roi-text" data-i18n="value.2.roi">A missed renewal-notice date can cost more in lost leverage than a year of the system that would have caught it.</p>
+          </div>
         </div>
       </article>
 
       <article class="value-card">
-        <p class="value-tag" data-i18n="value.3.tag">Investment management</p>
-        <h3 class="value-h" data-i18n="value.3.h">Getting through the filing before the market moves on it.</h3>
-        <p class="value-d" data-i18n="value.3.d">Analysts spend hours pulling the same handful of numbers out of 10-Ks, earnings transcripts, and portfolio reports before the actual analysis can start. A validation-first extraction pipeline pulls the structured metrics, checks them against source, and hands the analyst a reviewed summary instead of a stack of PDFs.</p>
-        <div class="value-roi">
-          <p class="value-roi-label" data-i18n="value.roi.label">The math</p>
-          <p class="value-roi-text" data-i18n="value.3.roi">Hours reclaimed per filing add up across a portfolio faster than the system costs to run, and deterministic validation means no one's trusting a hallucinated number in a memo.</p>
+        <p class="value-tag" data-i18n="value.3.tag">Investment<br />management</p>
+        <div class="value-body">
+          <h3 class="value-h" data-i18n="value.3.h">Getting through the filing before the market moves on it.</h3>
+          <p class="value-d" data-i18n="value.3.d">Analysts spend hours pulling the same handful of numbers out of 10-Ks, earnings transcripts, and portfolio reports before the actual analysis can start. A validation-first extraction pipeline pulls the structured metrics, checks them against source, and hands the analyst a reviewed summary instead of a stack of PDFs.</p>
+          <div class="value-roi">
+            <p class="value-roi-label" data-i18n="value.roi.label">The math ↳</p>
+            <p class="value-roi-text" data-i18n="value.3.roi">Hours reclaimed per filing add up across a portfolio faster than the system costs to run &mdash; and deterministic validation means no one's trusting a hallucinated number in a memo.</p>
+          </div>
         </div>
       </article>
 
@@ -477,7 +415,8 @@
   <div class="wrap-wide">
     <header class="sec-head">
       <div>
-        <h2 class="display h2" data-i18n="work.h2">Real AI work.<br />Grounded in systems we <em>run</em>.</h2>
+        <div class="eyebrow-row"><span class="eyebrow-num">03</span><p class="eyebrow" data-i18n="work.eyebrow">Proof</p></div>
+        <h2 class="display h2" data-i18n="work.h2">Real AI work. Grounded in systems we <em>run</em>.</h2>
       </div>
       <p class="lede" data-i18n="work.lede">Our AI stance isn&rsquo;t theoretical: production voice-AI work, a competitive AI residency, and client systems we&rsquo;ve shipped, backed by products we build and operate ourselves.</p>
     </header>
@@ -516,108 +455,93 @@
     </div>
 
     <div class="work-grid">
-
-      <article class="case case-featured">
-        <div class="case-media">
-          <div class="shot"><img src="images/appt-helper.webp" width="1200" height="630" data-i18n-alt="work.appt.alt" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" /></div>
-          <div class="shot"><img src="images/open-cita.webp" width="1200" height="630" data-i18n-alt="work.opencita.alt" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" /></div>
+      <div class="case-media">
+        <div class="shot"><img src="images/appt-helper.webp" width="1200" height="630" data-i18n-alt="work.appt.alt" alt="Appt Helper live dashboard showing Global Entry and SENTRI appointment slots being claimed in real time" loading="lazy" /></div>
+        <div class="shot"><img src="images/open-cita.webp" width="1200" height="630" data-i18n-alt="work.opencita.alt" alt="Open Cita live dashboard, the Spanish-language version of Appt Helper, showing appointment slots being claimed" loading="lazy" /></div>
+      </div>
+      <div class="case-body">
+        <p class="case-meta-line" data-i18n="work.engine.meta">Appt Helper · Open Cita &mdash; Live · MCP + x402</p>
+        <h3 class="case-title" data-i18n="work.engine.title">An agent-native alert engine, catching government slots that vanish in minutes.</h3>
+        <p class="case-desc" data-i18n="work.engine.desc1"><strong>The problem:</strong> Global Entry &amp; SENTRI cancellations disappear within minutes, and no official alert exists. <strong>The system:</strong> an automated pipeline watches all 184 U.S. enrollment centers 24/7, detects an opening the moment it appears, and fires an SMS seconds later &mdash; cutting a 4-to-11-month wait to days.</p>
+        <p class="case-desc" data-i18n="work.engine.desc2"><strong>The agent layer:</strong> it exposes an MCP server so AI agents can query live availability as a tool, and accepts autonomous, pay-per-use payments over Coinbase&rsquo;s x402 protocol. That's agent-native infrastructure, not just a website.</p>
+        <div class="case-stack mono">TypeScript · Next.js · Postgres · Twilio · MCP · x402 (Coinbase)</div>
+        <div class="case-links">
+          <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">appthelper.com <span class="arr">↗</span></a>
+          <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">opencita.com <span class="arr">↗</span></a>
         </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-name">Appt Helper · Open Cita</span>
-            <span class="case-status" data-i18n="work.engine.status">Live · MCP + x402</span>
-          </div>
-          <h3 class="case-title" data-i18n="work.engine.title">An agent-native alert engine, catching government slots that vanish in minutes.</h3>
-          <p class="case-desc" data-i18n="work.engine.desc"><strong>The problem:</strong> Global Entry &amp; SENTRI cancellations disappear within minutes, and no official alert exists. <strong>The system:</strong> an automated pipeline watches all 184 U.S. enrollment centers 24/7, detects an opening the moment it appears, and fires an SMS seconds later, cutting a 4-to-11-month wait to days. <strong>The agent layer:</strong> it exposes an MCP server so AI agents can query live availability as a tool, and accepts autonomous, pay-per-use payments over Coinbase&rsquo;s x402 protocol. That's agent-native infrastructure, not just a website. Runs unattended in production, localized in English (Appt&nbsp;Helper) and Spanish (Open&nbsp;Cita).</p>
-          <div class="case-foot">
-            <span class="case-stack mono">TypeScript · Next.js · Postgres · Twilio · MCP · x402 (Coinbase)</span>
-            <span class="case-links">
-              <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">appthelper.com <span class="arr">↗</span></a>
-              <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">opencita.com <span class="arr">↗</span></a>
-            </span>
-          </div>
-        </div>
-      </article>
-
+        <p class="work-footnote" data-i18n="work.footnote">In the lab: <strong>Border Bills</strong> (cross-border utility payments) and <strong>Baja Care</strong> (medical-tourism discovery &amp; intake), in active development on the same stack.</p>
+      </div>
     </div>
-
-    <p class="work-footnote" data-i18n="work.footnote">In the lab: <strong>Border Bills</strong> (cross-border utility payments) and <strong>Baja Care</strong> (medical-tourism discovery &amp; intake), both in active development on the same stack.</p>
   </div>
 </section>
 
 <!-- ─────────────────── How we work ─────────────────── -->
 <section id="how" class="section how-bg">
-  <div class="wrap-wide how-container">
-    <div class="how-left">
-      <header class="sec-head">
-        <div>
-          <p class="eyebrow" data-i18n="how.eyebrow">How we work</p>
-          <h2 class="display h2" data-i18n="how.h2">We meet you <em>where</em> you are.</h2>
-        </div>
-        <p class="lede" data-i18n="how.lede">Every engagement is structured around your reality, not a template. Pick what fits, or we&rsquo;ll help you choose.</p>
-      </header>
-    </div>
-    <div class="how-right">
-      <div class="how-timeline-line" aria-hidden="true">
-        <div class="how-timeline-progress"></div>
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <div class="eyebrow-row"><span class="eyebrow-num">04</span><p class="eyebrow" data-i18n="how.eyebrow">How we work</p></div>
+        <h2 class="display h2" data-i18n="how.h2">We meet you <em>where</em> you are.</h2>
       </div>
-      <div class="how-grid">
-        <article class="how-cell">
-          <div class="how-num">01</div>
-          <h3 class="display h4" data-i18n="how.1.title">Fixed-scope project</h3>
-          <p class="body" data-i18n="how.1.body">For a defined deliverable with a clear edge: an MVP, a redesign, an AI integration. We scope tightly, ship on a date, and hand off cleanly.</p>
-          <dl class="how-meta">
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.1.bestfor">validated ideas · planned launches</dd>
-            </div>
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.1.length">4 – 16 weeks</dd>
-            </div>
-          </dl>
-        </article>
+      <p class="lede" data-i18n="how.lede">Every engagement is structured around your reality, not a template. Pick what fits, or we&rsquo;ll help you choose.</p>
+    </header>
 
-        <article class="how-cell">
-          <div class="how-num">02</div>
-          <h3 class="display h4" data-i18n="how.2.title">Monthly retainer</h3>
-          <p class="body" data-i18n="how.2.body">For teams that need senior engineering or AI ops capacity on an ongoing basis. Predictable cost, flexible scope, no hiring overhead.</p>
-          <dl class="how-meta">
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.2.bestfor">scaling startups · fractional CTO</dd>
-            </div>
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.2.length">3+ months, month-to-month</dd>
-            </div>
-          </dl>
-        </article>
+    <div class="how-grid">
+      <article class="how-cell">
+        <div class="how-num">01</div>
+        <h3 class="display h4" data-i18n="how.1.title">Fixed-scope project</h3>
+        <p class="body" data-i18n="how.1.body">For a defined deliverable with a clear edge: an MVP, a redesign, an AI integration. We scope tightly, ship on a date, and hand off cleanly.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.1.bestfor">validated ideas · launches</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.length.label">Length</dt><dd data-i18n="how.1.length">4 – 16 weeks</dd>
+          </div>
+        </dl>
+      </article>
 
-        <article class="how-cell">
-          <div class="how-num">03</div>
-          <h3 class="display h4" data-i18n="how.3.title">Strategy sprint</h3>
-          <p class="body" data-i18n="how.3.body">A one- to two-week deep dive: AI readiness audit, architecture review, or agent design sprint. You leave with a roadmap your team can execute, with or without us.</p>
-          <dl class="how-meta">
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.3.bestfor">&ldquo;we know we need this&hellip;&rdquo;</dd>
-            </div>
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.3.length">1 – 2 weeks, fixed price</dd>
-            </div>
-          </dl>
-        </article>
+      <article class="how-cell">
+        <div class="how-num">02</div>
+        <h3 class="display h4" data-i18n="how.2.title">Monthly retainer</h3>
+        <p class="body" data-i18n="how.2.body">For teams that need senior engineering or AI ops capacity on an ongoing basis. Predictable cost, flexible scope, no hiring overhead.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.2.bestfor">scaling startups · fractional CTO</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.length.label">Length</dt><dd data-i18n="how.2.length">3+ months, month-to-month</dd>
+          </div>
+        </dl>
+      </article>
 
-        <article class="how-cell">
-          <div class="how-num">04</div>
-          <h3 class="display h4" data-i18n="how.4.title">Partnership / equity</h3>
-          <p class="body" data-i18n="how.4.body">For founders who want a long-term technical partner. We invest engineering time in exchange for equity or revenue share, with structure that protects both sides.</p>
-          <dl class="how-meta">
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.4.bestfor">early-stage with a credible market</dd>
-            </div>
-            <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
-              <dt data-i18n="how.length.label">Typical length</dt><dd data-i18n="how.4.length">12+ months</dd>
-            </div>
-          </dl>
-        </article>
-      </div>
+      <article class="how-cell">
+        <div class="how-num">03</div>
+        <h3 class="display h4" data-i18n="how.3.title">Strategy sprint</h3>
+        <p class="body" data-i18n="how.3.body">A one- to two-week deep dive: AI readiness audit, architecture review, or agent design sprint. You leave with a roadmap your team can execute, with or without us.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.3.bestfor">&ldquo;we know we need this&hellip;&rdquo;</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.length.label">Length</dt><dd data-i18n="how.3.length">1 – 2 weeks, fixed price</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="how-cell">
+        <div class="how-num">04</div>
+        <h3 class="display h4" data-i18n="how.4.title">Partnership / equity</h3>
+        <p class="body" data-i18n="how.4.body">For founders who want a long-term technical partner. We invest engineering time in exchange for equity or revenue share, with structure that protects both sides.</p>
+        <dl class="how-meta">
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.bestfor.label">Best for</dt><dd data-i18n="how.4.bestfor">early-stage, credible market</dd>
+          </div>
+          <div class="how-meta-row" style="display:flex;justify-content:space-between;gap:24px;">
+            <dt data-i18n="how.length.label">Length</dt><dd data-i18n="how.4.length">12+ months</dd>
+          </div>
+        </dl>
+      </article>
     </div>
   </div>
 </section>
@@ -625,35 +549,29 @@
 <!-- ─────────────────── About ─────────────────── -->
 <section id="about" class="section about-bg">
   <div class="wrap-wide">
-    <header class="sec-head">
-      <div>
-        <h2 class="display h2" data-i18n="about.h2">A small team of builders, led by an engineer who&rsquo;s been on <em>both</em> sides of the table.</h2>
-      </div>
-      <p class="lede" data-i18n="about.lede">We started by shipping our own products so we&rsquo;d know what we were talking about when we started shipping yours.</p>
-    </header>
+    <div class="eyebrow-row"><span class="eyebrow-num">05</span><p class="eyebrow" data-i18n="about.eyebrow">About</p></div>
 
     <div class="about-grid">
       <div class="about-body">
+        <h2 class="display h2 about-h2" data-i18n="about.h2">A small team of builders, led by an engineer who&rsquo;s been on <em>both</em> sides of the table.</h2>
         <p data-i18n="about.p1">Technology Consultants was founded by <strong>Roberto Guido</strong>, an electrical engineer (UC&nbsp;San&nbsp;Diego) with an MBA from NYU&nbsp;Stern who&rsquo;s spent his career bridging the gap between what&rsquo;s technically possible and what actually moves a business. He leads a focused team of senior engineers and designers who&rsquo;ve shipped products together for years.</p>
-        <p data-i18n="about.p2">That bridge runs in both directions: he&rsquo;s done hardware and software design work on the voice AI system at Encounter&nbsp;AI, a drive-thru and kiosk ordering platform backed by investors including Morgan Stanley Inclusive Ventures Lab, and is a 2024 resident of Colorwave&rsquo;s Technical Residency in AI or Cybersecurity (TRAC) program, a competitive fellowship, accepting roughly 10% of applicants, that places emerging technologists into real artificial-intelligence and cybersecurity work.</p>
-        <p data-i18n="about.p3">We started by building our own products (Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care) because we wanted to prove the architecture, the team, and the operating model worked before selling any of it to clients.</p>
-        <p data-i18n="about.p4">That portfolio is now the foundation of our consulting practice. Every recommendation we make has been tested against real users and real edge cases, not just slide decks.</p>
+        <p data-i18n="about.p2">That bridge runs in both directions: hardware and software design work on the voice AI system at Encounter&nbsp;AI &mdash; a drive-thru and kiosk ordering platform backed by investors including Morgan Stanley Inclusive Ventures Lab &mdash; and a 2024 residency in Colorwave&rsquo;s Technical Residency in AI or Cybersecurity (TRAC), a competitive fellowship accepting roughly 10% of applicants.</p>
+        <p data-i18n="about.p3">We started by building our own products &mdash; Appt&nbsp;Helper, Open&nbsp;Cita, Border&nbsp;Bills, and Baja&nbsp;Care &mdash; to prove the architecture, the team, and the operating model before selling any of it to clients.</p>
+        <p data-i18n="about.p4">That portfolio is now the foundation of our consulting practice: every recommendation has been tested against real users and real edge cases, not just slide decks.</p>
       </div>
       <aside class="about-card">
-        <div style="display:flex; align-items:center; gap:14px;">
-          <div class="pfp"><img src="images/roberto.png" alt="Roberto Guido" width="64" height="64" /></div>
-          <div>
-            <div class="name">Roberto Guido</div>
-            <div class="role" data-i18n="about.card.role">Founder · EE, UC San Diego · MBA, NYU Stern</div>
-          </div>
+        <div class="about-card-photo"><img src="images/roberto.png" alt="Roberto Guido" /></div>
+        <div class="about-card-body">
+          <div class="name">Roberto Guido</div>
+          <div class="role" data-i18n="about.card.role">Founder · EE, UC San Diego · MBA, NYU Stern</div>
+          <dl>
+            <div class="row"><dt data-i18n="about.card.practice.label">Practice</dt><dd data-i18n="about.card.practice.value">Interfaces &amp; automation</dd></div>
+            <div class="row"><dt data-i18n="about.card.residency.label">Residency</dt><dd data-i18n="about.card.residency.value">AI TRAC, 2024</dd></div>
+            <div class="row"><dt data-i18n="about.card.based.label">Based</dt><dd>San Diego · Tijuana</dd></div>
+            <div class="row"><dt data-i18n="about.card.languages.label">Languages</dt><dd data-i18n="about.card.languages.value">English · Spanish</dd></div>
+            <div class="row"><dt data-i18n="about.card.opento.label">Open to</dt><dd data-i18n="about.card.opento.value">SMB · startup · mid-market</dd></div>
+          </dl>
         </div>
-        <dl>
-          <div class="row"><dt data-i18n="about.card.practice.label">Practice</dt><dd data-i18n="about.card.practice.value">Interfaces &amp; automation</dd></div>
-          <div class="row"><dt data-i18n="about.card.residency.label">Residency</dt><dd data-i18n="about.card.residency.value">AI TRAC, 2024</dd></div>
-          <div class="row"><dt data-i18n="about.card.based.label">Based</dt><dd>San Diego · Tijuana</dd></div>
-          <div class="row"><dt data-i18n="about.card.languages.label">Languages</dt><dd data-i18n="about.card.languages.value">English · Spanish</dd></div>
-          <div class="row"><dt data-i18n="about.card.opento.label">Open to</dt><dd data-i18n="about.card.opento.value">SMB · startup · mid-market</dd></div>
-        </dl>
       </aside>
     </div>
   </div>
@@ -662,45 +580,38 @@
 <!-- ─────────────────── FAQ ─────────────────── -->
 <section id="faq" class="section faq-bg">
   <div class="wrap-wide">
-    <header class="sec-head" style="text-align: center; max-width: 600px; margin: 0 auto 40px; display: flex; flex-direction: column; align-items: center;">
-      <h2 class="display h2" data-i18n="faq.h2">Frequently asked questions</h2>
-    </header>
+    <div class="faq-grid">
+      <div class="faq-heading">
+        <div class="eyebrow-row"><span class="eyebrow-num">06</span><p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p></div>
+        <h2 class="display h2 faq-h2" data-i18n="faq.h2">Frequently asked questions</h2>
+      </div>
 
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary data-i18n="faq.q1">What is your typical engagement model?</summary>
-        <div class="faq-answer">
-          <p data-i18n="faq.a1">We operate either on a scoped, milestone-driven project basis (like MVPs, redesigns, or specific integrations) or as a fractional CTO retainer for ongoing senior development and operational capacity.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 data-i18n="faq.q1">What is your typical engagement model?</h3>
+          <p data-i18n="faq.a1">We operate either on a scoped, milestone-driven project basis (MVPs, redesigns, specific integrations) or as a fractional CTO retainer for ongoing senior development and operational capacity.</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary data-i18n="faq.q2">Do you advertise pricing?</summary>
-        <div class="faq-answer">
-          <p data-i18n="faq.a2">Consulting and development projects are tailored to each client's specific B2B business context and technical complexity. We scope every project individually to provide transparent, flat-rate phase pricing rather than flat pre-advertised rates.</p>
+        <div class="faq-item">
+          <h3 data-i18n="faq.q2">Do you advertise pricing?</h3>
+          <p data-i18n="faq.a2">Projects are tailored to each client's specific business context and technical complexity. We scope every project individually to provide transparent, flat-rate phase pricing rather than pre-advertised rates.</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary data-i18n="faq.q3">What is your standard technology stack?</summary>
-        <div class="faq-answer">
-          <p data-i18n="faq.a3">We build with React and TypeScript on the front-end, Node.js on the back-end, and PostgreSQL for databases. Our AI work leverages Claude, OpenAI, and custom Model Context Protocol (MCP) integrations.</p>
+        <div class="faq-item">
+          <h3 data-i18n="faq.q3">What is your standard technology stack?</h3>
+          <p data-i18n="faq.a3">React and TypeScript on the front-end, Node.js on the back-end, and PostgreSQL for databases. Our AI work leverages Claude, OpenAI, and custom Model Context Protocol (MCP) integrations.</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary data-i18n="faq.q4">How is technical handoff managed?</summary>
-        <div class="faq-answer">
+        <div class="faq-item">
+          <h3 data-i18n="faq.q4">How is technical handoff managed?</h3>
           <p data-i18n="faq.a4">We deliver fully documented git repositories and assist with cloud deployment. Your internal team can take over immediately, or we can continue running and monitoring the setup under a retainer.</p>
         </div>
-      </details>
 
-      <details class="faq-item">
-        <summary data-i18n="faq.q5">Where are you based?</summary>
-        <div class="faq-answer">
-          <p data-i18n="faq.a5">We are based in San Diego, California, and work with clients globally across the United States and Mexican cross-border markets.</p>
+        <div class="faq-item faq-item-last">
+          <h3 data-i18n="faq.q5">Where are you based?</h3>
+          <p data-i18n="faq.a5">San Diego, California, working with clients globally across the United States and Mexican cross-border markets.</p>
         </div>
-      </details>
+      </div>
     </div>
   </div>
 </section>
@@ -710,7 +621,8 @@
   <div class="wrap-wide">
     <div class="cta-card">
       <div>
-        <h2 class="display h2" data-i18n="contact.h2">Tell us what you&rsquo;re trying to build.</h2>
+        <p class="eyebrow" data-i18n="contact.eyebrow">07 · Contact</p>
+        <h2 class="display h2" data-i18n="contact.h2">Tell us what you&rsquo;re trying to <em>build</em>.</h2>
         <p class="lede" data-i18n="contact.lede">A 30-minute call costs nothing and usually leaves you with at least one concrete idea, whether or not we end up working together.</p>
       </div>
       <div class="cta-actions">
@@ -721,7 +633,7 @@
           </div>
           <textarea id="form-message" name="message" required rows="3" placeholder="Tell us about your project..." data-i18n-attr="placeholder:contact.form.message" aria-label="Project Details"></textarea>
           <button type="submit" class="btn btn-primary">
-            <span data-i18n="contact.form.submit">Book a strategy call</span>
+            <span data-i18n="contact.cta">Book a strategy call</span>
             <span class="arr" aria-hidden="true">→</span>
           </button>
           <div id="form-success" class="form-success-message" style="display:none;" data-i18n="contact.form.success">
@@ -731,6 +643,8 @@
             Something went wrong sending that. Please email us directly at contact@technologyconsultants.ventures instead.
           </div>
         </form>
+        <div class="cta-meta mono">contact@technologyconsultants.ventures</div>
+        <div class="cta-meta mono"><span class="cta-check">✓</span> <span data-i18n="contact.trust">replies within 24 hours</span></div>
       </div>
     </div>
   </div>
@@ -745,7 +659,7 @@
       <div class="footer-brand">
         <a class="nav-brand" href="#top">
           <span class="nav-mark" aria-hidden="true"></span>
-          <span style="color:#fff;">Technology Consultants</span>
+          <span>Technology Consultants</span>
         </a>
         <p data-i18n="footer.tagline">A senior engineering practice run by builders. We integrate advanced AI, intelligent agents, and automated data pipelines into business operations.</p>
       </div>
@@ -778,8 +692,8 @@
     </div>
     <div class="footer-bottom">
       <span class="small" data-i18n="footer.copyright">&copy; 2026 Technology Consultants Inc. All rights reserved.</span>
-      <span class="small"><a href="/privacy.html" class="footer-legal-link" style="color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4BECD7'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Privacy &amp; Terms</a></span>
-      <span class="mono" data-i18n="footer.version">v2026.06 · made by builders</span>
+      <span class="small"><a href="/privacy.html" class="footer-legal-link" style="color: #8b8779; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#16161a'" onmouseout="this.style.color='#8b8779'">Privacy &amp; Terms</a></span>
+      <span class="mono" data-i18n="footer.version">v2026.07 · made by builders</span>
     </div>
   </div>
 </footer>

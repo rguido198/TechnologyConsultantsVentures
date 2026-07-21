@@ -6,8 +6,8 @@
   "use strict";
 
   var COLORS = {
-    line: "rgba(55,85,134,", // Navy base
-    dot: "rgba(75,236,215,"  // Teal highlight
+    line: "rgba(43,89,217,", // Blue base
+    dot: "rgba(53,185,204,"  // Teal highlight
   };
 
   var reduceMotion =
