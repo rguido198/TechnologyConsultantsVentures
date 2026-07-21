@@ -257,7 +257,7 @@ nav { display: flex; align-items: center; gap: 30px; }
   background:
     radial-gradient(1100px 540px at 18% -10%, rgba(53,185,204,0.18), transparent 60%),
     radial-gradient(900px 480px at 90% 0%,    rgba(43,89,217,0.06), transparent 65%),
-    linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 50%, var(--bg) 100%);
+    var(--bg-warm);
 }
 .hero {
   position: relative;
@@ -376,7 +376,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 }
 
 /* ── AI value scenarios (illustrative, not case studies) ───────────── */
-.value-bg { background: var(--bg); }
+.value-bg { background: var(--bg-warm); }
 /* Full-width divided rows -- deliberately NOT a bordered card grid, so this
    doesn't repeat the ai-creds layout family two sections up the page. */
 .value-grid {
@@ -805,7 +805,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 .work-footnote strong { color: #cfccc2; font-weight: 400; }
 
 /* ── How we work ──────────────────────────────────────────────────── */
-.how-bg { background: var(--bg); }
+.how-bg { background: var(--bg-warm); }
 
 .how-grid {
   display: grid;
@@ -853,7 +853,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 @media (max-width: 560px) { .how-grid { grid-template-columns: 1fr; } }
 
 /* ── About ────────────────────────────────────────────────────────── */
-.about-bg { background: var(--bg); }
+.about-bg { background: var(--bg-warm); }
 .about-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -1429,7 +1429,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 }
 
 /* ── FAQ Section ────────────────────────────────────────────────── */
-.faq-bg { background: var(--bg); }
+.faq-bg { background: var(--bg-warm); }
 .faq-grid {
   display: grid;
   grid-template-columns: 300px 1fr;
