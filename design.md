@@ -1,102 +1,97 @@
 # Technology Consultants — Design System & Brand Guidelines
 
 **Repository:** Technology Consultants Ventures (`technologyconsultants.ventures`)  
-**Scope:** Sitewide design tokens, UI components, typography, color palette, and presentation slide design specs.
+**Core Identity:** Human Technology — *"We build technology around your people — not instead of them."*
 
 ---
 
-## 1. Brand Foundation & Positioning
+## 1. Design Philosophy & Brand Positioning
 
-Technology Consultants is a specialized technical practice founded by **Roberto Guido** — an electrical engineer (UC San Diego) with an MBA from NYU Stern. The practice bridges the gap between what is technically possible and what delivers measurable business outcomes.
+Technology Consultants is a high-end technical practice led by **Roberto Guido** (UC San Diego Electrical Engineering + NYU Stern MBA). We build custom web software, systems integrations (Workday Finance & Adaptive Planning), and applied AI automation.
 
-### Core Pillars
-1. **Engineering Meets Strategy:** Hardware and software engineering discipline combined with business ROI and operational realism.
-2. **Enterprise Systems Integration:** Deep financial backend integrations (Workday Finance, Workday Adaptive Planning, PostgreSQL) connected to custom modern frontends.
-3. **Applied AI & Intelligent Automation:** Custom Model Context Protocol (MCP) servers, LLM orchestration, and Human-In-The-Loop (HITL) safety controls.
-4. **Tested Architecture:** Every recommendation is proven against live, in-house products (*Appt Helper*, *Open Cita*, *Border Bills*, *Baja Care*).
+### Core Visual & Brand Principles
+1. **Human Technology (People-First Automation):** Technology designed to clear routine work off people's plates so they can focus on high-judgment decisions. Human-in-the-loop (HITL) wherever trust or money is on the line.
+2. **Editorial Elegance & Warmth:** Spacious layouts, warm organic parchment canvas (`#FAF9F5`), refined typography, and real human photography instead of dark, harsh tech gimmicks.
+3. **Typography with Intent:** Bold, confident headlines with selective *italicized emphasis* (*instead*, *both*, *human*) paired with clean body text and understated monospace status tags.
+4. **Code-First Rigor without Clutter:** Clean, working software proven on live self-developed products (*Appt Helper*, *Open Cita*, *Border Bills*), presented with clarity and zero fluff.
 
 ---
 
-## 2. Color System & Design Tokens
+## 2. Color Palette & Tokens
 
-The site utilizes a dual-theme canvas: a high-contrast dark theme for the navigation and terminal components, paired with a warm, editorial light background for readable content.
+The aesthetic is warm, light, and editorial — drawing inspiration from high-end architectural and design publications.
 
-### Color Palette
-
-| Token | Hex / Value | Usage & Meaning |
+| Token | Hex | Usage & Role |
 |---|---|---|
-| `--ink-dark` | `#121216` | Navigation bar, dark hero sections, terminal background, presentation dark slides |
-| `--ink` | `#16161a` | Primary body text, dark buttons, display headlines |
-| `--ink-soft` | `#454337` | Secondary body text, card descriptions, paragraph text |
-| `--ink-quiet` | `#5f5c52` | Captions, metadata, subtle labels |
-| `--bg-warm` | `#f4f1ea` | Main site background, light canvas, slide backgrounds |
-| `--bg-warm-2` | `#efe9d8` | Subtle card fills, hover container backgrounds |
-| `--blue` | `#2b59d9` | Primary action blue, interactive links, brand accent mark |
-| `--blue-hover` | `#1e46b8` | Hover state for buttons and links |
-| `--teal` | `#35b9cc` | Accent highlights, terminal log status, active indicators |
-| `--accent-gold` | `#d99b26` | Eyebrow badges, quote callouts, key metric callouts |
-| `--line` | `#c9c3b2` | Card borders, subtle dividers |
-| `--line-soft` | `#ddd7c8` | Light container borders |
-
-### Contrast & Accessibility Rules
-- Text on `--bg-warm` uses `--ink` (`#16161a`) or `--ink-soft` (`#454337`), ensuring a contrast ratio ≥ 7:1.
-- Buttons on dark backgrounds use white text (`#FFFFFF`) with `--blue` (`#2b59d9`) or gold (`#d99b26`) backgrounds.
-- Interactive elements use `--blue` for standard actions and gold for primary referral highlights.
+| `--bg-canvas` | `#FAF9F5` | Primary warm organic background canvas (pages & slide background) |
+| `--bg-warm-card` | `#F4F1EA` | Secondary warm background for containers and cards |
+| `--card-white` | `#FFFFFF` | Raised card surfaces, giving clean elevation over the warm background |
+| `--ink-primary` | `#16161A` | Deep charcoal primary headlines, dark pill buttons, and main text |
+| `--ink-secondary` | `#59564D` | Soft body text, descriptions, and secondary narrative copy |
+| `--ink-muted` | `#7C786C` | Metadata, captions, footers, and subtle labels |
+| `--line-subtle` | `#EBE7DF` | Thin, soft border lines for cards and dividers |
+| `--line-accent` | `#D6D0C2` | Outline borders for ghost buttons and pill containers |
+| `--blue-action` | `#2B59D9` | Link color and brand accent mark |
+| `--teal-status` | `#35B9CC` | Active status dot (`● Booking projects · Q3 2026`) |
+| `--teal-soft` | `#BFE9EE` | Soft highlight badge backgrounds |
+| `--gold-accent` | `#D99B26` | Subtle eyebrow tags and referral highlights |
 
 ---
 
-## 3. Typography & Hierarchy
+## 3. Typography & Editorial Hierarchy
 
-### Font Stacks
-- **UI & Display:** `"Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
-- **Code & Accents:** `"IBM Plex Mono", ui-monospace, monospace`
+### Font Families
+- **Display & UI:** `"Helvetica Neue", Helvetica, Arial, -apple-system, sans-serif`
+- **Monospace Accent:** `"IBM Plex Mono", ui-monospace, monospace` (used strictly for 11px eyebrow category tags and status badges)
 
-### Typographic Scale
-- **Display H1 / Hero Title:** 44px – 56px (Mobile: 32px – 38px), Bold (`700`), `-0.02em` tracking
-- **Section Heading (H2):** 28px – 36px, Bold (`700`)
-- **Card Heading (H3):** 20px – 24px, Bold (`700`)
-- **Body Text:** 16px – 17px, Line Height `1.5` – `1.65`
-- **Eyebrow / Badge:** 11px – 13px, `IBM Plex Mono`, Uppercase, Medium (`500` / `600`)
+### Editorial Rules
+- **Headline Emphasis:** Use bold weight (`700`) with selective *italicization* on key action words (e.g. *"We build technology around your people — not instead of them."*).
+- **Sub-headings / Feature Titles:** Bold Italic font (e.g., ***In production.***, ***Senior team.***, ***Code first.***, ***One team.***).
+- **Whitespace & Rhythm:** Ample line height (`1.55` - `1.65`) and generous padding around text containers to prevent visual density.
 
 ---
 
-## 4. Components & Layout Principles
+## 4. Component Design System
 
-### 1. Navigation Header
-- **Background:** Sticky `--ink-dark` (`#121216`) with bottom border `#26262c`.
-- **Brand Mark:** Blue rounded square (`28x28px`, `radius: 7px`) with a monospace cursor glyph (`›_`).
+### 1. Header Navigation
+- **Style:** Clean, minimal sticky header (`#121216` or soft `#FAF9F5`) with rounded pill action button (`Book a call` / `Book a 30-min strategy call →`).
+- **Brand Mark:** Rounded square with monospace cursor symbol (`› Technology Consultants`).
 
-### 2. Cards & Containers
-- **Border Radius:** `12px` (`var(--r-md)`) or `20px` (`var(--r-lg)`) for major feature cards.
-- **Card Background:** Pure white (`#FFFFFF`) on `--bg-warm` canvas, or `--ink-dark` container cards.
-- **Borders:** Thin 1px stroke (`--line` or `#26262c` on dark theme).
+### 2. Category Eyebrows & Badges
+- Spaced category labels: `WEBSITES · AUTOMATION · AI AGENTS` | `● Booking projects · Q3 2026`
+- Status badges: Soft background (`#FAF9F5`), subtle border (`#D6D0C2`), with soft teal status dot (`#35B9CC`).
 
-### 3. Interactive Hero Terminal & Canvas
-- Real-time terminal log animation (`.hero-terminal`) illustrating automated invoice ingestion and Human-In-The-Loop (HITL) gates.
-- Symmetrical perspective wave grid (`hero-shapes.js`) wrapped around hero headers.
+### 3. Buttons & Action Links
+- **Primary Pill:** `#16161A` solid dark pill, white text, pill radius (`border-radius: 999px`), right arrow icon (`→`).
+- **Ghost Pill:** `#FAF9F5` warm background, `#D6D0C2` soft border, `#16161A` text.
 
----
-
-## 5. PowerPoint (.PPTX) Slide Design Standards
-
-Slide decks generated for Technology Consultants follow the exact color palette, typography scale, and card container styling as the website:
-
-1. **Title & Conclusion Slides (Dark Theme):**
-   - Background: `--ink-dark` (`#121216`)
-   - Left Accent Bar: Gold (`#D99B26`)
-   - Title Text: White (`#FFFFFF`) with Gold Eyebrow (`TECHNOLOGY CONSULTANTS`)
-   - Author Info: White & Muted Silver
-
-2. **Content & Detail Slides (Light Editorial Theme):**
-   - Background: Warm Light (`#F4F1EA` / `#F8F9FA`)
-   - Header Eyebrow: Blue (`#2B59D9`) or Gold (`#D99B26`)
-   - Card Containers: White rounded cards (`#FFFFFF`) with subtle borders (`#E5E7EB` / `#2563EB`)
-   - Grid Layout: 3-column feature cards, 2-column comparison containers, or 3-row stacked triggers.
+### 4. Cards & Floating Human Context UI
+- Clean white cards (`#FFFFFF`) with soft borders (`#EBE7DF`) and rounded corners (`radius: 16px` / `20px`).
+- Human photo containers paired with real-world workflow context badges (e.g., `INVOICE REVIEW: 245 cleared automatically, 2 need you`).
 
 ---
 
-## 6. Localization & Language Standards (EN & es-MX)
+## 5. Presentation (.PPTX) Design Guidelines
 
-The brand maintains full bilingual symmetry across English and Mexican Spanish (`es-MX`):
-- **English:** Clean B2B tone ("Custom Interfaces & Systems Integration", "Who to Send My Way").
-- **Mexican Spanish (`es-MX`):** Natural, professional Mexican business Spanish ("Interfaces Personalizadas e Integración de Sistemas", "¿A quién enviarme? / Guía de Referencias").
+PowerPoint presentations representing Technology Consultants must reflect the exact warm, editorial elegance of the website:
+
+1. **Slide Canvas:** Warm organic off-white background (`#FAF9F5`) across ALL slides. **No artificial dark top bars or full black slide backgrounds.**
+2. **Typography & Layout:**
+   - Spacious 16:9 widescreen layout with 1.0 inch margins.
+   - Clean Display Titles in Deep Ink (`#16161A`) with italicized subheads.
+   - Monospace category badges (`[ WEBSITES · AUTOMATION · AI AGENTS ]`) in gold/blue accents.
+3. **Card Layouts:**
+   - White rounded cards (`#FFFFFF`) on `#FAF9F5` canvas with thin soft borders (`#EBE7DF`).
+   - Clean 3-column or 2-column grid cards with generous inner margins.
+   - Feature titles in bold italic font.
+4. **Human Touch & Quotes:**
+   - Real-world human scenarios and clear client quotes.
+   - Clean, scannable, executive-ready presentation.
+
+---
+
+## 6. Language & Localization (EN & es-MX)
+
+Maintains full tone symmetry across English and Mexican Spanish (`es-MX`):
+- **English:** *"We build technology around your people — not instead of them."*
+- **Mexican Spanish (`es-MX`):** *"Desarrollamos tecnología alrededor de tu equipo — no para reemplazarlo."*
