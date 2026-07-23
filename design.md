@@ -101,11 +101,13 @@ All slide decks representing Technology Consultants must adhere 100% to this des
 2. **Slide Canvas:** Warm Off-White Canvas `#FBFAF5`.
 3. **Canvas-Native Layout (No Card Overload):** Content sits directly on the warm parchment canvas (`#FBFAF5`) with generous whitespace. **Avoid enclosing every section or paragraph in rounded white card containers.**
 4. **Subtle Accent Dividers:** Use thin horizontal or vertical accent lines (`Pt(1)` – `Pt(3)` in Action Blue `#2B59D9`, Gold `#D99B26`, or Line Subtle `#E2DDD0`) to separate content areas cleanly instead of heavy box outlines.
-5. **Hero Cover Slide (Slide 1):**
-   - Category Line: `TECHNOLOGY CONSULTANTS  ·  PARTNER REFERRAL GUIDE`
-   - Cover Headline: **We build technology around your people — not instead of them.**
-   - Lede Paragraph & Value Prop: High-contrast summary of React web apps, Workday integrations, and Human-in-the-Loop AI agents directly on canvas.
-   - Practice Leadership: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
+5. **Executive Cover Slide (Slide 1):**
+   - Category Line: `TECHNOLOGY CONSULTANTS  ·  PRACTICE OVERVIEW & REFERRAL GUIDE`
+   - Primary Presentation Title: **Who to Send My Way** (`38pt` Bold) / **¿A quién enviarme?**
+   - Subtitle: **Partner Referral Guide & Ideal Client Profile** (`18pt` Medium)
+   - Brand Motto Callout Block: *"We build technology around your people — not instead of them."* (`16pt` Bold Italic quote with a `3px` solid Action Blue `#2B59D9` left accent line).
+   - Presented By: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
+   - Location & Contact: San Diego, CA & Tijuana, MX · `technologyconsultants.ventures`
    - Bottom 4-Column Proof Bar: **In production.** | **Senior team.** | **Code first.** | **One team.**
 6. **Content Layout & Breathing Room (Slides 2 - 8):**
    - Open 2-column and 3-column layouts with top accent border lines (`Pt(2)`), bold headers, and readable body text.
