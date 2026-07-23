@@ -92,18 +92,17 @@ All slide decks representing Technology Consultants must adhere 100% to this des
 
 1. **Typography:** `Helvetica Neue` / `Helvetica` / `Arial` across ALL text elements (titles, subtitles, card headers, body text, buttons). **No typewriter, serif, or newspaper fonts.**
 2. **Slide Background:** Warm Off-White Canvas `#FBFAF5`.
-3. **Top Navigation Header Mockup:** Every slide includes a replica of the site's dark sticky top navigation bar (`#121216` background, `#26262C` bottom line) with the blue brand icon (`›`), `Technology Consultants` brand text, nav links, and `Book a call` white pill button.
-4. **Hero Title & Motto (Slide 1):**
-   - Category Line: `WEBSITES · AUTOMATION · AI AGENTS  |  ● Booking projects · Q3 2026`
-   - Hero Headline: **We build technology around your people — not instead of them.**
-   - Title Badge: `WHO TO SEND MY WAY` / `¿A QUIÉN ENVIARME?`
-   - Action Pill: Black solid pill button `Book a 30-min call →` (`#16161A`)
-   - Founder Credentials: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
+3. **Clean Presentation Slide Headers:** Executive slide headers (`y = 0.55"`) featuring an uppercase category tag in Action Blue (`#2B59D9`) or Gold (`#D99B26`), followed by a bold primary headline in Deep Charcoal (`#16161A`). **No website navigation headers.**
+4. **Hero Cover Slide (Slide 1):**
+   - Category Line: `TECHNOLOGY CONSULTANTS  ·  PARTNER REFERRAL GUIDE`
+   - Cover Headline: **We build technology around your people — not instead of them.**
+   - Lede Paragraph & Value Prop Card: High-contrast summary of React web apps, Workday integrations, and Human-in-the-Loop AI agents.
+   - Practice Leadership Card: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
    - Bottom 4-Column Proof Bar: **In production.** | **Senior team.** | **Code first.** | **One team.**
-5. **Content Slide Containers (Slides 2 - 8):**
-   - Raised White Card containers (`#FFFFFF`, border `#E2DDD0`, rounded corners).
-   - Blue action tags (`#2B59D9`) and Gold eyebrow badges (`#D99B26`).
-   - Clean, scannable, executive-ready presentation.
+5. **Content Slide Containers & Vertical Rhythm (Slides 2 - 8):**
+   - Raised White Card containers (`#FFFFFF`, border `#E2DDD0`, rounded corners) with balanced padding and proportioned heights (`h = 3.5" - 4.7"`).
+   - Blue category tags (`#2B59D9`) and Gold eyebrow badges (`#D99B26`).
+   - Executive presentation layout with clean margins and breathing room.
 
 ---
 
