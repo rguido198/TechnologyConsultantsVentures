@@ -109,15 +109,31 @@ All slide decks representing Technology Consultants must adhere 100% to this des
    - Presented By: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
    - Location & Contact: San Diego, CA & Tijuana, MX · `technologyconsultants.ventures`
    - Bottom 4-Column Proof Bar: **In production.** | **Senior team.** | **Code first.** | **One team.**
-6. **Content Layout & Specific Slide Titles (Slides 2 - 8):**
-   - **Slide 2 Title:** **Custom Web Apps, Enterprise Integrations & AI Agents** (Spanish: **Aplicaciones Web, Integraciones Empresariales y Agentes de IA**) — *No generic corporate "Bridging X with Y" placeholders.*
-   - **Slide 3 Title:** **Target Organizations & Key Decision Makers**
-   - **Slide 4 Title:** **Operational Trigger Signals That Indicate a Fit**
-   - **Slide 5 Title:** **Live Enterprise Integrations & Proprietary Products**
-   - **Slide 6 Title:** **Unsuitable Projects That We Politely Pass On**
-   - **Slide 7 Title:** **Sprint, Project, and Retainer Engagement Options**
-   - **Slide 8 Title:** **Recommended Partner Email Introduction Template**
-   - Open 2-column and 3-column canvas-native layouts with top accent border lines (`Pt(2)`), bold headers, and readable body text.
+---
+
+## Presentation Deck Collateral Suite
+
+1. **Executive Company Overview & Applied AI Impact Deck (10 Slides):**
+   - **Slide 1 (Cover):** **Applied AI & Custom Web Engineering** (Subtitle: *What Real AI Means for Operations & How We Build Systems That Impact Business*).
+   - **Slide 2 (Demystifying AI):** **What "AI" Actually Means for Business Operations** (Generic Chatbots vs Connected Systems vs Human-in-the-Loop).
+   - **Slide 3 (Core Practice):** **Websites, Enterprise Integrations & Intelligent Automations** (React Web Apps, Workday/PostgreSQL, MCP & AI Agents).
+   - **Slide 4 (Case Study 1 - Workday MCP):** **Workday Finance & Enterprise MCP Integration** (Automating invoice reviews with 100% security & audit trails).
+   - **Slide 5 (Case Study 2 - Voice AI):** **Encounter AI — High-Volume Voice AI Hardware & Software** (Backed by Morgan Stanley Inclusive Ventures Lab).
+   - **Slide 6 (Case Study 3 - Proprietary Suite):** **Self-Developed Applications Live in Production Today** (Appt Helper, Open Cita, Border Bills).
+   - **Slide 7 (Operational Transformation):** **How We Transform Company Workflows in 30–90 Days** (Automate 90% routine, flag 10% exceptions, zero copy-pasting).
+   - **Slide 8 (Ideal Client Profile & Referral Signals):** **Companies in Your Network That We Can Help Most** (Target profiles + trigger quotes).
+   - **Slide 9 (Engagement Methodology):** **Low-Risk Sprints to Working Production Software** (2–4 week Proof-of-Concept Sprint, Full Build, Retainer).
+   - **Slide 10 (Next Steps):** **How to Make the Introduction** (Gold callout box with recommended email template & contact details).
+
+2. **Partner Referral & ICP Guide Deck (8 Slides):**
+   - **Slide 1 (Cover):** **Who to Send My Way** (Partner Referral Guide & Ideal Client Profile).
+   - **Slide 2:** **Custom Web Apps, Enterprise Integrations & AI Agents**
+   - **Slide 3:** **Target Organizations & Key Decision Makers**
+   - **Slide 4:** **Operational Trigger Signals That Indicate a Fit**
+   - **Slide 5:** **Live Enterprise Integrations & Proprietary Products**
+   - **Slide 6:** **Unsuitable Projects That We Politely Pass On**
+   - **Slide 7:** **Sprint, Project, and Retainer Engagement Options**
+   - **Slide 8:** **Recommended Partner Email Introduction Template**
 
 ---
 
