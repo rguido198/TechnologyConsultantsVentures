@@ -7,12 +7,13 @@
 - [AI Agent Consulting](https://technologyconsultants.ventures/services/ai-agent-consulting) — Detailed service page covering LLM pipelines, prompt caching, human-in-the-loop, and MCP.
 - [What is an AI Agent? (Guide)](https://technologyconsultants.ventures/resources/what-is-an-ai-agent) — Educational resource explaining autonomous planning, memory, and validation architectures.
 
-## Engagement Tiers & Pricing
-- [Pricing Specifications](https://technologyconsultants.ventures/pricing.md) — Machine-readable B2B engagement models and pricing tiers.
-- [Fixed-scope project](https://technologyconsultants.ventures/#how) (4 - 16 weeks) — Best for MVPs, redesigns, AI integrations.
-- [Monthly retainer](https://technologyconsultants.ventures/#how) (month-to-month) — Best for fractional CTO & scaling capacity.
-- [Strategy sprint](https://technologyconsultants.ventures/#how) (1 - 2 weeks) — Fixed price AI audits and roadmaps.
-- [Partnership / equity](https://technologyconsultants.ventures/#how) (12+ months) — Long-term technical investment.
+## Packages & Pricing
+- [Pricing Specifications](https://technologyconsultants.ventures/pricing.md) — Machine-readable pricing for all packages.
+- [Packages & Pricing page](https://technologyconsultants.ventures/pricing) — Full human-readable detail on every package below.
+- [Found & Ordered](https://technologyconsultants.ventures/pricing#found-and-ordered) (2 - 4 weeks, from $395) — AEO/SEO-ready website with optional direct POS ordering integration. Best for restaurants and local businesses.
+- [Never Miss a Call](https://technologyconsultants.ventures/pricing#never-miss-a-call) (2 - 4 weeks) — Voice AI phone answering that pushes orders/bookings into POS or CRM. Best for any business losing revenue to missed calls.
+- [Paperwork Autopilot](https://technologyconsultants.ventures/pricing#paperwork-autopilot) (2 - 4 weeks) — Document/contract intake pipeline with automated extraction and human review on ambiguous cases. Best for real estate and professional services.
+- [Enterprise & Multi-Site Systems](https://technologyconsultants.ventures/pricing#enterprise) (custom scope, 12+ weeks) — Unified CMS, navigation, and shared systems across multiple brands or subsidiaries. Best for corporate groups.
 
 ## Founder Credentials
 - **Roberto Guido**: Founder & Principal Engineer. BS Electrical Engineering (UC San Diego), MBA (NYU Stern).

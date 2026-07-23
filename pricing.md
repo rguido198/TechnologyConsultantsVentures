@@ -1,34 +1,41 @@
-# Pricing & Engagement Models — Technology Consultants Inc.
+# Packages & Pricing — Technology Consultants Inc
 
-We provide senior engineering capacity and architectural advice. We operate under flat-rate, milestone-driven structures to ensure transparency and cost control. We do not participate in hourly billing.
+We build productized packages with real, published starting prices — not hourly billing. Custom-scope work (Enterprise & Multi-Site Systems) is quoted individually.
 
-## Engagement Tiers
+## Packages
 
-### 1. Strategy Sprint (AI Audits & Roadmaps)
-*   **Price**: $7,500 (Flat-Rate)
-*   **Duration**: 1–2 weeks
-*   **Best For**: AI feasibility audits, technical architecture roadmaps, legacy codebase review, and performance bottleneck identification.
-*   **Included Deliverables**: Complete technical architecture document, data security assessment, and scoped phase-1 backlog.
+### 1. Found & Ordered (Website Development)
+*   **Price**: Starting at, single-location businesses only. Website only — $395 upfront, or $50/month for 9 months ($450 total). Website + POS ordering integration — $450 upfront, or $50/month for 11 months ($550 total).
+*   **Scope included**: Up to 5 pages, standard template customization, one round of revisions. Additional pages, custom integrations beyond POS, or extra revision rounds are quoted separately.
+*   **Duration**: 2–4 weeks
+*   **Best For**: Single-location restaurants, local and service businesses. Multi-location groups or larger operations fall under Enterprise & Multi-Site Systems instead.
+*   **Included**: A website built to be found by Google and AI answer engines (ChatGPT, Perplexity), with optional direct POS ordering integration so orders skip third-party delivery-app commissions.
+*   **Optional ongoing**: $50/month Care plan after payoff — AEO/SEO monitoring, security, backups, uptime monitoring, minor content edits. Opt-in only, never automatic.
+*   **Add-ons available**: checkout upsell/cross-sell prompts, loyalty & rewards program, QR-code/table ordering, catering & event booking, Google Business Profile setup, local citation building, monthly content refresh.
 
-### 2. Fixed-Scope Project (MVPs, Redesigns, AI Integrations)
-*   **Price**: $25,000–$75,000 (Based on milestones)
-*   **Duration**: 4–16 weeks
-*   **Best For**: Custom AI agent pipelines, systems integration (e.g. Workday to Claude MCP), database wrappers, and full-stack React application development.
-*   **Included Deliverables**: Production-grade codebase, full documentation, CI/CD setup, OAuth security configuration, and 30 days of post-launch technical support.
+### 2. Never Miss a Call (Voice AI)
+*   **Price**: Custom quote based on call volume.
+*   **Duration**: 2–4 weeks
+*   **Best For**: Any business losing revenue to missed calls.
+*   **Included**: Voice AI phone answering that takes orders or bookings and pushes them directly into the client's POS or CRM.
+*   **Add-ons available**: AI chat/concierge widget, email & SMS marketing automation, automated review requests with AI-drafted responses.
 
-### 3. Monthly Retainer (Fractional CTO & Scaling Capacity)
-*   **Price**: $12,500/month (Month-to-Month)
-*   **Duration**: Minimum 3 months recommended
-*   **Best For**: Startups, SMBs, or mid-market teams requiring fractional CTO leadership, ongoing senior developer capacity, and architectural oversight.
-*   **Included Deliverables**: Dedicated engineering capacity, weekly sprint planning, code review oversight, and emergency support channels.
+### 3. Paperwork Autopilot (Document Automation)
+*   **Price**: Custom quote based on document volume and complexity.
+*   **Duration**: 2–4 weeks
+*   **Best For**: Real estate, professional services, back-office-heavy teams.
+*   **Included**: An intake pipeline that reads PDFs and contracts, extracts data automatically, and routes ambiguous cases to a human instead of guessing.
+*   **Add-ons available**: inventory sync automation, automated ops/reporting dashboards, ongoing monthly processing retainer.
 
-### 4. Technical Partnership / Equity
-*   **Price**: Hybrid cash/equity structure (Negotiable)
-*   **Duration**: 12+ months commitment
-*   **Best For**: Early-stage startups requiring a hands-on technical co-founder to build and launch the initial product.
+### 4. Enterprise & Multi-Site Systems
+*   **Price**: Custom-quoted (typical market range for this scope of work: $25,000+)
+*   **Duration**: Custom scope, typically 12+ weeks
+*   **Best For**: Corporate groups running multiple brands or subsidiaries.
+*   **Included**: Unified CMS and navigation experience across multiple sites, plus integration of shared systems such as career portals and payment platforms.
 
 ---
 ## Contact
-For custom estimates or to request a strategy sprint:
+For custom estimates or to discuss which package fits:
 *   Email: contact@technologyconsultants.ventures
 *   Booking Form: [Book a 30-min strategy call](https://technologyconsultants.ventures/#contact)
+*   Full details: [Packages & Pricing page](https://technologyconsultants.ventures/pricing)
