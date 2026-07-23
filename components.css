@@ -1232,6 +1232,46 @@ nav { display: flex; align-items: center; gap: 30px; }
   border-radius: 999px;
 }
 
+/* Enterprise capability band (landing, section 01) */
+.ent-band {
+  margin-top: clamp(28px, 3.5vw, 44px);
+  border: 1px solid rgba(43,89,217,0.18);
+  background: rgba(43,89,217,0.04);
+  border-radius: var(--r-lg);
+  padding: clamp(22px, 2.8vw, 32px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(18px, 2.5vw, 36px);
+}
+.ent-band-tag {
+  font: 500 11px/1 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin: 0 0 10px;
+}
+.ent-band-h {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(19px, 1.6vw, 24px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.ent-band-d {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 62ch;
+}
+.ent-band .service-link { margin-top: 0; white-space: nowrap; }
+@media (max-width: 860px) {
+  .ent-band { grid-template-columns: 1fr; }
+}
+
 /* ── Browser Mockup (Baja Care) ────────────────────────────────── */
 .browser-mockup {
   width: 100%;

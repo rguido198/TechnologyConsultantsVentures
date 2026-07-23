@@ -37,6 +37,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://technologyconsultants.ventures/services/workday-consulting</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://technologyconsultants.ventures/es/services/workday-consulting</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://technologyconsultants.ventures/pricing</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
