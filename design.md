@@ -90,18 +90,18 @@ The visual aesthetic combines a dark, sleek navigation bar with a warm organic p
 
 All slide decks representing Technology Consultants must adhere 100% to this design specification:
 
-1. **Typography:** `Helvetica Neue` / `Helvetica` / `Arial` across ALL text elements (titles, subtitles, card headers, body text, buttons). **No typewriter, serif, or newspaper fonts.**
-2. **Slide Background:** Warm Off-White Canvas `#FBFAF5`.
-3. **Clean Presentation Slide Headers:** Executive slide headers (`y = 0.55"`) featuring an uppercase category tag in Action Blue (`#2B59D9`) or Gold (`#D99B26`), followed by a bold primary headline in Deep Charcoal (`#16161A`). **No website navigation headers.**
-4. **Hero Cover Slide (Slide 1):**
+1. **Typography:** `Helvetica Neue` / `Helvetica` / `Arial` across ALL text elements (titles, subtitles, section headers, body text). **No typewriter, serif, or newspaper fonts.**
+2. **Slide Canvas:** Warm Off-White Canvas `#FBFAF5`.
+3. **Canvas-Native Layout (No Card Overload):** Content sits directly on the warm parchment canvas (`#FBFAF5`) with generous whitespace. **Avoid enclosing every section or paragraph in rounded white card containers.**
+4. **Subtle Accent Dividers:** Use thin horizontal or vertical accent lines (`Pt(1)` – `Pt(3)` in Action Blue `#2B59D9`, Gold `#D99B26`, or Line Subtle `#E2DDD0`) to separate content areas cleanly instead of heavy box outlines.
+5. **Hero Cover Slide (Slide 1):**
    - Category Line: `TECHNOLOGY CONSULTANTS  ·  PARTNER REFERRAL GUIDE`
    - Cover Headline: **We build technology around your people — not instead of them.**
-   - Lede Paragraph & Value Prop Card: High-contrast summary of React web apps, Workday integrations, and Human-in-the-Loop AI agents.
-   - Practice Leadership Card: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
+   - Lede Paragraph & Value Prop: High-contrast summary of React web apps, Workday integrations, and Human-in-the-Loop AI agents directly on canvas.
+   - Practice Leadership: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
    - Bottom 4-Column Proof Bar: **In production.** | **Senior team.** | **Code first.** | **One team.**
-5. **Content Slide Containers & Vertical Rhythm (Slides 2 - 8):**
-   - Raised White Card containers (`#FFFFFF`, border `#E2DDD0`, rounded corners) with balanced padding and proportioned heights (`h = 3.5" - 4.7"`).
-   - Blue category tags (`#2B59D9`) and Gold eyebrow badges (`#D99B26`).
+6. **Content Layout & Breathing Room (Slides 2 - 8):**
+   - Open 2-column and 3-column layouts with top accent border lines (`Pt(2)`), bold headers, and readable body text.
    - Executive presentation layout with clean margins and breathing room.
 
 ---
