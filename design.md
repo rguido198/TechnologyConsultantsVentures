@@ -109,9 +109,15 @@ All slide decks representing Technology Consultants must adhere 100% to this des
    - Presented By: **Roberto Guido** | Founder & Principal Engineer (UC San Diego EE · NYU Stern MBA)
    - Location & Contact: San Diego, CA & Tijuana, MX · `technologyconsultants.ventures`
    - Bottom 4-Column Proof Bar: **In production.** | **Senior team.** | **Code first.** | **One team.**
-6. **Content Layout & Breathing Room (Slides 2 - 8):**
-   - Open 2-column and 3-column layouts with top accent border lines (`Pt(2)`), bold headers, and readable body text.
-   - Executive presentation layout with clean margins and breathing room.
+6. **Content Layout & Specific Slide Titles (Slides 2 - 8):**
+   - **Slide 2 Title:** **Custom Web Apps, Enterprise Integrations & AI Agents** (Spanish: **Aplicaciones Web, Integraciones Empresariales y Agentes de IA**) — *No generic corporate "Bridging X with Y" placeholders.*
+   - **Slide 3 Title:** **Target Organizations & Key Decision Makers**
+   - **Slide 4 Title:** **Operational Trigger Signals That Indicate a Fit**
+   - **Slide 5 Title:** **Live Enterprise Integrations & Proprietary Products**
+   - **Slide 6 Title:** **Unsuitable Projects That We Politely Pass On**
+   - **Slide 7 Title:** **Sprint, Project, and Retainer Engagement Options**
+   - **Slide 8 Title:** **Recommended Partner Email Introduction Template**
+   - Open 2-column and 3-column canvas-native layouts with top accent border lines (`Pt(2)`), bold headers, and readable body text.
 
 ---
 
