@@ -46,13 +46,20 @@ The visual aesthetic combines a dark, sleek navigation bar with a warm organic p
 - **Display, Headlines, Body & UI:** `"Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
 - **Monospace Accent:** `"IBM Plex Mono", ui-monospace, monospace` (Self-hosted; used strictly for 11px uppercase category tags and status badges)
 
-### Typographic Hierarchy & Rules
-- **Display Headline (H1):** 44px – 56px (Mobile: 32px – 38px), Bold (`700`), Deep Charcoal (`#16161A`), `-0.02em` tracking. Selective *italicization* on key action words (*instead*, *both*, *human*).
-- **Section Heading (H2):** 28px – 36px, Bold (`700`), Deep Charcoal (`#16161A`).
-- **Card Title (H3):** 19px – 22px, Bold (`700`), Deep Charcoal (`#16161A`).
-- **Proof Bar Headlines:** Bold (`700`), Deep Charcoal (`#16161A`), e.g., **In production.**, **Senior team.**, **Code first.**, **One team.**
-- **Body Copy:** Regular (`400`), Soft Charcoal (`#454337`), Line Height `1.5` – `1.65`.
-- **Eyebrow Badges:** 10px – 11px, `IBM Plex Mono`, Uppercase, Bold (`700`), Blue (`#2B59D9`) or Gold (`#D99B26`).
+### Typographic Hierarchy & Presentation Font Scale (Mapped to Website CSS Tokens)
+
+| Element Role | Website CSS Size | PPTX Widescreen Size | Font Weight & Color |
+|---|---|---|---|
+| **Cover Display Title (H1)** | `clamp(34px, 4.5vw, 54px)` | `Pt(40)` | Bold (`700`), Deep Charcoal (`#16161A`) |
+| **Slide Main Headline (H2)** | `32px` | `Pt(30)` | Bold (`700`), Deep Charcoal (`#16161A`) |
+| **Section & Feature Title (H3)** | `20px – 22px` | `Pt(20)` | Bold (`700`), Deep Charcoal (`#16161A`) |
+| **Column Numbers (01, 02, 03)** | `28px – 32px` | `Pt(28)` | Bold (`700`), Action Blue (`#2B59D9`) / Gold (`#D99B26`) |
+| **Category Eyebrows / Badges** | `11px` (Uppercase, `0.08em` tracking) | `Pt(11)` | Bold (`700`), Action Blue (`#2B59D9`) / Gold (`#D99B26`) |
+| **Lede Paragraphs** | `18px` (`line-height: 1.5`) | `Pt(16)` | Regular (`400`), Soft Charcoal (`#454337`) |
+| **Body Text & Bullet Points** | `14.5px – 15px` | `Pt(13.5) – Pt(14)` | Regular (`400`) / Bold lead-in (`700`), Soft Charcoal (`#454337`) |
+| **Proof Band Stat Headings** | `16px` | `Pt(15)` | Bold (`700`), Deep Charcoal (`#16161A`) |
+| **Proof Band Stat Labels** | `13px` | `Pt(12)` | Regular (`400`), Soft Charcoal (`#454337`) |
+| **Footer Metadata** | `12px` | `Pt(10.5)` | Regular (`400`), Quiet Charcoal (`#736E62`) |
 
 ---
 
