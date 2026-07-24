@@ -36,8 +36,8 @@ We build productized packages with real, published starting prices — not hourl
 ### 5. Fractional CTO & Staff Coaching
 *   **Price**: Monthly retainer (scoped to weekly availability needs).
 *   **Duration**: Ongoing retainer (monthly commitment).
-*   **Best For**: Growing engineering teams, startups, and mid-market organizations needing technical leadership and team up-skilling.
-*   **Included**: Executive technical leadership, system architecture oversight, code review feedback, weekly 1:1 developer coaching, and AI/MCP stack up-skilling.
+*   **Best For**: Growing engineering teams, startups, and mid-market organizations needing technical leadership, team up-skilling, and AI overwhelm reduction.
+*   **Included**: Executive technical leadership, system architecture oversight, code review feedback, weekly 1:1 developer coaching, practical AI/MCP stack training, and clear production safety guardrails.
 
 ---
 ## Contact
