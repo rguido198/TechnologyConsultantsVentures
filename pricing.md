@@ -33,6 +33,12 @@ We build productized packages with real, published starting prices — not hourl
 *   **Best For**: Corporate groups running multiple brands or subsidiaries.
 *   **Included**: Unified CMS and navigation experience across multiple sites, plus integration of shared systems such as career portals and payment platforms.
 
+### 5. Fractional CTO & Staff Coaching
+*   **Price**: Monthly retainer (scoped to weekly availability needs).
+*   **Duration**: Ongoing retainer (monthly commitment).
+*   **Best For**: Growing engineering teams, startups, and mid-market organizations needing technical leadership and team up-skilling.
+*   **Included**: Executive technical leadership, system architecture oversight, code review feedback, weekly 1:1 developer coaching, and AI/MCP stack up-skilling.
+
 ---
 ## Contact
 For custom estimates or to discuss which package fits:

@@ -14,6 +14,7 @@
 - [Never Miss a Call](https://technologyconsultants.ventures/pricing#never-miss-a-call) (2 - 4 weeks) — Voice AI phone answering that pushes orders/bookings into POS or CRM. Best for any business losing revenue to missed calls.
 - [Paperwork Autopilot](https://technologyconsultants.ventures/pricing#paperwork-autopilot) (2 - 4 weeks) — Document/contract intake pipeline with automated extraction and human review on ambiguous cases. Best for real estate and professional services.
 - [Enterprise & Multi-Site Systems](https://technologyconsultants.ventures/pricing#enterprise) (custom scope, 12+ weeks) — Unified CMS, navigation, and shared systems across multiple brands or subsidiaries. Best for corporate groups.
+- [Fractional CTO & Staff Coaching](https://technologyconsultants.ventures/pricing#fractional-cto) (monthly retainer) — Executive technical direction, system architecture oversight, code reviews, and direct developer coaching for internal teams.
 
 ## Founder Credentials
 - **Roberto Guido**: Founder & Principal Engineer. BS Electrical Engineering (UC San Diego), MBA (NYU Stern).
