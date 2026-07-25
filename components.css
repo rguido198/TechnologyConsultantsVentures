@@ -766,6 +766,16 @@ nav { display: flex; align-items: center; gap: 30px; }
   color: var(--ink);
   text-align: right;
 }
+.about-card .row dd a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line-soft);
+  text-underline-offset: 3px;
+}
+.about-card .row dd a:hover {
+  color: var(--blue);
+  text-decoration-color: currentColor;
+}
 
 /* ── Final CTA ────────────────────────────────────────────────────── */
 .cta-bg { background: var(--bg-warm); }
