@@ -54,6 +54,46 @@
     );
   }
 
+  // Hero pin + scrub transition: the hero content pins in place and recedes
+  // (fades, drifts up, scales down slightly) as the user scrolls, instead of
+  // just static-cutting to Services underneath. This is the "hero motion
+  // that carries into the next section" effect — previously the site only
+  // had the hero-shapes.js background canvas reacting to scroll, with no
+  // foreground choreography at all.
+  //
+  // Pins .hero-inner only (not the whole .top-visual-wrapper, which also
+  // contains the Services section in the markup — pinning that would pin
+  // Services too). start: "top 96px" matches the nav-clearance offset
+  // .top-visual-wrapper already reserves, so the pin locks in at the same
+  // position the content already sits at pre-scroll — no visual jump.
+  function initHeroPinTransition() {
+    var heroInner = document.querySelector(".hero-inner");
+    if (!heroInner) return;
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: heroInner,
+        start: "top 96px",
+        end: "+=520",
+        scrub: 0.6,
+        pin: true,
+        pinSpacing: true,
+        anticipatePin: 1
+      }
+    })
+      // .hero-visual carries its own CSS `heroEntrance` keyframe animation
+      // (components.css ~L1605, `forwards` fill) from the page-load entrance.
+      // A held CSS animation outranks inline styles in the cascade, so GSAP's
+      // opacity/transform tweens on this same element would silently lose to
+      // it. Hand off cleanly: kill the animation and pin down its already-
+      // settled end state (opacity 1, no transform) in the same zero-duration
+      // set, so there's no flash, before tweening from there.
+      .set(".hero-visual", { animation: "none", opacity: 1, y: 0, scale: 1 }, 0)
+      .to(".hero-copy", { opacity: 0, y: -56, scale: 0.97, ease: "none" }, 0)
+      .to(".hero-visual", { opacity: 0, y: -36, scale: 0.96, ease: "none" }, 0.08)
+      .to(".proof-band", { opacity: 0, y: -24, ease: "none" }, 0.18);
+  }
+
   // Split a heading into masked words using GSAP SplitText (3.13+).
   //
   // Replaces a hand-rolled recursive splitter. SplitText gives us three
@@ -257,6 +297,10 @@
   }
 
   // Initial runs
+  // initHeroPinTransition() first — it's the topmost trigger on the page,
+  // and ScrollTrigger refresh order should follow page order (see
+  // gsap-scrolltrigger skill: create top-to-bottom or set refreshPriority).
+  initHeroPinTransition();
   applyHeadingAnimations();
   initCardHovers();
   initSpotlightCards();
