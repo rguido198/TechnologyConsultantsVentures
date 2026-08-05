@@ -12,6 +12,7 @@
   if (reduceMotion) return;
 
   gsap.registerPlugin(ScrollTrigger);
+  if (window.SplitText) gsap.registerPlugin(SplitText);
 
   var EASE = "power2.out";
   var DURATION = 0.55;
@@ -53,40 +54,42 @@
     );
   }
 
-  // Split text by word nodes recursively (preserving tags like em, br)
-  function prepareTextReveal(el) {
-    var nodes = Array.from(el.childNodes);
-    el.innerHTML = "";
-    nodes.forEach(function (node) {
-      if (node.nodeType === Node.TEXT_NODE) {
-        var text = node.textContent;
-        var words = text.split(/(\s+)/);
-        words.forEach(function (word) {
-          if (word.trim() === "") {
-            el.appendChild(document.createTextNode(word));
-          } else {
-            var mask = document.createElement("span");
-            mask.className = "word-mask";
-            var inner = document.createElement("span");
-            inner.className = "word-inner";
-            inner.textContent = word;
-            mask.appendChild(inner);
-            el.appendChild(mask);
-          }
-        });
-      } else if (node.nodeName === "BR") {
-        el.appendChild(document.createElement("br"));
-      } else if (node.nodeType === Node.ELEMENT_NODE) {
-        var cloned = node.cloneNode(true);
-        prepareTextReveal(cloned);
-        el.appendChild(cloned);
-      }
+  // Split a heading into masked words using GSAP SplitText (3.13+).
+  //
+  // Replaces a hand-rolled recursive splitter. SplitText gives us three
+  // things that version could not:
+  //   * aria: "auto"  — labels the heading and hides the split units, so
+  //     assistive tech reads the sentence instead of word-by-word fragments.
+  //   * mask: "words" — generates the overflow-clipped wrapper natively,
+  //     which is what .word-mask was doing by hand.
+  //   * autoSplit    — re-splits once webfonts settle, so line breaks are
+  //     measured against the real font rather than the fallback.
+  //
+  // Class names are kept as word-mask / word-inner so the existing CSS in
+  // components.css and the fail-safe below keep matching.
+  function splitHeading(el) {
+    return SplitText.create(el, {
+      type: "words",
+      wordsClass: "word-inner",
+      mask: "words",
+      aria: "auto",
+      reduceWhiteSpace: false
     });
   }
 
   function applyHeadingAnimations() {
+    if (!window.SplitText) return;   // plugin missing: leave headings as plain text
+
     gsap.utils.toArray(".sec-head h2").forEach(function (h) {
-      prepareTextReveal(h);
+      if (h.dataset.split) return;   // already processed
+      var split = splitHeading(h);
+      h.dataset.split = "1";
+
+      // SplitText names mask wrappers "<wordsClass>-mask". Add the legacy
+      // .word-mask class so the existing components.css rules (inline-block,
+      // overflow:hidden, descender padding) keep applying unchanged.
+      split.masks.forEach(function (m) { m.classList.add("word-mask"); });
+
       var inners = h.querySelectorAll(".word-inner");
       if (!inners.length) return;
 
@@ -367,6 +370,23 @@
       if (parseFloat(window.getComputedStyle(el).opacity) < 1) {
         gsap.killTweensOf(el);
         gsap.set(el, { opacity: 1, y: 0, rotateX: 0, scale: 1, clearProps: "transform" });
+      }
+    });
+
+    // Section headings need their own pass. They are not in the selector
+    // above, and they are hidden by `transform: translateY(130%)` inside an
+    // `overflow:hidden` mask rather than by opacity — so the opacity test
+    // cannot see them. Without this, the exact single-pass renderers named
+    // above rescue every card and paragraph while leaving every <h2>
+    // parked outside its mask: blank headings in link previews and QA
+    // screenshots, and on any client where ScrollTrigger fails to init.
+    document.querySelectorAll(".word-inner").forEach(function (el) {
+      var t = window.getComputedStyle(el).transform;
+      // Settled words read as "none" or an identity matrix; anything else
+      // means the reveal never ran.
+      if (t && t !== "none" && t !== "matrix(1, 0, 0, 1, 0, 0)") {
+        gsap.killTweensOf(el);
+        gsap.set(el, { y: "0%", clearProps: "willChange" });
       }
     });
   }, 3000);
