@@ -6,8 +6,8 @@
   "use strict";
 
   var COLORS = {
-    line: "rgba(43,89,217,", // Blue base
-    dot: "rgba(53,185,204,"  // Teal highlight
+    line: "rgba(107,98,242,", // Violet base (was blue #2b59d9 — matches the dark reskin's new accent)
+    dot: "rgba(53,185,204,"   // Teal highlight — unchanged
   };
 
   var reduceMotion =

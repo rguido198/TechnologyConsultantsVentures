@@ -137,7 +137,7 @@
         
         <h2 class="h3">System Integration Blueprint</h2>
         <p>We connect <strong>PostgreSQL Database</strong> securely to <strong>Claude Desktop</strong> via Model Context Protocol (MCP). Here is a simplified code reference of our implementation wrapper:</p>
-        <pre style="background: #1e1e24; color: #d4d4d4; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 13.5px; margin: 16px 0;">const server = new Server({ name: 'postgres-mcp', version: '1.0.0' }, { capabilities: { tools: {} } });
+        <pre class="code-block">const server = new Server({ name: 'postgres-mcp', version: '1.0.0' }, { capabilities: { tools: {} } });
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [{
     name: 'run_query',
@@ -240,7 +240,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     </div>
     <div class="footer-bottom">
       <span class="small">&copy; 2026 Technology Consultants Inc. All rights reserved.</span>
-      <span class="small"><a href="/privacy" class="footer-legal-link" style="color: #8b8779; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#16161a'" onmouseout="this.style.color='#8b8779'">Privacy &amp; Terms</a></span>
+      <span class="small"><a href="/privacy" class="footer-legal-link">Privacy &amp; Terms</a></span>
       <span class="mono">v2026.07 · made by builders</span>
     </div>
   </div>

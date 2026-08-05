@@ -4,35 +4,44 @@
    ────────────────────────────────────────────────────────────────────── */
 
 :root {
-  /* Brand palette (2026.07 redesign) */
+  /* Brand palette (2026.08 dark reskin — Dimension-inspired) */
   --blue:        #2b59d9;
   --blue-hover:  #1e46b8;
   --teal:        #35b9cc;
-  --teal-soft:   #bfe9ee;
+  --teal-soft:   rgba(53,185,204,0.16);
   --navy:        #2b59d9;
-  --ink:         #16161a;
-  --ink-soft:    #454337;
-  --ink-quiet:   #5f5c52;
-  --line:        #c9c3b2;
-  --line-soft:   #ddd7c8;
-  --bg:          #fbfaf5;
-  --bg-warm:     #f4f1ea;
-  --bg-warm-2:   #efe9d8;
-  --bg-soft:     #f4f1ea;
-  --ink-dark:    #121216;
+  --violet:      #6b62f2;
+  --color-snow-white: #ffffff;
+  --ink:         #ededed;
+  --ink-soft:    #c2c2c2;
+  --ink-quiet:   #686868;
+  --line:        #e5e5e5;
+  --line-soft:   rgba(229,229,229,0.12);
+  --bg:          #161616;
+  --bg-warm:     #0a0a0a;
+  --bg-warm-2:   #1c1c1c;
+  --bg-soft:     #141414;
+  --ink-dark:    #161616;
+  --card-bg:     #161616;
+  --glass-fill:  rgba(212,212,212,0.1);
+  --glass-blur:  4px;
+  --gradient-hero: linear-gradient(120deg, #e8935a 0%, #d97757 18%, #6b62f2 55%, #2b59d9 100%);
+  --gradient-violet-wash: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0) 40%, rgba(107,98,242,.565) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0));
 
   /* Type (default — system sans sitewide, mono for accents) */
-  --font-display: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-sans:    "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans:    -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono:    "IBM Plex Mono", ui-monospace, monospace;
-  --display-weight: 700;
-  --display-tracking: -0.02em;
+  --display-weight: 500;
+  --heading-weight: 600;
+  --display-tracking: -0.035em;
 
   /* Radii */
-  --r-sm:  6px;
-  --r-md:  12px;
-  --r-lg:  20px;
-  --r-xl:  28px;
+  --r-sm:  10px;
+  --r-md:  10px;
+  --r-lg:  24px;
+  --r-xl:  24px;
+  --r-icon: 4px;
 
   /* Rhythm */
   --section-y: clamp(80px, 7.5vw, 112px);
@@ -40,10 +49,15 @@
   --max:       1200px;
   --max-wide:  1320px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(20,22,30,.04);
-  --shadow-md: 0 12px 32px -16px rgba(20,22,30,.18);
-  --shadow-lg: 0 32px 64px -24px rgba(20,22,30,.22);
+  /* Shadows — hairline-inset only, no elevation shadows */
+  --shadow-sm: rgba(255,255,255,.1) 0 0 0 1px inset;
+  --shadow-md: rgba(255,255,255,.1) 0 0 0 1px inset;
+  --shadow-lg: rgba(255,255,255,.1) 0 0 0 1px inset;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.3s;
 }
 
 * { box-sizing: border-box; }
@@ -65,7 +79,7 @@ body {
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-::selection { background: var(--teal); color: var(--ink); }
+::selection { background: var(--teal); color: var(--ink-dark); }
 
 /* ── Layout ─────────────────────────────────────────────────────────── */
 .wrap        { max-width: var(--max);      margin: 0 auto; padding: 0 var(--gutter-x); }
@@ -98,7 +112,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .eyebrow-num {
   font: 500 12px/1 var(--font-mono);
   letter-spacing: 0.14em;
-  color: #b6b1a3;
+  color: var(--ink-quiet);
 }
 
 .display {
@@ -111,12 +125,16 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   text-wrap: balance;
 }
 .h1 { font-size: clamp(48px, 7.4vw, 104px); line-height: 0.98; }
-.h2 { font-size: clamp(38px, 4.8vw, 68px); line-height: 1.04; letter-spacing: -0.028em; }
-.h3 { font-size: clamp(28px, 3vw, 40px);   line-height: 1.1;  letter-spacing: -0.02em; }
-.h4 { font-size: clamp(22px, 1.9vw, 28px); line-height: 1.18; letter-spacing: -0.012em; }
+.h2 { font-size: clamp(38px, 4.8vw, 68px); line-height: 1.04; letter-spacing: -0.028em; font-weight: var(--heading-weight); }
+.h3 { font-size: clamp(28px, 3vw, 40px);   line-height: 1.1;  letter-spacing: -0.02em; font-weight: var(--heading-weight); }
+.h4 { font-size: clamp(22px, 1.9vw, 28px); line-height: 1.18; letter-spacing: -0.012em; font-weight: var(--heading-weight); }
 .display em { font-style: italic; font-weight: inherit; }
 
-/* Highlighter (teal block behind a word) */
+/* Highlighter (teal block behind a word). Text keeps the surrounding light
+   --ink color (it sits on the void canvas for most of its height, only the
+   baseline sliver overlaps the highlight band) — so the band itself is a
+   translucent wash rather than a solid fill, keeping contrast in both zones
+   instead of forcing a text color that only works against one of them. */
 .mark { position: relative; display: inline; font-style: normal; z-index: 0; }
 .mark::after {
   content: "";
@@ -124,7 +142,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   left: -0.06em; right: -0.06em;
   bottom: 0.06em;
   height: 0.36em;
-  background: var(--teal);
+  background: rgba(53,185,204,0.35);
   z-index: -1;
   border-radius: 2px;
 }

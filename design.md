@@ -11,42 +11,49 @@ Technology Consultants is a specialized technical practice led by **Roberto Guid
 
 ### Core Brand Principles
 1. **Human Technology (People-First Automation):** We build software that takes repetitive work off your team's plate — clearing routine tasks while keeping humans in the loop wherever trust, money, or judgment is on the line.
-2. **Modern B2B Engineering Excellence:** Clean, approachable, warm, and sophisticated. We avoid dense computer terminal dumps or harsh developer gimmicks in favor of clean layouts, expansive whitespace, warm canvas tones, and real human photography.
-3. **Clean System Sans Typography:** High-contrast, bold display titles paired with selective *italicized emphasis* (*instead*, *both*, *human*) set in `Helvetica Neue` / `Helvetica` / `Arial`. Monospace (`IBM Plex Mono`) is used strictly for subtle 11px category tags and status badges.
+2. **Dark, Editorial B2B Engineering — Restraint Over Bold Statements (2026.08 reskin):** The site runs on a dark "dusk-lit workspace" canvas — void-black page background, frosted-glass panels, hairline borders instead of shadows, weight-500 display type. This replaced the prior warm-parchment/light system. **The human-photography commitment from principle 2's original wording is preserved, not dropped**: the hero's real team photo stays, now wrapped in a frosted-glass panel rather than a plain white card. What changed is tone (dark, quiet, restrained) and surface language (glass/hairline instead of light cards/shadows) — not the decision to show real people doing the work.
+3. **Clean System Sans Typography:** High-contrast display titles, restrained to weight 500 (never bolder) for hero-scale type and weight 600 for section headers, paired with selective *italicized emphasis* (*instead*, *both*, *human*). Type stack is system-native (`-apple-system, "Segoe UI", "Helvetica Neue", Arial`) — no webfont added for display/body, a deliberate call to preserve the site's no-render-blocking-fetch performance decision even through the reskin. Monospace (`IBM Plex Mono`, self-hosted, unchanged) is used strictly for subtle 11px category tags and status badges.
 4. **Code-First Production Rigor:** Every recommendation is backed by real working software proven on live, self-developed products (*Appt Helper*, *Open Cita*, *Border Bills*, *Baja Care*).
 
 ---
 
 ## 2. Color Palette & Design Tokens
 
-The visual aesthetic combines a dark, sleek navigation bar with a warm organic parchment background canvas (`#FBFAF5`) and clean white card containers (`#FFFFFF`).
+Void-black canvas (`#0A0A0A`) with graphite elevated surfaces (`#161616`) for cards, a frosted-glass panel treatment for floating overlays, and hairline borders (`#E5E5E5` at full or low opacity) in place of the prior shadow-based elevation. Blue and teal — the site's original accent colors — are kept as general-purpose accents (links, tags, status dots) rather than retired in favor of a single-accent system; violet is layered in as a new accent alongside them, used only in gradient washes and glows, never as a solid fill. This is a deliberate, narrower application of the reference dark system's own "single accent only" rule, chosen to preserve continuity with the site's existing brand recognition.
 
 | Token | Hex / Value | Usage & Meaning |
 |---|---|---|
-| `--ink-dark` | `#121216` | Navigation header background, dark card fills, dark slide header bar |
-| `--ink-primary` | `#16161A` | Deep charcoal primary headlines, main body text, primary pill buttons |
-| `--ink-soft` | `#454337` | Secondary body text, paragraph descriptions, card summaries |
-| `--ink-muted` | `#5F5C52` | Captions, metadata, footer links, and page counters |
-| `--bg-canvas` | `#FBFAF5` | Primary warm organic background canvas (page body & presentation slides) |
-| `--bg-warm-2` | `#F4F1EA` | Secondary warm background for section containers and subtle card fills |
-| `--card-white` | `#FFFFFF` | Raised white card surfaces providing clean contrast over the warm canvas |
-| `--blue-action` | `#2B59D9` | Primary action blue for links, brand mark fill, and active indicators |
-| `--blue-hover` | `#1E46B8` | Hover state for buttons and interactive links |
-| `--teal-status` | `#35B9CC` | Active status dot (`● Booking projects · Q3 2026`) |
-| `--gold-accent` | `#D99B26` | Eyebrow badges, quote callouts, and key referral highlights |
-| `--line-subtle` | `#E2DDD0` | Soft card border strokes and horizontal section dividers |
-| `--line-nav` | `#26262C` | Dark navigation bar bottom border stroke |
-| `--red-disqual` | `#DC2626` | Alert red for disqualifier cards |
+| `--bg-warm` (page canvas) | `#0A0A0A` | Void — primary page background, replaces the prior warm parchment |
+| `--ink-dark` / `--card-bg` | `#161616` | Graphite — elevated card surfaces, nav fill, dark section bands |
+| `--bg-warm-2` | `#1C1C1C` | Secondary elevated surface (browser-mockup chrome bar) |
+| `--ink` | `#EDEDED` | Bone — primary text on dark surfaces (was near-black; inverted) |
+| `--ink-soft` | `#C2C2C2` | Ash — secondary body text |
+| `--ink-quiet` | `#686868` | Slate — captions, metadata, quiet labels |
+| `--line` | `#E5E5E5` | Hairline — emphasized/hover border state |
+| `--line-soft` | `rgba(229,229,229,0.12)` | Hairline — default-state border, dimmer |
+| `--color-snow-white` | `#FFFFFF` | Primary CTA fill (white pill), icon glyphs on colored chips |
+| `--glass-fill` | `rgba(212,212,212,0.1)` | Frosted-glass panel fill (hero photo card, feature panels) |
+| `--blue` | `#2B59D9` | Kept as general accent — links, brand mark fill, hero gradient cobalt stop |
+| `--blue-hover` | `#1E46B8` | Hover state for blue actions |
+| `--teal` | `#35B9CC` | Kept as general accent — status dots, tags, highlighter blocks |
+| `--violet` | `#6B62F2` | New accent — gradient washes and radial glows only, never a solid fill |
+| `--gold-accent` | `#D99B26` (PPTX only, see §5) | Eyebrow badges, quote callouts in presentation decks |
+| `--red-disqual` | `#DC2626` (PPTX only, see §5) | Alert red for disqualifier cards in presentation decks |
+
+**Not reskinned:** the "Browser Mockup" product-screenshot component (`.browser-mockup` and its `.mock-*` family in `components.css`) is intentionally kept on light, self-contained literal values — it represents an actual product UI screenshot, and a real screenshot doesn't recolor itself to match the page around it.
 
 ---
 
 ## 3. Typography & Text Hierarchy
 
 ### Typeface Stacks
-- **Display, Headlines, Body & UI:** `"Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
-- **Monospace Accent:** `"IBM Plex Mono", ui-monospace, monospace` (Self-hosted; used strictly for 11px uppercase category tags and status badges)
+- **Display, Headlines, Body & UI (website):** `-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif` — system-native, no webfont added. Display weight is capped at **500** (never bolder), section-level headings sit at **600**; scale and negative tracking (`-0.035em` at display size) carry the hierarchy, matching the reference dark system's own restraint principle.
+- **Monospace Accent:** `"IBM Plex Mono", ui-monospace, monospace` (Self-hosted; used strictly for 11px uppercase category tags and status badges) — unchanged.
+- **PPTX decks** still use `Helvetica Neue` / `Helvetica` / `Arial` at their existing weights — see §5, intentionally not reskinned in this pass.
 
 ### Typographic Hierarchy & Presentation Font Scale (Mapped to Website CSS Tokens)
+
+The **Color** column below is the PPTX deck's own (unchanged, light-canvas) palette — decks are out of scope for the dark reskin, see §5. The website side of this mapping now renders those same sizes in Bone (`#EDEDED`) on the dark canvas rather than Deep Charcoal on parchment.
 
 | Element Role | Website CSS Size | PPTX Widescreen Size | Font Weight & Color |
 |---|---|---|---|
@@ -65,16 +72,17 @@ The visual aesthetic combines a dark, sleek navigation bar with a warm organic p
 
 ## 4. Components & Interface Architecture
 
-### 1. Navigation Header Bar
-- **Background:** Sticky `--ink-dark` (`#121216`) with bottom border stroke `#26262C`.
-- **Brand Mark:** Blue rounded square (`28x28px`, `#2B59D9`) containing white cursor symbol (`›`).
+### 1. Navigation Header Bar — Floating Frosted Nav
+- **Background:** No longer flush/sticky — floats detached from the viewport edge (`position: fixed`, 16px offset), 19px asymmetric border-radius, `rgba(22,22,22,0.7)` fill with backdrop blur, 1px hairline border.
+- **Brand Mark:** Blue rounded square (`28x28px`, `#2B59D9`) containing a white (`--color-snow-white`) cursor symbol (`›`) — unchanged color role, since the square was always a colored chip needing light glyph contrast.
 - **Brand Text:** `Technology Consultants` in bold white sans-serif.
 - **Nav Items:** `Services` · `Work` · `How we work` · `About` · `FAQ` · `ES · Español`.
-- **Primary CTA:** White rounded pill button `Book a call` (`#FFFFFF` background, `#16161A` text).
+- **Primary CTA:** White rounded pill button `Book a call` (`--color-snow-white` background, `--ink-dark` text) — Dimension's inverted "White Pill CTA" pattern.
 
 ### 2. Buttons & Action Links
-- **Primary Action Pill:** `#16161A` solid dark pill, white text, pill radius (`border-radius: 999px`), right arrow icon (`→`).
-- **Secondary Ghost Pill:** `#FBFAF5` warm background, `#E2DDD0` soft border, `#16161A` text.
+- **Primary Action Pill:** Inverted fill — white pill, dark text (`--ink-dark`), pill radius (`border-radius: 999px`), right arrow icon (`→`). No hover shadow; hover dims to `rgba(255,255,255,.85)`.
+- **Secondary Ghost Pill:** Transparent fill, hairline border (`--line`), `--ink` text.
+- **Blue Action Button:** `--blue` fill, white text — kept as a secondary filled option per the color-palette decision to retain blue/teal as general accents.
 
 ### 3. Proof Principles Bar (4 Columns)
 - **In production.** Real users today on our self-developed products.
@@ -83,13 +91,14 @@ The visual aesthetic combines a dark, sleek navigation bar with a warm organic p
 - **One team.** Interfaces and automations: same engineers, same stack.
 
 ### 4. Human Photography & Operational Badge
-- Hero section includes human collaboration photography (`images/team-hero.webp`) paired with a floating operational badge:
+- Hero section still includes human collaboration photography (`images/team-hero.webp`) — this stays, unconditionally, per brand principle 2. What changed is the frame around it: the floating "operational badge" card (`.hero-photo-card`) is now a **frosted-glass panel** (`--glass-fill` translucent dark fill + backdrop blur, hairline border, hairline-inset shadow instead of a drop shadow) rather than a near-opaque white card. Content unchanged:
   - Label: `INVOICE REVIEW`
   - Stat: `245 cleared automatically`
-  - Badge: `2 need you` (Human-in-the-loop highlight)
+  - Badge: `2 need you` (Human-in-the-loop highlight, gold chip, unchanged)
 
 ### 5. Cards & Containers
-- White rounded containers (`#FFFFFF`, `border-radius: 16px`), thin soft border (`#E2DDD0`), and generous inner padding.
+- Graphite rounded containers (`--card-bg` `#161616`, `border-radius: 24px`), hairline border (`--line-soft`), generous inner padding. No box-shadow elevation anywhere on the site — hairline borders and surface contrast (void canvas vs. graphite card) carry all depth cues, replacing the prior shadow-based system.
+- **Exception, by design:** the "Browser Mockup" product-screenshot component stays light (self-contained literal values, not the shared dark tokens) — see §2.
 
 ---
 

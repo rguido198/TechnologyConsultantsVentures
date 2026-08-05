@@ -129,18 +129,20 @@
 
       var tl = gsap.timeline({ paused: true });
       if (media.length) {
+        // No box-shadow lift (this site is hairline-border/translucency only,
+        // no elevation shadows) — scale + a slight brightness lift instead.
         tl.to(media, {
           scale: 1.03,
-          boxShadow: "0 24px 48px -16px rgba(20,30,50,0.16)",
+          filter: "brightness(1.06)",
           duration: 0.35,
-          ease: "power2.out"
+          ease: EASE
         }, 0);
       }
       if (arrs.length) {
         tl.to(arrs, {
           x: 4,
           duration: 0.25,
-          ease: "power2.out"
+          ease: EASE
         }, 0);
       }
 
@@ -176,7 +178,7 @@
         {
           innerText: target,
           duration: 1.2,
-          ease: "power2.out",
+          ease: EASE,
           snap: { innerText: 1 },
           scrollTrigger: {
             trigger: el,
