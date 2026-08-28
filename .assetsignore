@@ -1,0 +1,16 @@
+.git
+.git/**
+.claude
+.claude/**
+.wrangler
+.wrangler/**
+.impeccable
+.impeccable/**
+node_modules
+node_modules/**
+.DS_Store
+**/.DS_Store
+seo-audit
+seo-audit/**
+plans
+plans/**

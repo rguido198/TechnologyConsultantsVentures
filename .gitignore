@@ -30,3 +30,6 @@ dist-ssr
 # SEO Audit Deliverable
 seo-audit/
 
+# Cloudflare Workers local cache
+.wrangler/
+
