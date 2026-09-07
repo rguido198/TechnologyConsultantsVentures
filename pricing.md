@@ -42,6 +42,6 @@ We build productized packages with real, published starting prices — not hourl
 ---
 ## Contact
 For custom estimates or to discuss which package fits:
-*   Email: contact@technologyconsultants.ventures
-*   Booking Form: [Book a 30-min strategy call](https://technologyconsultants.ventures/#contact)
-*   Full details: [Packages & Pricing page](https://technologyconsultants.ventures/pricing)
+*   Email: contact@technologyconsultants.ai
+*   Booking Form: [Book a 30-min strategy call](https://technologyconsultants.ai/#contact)
+*   Full details: [Packages & Pricing page](https://technologyconsultants.ai/pricing)

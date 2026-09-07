@@ -27,4 +27,4 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-Sitemap: https://technologyconsultants.ventures/sitemap.xml
+Sitemap: https://technologyconsultants.ai/sitemap.xml

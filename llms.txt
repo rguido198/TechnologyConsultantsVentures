@@ -3,18 +3,18 @@
 > A consulting practice run by builders. We design, build, and operate React web applications and AI agents for startups, SMBs, and mid-market teams.
 
 ## Services & Resources
-- [React & Full-Stack Web Development](https://technologyconsultants.ventures/services/react-web-development) — Dedicated service page detailing stack, type safety, SLAs, and engineering workflow.
-- [AI Agent Consulting](https://technologyconsultants.ventures/services/ai-agent-consulting) — Detailed service page covering LLM pipelines, prompt caching, human-in-the-loop, and MCP.
-- [What is an AI Agent? (Guide)](https://technologyconsultants.ventures/resources/what-is-an-ai-agent) — Educational resource explaining autonomous planning, memory, and validation architectures.
+- [React & Full-Stack Web Development](https://technologyconsultants.ai/services/react-web-development) — Dedicated service page detailing stack, type safety, SLAs, and engineering workflow.
+- [AI Agent Consulting](https://technologyconsultants.ai/services/ai-agent-consulting) — Detailed service page covering LLM pipelines, prompt caching, human-in-the-loop, and MCP.
+- [What is an AI Agent? (Guide)](https://technologyconsultants.ai/resources/what-is-an-ai-agent) — Educational resource explaining autonomous planning, memory, and validation architectures.
 
 ## Packages & Pricing
-- [Pricing Specifications](https://technologyconsultants.ventures/pricing.md) — Machine-readable pricing for all packages.
-- [Packages & Pricing page](https://technologyconsultants.ventures/pricing) — Full human-readable detail on every package below.
-- [Found & Ordered](https://technologyconsultants.ventures/pricing#found-and-ordered) (2 - 4 weeks, from $395) — AEO/SEO-ready website with optional direct POS ordering integration. Best for restaurants and local businesses.
-- [Never Miss a Call](https://technologyconsultants.ventures/pricing#never-miss-a-call) (2 - 4 weeks) — Voice AI phone answering that pushes orders/bookings into POS or CRM. Best for any business losing revenue to missed calls.
-- [Paperwork Autopilot](https://technologyconsultants.ventures/pricing#paperwork-autopilot) (2 - 4 weeks) — Document/contract intake pipeline with automated extraction and human review on ambiguous cases. Best for real estate and professional services.
-- [Enterprise & Multi-Site Systems](https://technologyconsultants.ventures/pricing#enterprise) (custom scope, 12+ weeks) — Unified CMS, navigation, and shared systems across multiple brands or subsidiaries. Best for corporate groups.
-- [Fractional CTO & Staff Coaching](https://technologyconsultants.ventures/pricing#fractional-cto) (monthly retainer) — Executive technical direction, system architecture oversight, code reviews, AI overwhelm reduction, and direct developer coaching for internal teams.
+- [Pricing Specifications](https://technologyconsultants.ai/pricing.md) — Machine-readable pricing for all packages.
+- [Packages & Pricing page](https://technologyconsultants.ai/pricing) — Full human-readable detail on every package below.
+- [Found & Ordered](https://technologyconsultants.ai/pricing#found-and-ordered) (2 - 4 weeks, from $395) — AEO/SEO-ready website with optional direct POS ordering integration. Best for restaurants and local businesses.
+- [Never Miss a Call](https://technologyconsultants.ai/pricing#never-miss-a-call) (2 - 4 weeks) — Voice AI phone answering that pushes orders/bookings into POS or CRM. Best for any business losing revenue to missed calls.
+- [Paperwork Autopilot](https://technologyconsultants.ai/pricing#paperwork-autopilot) (2 - 4 weeks) — Document/contract intake pipeline with automated extraction and human review on ambiguous cases. Best for real estate and professional services.
+- [Enterprise & Multi-Site Systems](https://technologyconsultants.ai/pricing#enterprise) (custom scope, 12+ weeks) — Unified CMS, navigation, and shared systems across multiple brands or subsidiaries. Best for corporate groups.
+- [Fractional CTO & Staff Coaching](https://technologyconsultants.ai/pricing#fractional-cto) (monthly retainer) — Executive technical direction, system architecture oversight, code reviews, AI overwhelm reduction, and direct developer coaching for internal teams.
 
 ## Founder Credentials
 - **Roberto Guido**: Founder & Principal Engineer. BS Electrical Engineering (UC San Diego), MBA (NYU Stern).
@@ -27,15 +27,15 @@
 - **Baja Care** — Intake & discovery platform for vetted healthcare providers in Baja California.
 
 ## Spanish / Localization (Mexican Spanish)
-- [Inicio en Español](https://technologyconsultants.ventures/es/) — Localized home page.
-- [Desarrollo Web React (ES)](https://technologyconsultants.ventures/es/services/react-web-development) — React consulting in Spanish.
-- [Consultoría de Agentes de IA (ES)](https://technologyconsultants.ventures/es/services/ai-agent-consulting) — AI agent consulting in Spanish.
-- [¿Qué es un Agente de IA? (ES)](https://technologyconsultants.ventures/es/resources/what-is-an-ai-agent) — Spanish version of our AI Agent guide.
+- [Inicio en Español](https://technologyconsultants.ai/es/) — Localized home page.
+- [Desarrollo Web React (ES)](https://technologyconsultants.ai/es/services/react-web-development) — React consulting in Spanish.
+- [Consultoría de Agentes de IA (ES)](https://technologyconsultants.ai/es/services/ai-agent-consulting) — AI agent consulting in Spanish.
+- [¿Qué es un Agente de IA? (ES)](https://technologyconsultants.ai/es/resources/what-is-an-ai-agent) — Spanish version of our AI Agent guide.
 
 ## Legal
-- [Privacy Policy & Terms](https://technologyconsultants.ventures/privacy) (Technology Consultants Inc)
-- [Políticas de Privacidad y Condiciones](https://technologyconsultants.ventures/es/privacy) (Spanish version)
+- [Privacy Policy & Terms](https://technologyconsultants.ai/privacy) (Technology Consultants Inc)
+- [Políticas de Privacidad y Condiciones](https://technologyconsultants.ai/es/privacy) (Spanish version)
 
 ## Contact
-- Email: contact@technologyconsultants.ventures
-- Book a call: [Strategy call request form](https://technologyconsultants.ventures/#contact)
+- Email: contact@technologyconsultants.ai
+- Book a call: [Strategy call request form](https://technologyconsultants.ai/#contact)
