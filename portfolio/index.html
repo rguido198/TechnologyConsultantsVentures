@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Roberto Guido — Portfolio</title>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="/fonts.css" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/components.css?v=2" />
+
+<style>
+  /* Page-specific only — everything else reuses the site's own tokens/classes */
+  #gate {
+    position: fixed; inset: 0; z-index: 999;
+    background: var(--bg-warm);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  #gate.hidden { display: none; }
+  .gate-card {
+    width: 100%; max-width: 380px;
+    background: var(--card-bg);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-lg);
+    padding: clamp(28px, 4vw, 40px);
+    text-align: center;
+  }
+  .gate-card h1 {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    font-size: 22px;
+    color: var(--color-snow-white);
+    margin: 0 0 8px;
+  }
+  .gate-card p { color: var(--ink-soft); font-size: 14px; margin: 0 0 20px; }
+  .gate-card input {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-warm-2);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-md);
+    color: var(--ink);
+    font: 400 15px var(--font-sans, -apple-system, sans-serif);
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .gate-card input:focus { outline: none; border-color: var(--blue); }
+  .gate-card button {
+    width: 100%;
+    background: var(--color-snow-white);
+    color: var(--ink-dark);
+    border: none;
+    border-radius: var(--r-md);
+    font: 600 14px var(--font-sans, -apple-system, sans-serif);
+    padding: 12px 14px;
+    cursor: pointer;
+  }
+  .gate-card button:hover { background: rgba(255,255,255,.85); }
+  .gate-error { color: #E5645A; font-size: 13px; margin-top: 10px; display: none; }
+  .gate-error.show { display: block; }
+
+  #content { display: none; }
+  #content.visible { display: block; }
+
+  .txt-case {
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-lg);
+    padding: clamp(24px, 3vw, 36px);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .txt-case + .txt-case { margin-top: 28px; }
+  .txt-case .case-desc strong { color: var(--color-snow-white); }
+
+  .live-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 700px) { .live-grid { grid-template-columns: 1fr; } }
+  .live-card {
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-lg);
+    padding: 24px;
+  }
+  .live-card h3 { font-family: var(--font-display); font-weight: var(--display-weight); color: var(--color-snow-white); font-size: 18px; margin: 8px 0 6px; }
+  .live-card p { color: var(--ink-soft); font-size: 14px; line-height: 1.55; margin: 0 0 14px; }
+</style>
+</head>
+<body>
+
+<!-- ─────────────────── Password gate ─────────────────── -->
+<div id="gate">
+  <div class="gate-card">
+    <h1>Roberto Guido</h1>
+    <p>This page is unlisted. Enter the password to continue.</p>
+    <input type="password" id="gate-pw" placeholder="Password" autocomplete="off" />
+    <button id="gate-submit">Enter</button>
+    <p class="gate-error" id="gate-error">Incorrect password — try again.</p>
+  </div>
+</div>
+
+<div id="content">
+
+<!-- ─────────────────── Nav (reused from main site) ─────────────────── -->
+<header class="nav">
+  <div class="wrap-wide nav-inner">
+    <a class="nav-brand" href="/" aria-label="Technology Consultants home">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-brand-text">Technology Consultants</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-li"><a href="#live">Live products</a></li>
+        <li class="nav-li"><a href="#case-studies">Case studies</a></li>
+        <li class="nav-li"><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="nav-cta" href="/files/Roberto_Guido_Resume_2026.pdf" target="_blank" rel="noreferrer">Download resume</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ─────────────────── Header ─────────────────── -->
+<section class="section" style="padding-top: clamp(64px, 8vw, 96px);">
+  <div class="wrap-wide">
+    <div class="eyebrow-row"><span class="eyebrow-num">01</span><p class="eyebrow">Portfolio</p></div>
+    <h1 class="display h1" style="max-width: 18ch;">Finance Systems &amp; Applied AI Leader.</h1>
+    <p class="lede" style="max-width: 62ch; margin-top: 16px;">Finance transformation and enterprise-applications background (Encore Capital, Workday Adaptive) paired with an electrical-engineering foundation (Nokia, NYU Stern MBA). I architect, build, and operate the AI-agent systems that run AP, CFO reporting, and lease/maintenance operations for multi-location operators.</p>
+  </div>
+</section>
+
+<!-- ─────────────────── Live products ─────────────────── -->
+<section id="live" class="section work-bg">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <div class="eyebrow-row"><span class="eyebrow-num">02</span><p class="eyebrow">Live products</p></div>
+        <h2 class="display h2">Things you can go <em>try</em> right now.</h2>
+      </div>
+      <p class="lede">Not slides — real, operating software.</p>
+    </header>
+
+    <div class="live-grid">
+      <div class="live-card">
+        <p class="ai-cred-tag">Live · Government appointment alerts</p>
+        <h3>Appt Helper</h3>
+        <p>Global Entry &amp; SENTRI appointment-monitoring engine watching enrollment centers 24/7, firing an alert the moment a cancellation opens up.</p>
+        <a class="btn-link" href="https://appthelper.com" target="_blank" rel="noreferrer">appthelper.com <span class="arr">↗</span></a>
+      </div>
+      <div class="live-card">
+        <p class="ai-cred-tag">Live · Spanish-language version</p>
+        <h3>Open Cita</h3>
+        <p>The Spanish-language counterpart to Appt Helper, serving the same real-time appointment-monitoring engine to Spanish-speaking travelers.</p>
+        <a class="btn-link" href="https://opencita.com" target="_blank" rel="noreferrer">opencita.com <span class="arr">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Case studies ─────────────────── -->
+<section id="case-studies" class="section">
+  <div class="wrap-wide">
+    <header class="sec-head">
+      <div>
+        <div class="eyebrow-row"><span class="eyebrow-num">03</span><p class="eyebrow">Case studies</p></div>
+        <h2 class="display h2">Real systems, real numbers.</h2>
+      </div>
+      <p class="lede">Client names withheld — the work and the metrics are real, the confidentiality isn't negotiable.</p>
+    </header>
+
+    <div class="txt-case">
+      <p class="case-meta-line">Commercial real estate landlord client &middot; 2025–present</p>
+      <h3 class="case-title">Autonomous operations for a commercial real estate portfolio</h3>
+      <p class="case-desc"><strong>The problem:</strong> a commercial plaza landlord ran maintenance, leasing, and shared-expense billing entirely by hand — tickets triaged by memory, lease conflicts caught only if someone happened to notice, CAM charges reconciled manually once a year.</p>
+      <p class="case-desc"><strong>What I built:</strong> three named autonomous agents wired into a shared operations platform — a maintenance dispatcher that triages tickets by severity/SLA and attributes cost against the actual lease clause, a lease screener that checks every incoming request against active tenants' exclusive-use clauses in real time, and a CAM allocator that prorates shared-expense invoices by leased square footage and runs annual estimated-vs-actual reconciliation automatically. Every action that touches money or a lease commitment is gated behind human approval.</p>
+      <p class="case-desc"><strong>Result:</strong> processing 100+ maintenance tickets a month, running fully on the landlord's own team — no hands-on involvement from me required to keep it operating.</p>
+      <div class="case-stack mono">Agentic pipelines · Human-in-the-loop approval gates · Real-time lease-clause matching</div>
+    </div>
+
+    <div class="txt-case">
+      <p class="case-meta-line">Restaurant group client &middot; 2024–2025</p>
+      <h3 class="case-title">AP Control Tower — invoice-to-pay automation</h3>
+      <p class="case-desc"><strong>The problem:</strong> invoice processing was fully manual — a bookkeeper opened every vendor invoice, validated it by hand, and keyed it into NetSuite. ~$10 in labor cost per invoice, 24-hour turnaround.</p>
+      <p class="case-desc"><strong>What I built:</strong> an agent pipeline that ingests CFDI 4.0 invoices, validates them against Mexican tax-authority rules, runs a 3-way match (PO / goods-receipt / invoice) against NetSuite via its RESTlet API, and routes anything outside tolerance to a human for approval — nothing posts automatically.</p>
+      <p class="case-desc"><strong>Result:</strong> cost per invoice dropped ~88% (~$10 → ~$1.20). Turnaround dropped from 24 hours to 3 minutes.</p>
+      <div class="case-stack mono">CFDI 4.0 validation · 3-way match · Oracle NetSuite (RESTlet/API)</div>
+    </div>
+
+    <div class="txt-case">
+      <p class="case-meta-line">Encore Capital &middot; Senior Financial and Systems Analyst, 2017–2023</p>
+      <h3 class="case-title">Revenue recognition &amp; regulatory reporting transformation</h3>
+      <p class="case-desc"><strong>The problem:</strong> Encore Capital needed a real Revenue Recognition system for distressed financial products, and separately faced a major regulatory deadline — implementing CECL (Current Expected Credit Loss) accounting across Latin America, Europe, and U.S. business units, each running on disparate systems.</p>
+      <p class="case-desc"><strong>What I built/led:</strong> led implementation of RevInsight, Encore's Revenue Recognition system, running agile sessions with a Bangalore engineering team as sole owner of the system through go-live. Separately led the CECL implementation in Workday Adaptive, consolidating those disparate regional financial products into one unified system.</p>
+      <p class="case-desc"><strong>Result:</strong> cut 10-Q SEC report generation time 67%.</p>
+      <div class="case-stack mono">Workday Adaptive · Revenue recognition · CECL · Cross-border delivery (Bangalore team)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── Contact ─────────────────── -->
+<section id="contact" class="section work-bg">
+  <div class="wrap-wide" style="text-align:center;">
+    <h2 class="display h2">Let's talk.</h2>
+    <p class="lede" style="margin: 16px auto 28px;">roberto.guido@gmail.com &middot; 619-205-2428 &middot; <a class="btn-link" href="https://linkedin.com/in/guidoroberto/" target="_blank" rel="noreferrer">linkedin.com/in/guidoroberto</a></p>
+    <a class="btn btn-primary" href="/files/Roberto_Guido_Resume_2026.pdf" target="_blank" rel="noreferrer">
+      <span>Download resume</span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-bottom">
+      <span class="small">&copy; 2026 Roberto Guido. Unlisted page — not indexed.</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#content -->
+
+<script>
+(function () {
+  var PW = "Guido2026"; // low-stakes obscurity, not real security — swap this string if you want to rotate it
+  var gate = document.getElementById('gate');
+  var content = document.getElementById('content');
+  var input = document.getElementById('gate-pw');
+  var err = document.getElementById('gate-error');
+
+  function tryUnlock() {
+    if (input.value === PW) {
+      try { sessionStorage.setItem('rg-portfolio-unlocked', '1'); } catch (e) {}
+      gate.classList.add('hidden');
+      content.classList.add('visible');
+    } else {
+      err.classList.add('show');
+    }
+  }
+
+  document.getElementById('gate-submit').addEventListener('click', tryUnlock);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter') tryUnlock(); });
+
+  try {
+    if (sessionStorage.getItem('rg-portfolio-unlocked') === '1') {
+      gate.classList.add('hidden');
+      content.classList.add('visible');
+    }
+  } catch (e) {}
+})();
+</script>
+
+</body>
+</html>
